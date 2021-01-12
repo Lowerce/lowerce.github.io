@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lowerce&#39;s Blog - A technology &amp; emotion Blog</title>
+    <link>https://lowerce.github.io/</link>
+    <description>Recent content on Lowerce&#39;s Blog - A technology &amp; emotion Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 31 Dec 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://lowerce.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About Me</title>
+      <link>https://lowerce.github.io/about/</link>
+      <pubDate>Thu, 31 Dec 2020 10:43:19 +0800</pubDate>
+      
+      <guid>https://lowerce.github.io/about/</guid>
+      
+        <description>&lt;p&gt;I&amp;rsquo;m a &lt;strong&gt;PhD student&lt;/strong&gt; in the mainland of China.&lt;/p&gt;
+&lt;p&gt;This blog is established for recording the solution of the problem I met at work and the love between my girl and me.&lt;/p&gt;
+&lt;p&gt;The main techniques I focus on are showed below:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://geant4.web.cern.ch/&#34;&gt;Geant4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://root.cern/&#34;&gt;ROOT&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.python.org/&#34;&gt;python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://tensorflow.google.cn/&#34;&gt;TensorFlow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.microsoft.com/zh-cn/dotnet/csharp/&#34;&gt;C#&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cplusplus.com/&#34;&gt;C++&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;&#34;&gt;C&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The main fields I focus on are showed below:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Nuclear Science and Technology&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Embedded Programming&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Host Computer Programming&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you are interested in the content I posted, you can find me on my WeChat &lt;strong&gt;lowerce&lt;/strong&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>写在2020年的最后一天</title>
+      <link>https://lowerce.github.io/post/my-first-record/</link>
+      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://lowerce.github.io/post/my-first-record/</guid>
+      
+        <description>&lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第一篇文章&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;就在2020年的最后一天写点什么来度过这个不太一样的2020吧。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如果在2020年的第一天让我猜测一下我的2020年会是什么样子的，我至少不会猜到今天的我会是以什么样的心情来写下这篇文字。如果说这一年对于大多数人而言是totally shit的话，对于我而言，这是很不错的一年吧，即使有疫情，即使生活也并没有那么如偿所愿，因为我遇到了一个姑娘，my life and my world are totally changed.&lt;/p&gt;
+&lt;p&gt;疫情最严重的那段时光并没有一个好心情相衬，如果我没有在家而是一直在学校的话，相信疫情生活会有意思许多。我会用大量的时间来让我的脑袋更满一些、更满一些、再满一些。在家的疫情生活就是在开会、打游戏、买材料和各种各样的坏心情中度过，实际的工作时间（指用来code和补充知识来改进code的时间）少的可怜，几乎所有的工作就是在原来的上位机程序里修修补补，做一些适配性质的改进，唯一比较原创的工作就是部署了一个挺酷炫的UI，使用了新的页面切换模式。总而言之，在家的疫情生活的确让我对C#的理解更为深入了，不出意外我可以自己写出更为“商业”的应用程序来了，当然同样深入的还有对和平精英的理解，可能后者更甚，尤其是在家里超烂网络的加持下。那段日子里的开心时光都是在和小伙伴打游戏和去附近玩耍的时光里度过的，还有就是和多年来的好兄弟们的聚会里。这些多年前的好友总是会在我很需要的时候（当然我不会讲）陪在我身边，大家还是跟相识时的状态一样，同样的无话不说，同样的热爱生活，同样的憧憬未来，同样真诚快乐地生活在这个大家还都有所期盼的世界里。&lt;/p&gt;
+&lt;p&gt;小姑娘的心情因为疫情的缘故并没有很好，跟小姑娘聊天的时候隔着屏幕都能感受到她强烈的感情波动，如果疫情需要什么正确的集体记忆的话，我也就没什么好多说的了，我想起微博上看到的一句话，“&lt;em&gt;现在搞的如火如荼如临大敌，是从心理上对去年同期隐瞒拖延的补偿。亡羊补牢好，举轻若重不好。&lt;/em&gt;” 疫情最严重的那段时间，对于关心疫情和正在经历着疫情的人们而言，如果恰好没有一颗强大的内心的话（事实上并没有人能在真正关心并接受着各种信息的情况下视若无睹，只有选择并不真正去关心和选择不再接受信息两种方式让自己的心情好受一些），终归是一段难熬的日子吧。&lt;/p&gt;
+&lt;p&gt;回到学校的日子果然要happy得多，刚回去的日子里，no study，all game. 直到发现毕业设计中的一个part出现了严重的进度问题，大家都开始忙碌起来，从开始充满斗志的忙到最后濒临死亡的忙（更多的是心情的变化吧，从充满希望到满怀绝望，果然责任心不是什么好东西），虽然一直在说这是个烂摊子，但是忙碌仍然让我学到了很多新的东西，原理图、PCB、32的编程都有了一些从理论到实践的跨越，虽然仍旧粗浅，但至少做过和没做还是差异巨大，更为重要的是，我享受了一把死亡边缘的感觉，我喜欢把自己逼到死的感觉，工作不息，潜能不止。顺利毕业还get到了一个在全校面前show的机会，总之，心情不算好，收获不算少，有一种不枉四年的感觉吧，在大学即将结束的时候做一些这样的事情，从时间上来说不算差，至于心情，我心情什么时候特别棒过呢，也就这样吧。&lt;/p&gt;
+&lt;p&gt;毕业后的假期过的仍旧是喜忧参半吧，可能我跟我自己不太对付，我需要独处的时间越来越多，但是自己待着心情又越来越差，幸运的是我还有工作可做，刚刚从南航离开就去了合肥，一住就是一周，好喜欢这种一个人住在陌生城市里的感觉，每走远一步，就有新的惊喜，这种无拘无束的日子我特别特别喜欢，工作也没少完成，几天内看了篇巨长的文献，学了不少G4的原理，这些从没接触过的东西塞到脑子里的感觉，还不错，挺有意思的。回到家里，也在被师兄们的牛逼push着，所以东西也没少学，论文也没少看，啥感兴趣学啥的感觉真好呀。&lt;/p&gt;
+&lt;p&gt;小姑娘在几个晚上给我打了几通电话，都在讲在那次“激烈”的交流吧，小姑娘没有做错什么，我的不对更多一些吧，像是一个小朋友在看面前的人是不是在乎自己一样，把脸扭向一边，看看她有没有发现我的不开心，很幼稚，但是小朋友获得了自己想要得到的🍬。开学之前的不开心都在跟小姑娘分享着，我好喜欢小姑娘呀。&lt;/p&gt;
+&lt;p&gt;开学后的时光平平无奇，开课前的研究生教育，开课后的上课，一切都跟本科并无不同，区别就在于热水的供应时间和需要骑车才能到达的教室。我的博士生涯就在这样的波澜不惊中开始了，直到十月初，小姑娘来到北京找我。那些时光就像在昨天一样，我彻底爱上了小姑娘。&lt;/p&gt;
+&lt;p&gt;2020年剩下的时光就是我和姑娘的爱情故事啦，2021、2022、2023……，嘿嘿，未来的每一年都会是的！这是属于我们两个的爱情故事💓。&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>
