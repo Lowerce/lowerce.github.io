@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>emotion · Lowerce&#39;s Blog - A technology &amp; emotion Blog</title>
+  <title>使用leetcode练习算法的一些总结 - Lowerce&#39;s Blog - A technology &amp; emotion Blog</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,6 +23,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Lowerce" />
+  <meta name="description" content="这是Lowerce&amp;rsquo;s Blog的第二篇文章 即使不靠算法吃饭，leetcode依然能让我在编程语言的使用上更上一层楼。 本文内容依据" />
+
 
 
 
@@ -32,8 +34,8 @@
 <meta name="generator" content="Hugo 0.82.0" />
 
 
-<link rel="canonical" href="https://lowerce.github.io/categories/emotion/" />
-<link href="/categories/emotion/index.xml" rel="alternate" type="application/rss+xml" title="Lowerce&#39;s Blog - A technology &amp; emotion Blog" />
+<link rel="canonical" href="https://lowerce.github.io/post/leetcode-record/" />
+
 
 
 
@@ -56,15 +58,20 @@
 
 
 
-<meta property="og:title" content="emotion" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://lowerce.github.io/categories/emotion/" />
+<meta property="og:title" content="使用leetcode练习算法的一些总结" />
+<meta property="og:description" content="这是Lowerce&rsquo;s Blog的第二篇文章 即使不靠算法吃饭，leetcode依然能让我在编程语言的使用上更上一层楼。 本文内容依据" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lowerce.github.io/post/leetcode-record/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-08-24T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-08-24T00:00:00&#43;00:00" />
 
-<meta itemprop="name" content="emotion">
-<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="emotion"/>
-<meta name="twitter:description" content=""/>
+<meta itemprop="name" content="使用leetcode练习算法的一些总结">
+<meta itemprop="description" content="这是Lowerce&rsquo;s Blog的第二篇文章 即使不靠算法吃饭，leetcode依然能让我在编程语言的使用上更上一层楼。 本文内容依据"><meta itemprop="datePublished" content="2021-08-24T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-08-24T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1167">
+<meta itemprop="keywords" content="algorithm,c&#43;&#43;,2021," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="使用leetcode练习算法的一些总结"/>
+<meta name="twitter:description" content="这是Lowerce&rsquo;s Blog的第二篇文章 即使不靠算法吃饭，leetcode依然能让我在编程语言的使用上更上一层楼。 本文内容依据"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -323,55 +330,157 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
-
-<section id="archive" class="archive">
-  
+          <article class="post bg-white">
     
-      <div class="archive-title category">
-        <h2 class="archive-name">分类： emotion</h2>
+    <header class="post-header">
+      <h1 class="post-title">使用leetcode练习算法的一些总结</h1>
+      
+      <div class="post-meta">
+        <time datetime="2021-08-24" class="post-time">
+          2021-08-24
+        </time>
+        <div class="post-category">
+            <a href="https://lowerce.github.io/categories/technology/"> technology </a>
+            <a href="https://lowerce.github.io/categories/2021/"> 2021 </a>
+            
+          </div>
+        <span class="more-meta"> 约 1167 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+
+        
+        
+
+        
+        
       </div>
+    </header>
+
     
-  
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-map">1. map</a></li>
+        <li><a href="#2-string">2. string</a></li>
+        <li><a href="#3-for">3. for</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
 
-  
-    <div class="archive-post">
-      <time datetime="2020-12-31" class="archive-post-time">
-        2020-12-31
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/my-first-record/" class="archive-post-link">
-          写在2020年的最后一天
-        </a>
-      </span>
+    
+    <div class="post-content">
+      <p><em>这是Lowerce&rsquo;s Blog的第二篇文章</em></p>
+<blockquote>
+<p>即使不靠算法吃饭，leetcode依然能让我在编程语言的使用上更上一层楼。</p>
+</blockquote>
+<p>本文内容依据我在使用c++完成各类leetcode问题时得到的有效信息和经验写成。</p>
+<p>P.S.可能更强调在c++的使用上而非各类逆天的算法解决方案上。</p>
+<h3 id="1-map">1. map</h3>
+<p>总的来说map是一个非常好用的东西，很多可以用set的问题我依然使用map来解决，感觉很舒服。</p>
+<h4 id="创建">创建</h4>
+<p>创建的时候需要指定好类型 map or unordered_map &lt; type , type &gt; variable_name，创建出来是空的。拿unordered_map&lt;string,int&gt; maps来举例。</p>
+<h4 id="插入删除">插入删除</h4>
+<p>对于计数型应用(反正做题比较多)，即后一个type是int的情况，用起来很简单，直接maps[&ldquo;hello&rdquo;]++，这样就在创建了对应key值并+1。这里使用上<strong>值得注意</strong>，当key对应的value值减到0时，并不意味着这个key就消失了，需要maps.erase(&ldquo;hello&rdquo;)才能真正抹掉对应的key值。</p>
+<p>其它的应用就需要使用maps.insert(pair&lt;string,string&gt;(&ldquo;hello&rdquo;,&ldquo;world&rdquo;))来插入了。</p>
+<h4 id="查找">查找</h4>
+<p>作为一个哈希表，查找是其得到使用的根本原因。</p>
+<p>看一个key是不是在表里， if(maps.find(&ldquo;hello&rdquo;)!=maps.end()) ，如果返回true，则说明在表里。这里的返回值是一个迭代器，迭代器这么用，maps.find(&ldquo;hello&rdquo;)-&gt;first ，这就是key的值（也就是&quot;hello&quot;），maps.find(&ldquo;hello&rdquo;)-&gt;second ，这就是&quot;hello&quot;对应的value值。</p>
+<p>想遍历map，也得靠迭代器，先造个迭代器，unordered_map&lt;string,int&gt;::iterator itr，然后for循环的用法就跟一般的遍历差不多了。for(itr=maps.begin();itr&lt;maps.end();itr++)这样就能遍历啦。</p>
+<h3 id="2-string">2. string</h3>
+<p>string的各种操作用法千奇百怪，很多感觉几乎等效。</p>
+<h4 id="assign">assign</h4>
+<p>大概用法是 s1.assign(s,index,num) ，这样可以把s字符串从index索引值开始往后的num个字符赋给s1字符串。</p>
+<p>基本跟substr是一样的。</p>
+<h4 id="substr">substr</h4>
+<p>s1=s.substr(index,num) ，这个操作跟使用assign是等效的。</p>
+<h3 id="3-for">3. for</h3>
+<p>for循环一些自动遍历的trick之前没用过。</p>
+<p>比如for(auto i:nums)或者for(auto &amp;i:maps)，后者取值用t.first和t.second即可。也可以for(auto &amp;[key,vaule]:maps)就能直接取到key和value啦。</p>
+<p><strong>以后随时更新&hellip;</strong></p>
+
     </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Lowerce</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+      2021-08-24
+      
+    </span>
+  </p>
   
-</section>
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
 
 
+    
+    
 
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="https://lowerce.github.io/tags/algorithm/">algorithm</a>
+          <a href="https://lowerce.github.io/tags/c&#43;&#43;/">c&#43;&#43;</a>
+          <a href="https://lowerce.github.io/tags/2021/">2021</a>
+          
+        </div>
 
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/my-first-record/">
+            <span class="next-text nav-default">写在2020年的最后一天</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
 
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
 
   
   
+
+  
+  
+
   
 
   
   
 
   
-  
 
   
-  
 
   
+
+    
+
   
-
-
-
-
 
         </div>
       </div>

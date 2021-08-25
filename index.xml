@@ -6,7 +6,7 @@
     <description>Recent content on Lowerce&#39;s Blog - A technology &amp; emotion Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 31 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Aug 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://lowerce.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -37,6 +37,45 @@
 &lt;li&gt;&lt;em&gt;Host Computer Programming&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;If you are interested in the content I posted, you can find me on my WeChat &lt;strong&gt;lowerce&lt;/strong&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>使用leetcode练习算法的一些总结</title>
+      <link>https://lowerce.github.io/post/leetcode-record/</link>
+      <pubDate>Tue, 24 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://lowerce.github.io/post/leetcode-record/</guid>
+      
+        <description>&lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第二篇文章&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;即使不靠算法吃饭，leetcode依然能让我在编程语言的使用上更上一层楼。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;本文内容依据我在使用c++完成各类leetcode问题时得到的有效信息和经验写成。&lt;/p&gt;
+&lt;p&gt;P.S.可能更强调在c++的使用上而非各类逆天的算法解决方案上。&lt;/p&gt;
+&lt;h3 id=&#34;1-map&#34;&gt;1. map&lt;/h3&gt;
+&lt;p&gt;总的来说map是一个非常好用的东西，很多可以用set的问题我依然使用map来解决，感觉很舒服。&lt;/p&gt;
+&lt;h4 id=&#34;创建&#34;&gt;创建&lt;/h4&gt;
+&lt;p&gt;创建的时候需要指定好类型 map or unordered_map &amp;lt; type , type &amp;gt; variable_name，创建出来是空的。拿unordered_map&amp;lt;string,int&amp;gt; maps来举例。&lt;/p&gt;
+&lt;h4 id=&#34;插入删除&#34;&gt;插入删除&lt;/h4&gt;
+&lt;p&gt;对于计数型应用(反正做题比较多)，即后一个type是int的情况，用起来很简单，直接maps[&amp;ldquo;hello&amp;rdquo;]++，这样就在创建了对应key值并+1。这里使用上&lt;strong&gt;值得注意&lt;/strong&gt;，当key对应的value值减到0时，并不意味着这个key就消失了，需要maps.erase(&amp;ldquo;hello&amp;rdquo;)才能真正抹掉对应的key值。&lt;/p&gt;
+&lt;p&gt;其它的应用就需要使用maps.insert(pair&amp;lt;string,string&amp;gt;(&amp;ldquo;hello&amp;rdquo;,&amp;ldquo;world&amp;rdquo;))来插入了。&lt;/p&gt;
+&lt;h4 id=&#34;查找&#34;&gt;查找&lt;/h4&gt;
+&lt;p&gt;作为一个哈希表，查找是其得到使用的根本原因。&lt;/p&gt;
+&lt;p&gt;看一个key是不是在表里， if(maps.find(&amp;ldquo;hello&amp;rdquo;)!=maps.end()) ，如果返回true，则说明在表里。这里的返回值是一个迭代器，迭代器这么用，maps.find(&amp;ldquo;hello&amp;rdquo;)-&amp;gt;first ，这就是key的值（也就是&amp;quot;hello&amp;quot;），maps.find(&amp;ldquo;hello&amp;rdquo;)-&amp;gt;second ，这就是&amp;quot;hello&amp;quot;对应的value值。&lt;/p&gt;
+&lt;p&gt;想遍历map，也得靠迭代器，先造个迭代器，unordered_map&amp;lt;string,int&amp;gt;::iterator itr，然后for循环的用法就跟一般的遍历差不多了。for(itr=maps.begin();itr&amp;lt;maps.end();itr++)这样就能遍历啦。&lt;/p&gt;
+&lt;h3 id=&#34;2-string&#34;&gt;2. string&lt;/h3&gt;
+&lt;p&gt;string的各种操作用法千奇百怪，很多感觉几乎等效。&lt;/p&gt;
+&lt;h4 id=&#34;assign&#34;&gt;assign&lt;/h4&gt;
+&lt;p&gt;大概用法是 s1.assign(s,index,num) ，这样可以把s字符串从index索引值开始往后的num个字符赋给s1字符串。&lt;/p&gt;
+&lt;p&gt;基本跟substr是一样的。&lt;/p&gt;
+&lt;h4 id=&#34;substr&#34;&gt;substr&lt;/h4&gt;
+&lt;p&gt;s1=s.substr(index,num) ，这个操作跟使用assign是等效的。&lt;/p&gt;
+&lt;h3 id=&#34;3-for&#34;&gt;3. for&lt;/h3&gt;
+&lt;p&gt;for循环一些自动遍历的trick之前没用过。&lt;/p&gt;
+&lt;p&gt;比如for(auto i:nums)或者for(auto &amp;amp;i:maps)，后者取值用t.first和t.second即可。也可以for(auto &amp;amp;[key,vaule]:maps)就能直接取到key和value啦。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;以后随时更新&amp;hellip;&lt;/strong&gt;&lt;/p&gt;
 </description>
       
     </item>
