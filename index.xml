@@ -6,7 +6,7 @@
     <description>Recent content on Lowerce&#39;s Blog - A technology &amp; emotion Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 24 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 29 Aug 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://lowerce.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -37,6 +37,33 @@
 &lt;li&gt;&lt;em&gt;Host Computer Programming&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;If you are interested in the content I posted, you can find me on my WeChat &lt;strong&gt;lowerce&lt;/strong&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>使用leetcode练习算法的一些总结(UPDATE-1)</title>
+      <link>https://lowerce.github.io/post/leetcode-record-2/</link>
+      <pubDate>Sun, 29 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://lowerce.github.io/post/leetcode-record-2/</guid>
+      
+        <description>&lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第三篇文章&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;即使不靠算法吃饭，leetcode依然能让我在编程语言的使用上更上一层楼。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;本文内容依据我在使用c++完成各类leetcode问题时得到的有效信息和经验写成。&lt;/p&gt;
+&lt;p&gt;P.S.可能更强调在c++的使用上而非各类逆天的算法解决方案上。&lt;/p&gt;
+&lt;h3 id=&#34;1-一些c标准库函数&#34;&gt;1. 一些C++标准库函数&lt;/h3&gt;
+&lt;h4 id=&#34;reverse&#34;&gt;reverse&lt;/h4&gt;
+&lt;p&gt;这个好像可以用来反转很多C++支持的数据结构，一般是两个输入参量，用法大概是这样。reverse(开始位置，开始位置+需要翻转的数量)，从这个角度看，它的输入参量是&lt;strong&gt;左闭右开&lt;/strong&gt;的区间，例如reverse(string.begin(),string.end())&amp;hellip;&lt;/p&gt;
+&lt;p&gt;反正第一次用起来有点晕，极有可能c++很多的标准函数采用类似的输入形式，需要注意。&lt;/p&gt;
+&lt;h4 id=&#34;resize&#34;&gt;resize&lt;/h4&gt;
+&lt;p&gt;反正对于字符串而言挺好使，直接resize(更新后的尺寸)，可以直接把字符串扩充到指定长度，多出来的部分应该是空的吧。&lt;/p&gt;
+&lt;h4 id=&#34;sort&#34;&gt;sort&lt;/h4&gt;
+&lt;p&gt;sort(begin(),end())这样用，反正可以直接按从小到大光速排序，这里的开始和结束参照reverse，输入是完全一样的方法。说明前面的猜想是正确的😄。&lt;/p&gt;
+&lt;p&gt;好像还可以用自定义函数作为第三个输入参量来作为排序依据，这个等以后做题遇到的时候再写吧，没用过的东西一概不写😋。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;以后随时更新&amp;hellip;&lt;/strong&gt;&lt;/p&gt;
 </description>
       
     </item>
