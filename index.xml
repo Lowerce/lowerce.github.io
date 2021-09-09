@@ -6,7 +6,7 @@
     <description>Recent content on Lowerce&#39;s Blog - A technology &amp; emotion Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 29 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Sep 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://lowerce.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -37,6 +37,94 @@
 &lt;li&gt;&lt;em&gt;Host Computer Programming&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;If you are interested in the content I posted, you can find me on my WeChat &lt;strong&gt;lowerce&lt;/strong&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>李宏毅-Machine Learning</title>
+      <link>https://lowerce.github.io/post/ml_lhy/</link>
+      <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://lowerce.github.io/post/ml_lhy/</guid>
+      
+        <description>&lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第四篇文章&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;此文是根据李宏毅2021年春季的机器学习课程撰写。李宏毅机器学习课程的特点是对理论理解的剖析非常深入同时又不失在实际训练过程中的trick教学。&lt;/p&gt;
+&lt;h2 id=&#34;1-机器学习general-guidence&#34;&gt;1. 机器学习general guidence&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://lowerce.github.io/img/1D9FC546-6F96-44DB-9F10-A5679B13C56D.png&#34; alt=&#34;机器学习general guidence&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2-调参trick&#34;&gt;2. 调参trick&lt;/h2&gt;
+&lt;h3 id=&#34;1-local-minima局部最小值and-saddle-point鞍点&#34;&gt;1. local minima（局部最小值）and saddle point（鞍点）&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Hessian Matrix&lt;/strong&gt; - 其实就是二阶导 在一阶导数消失的时候通过二阶导来决定下一步行进的方向&lt;/p&gt;
+&lt;p&gt;H正定时（Hessian Matrix 所有特征值为正）说明遇到 local minima&lt;/p&gt;
+&lt;p&gt;H正负不定（Hessian Matrix 特征值有正有负）说明遇到 saddle point&lt;/p&gt;
+&lt;p&gt;向沿H特征向量的方向更新参数&lt;/p&gt;
+&lt;h3 id=&#34;2-batch-size-and-momentum&#34;&gt;2. batch size and momentum&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;batch size大小的优劣&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://lowerce.github.io/img/C8DF9C21-AECE-49A2-84D8-5797175941FA.png&#34; alt=&#34;batch size&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;由1、2得出的conclusion&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://lowerce.github.io/img/79D06710-F038-40EA-88EA-B7171FF632B6.png&#34; alt=&#34;conclusin of 1 and 2&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3-adaptive-learning-rate&#34;&gt;3. Adaptive Learning Rate&lt;/h3&gt;
+&lt;p&gt;$\sigma$&lt;/p&gt;
+&lt;p&gt;Root Mean Square &amp;ndash;&amp;gt; RMSProp &amp;ndash;&amp;gt; Adam(RMSProp + Momentum)&lt;/p&gt;
+&lt;p&gt;$ \eta $&lt;/p&gt;
+&lt;p&gt;Learning Rate Scheduling: Learing Rate Decay and Warm Up&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Optimizer总结&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://lowerce.github.io/img/11A3D17A-7B8E-464F-9926-1C529FFE2B84.png&#34; alt=&#34;Optimization Summary&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;4-loss-function&#34;&gt;4. Loss function&lt;/h3&gt;
+&lt;p&gt;Cross-entropy 如何优于 Mean Square Error (MSE)？&lt;/p&gt;
+&lt;p&gt;从error surface的角度来看 Cross-entropy 的梯度变化更平缓 &amp;ndash;&amp;gt; 更好 train&lt;/p&gt;
+&lt;h3 id=&#34;5-batch-normalization&#34;&gt;5. Batch Normalization&lt;/h3&gt;
+&lt;p&gt;Feature Normalization - 对所有样本的每一个维度（dimension）作 normalization（减均值、除方差）&lt;/p&gt;
+&lt;p&gt;可以对每一层的输出（激活函数前后影响不大）作上述 Featurn Normalization&lt;/p&gt;
+&lt;p&gt;归根结底让整个 error surface 不那么崎岖（还有各种Normalization的方法）&lt;/p&gt;
+&lt;h2 id=&#34;3-cnn&#34;&gt;3. CNN&lt;/h2&gt;
+&lt;p&gt;在图像感知的问题中使用&lt;/p&gt;
+&lt;p&gt;stride 迈步步长 padding 越界填充&lt;/p&gt;
+&lt;p&gt;Receptive field &amp;ndash;&amp;gt; neutrons &amp;ndash;&amp;gt; shared parameters&lt;/p&gt;
+&lt;p&gt;filters &amp;ndash;&amp;gt; Feature Map&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;两种看待CNN所做事情的角度&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://lowerce.github.io/img/C86E2845-06BB-4CB7-96B1-FACE8BD92187.png&#34; alt=&#34;两个故事&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Pooling - subsampling  比较典型的 Max Pooling&lt;/p&gt;
+&lt;p&gt;Pooling不是必要的&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CNN的标准流程&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://lowerce.github.io/img/61E6FEDC-9788-4786-A1B1-2D0987C77ACE.png&#34; alt=&#34;典型CNN流程&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;4-self-attention&#34;&gt;4. Self-attention&lt;/h2&gt;
+&lt;p&gt;Sequence(vector set) input 考虑整个input sequence的资讯&lt;/p&gt;
+&lt;p&gt;《Attention is all you need》&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Self-attention的运行方式&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://lowerce.github.io/img/4F8CE0ED-6696-4449-82FD-511E7EEC0555.png&#34; alt=&#34;self attention运作机制&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Multi-head Self-attention&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://lowerce.github.io/img/BC60BC4E-EC6A-42B8-BB92-F6DF3E6EEAB1.png&#34; alt=&#34;multi-head self attention&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Position Encoding&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://lowerce.github.io/img/E6BE25B8-F4EF-44FE-A0F0-BE7C8085AC46.png&#34; alt=&#34;position encoding&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Self-attention可以视作可调感知域的&lt;strong&gt;CNN&lt;/strong&gt;（在数据量足够大时效果要好于CNN） CNN属于简化版的Self-attention&lt;/p&gt;
+&lt;p&gt;Self-attention比起&lt;strong&gt;RNN&lt;/strong&gt;更加不受输入vector之间距离的影响&lt;/p&gt;
+&lt;h2 id=&#34;5-transformer-seq2seq&#34;&gt;5. Transformer (Seq2Seq)&lt;/h2&gt;
+&lt;p&gt;Encoder + Decoder&lt;/p&gt;
+&lt;h3 id=&#34;encoder&#34;&gt;Encoder&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Encoder block的构成&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://lowerce.github.io/img/584624C6-718B-4650-A1C2-06429F36429E.png&#34; alt=&#34;one block of Encoder&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Encoder的结构&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://lowerce.github.io/img/C0FB8882-3F54-4CF0-92BF-E17CB7E8915E.png&#34; alt=&#34;Encoder&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;decoder&#34;&gt;Decoder&lt;/h3&gt;
+&lt;p&gt;分为 Autoregressive 和 Non- Autoregressive&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://lowerce.github.io/img/B06A8A1F-5B7B-4640-B779-8167621FA019.png&#34; alt=&#34;对比&#34;&gt;&lt;/p&gt;
+&lt;p&gt;下面以Autoregressive为例概述Decoder的组成结构&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Masked Self-attention&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;显然在Decoder中上一个的输出作为下一个的输入，输入一个一个依次产生，无法像Self-attention那样直接考虑所有的资讯&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://lowerce.github.io/img/25E02433-E241-43DE-8EC1-7A114044ABAB.png&#34; alt=&#34;Masked Self-attention&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cross attention&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://lowerce.github.io/img/A9EA99CD-4DA1-4FAB-B524-0987E7DF8ABC.png&#34; alt=&#34;Cross attention&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Decoder的结构（Encoder and Decoder）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://lowerce.github.io/img/196FCDE9-E68C-427E-8EE9-7614601932F9.png&#34; alt=&#34;Decoder&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;其它的seq2seq架构&#34;&gt;其它的Seq2Seq架构&lt;/h3&gt;
+&lt;p&gt;Copy mechanism: Pointer Network&lt;/p&gt;
+&lt;p&gt;Guided Attention:  Monotonic Attention、 Location-aware attention&lt;/p&gt;
+&lt;h3 id=&#34;评价方法&#34;&gt;评价方法&lt;/h3&gt;
+&lt;p&gt;BLUE score&lt;/p&gt;
+&lt;p&gt;但BLUE难以用于optimuze，对于不知道如何optimize的问题可以使用&lt;strong&gt;RL&lt;/strong&gt;解决&lt;/p&gt;
+&lt;h3 id=&#34;exposure-bias&#34;&gt;exposure bias&lt;/h3&gt;
+&lt;p&gt;Scheduled Sampling来防止在teacher forcing下可能出现的“一步错步步错”的问题&lt;/p&gt;
 </description>
       
     </item>
