@@ -6,9 +6,18 @@
     <description>Recent content in 2021 on Lowerce&#39;s Blog - A technology &amp; emotion Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 09 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://lowerce.github.io/categories/2021/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://lowerce.github.io/categories/2021/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>李宏毅-Machine Learning</title>
+      <title>Mounty的使用技巧</title>
+      <link>https://lowerce.github.io/post/mounty-in-mac/</link>
+      <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://lowerce.github.io/post/mounty-in-mac/</guid>
+      <description>这是Lowerce&amp;rsquo;s Blog的第五篇文章 对于Mac而言，读取文件格式为NTFS的U盘或者移动硬盘是令人痛苦的，虽然并非Mac不</description>
+    </item>
+    
+    <item>
+      <title>李宏毅-Machine_Learning</title>
       <link>https://lowerce.github.io/post/ml_lhy/</link>
       <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
       

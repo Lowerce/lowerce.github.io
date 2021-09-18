@@ -10,55 +10,69 @@
   
   <url>
     <loc>https://lowerce.github.io/tags/2021/</loc>
-    <lastmod>2021-09-09T00:00:00+00:00</lastmod>
+    <lastmod>2021-09-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://lowerce.github.io/categories/2021/</loc>
-    <lastmod>2021-09-09T00:00:00+00:00</lastmod>
+    <lastmod>2021-09-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://lowerce.github.io/categories/</loc>
-    <lastmod>2021-09-09T00:00:00+00:00</lastmod>
+    <lastmod>2021-09-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://lowerce.github.io/</loc>
-    <lastmod>2021-09-09T00:00:00+00:00</lastmod>
+    <lastmod>2021-09-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://lowerce.github.io/tags/ml/</loc>
-    <lastmod>2021-09-09T00:00:00+00:00</lastmod>
+    <loc>https://lowerce.github.io/tags/mac/</loc>
+    <lastmod>2021-09-12T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://lowerce.github.io/post/mounty-in-mac/</loc>
+    <lastmod>2021-09-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://lowerce.github.io/post/</loc>
-    <lastmod>2021-09-09T00:00:00+00:00</lastmod>
+    <lastmod>2021-09-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://lowerce.github.io/tags/</loc>
-    <lastmod>2021-09-09T00:00:00+00:00</lastmod>
+    <lastmod>2021-09-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://lowerce.github.io/categories/technology/</loc>
+    <lastmod>2021-09-12T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://lowerce.github.io/tags/ml/</loc>
     <lastmod>2021-09-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

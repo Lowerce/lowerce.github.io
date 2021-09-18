@@ -6,7 +6,7 @@
     <description>Recent content on Lowerce&#39;s Blog - A technology &amp; emotion Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 09 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Sep 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://lowerce.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -42,7 +42,25 @@
     </item>
     
     <item>
-      <title>李宏毅-Machine Learning</title>
+      <title>Mounty的使用技巧</title>
+      <link>https://lowerce.github.io/post/mounty-in-mac/</link>
+      <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://lowerce.github.io/post/mounty-in-mac/</guid>
+      
+        <description>&lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第五篇文章&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;对于Mac而言，读取文件格式为NTFS的U盘或者移动硬盘是令人痛苦的，虽然并非Mac不支持，但是因为种种原因苹果并不想让各位Mac用户简单方便地读取NTFS的存储设备，所以第一个建议是：如果您是仅使用Mac的人群，那么请尽量确保您自己的存储设备文件格式为exFAT或其他Mac原生支持的文件格式，以便于您访问和操作这些存储设备内的文件。&lt;/p&gt;
+&lt;p&gt;显然，您的Mac总会有同NTFS设备接入的时候，那么这时该如何正常地访问NTFS设备呢？显然NTFS for Mac是最广泛使用的应用来帮助您访问NTFS设备，当然，这时一个付费应用，而且，对于Mac这种并非不支持NTFS访问的设备而言，花钱去访问让人感觉非常不值。那么，Mounty是一个很不错的选择。&lt;/p&gt;
+&lt;p&gt;Mounty的正常使用在此不再详述，仅记录一些使用问题的解决方法。&lt;/p&gt;
+&lt;h4 id=&#34;出现不可重新挂载问题&#34;&gt;出现不可重新挂载问题&lt;/h4&gt;
+&lt;p&gt;这种情况一般是由于未正确插拔设备导致，请在windows下使用时选择移除可移动设备后再拔除&lt;/p&gt;
+&lt;p&gt;在windows下使用&lt;strong&gt;chkdsk X: /f&lt;/strong&gt; （X为移动设备对应的盘符）命令检查磁盘即可&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>李宏毅-Machine_Learning</title>
       <link>https://lowerce.github.io/post/ml_lhy/</link>
       <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
       
@@ -100,6 +118,7 @@
 &lt;p&gt;Self-attention可以视作可调感知域的&lt;strong&gt;CNN&lt;/strong&gt;（在数据量足够大时效果要好于CNN） CNN属于简化版的Self-attention&lt;/p&gt;
 &lt;p&gt;Self-attention比起&lt;strong&gt;RNN&lt;/strong&gt;更加不受输入vector之间距离的影响&lt;/p&gt;
 &lt;h2 id=&#34;5-transformer-seq2seq&#34;&gt;5. Transformer (Seq2Seq)&lt;/h2&gt;
+&lt;p&gt;语音辨识&lt;/p&gt;
 &lt;p&gt;Encoder + Decoder&lt;/p&gt;
 &lt;h3 id=&#34;encoder&#34;&gt;Encoder&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Encoder block的构成&lt;/strong&gt;&lt;/p&gt;
@@ -125,6 +144,15 @@
 &lt;p&gt;但BLUE难以用于optimuze，对于不知道如何optimize的问题可以使用&lt;strong&gt;RL&lt;/strong&gt;解决&lt;/p&gt;
 &lt;h3 id=&#34;exposure-bias&#34;&gt;exposure bias&lt;/h3&gt;
 &lt;p&gt;Scheduled Sampling来防止在teacher forcing下可能出现的“一步错步步错”的问题&lt;/p&gt;
+&lt;h2 id=&#34;6-gan&#34;&gt;6. GAN&lt;/h2&gt;
+&lt;p&gt;输出一种分布**（Generator-生成）**&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Discriminator&lt;/strong&gt;（判别Generator生成的优劣）&lt;/p&gt;
+&lt;p&gt;D将G的生成集和训练集分别label后进行训练以期分辨G的生成和自然数据的差异(real or fake，real打分更高)；G将生成接到D上让D打分 以此作为loss 来更新G的参数&lt;/p&gt;
+&lt;p&gt;轮流固定G和D，训练D和G&lt;/p&gt;
+&lt;h3 id=&#34;训练trick&#34;&gt;训练trick&lt;/h3&gt;
+&lt;p&gt;D存在的意义是在无法或者不容易计算生成数据分布与自然数据分布的divergence的情况下给出loss使G能够train起来，divergence的选择（参见f-GAN文章）决定了D的objective function。&lt;/p&gt;
+&lt;p&gt;JS divergence 不适合区分两个分布没有重叠(overlap)的情况，而在高维空间中不同分布图像的overlap很少；Wasserstein distance适于计算两个分布之间的距离（WGAN）&lt;/p&gt;
+&lt;p&gt;未完待续&amp;hellip;&lt;/p&gt;
 </description>
       
     </item>
