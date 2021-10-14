@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Lowerce" />
-  <meta name="description" content="这是Lowerce&amp;rsquo;s Blog的第六篇文章 学点有的没的，以加深对于网络世界的理解。" />
+  <meta name="description" content="这是Lowerce&amp;rsquo;s Blog的第六篇文章 学点有的没的，以加深对于网络世界的理解。 Spring Boot 创建 在Intellij IDEA中新建项目，" />
 
 
 
@@ -59,19 +59,19 @@
 
 
 <meta property="og:title" content="前后端开发自学指南" />
-<meta property="og:description" content="这是Lowerce&rsquo;s Blog的第六篇文章 学点有的没的，以加深对于网络世界的理解。" />
+<meta property="og:description" content="这是Lowerce&rsquo;s Blog的第六篇文章 学点有的没的，以加深对于网络世界的理解。 Spring Boot 创建 在Intellij IDEA中新建项目，" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lowerce.github.io/post/site_construction/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2021-09-18T00:00:00&#43;00:00" />
 <meta property="article:modified_time" content="2021-09-18T00:00:00&#43;00:00" />
 
 <meta itemprop="name" content="前后端开发自学指南">
-<meta itemprop="description" content="这是Lowerce&rsquo;s Blog的第六篇文章 学点有的没的，以加深对于网络世界的理解。"><meta itemprop="datePublished" content="2021-09-18T00:00:00&#43;00:00" />
+<meta itemprop="description" content="这是Lowerce&rsquo;s Blog的第六篇文章 学点有的没的，以加深对于网络世界的理解。 Spring Boot 创建 在Intellij IDEA中新建项目，"><meta itemprop="datePublished" content="2021-09-18T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-09-18T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="47">
+<meta itemprop="wordCount" content="1368">
 <meta itemprop="keywords" content="website,2021," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="前后端开发自学指南"/>
-<meta name="twitter:description" content="这是Lowerce&rsquo;s Blog的第六篇文章 学点有的没的，以加深对于网络世界的理解。"/>
+<meta name="twitter:description" content="这是Lowerce&rsquo;s Blog的第六篇文章 学点有的没的，以加深对于网络世界的理解。 Spring Boot 创建 在Intellij IDEA中新建项目，"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -345,8 +345,8 @@
             <a href="https://lowerce.github.io/categories/2021/"> 2021 </a>
             
           </div>
-        <span class="more-meta"> 约 47 字 </span>
-          <span class="more-meta"> 预计阅读 1 分钟 </span>
+        <span class="more-meta"> 约 1368 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
 
         
         
@@ -361,7 +361,18 @@
 <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content">
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#spring-boot">Spring Boot</a>
+      <ul>
+        <li><a href="#bootstrap">Bootstrap</a></li>
+        <li><a href="#applicationproperties">application.properties</a></li>
+        <li><a href="#spring-">Spring @</a></li>
+        <li><a href="#快捷键">快捷键</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
   </div>
 </div>
 
@@ -371,6 +382,59 @@
 <blockquote>
 <p><em>学点有的没的，以加深对于网络世界的理解。</em></p>
 </blockquote>
+<h2 id="spring-boot">Spring Boot</h2>
+<ol>
+<li>创建</li>
+</ol>
+<p>在Intellij IDEA中新建项目，使用Spring Initializer创建即可。</p>
+<p>名称最好为网址的倒序排列。</p>
+<ol start="2">
+<li>入门</li>
+</ol>
+<p>参考<a href="https://spring.io/">spring.io</a>中<a href="https://spring.io/guides">Guides</a>栏下的<a href="https://spring.io/guides/gs/serving-web-content/">Serving Web Content with Spring MVC</a>进行配置。</p>
+<p>主要注意<code>pom.xml</code>中<code>dependency</code>的添加，<code>controller</code>的创建以及<code>templates</code>中html的添加。</p>
+<blockquote>
+<h3 id="bootstrap">Bootstrap</h3>
+<p>参考<a href="https://v3.bootcss.com/components/">bootstrap v3</a>中各组件的使用，以及<a href="https://v3.bootcss.com/css/#grid">bootstrap 栅格系统</a>。</p>
+<p>在https://v3.bootcss.com/getting-started/#download中直接下载用于生产环境的bootstrap。</p>
+<p>把这些文件放至<code>static</code>目录下。</p>
+<p>按照https://v3.bootcss.com/getting-started/#download-cdn的方式在html中部署css和js文件，路径应为<code>css/</code>或者<code>js/</code>。</p>
+<p>拷贝所需组件的代码至html文件。</p>
+</blockquote>
+<ol start="3">
+<li>登录</li>
+</ol>
+<p>参照https://docs.github.com/en/developers/apps/building-oauth-apps来使用Github登录。</p>
+<p>在<code>Developer setting</code>中创建OAuth应用。</p>
+<p>在<strong>登录</strong>按钮处按照https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps的<strong>GET</strong>部分来填写<code>href</code>，其<code>Parameters</code>使用<code>?&amp;</code>的组合传入。</p>
+<p>创建<code>controller</code>来接收<code>callback</code>的数据（包含code和state）。</p>
+<p>这里使用<a href="https://square.github.io/okhttp/">OkHttp</a>来<strong>POST</strong>。需要一个<code>DTO</code>（需要<code>POST</code>的参数以及相应的get\set方法）和一个<code>Provider</code>（创建一个方法来调用<code>OkHttp</code>）。Json依赖可以使用**<code>Fastjson</code>**，可在https://mvnrepository.com/里查找所需库并按<code>Maven</code>来添加<code>dependency</code>。</p>
+<p>在<code>controller</code>中调用<code>Provider</code>和<code>DTO</code>。</p>
+<p>再通过<code>access_token</code><strong>GET</strong>接入API。同样可以构造<code>DTO</code>（<code>DTO</code>的内容选择需要<code>GET</code>的参数内容）和<code>Provider</code>（<code>Provider</code>可以共用，因为是同一个过程的不同步骤，有些变量会重用）。使用<code>JSON.parseObject</code>来将String按照DTO的形式来切分。</p>
+<p>基本流程：<strong>GET获取code -&gt; POST获取的code来换取AccessToken -&gt; 使用AccessToken来GET用户信息</strong></p>
+<ol start="4">
+<li>Session&amp;Cookie</li>
+</ol>
+<p>HttpServletRequest用来处理Http请求，获取session并将得到的用户信息写入session以保持登录态。</p>
+<p>session信息和前端页面的绑定通过index.html的修改实现，需要根据<code>dependency</code>依赖的引擎所支持的语法来改写前端页面。</p>
+<p>&ldquo;redirect:/&ldquo;可以重定向至首页。</p>
+<ol start="5">
+<li>MySQL</li>
+</ol>
+<h3 id="applicationproperties">application.properties</h3>
+<p>server.port 指定端口</p>
+<p>可以任意指定关键字，使用时在@Value中替换即可。适用于当前环境与开发环境不一致的路径，便于快速修改。</p>
+<h3 id="spring-">Spring @</h3>
+<p>@Component</p>
+<p>@Autowired</p>
+<p>@Value(&quot;${}&quot;)</p>
+<p>@Controller</p>
+<p>@GetMapping()</p>
+<h3 id="快捷键">快捷键</h3>
+<p>ctrl alt v 快速创建变量</p>
+<p>alt insert 快速创建get\set等方法</p>
+<p>ctrl n 检索</p>
+<p>shift enter 快速换行</p>
 
     </div>
 
