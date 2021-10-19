@@ -78,7 +78,7 @@
 &lt;p&gt;在&lt;code&gt;Developer setting&lt;/code&gt;中创建OAuth应用。&lt;/p&gt;
 &lt;p&gt;在&lt;strong&gt;登录&lt;/strong&gt;按钮处按照https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps的&lt;strong&gt;GET&lt;/strong&gt;部分来填写&lt;code&gt;href&lt;/code&gt;，其&lt;code&gt;Parameters&lt;/code&gt;使用&lt;code&gt;?&amp;amp;&lt;/code&gt;的组合传入。&lt;/p&gt;
 &lt;p&gt;创建&lt;code&gt;controller&lt;/code&gt;来接收&lt;code&gt;callback&lt;/code&gt;的数据（包含code和state）。&lt;/p&gt;
-&lt;p&gt;这里使用&lt;a href=&#34;https://square.github.io/okhttp/&#34;&gt;OkHttp&lt;/a&gt;来&lt;strong&gt;POST&lt;/strong&gt;。需要一个&lt;code&gt;DTO&lt;/code&gt;（需要&lt;code&gt;POST&lt;/code&gt;的参数以及相应的get\set方法）和一个&lt;code&gt;Provider&lt;/code&gt;（创建一个方法来调用&lt;code&gt;OkHttp&lt;/code&gt;）。Json依赖可以使用**&lt;code&gt;Fastjson&lt;/code&gt;**，可在https://mvnrepository.com/里查找所需库并按&lt;code&gt;Maven&lt;/code&gt;来添加&lt;code&gt;dependency&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;这里使用&lt;a href=&#34;https://square.github.io/okhttp/&#34;&gt;OkHttp&lt;/a&gt;来&lt;strong&gt;POST&lt;/strong&gt;。需要一个&lt;code&gt;DTO&lt;/code&gt;（需要&lt;code&gt;POST&lt;/code&gt;的参数以及相应的get\set方法）和一个&lt;code&gt;Provider&lt;/code&gt;（创建一个方法来调用&lt;code&gt;OkHttp&lt;/code&gt;）。Json依赖可以使用&lt;code&gt;Fastjson&lt;/code&gt;，可在https://mvnrepository.com/里查找所需库并按&lt;code&gt;Maven&lt;/code&gt;来添加&lt;code&gt;dependency&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;在&lt;code&gt;controller&lt;/code&gt;中调用&lt;code&gt;Provider&lt;/code&gt;和&lt;code&gt;DTO&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;再通过&lt;code&gt;access_token&lt;/code&gt;&lt;strong&gt;GET&lt;/strong&gt;接入API。同样可以构造&lt;code&gt;DTO&lt;/code&gt;（&lt;code&gt;DTO&lt;/code&gt;的内容选择需要&lt;code&gt;GET&lt;/code&gt;的参数内容）和&lt;code&gt;Provider&lt;/code&gt;（&lt;code&gt;Provider&lt;/code&gt;可以共用，因为是同一个过程的不同步骤，有些变量会重用）。使用&lt;code&gt;JSON.parseObject&lt;/code&gt;来将String按照DTO的形式来切分。&lt;/p&gt;
 &lt;p&gt;基本流程：&lt;strong&gt;GET获取code -&amp;gt; POST获取的code来换取AccessToken -&amp;gt; 使用AccessToken来GET用户信息&lt;/strong&gt;&lt;/p&gt;
@@ -104,8 +104,7 @@
 &lt;p&gt;ctrl alt v 快速创建变量&lt;/p&gt;
 &lt;p&gt;alt insert 快速创建get\set等方法&lt;/p&gt;
 &lt;p&gt;ctrl n 检索&lt;/p&gt;
-&lt;p&gt;shift enter 快速换行&lt;/p&gt;
-</description>
+&lt;p&gt;shift enter 快速换行&lt;/p&gt;</description>
       
     </item>
     
@@ -122,8 +121,7 @@
 &lt;p&gt;Mounty的正常使用在此不再详述，仅记录一些使用问题的解决方法。&lt;/p&gt;
 &lt;h5 id=&#34;出现不可重新挂载问题&#34;&gt;出现不可重新挂载问题&lt;/h5&gt;
 &lt;p&gt;这种情况一般是由于未正确插拔设备导致，请在windows下使用时选择移除可移动设备后再拔除&lt;/p&gt;
-&lt;p&gt;在windows下使用&lt;strong&gt;chkdsk X: /f&lt;/strong&gt; （X为移动设备对应的盘符）命令检查磁盘即可&lt;/p&gt;
-</description>
+&lt;p&gt;在windows下使用&lt;strong&gt;chkdsk X: /f&lt;/strong&gt; （X为移动设备对应的盘符）命令检查磁盘即可&lt;/p&gt;</description>
       
     </item>
     
@@ -220,8 +218,7 @@
 &lt;h3 id=&#34;训练trick&#34;&gt;训练trick&lt;/h3&gt;
 &lt;p&gt;D存在的意义是在无法或者不容易计算生成数据分布与自然数据分布的divergence的情况下给出loss使G能够train起来，divergence的选择（参见f-GAN文章）决定了D的objective function。&lt;/p&gt;
 &lt;p&gt;JS divergence 不适合区分两个分布没有重叠(overlap)的情况，而在高维空间中不同分布图像的overlap很少；Wasserstein distance适于计算两个分布之间的距离（WGAN）&lt;/p&gt;
-&lt;p&gt;未完待续&amp;hellip;&lt;/p&gt;
-</description>
+&lt;p&gt;未完待续&amp;hellip;&lt;/p&gt;</description>
       
     </item>
     
@@ -247,8 +244,7 @@
 &lt;h4 id=&#34;sort&#34;&gt;sort&lt;/h4&gt;
 &lt;p&gt;sort(begin(),end())这样用，反正可以直接按从小到大光速排序，这里的开始和结束参照reverse，输入是完全一样的方法。说明前面的猜想是正确的😄。&lt;/p&gt;
 &lt;p&gt;好像还可以用自定义函数作为第三个输入参量来作为排序依据，这个等以后做题遇到的时候再写吧，没用过的东西一概不写😋。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;以后随时更新&amp;hellip;&lt;/strong&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;strong&gt;以后随时更新&amp;hellip;&lt;/strong&gt;&lt;/p&gt;</description>
       
     </item>
     
@@ -286,8 +282,7 @@
 &lt;h3 id=&#34;3-for&#34;&gt;3. for&lt;/h3&gt;
 &lt;p&gt;for循环一些自动遍历的trick之前没用过。&lt;/p&gt;
 &lt;p&gt;比如for(auto i:nums)或者for(auto &amp;amp;i:maps)，后者取值用t.first和t.second即可。也可以for(auto &amp;amp;[key,vaule]:maps)就能直接取到key和value啦。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;以后随时更新&amp;hellip;&lt;/strong&gt;&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;strong&gt;以后随时更新&amp;hellip;&lt;/strong&gt;&lt;/p&gt;</description>
       
     </item>
     
@@ -309,8 +304,7 @@
 &lt;p&gt;毕业后的假期过的仍旧是喜忧参半吧，可能我跟我自己不太对付，我需要独处的时间越来越多，但是自己待着心情又越来越差，幸运的是我还有工作可做，刚刚从南航离开就去了合肥，一住就是一周，好喜欢这种一个人住在陌生城市里的感觉，每走远一步，就有新的惊喜，这种无拘无束的日子我特别特别喜欢，工作也没少完成，几天内看了篇巨长的文献，学了不少G4的原理，这些从没接触过的东西塞到脑子里的感觉，还不错，挺有意思的。回到家里，也在被师兄们的牛逼push着，所以东西也没少学，论文也没少看，啥感兴趣学啥的感觉真好呀。&lt;/p&gt;
 &lt;p&gt;小姑娘在几个晚上给我打了几通电话，都在讲在那次“激烈”的交流吧，小姑娘没有做错什么，我的不对更多一些吧，像是一个小朋友在看面前的人是不是在乎自己一样，把脸扭向一边，看看她有没有发现我的不开心，很幼稚，但是小朋友获得了自己想要得到的🍬。开学之前的不开心都在跟小姑娘分享着，我好喜欢小姑娘呀。&lt;/p&gt;
 &lt;p&gt;开学后的时光平平无奇，开课前的研究生教育，开课后的上课，一切都跟本科并无不同，区别就在于热水的供应时间和需要骑车才能到达的教室。我的博士生涯就在这样的波澜不惊中开始了，直到十月初，小姑娘来到北京找我。那些时光就像在昨天一样，我彻底爱上了小姑娘。&lt;/p&gt;
-&lt;p&gt;2020年剩下的时光就是我和姑娘的爱情故事啦，2021、2022、2023……，嘿嘿，未来的每一年都会是的！这是属于我们两个的爱情故事💓。&lt;/p&gt;
-</description>
+&lt;p&gt;2020年剩下的时光就是我和姑娘的爱情故事啦，2021、2022、2023……，嘿嘿，未来的每一年都会是的！这是属于我们两个的爱情故事💓。&lt;/p&gt;</description>
       
     </item>
     
