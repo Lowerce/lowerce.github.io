@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>2021 · Lowerce&#39;s Blog - A technology &amp; emotion Blog</title>
+  <title>Docker原理及应用 - Lowerce&#39;s Blog - A technology &amp; emotion Blog</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,6 +23,9 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Lowerce" />
+  <meta name="description" content="这是Lowerce&amp;rsquo;s Blog的第七篇文章
+" />
+
 
 
 
@@ -32,8 +35,8 @@
 <meta name="generator" content="Hugo 0.82.0" />
 
 
-<link rel="canonical" href="https://lowerce.github.io/tags/2021/" />
-<link href="/tags/2021/index.xml" rel="alternate" type="application/rss+xml" title="Lowerce&#39;s Blog - A technology &amp; emotion Blog" />
+<link rel="canonical" href="https://lowerce.github.io/post/docker/" />
+
 
 
 
@@ -56,15 +59,20 @@
 
 
 
-<meta property="og:title" content="2021" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://lowerce.github.io/tags/2021/" />
+<meta property="og:title" content="Docker原理及应用" />
+<meta property="og:description" content="这是Lowerce&rsquo;s Blog的第七篇文章" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lowerce.github.io/post/docker/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-10-24T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-10-24T00:00:00&#43;00:00" />
 
-<meta itemprop="name" content="2021">
-<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="2021"/>
-<meta name="twitter:description" content=""/>
+<meta itemprop="name" content="Docker原理及应用">
+<meta itemprop="description" content="这是Lowerce&rsquo;s Blog的第七篇文章"><meta itemprop="datePublished" content="2021-10-24T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-10-24T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="266">
+<meta itemprop="keywords" content="Docker,Geant4,2021," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Docker原理及应用"/>
+<meta name="twitter:description" content="这是Lowerce&rsquo;s Blog的第七篇文章"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -324,94 +332,122 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
-
-<section id="archive" class="archive">
-  
+          <article class="post bg-white">
     
-      <div class="archive-title tag">
-        <h2 class="archive-name">标签： 2021</h2>
+    <header class="post-header">
+      <h1 class="post-title">Docker原理及应用</h1>
+      
+      <div class="post-meta">
+        <time datetime="2021-10-24" class="post-time">
+          2021-10-24
+        </time>
+        <div class="post-category">
+            <a href="https://lowerce.github.io/categories/technology/"> technology </a>
+            <a href="https://lowerce.github.io/categories/2021/"> 2021 </a>
+            
+          </div>
+        <span class="more-meta"> 约 266 字 </span>
+          <span class="more-meta"> 预计阅读 1 分钟 </span>
+
+        
+        
+
+        
+        
       </div>
+    </header>
+
     
-  
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#command">Command</a></li>
+    <li><a href="#dockerfile">Dockerfile</a></li>
+    <li><a href="#trick">Trick</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
 
-  
-    <div class="archive-post">
-      <time datetime="2021-10-24" class="archive-post-time">
-        2021-10-24
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/docker/" class="archive-post-link">
-          Docker原理及应用
-        </a>
-      </span>
+    
+    <div class="post-content">
+      <p><em>这是Lowerce&rsquo;s Blog的第七篇文章</em></p>
+<h2 id="command">Command</h2>
+<p><code>docker images</code>  列出全部映像</p>
+<p><code>docker run -it 映像</code>  运行并保持某一映像</p>
+<p><code>docker ps -a</code>  列出全部容器（包括未在运行的）</p>
+<p><code>docker container prune</code>  删除全部已停止的容器</p>
+<p><code>docker rm 容器</code>   删除指定容器</p>
+<p><code>docker port 容器</code>  查看容器所映射的端口</p>
+<p><code>docker start 容器</code>  启动指定容器</p>
+<p><code>docker stop 容器</code>  停止指定容器</p>
+<p><code>docker search 映像</code>  搜索所需映像</p>
+<h2 id="dockerfile">Dockerfile</h2>
+<h2 id="trick">Trick</h2>
+<p><code>docker run --rm 映像</code></p>
+<p>映像不存在时自动pull映像运行并在映像运行结束后自动删除容器</p>
+<p><code>docker run -d -P --name 指定一个名称 映像</code></p>
+<p>终端界面可以自由关闭而不影响容器的持续运行，映射容器的端口到本机的随机端口，并为容器指定名称</p>
+<p><code>docker run -p 本机端口:映像端口 映像</code></p>
+<p>将映像的端口映射到本机的端口中来启动容器</p>
     </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Lowerce</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+      2021-10-24
+      
+    </span>
+  </p>
   
-    <div class="archive-post">
-      <time datetime="2021-09-18" class="archive-post-time">
-        2021-09-18
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/site_construction/" class="archive-post-link">
-          前后端开发自学指南
-        </a>
-      </span>
-    </div>
-  
-    <div class="archive-post">
-      <time datetime="2021-09-12" class="archive-post-time">
-        2021-09-12
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/mounty-in-mac/" class="archive-post-link">
-          Mounty的使用技巧
-        </a>
-      </span>
-    </div>
-  
-    <div class="archive-post">
-      <time datetime="2021-09-09" class="archive-post-time">
-        2021-09-09
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/ml_lhy/" class="archive-post-link">
-          李宏毅-Machine_Learning
-        </a>
-      </span>
-    </div>
-  
-    <div class="archive-post">
-      <time datetime="2021-08-29" class="archive-post-time">
-        2021-08-29
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/leetcode-record-2/" class="archive-post-link">
-          使用leetcode练习算法的一些总结(UPDATE-1)
-        </a>
-      </span>
-    </div>
-  
-    <div class="archive-post">
-      <time datetime="2021-08-24" class="archive-post-time">
-        2021-08-24
-      </time>
-      <span class="archive-post-title">
-        <a href="/post/leetcode-record/" class="archive-post-link">
-          使用leetcode练习算法的一些总结
-        </a>
-      </span>
-    </div>
-  
-</section>
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
 
 
+    
+    
 
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="https://lowerce.github.io/tags/docker/">Docker</a>
+          <a href="https://lowerce.github.io/tags/geant4/">Geant4</a>
+          <a href="https://lowerce.github.io/tags/2021/">2021</a>
+          
+        </div>
 
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/site_construction/">
+            <span class="next-text nav-default">前后端开发自学指南</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
 
-
-  
-  
-  
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
 
   
   
@@ -420,14 +456,19 @@
   
 
   
-  
 
   
   
 
+  
 
+  
 
+  
 
+    
+
+  
 
         </div>
       </div>
