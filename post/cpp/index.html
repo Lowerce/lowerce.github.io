@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Lowerce&#39;s Blog - A technology &amp; emotion Blog</title>
+  <title>C&#43;&#43; Primer充电以及C&#43;&#43;特性了解 - Lowerce&#39;s Blog - A technology &amp; emotion Blog</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,6 +23,9 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="Lowerce" />
+  <meta name="description" content="这是Lowerce&amp;rsquo;s Blog的第九篇文章
+" />
+
 
 
 
@@ -32,8 +35,8 @@
 <meta name="generator" content="Hugo 0.82.0" />
 
 
-<link rel="canonical" href="https://lowerce.github.io/" />
-<link href="/index.xml" rel="alternate" type="application/rss+xml" title="Lowerce&#39;s Blog - A technology &amp; emotion Blog" />
+<link rel="canonical" href="https://lowerce.github.io/post/cpp/" />
+
 
 
 
@@ -56,15 +59,20 @@
 
 
 
-<meta property="og:title" content="Lowerce&#39;s Blog - A technology &amp; emotion Blog" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://lowerce.github.io/" />
+<meta property="og:title" content="C&#43;&#43; Primer充电以及C&#43;&#43;特性了解" />
+<meta property="og:description" content="这是Lowerce&rsquo;s Blog的第九篇文章" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://lowerce.github.io/post/cpp/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-11-07T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-11-07T00:00:00&#43;00:00" />
 
-<meta itemprop="name" content="Lowerce&#39;s Blog - A technology &amp; emotion Blog">
-<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Lowerce&#39;s Blog - A technology &amp; emotion Blog"/>
-<meta name="twitter:description" content=""/>
+<meta itemprop="name" content="C&#43;&#43; Primer充电以及C&#43;&#43;特性了解">
+<meta itemprop="description" content="这是Lowerce&rsquo;s Blog的第九篇文章"><meta itemprop="datePublished" content="2021-11-07T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-11-07T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="3562">
+<meta itemprop="keywords" content="C&#43;&#43;,2021," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="C&#43;&#43; Primer充电以及C&#43;&#43;特性了解"/>
+<meta name="twitter:description" content="这是Lowerce&rsquo;s Blog的第九篇文章"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -232,7 +240,7 @@
   <ul id="menu" class="menu">
     
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -324,171 +332,305 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
-<section id="posts" class="posts">
-  
-  
+          <article class="post bg-white">
     
-  
-  
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
+    <header class="post-header">
+      <h1 class="post-title">C&#43;&#43; Primer充电以及C&#43;&#43;特性了解</h1>
       
-      <a class="post-link" href="/post/cpp/">C&#43;&#43; Primer充电以及C&#43;&#43;特性了解</a>
-    </h1>
+      <div class="post-meta">
+        <time datetime="2021-11-07" class="post-time">
+          2021-11-07
+        </time>
+        <div class="post-category">
+            <a href="https://lowerce.github.io/categories/technology/"> technology </a>
+            <a href="https://lowerce.github.io/categories/2021/"> 2021 </a>
+            
+          </div>
+        <span class="more-meta"> 约 3562 字 </span>
+          <span class="more-meta"> 预计阅读 8 分钟 </span>
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
     
-    <div class="post-meta">
-      <time datetime="2021-11-07" class="post-time">
-        2021-11-07
-      </time>
-      <div class="post-category">
-          <a href="https://lowerce.github.io/categories/technology/"> technology </a>
-          <a href="https://lowerce.github.io/categories/2021/"> 2021 </a>
-          
-        </div>
-      <span class="more-meta"> 约 3562 字 </span>
-      <span class="more-meta"> 预计阅读 8 分钟 </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
     
-    <div class="post-summary">
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#c-primer">C++ Primer</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#c特性">C++特性</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
       <p><em>这是Lowerce&rsquo;s Blog的第九篇文章</em></p>
+<blockquote>
+<p><em>C++基础知识？</em></p>
+</blockquote>
+<h2 id="c-primer">C++ Primer</h2>
+<ul>
+<li>单文件编译</li>
+</ul>
+<p>​        g++ -o 输出文件名 待编译文件名</p>
+<ul>
+<li>读取、输出到文件</li>
+</ul>
+<p>​        程序名 &lt; 输入文件 程序名 &gt; 输出文件</p>
+<h4 id="数据类型">数据类型</h4>
+<ul>
+<li>选用的经验：</li>
+</ul>
+<p>​        数值不为负选择无符号型(unsigned)
+​        整数运算选用<code>int</code>，超过表示范围的话选用<code>long long</code>
+​        浮点数运算选用<code>double</code></p>
+<ul>
+<li>不要混用有符号类型和无符号类型，带符号数会自动转换为无符号数，等于初始值对无符号类型所能表示的数值总数取模后的余数</li>
+<li>字符型字面值常量的类型可以通过前缀指定，整型、浮点型可以通过后缀指定</li>
+</ul>
+<h4 id="变量">变量</h4>
+<ul>
+<li>初始化和赋值存在本质上的巨大区别</li>
+<li>使用列表初始化{}，在可能的数据丢失时会使编译器给出警告</li>
+<li>声明(declaration)和定义(definition)是不同的，声明使名字为程序所知，定义则为变量申请存储空间或赋初值</li>
+<li>使用<code>extern</code>关键字来声明变量</li>
+<li>变量能且只能被定义一次，但可以被多次声明</li>
+<li>C++是静态语言——在编译阶段检查类型</li>
+<li>全局变量在块作用域内用<code>::</code>前缀可以显式访问（屏蔽块作用域内的局部变量）</li>
+<li>局部变量最好不要同全局变量同名</li>
+</ul>
+<h4 id="复合类型">复合类型</h4>
+<ul>
+<li>通过在变量名前加<code>&amp;</code>来定义引用类型，引用必须初始化</li>
+<li><strong>引用即别名</strong></li>
+<li>引用只能绑定在对象上</li>
+<li>指针存放对象的地址，使用<strong>取地址符</strong><code>&amp;</code>获取地址</li>
+<li>利用指针访问对象，使用<strong>解引用符</strong><code>*</code>访问对象</li>
+<li><code>&amp;</code>和<code>*</code>出现在声明和表达式中的含义截然不同</li>
+<li>初始化空指针(=nullptr、=0、=NULL)</li>
+<li>赋值永远改变的是等号左侧的对象</li>
+<li><code>void*</code>可以存放任意对象的地址</li>
+<li>类型修饰符(<code>*</code>和<code>&amp;</code>)仅修饰其后的<strong>第一个</strong>变量标识符</li>
+</ul>
+<h4 id="const限定符">const限定符</h4>
+<ul>
+<li>弄清声明的含义最有效的方法是从右向左阅读</li>
+<li><code>*</code>放在const之前说明指针是一个常量-不变的是指针本身的值而非指向的那个值</li>
+<li>指针本身是一个常量并不意味着不能通过指针修改其所指向对象的值</li>
+<li>非常量可以转换为常量 反之则不行</li>
+<li>常量表达式是指值不会改变并且在编译过程就能得到计算结果的表达式</li>
+<li>一个对象是不是常量表达式由它的数据类型和初始值共同决定</li>
+<li>顶层const 和 底层const</li>
+</ul>
+<h4 id="处理类型">处理类型</h4>
+<ul>
+<li>类型别名：typedef 前者 后者 —— 后者是前者的同义词</li>
+<li>注意typedef中使用<code>*</code>的情况（并不是简单的替换关系）</li>
+<li>别名声明：using 前者 = 后者 —— 前者是后者的同义词</li>
+<li>auto 根据初值自动推断数据类型（仅保留底层const）顶层const需要在auto前加以修饰</li>
+<li><code>*</code>和<code>&amp;</code>只从属于某个声明符而非基本数据类型的一部分</li>
+<li>decltype 推断表达式类型而不使用其作为初值（保留变量的全部类型）</li>
+<li>如果decltype使用的表达式不是一个变量，则decltype返回表达式结果对应的类型</li>
+<li>如果表达式的内容是解引用操作，则decltype将得到引用类型</li>
+<li>对于decltype所用的表达式来说，在变量名上加括号与不加括号得到的类型会有不同</li>
+<li>decltype((变量))的结果永远是引用，decltype(变量)只有在变量本身是引用时才是引用</li>
+</ul>
+<h4 id="自定义数据结构">自定义数据结构</h4>
+<ul>
+<li>struct 类名 类体 <code>;</code></li>
+<li>预处理器保证头文件多次包含仍能安全工作——头文件保护符</li>
+<li><code>#define</code>把一个名字设定为预处理变量</li>
+<li><code>#ifdef</code>当且仅当变量已定义时为真</li>
+<li><code>#ifndef</code>当且仅当变量未定义时为真</li>
+<li><code>#endif</code>检查结果为真时执行后续操作直到出现此命令</li>
+<li>一般将预处理变量名全部大写以保证其唯一性</li>
+<li>头文件一旦改变，相关的源文件必须重新编译以获取更新过的声明</li>
+</ul>
+<h4 id="using声明">using声明</h4>
+<ul>
+<li><code>using namespace::name;</code></li>
+<li>头文件中不应包含using声明</li>
+</ul>
+<h4 id="string">string</h4>
+<ul>
+<li><code>std::string</code> 可变长字符序列</li>
+<li>在执行读取操作时，string对象会自动忽略开头的空白（空格符、换行符、制表符等）并从第一个真正的字符开始读起，直到遇见下一处空白为止</li>
+<li>常用操作:<code>getline(a,b)</code>——从a中读取一行（以换行符为界）赋给b <code>s.empty()</code>——判断s是否为空 <code>s.size()</code></li>
+<li>size函数的返回值是一个无符号整型数（类型为string::size_type） 注意避免int和unsigned混用</li>
+<li>string的比较：1.字符相同时，较短string小于较长string；2.字符相异时，第一对相异字符的比较</li>
+<li>当string对象和字符/字符串字面值混在一条语句中时，必须确保每个+两侧的运算对象至少有一个是string</li>
+<li><strong>字符串字面值与string是不同的类型</strong></li>
+<li>使用C++版本的C标准库头文件 <code>ctype.h</code>=&gt;<code>cctype</code></li>
+<li>cctype中包含一系列字符的判断和处理函数</li>
+<li>基于范围的for语句 <code>for (declaration : expression)</code> 类似于python中的for语句</li>
+<li>string中的字符可以通过下标访问</li>
+<li>始终注意检查下标的合法性（是否在正确的范围内）</li>
+</ul>
+<h4 id="vector">vector</h4>
+<ul>
+<li><code>std::vector</code> 对象的集合（所有对象的类型相同）；容器</li>
+<li>vector是模板而非类型</li>
+<li>vector&lt;类型&gt; 容器名;</li>
+<li>vector丰富的初始化方式：列表、拷贝、构造&hellip;</li>
+<li>push_back(值) 将值作为vector的尾元素压到vector的尾端</li>
+<li>vector能高效地快速添加元素（没有必要为其指定容量）</li>
+<li>如果循环体内部包含有向vector添加元素的语句，则不能使用范围for循环</li>
+<li>empty和size函数与string的类似</li>
+<li>size函数的返回值也是属于vector的特殊类型size_type 但需要指出vector的元素类型</li>
+<li>vector的比较法则也与string类似</li>
+<li>vector不能使用下标添加元素，只能使用下标访问已存在的元素</li>
+</ul>
+<h4 id="迭代器">迭代器</h4>
+<ul>
+<li>有迭代器的类型同时拥有返回迭代器的成员</li>
+<li>begin()返回指向第一个元素的迭代器 end()返回指向尾元素下一位置**（尾后）**的迭代器</li>
+<li>一般来说，我们不清楚迭代器的准确类型（使用auto来定义变量）</li>
+<li><code>*iter</code>返回迭代器所指元素的引用 <code>iter-&gt;mem</code> <code>++iter</code>/<code>--iter</code>指示容器的下一个/上一个元素</li>
+<li>泛型编程：所有标准库容器的迭代器都定义了==和!=，所以在for循环中使用!=而非&lt;，因为这种编程风格在标准库提供的所有容器中都有效</li>
+<li>const_iterator只能读元素，不能写元素</li>
+<li><code>-&gt;</code>即为解引用和成员访问的结合，it-&gt;mem等价于(*it).mem</li>
+<li>任何一种可能改变vector容量的操作，都会使该vector的迭代器失效</li>
+<li>凡是使用了迭代器的循环体，都不要向迭代器所属的容易添加元素</li>
+<li>两个迭代器相减的结果为difference_type（带符号整型数）</li>
+</ul>
+<h4 id="数组">数组</h4>
+<ul>
+<li>与vector类似的是存放类型相同的对象的容器；不同的是数组的大小确定不变，不能随意向其增加元素</li>
+<li>数组中元素的个数也是数组类型的一部分，所以需要为常量表达式</li>
+<li>数组的初始化：列表初始化，不允许拷贝</li>
+<li>字符数组可以使用字符串字面值初始化，但要注意字符串字面值结尾处自带一个空字符</li>
+<li>默认情况下，类型修饰符从右向左依次绑定；但对于数组而言，由（括号）内向外阅读更有意义</li>
+<li>在使用数组下标时，通常将其定义为size_t类型</li>
+<li>使用数组类型的对象其实是使用一个指向该数组首元素的指针</li>
+<li>当使用数组作为一个auto变量的初始值时，推断得到的类型是指针而非数组；但是decltype不会发生上述转换</li>
+<li>数组可以使用下标索引尾元素后那个并不存在的元素</li>
+<li>begin(数组名)/end(数组名)能安全地返回首元素指针/尾后元素指针</li>
+<li>两个指针相减的结果为ptrdiff_t</li>
+<li>如果两个指针分别指向不相关的对象，则不能比较</li>
+<li>内置的下标运算符所用的索引值不是无符号类型，这与vector和string是不同的</li>
+<li>使用标准库string比使用C风格字符串更安全高效</li>
+<li>尽量使用标准库类型而非数组</li>
+</ul>
+<h4 id="多维数组">多维数组</h4>
+<ul>
+<li>严格来说，C++中没有多维数组，通常所说的多维数组其实是数组的数组</li>
+<li>使用<code>{}</code>括起来的一组值初始化多维数组，花括号嵌套与否完全等价（嵌套只是为了更清晰地阅读）</li>
+<li>可以仅初始化部分元素，其它元素执行默认初始化</li>
+<li></li>
+</ul>
+<h2 id="c特性">C++特性</h2>
+<ul>
+<li><strong><code>unique_ptr&lt;类型&gt;</code></strong></li>
+</ul>
+<p>​		代表一种不共享的指针，不能复制只能移动(<code>std::move</code>)，可以通过<code>make_unique&lt;类型&gt;(参数)</code>来创建。归属于头文件<code>&lt;memory&gt;</code>，属于C++标准库。</p>
+<p>​		参考 <a href="https://docs.microsoft.com/en-us/cpp/cpp/how-to-create-and-use-unique-ptr-instances?view=msvc-160">How to: Create and use unique_ptr instances</a></p>
+<ul>
+<li><strong><code>inline</code></strong></li>
+</ul>
+<p>​		一种关键字，表示内联。在程序编译过程中对内联部分的代码调用直接替换代码段。仅适用于简单函数，仅对编译器进行建议，必须与实际实现的函数体放在一起才有意义（仅作用于声明则无效）。</p>
+<p>​		参考 <a href="https://www.runoob.com/w3cnote/cpp-inline-usage.html">C++ 中的 inline 用法</a></p>
+<ul>
+<li><strong><code>const</code></strong></li>
+</ul>
+<p>​		一种关键字，表示常量。被修饰的对象或变量无法被修改。</p>
+<p>​		const对象必须初始化，仅在文件内有效。</p>
+<p>​		如果想在多个文件中共享const对象，必须在变量的定义之前添加extern关键字。</p>
+<p>​		允许一个常量引用绑定非常量对象，但无法通过常量引用改变非常量对象。类似的，允许一个常量指针绑定非常量对象。</p>
+<p>​        参考 <a href="https://docs.microsoft.com/en-us/cpp/cpp/const-cpp?view=msvc-160">const (C++)</a></p>
+<ul>
+<li><strong><code>constexpr</code></strong></li>
+</ul>
+<p>​        用来修饰编译器常量。由编译器来验证变量的值是否是一个常量表达式。</p>
+<p>​        在C++ 11中，表示“常量”可以用constexpr，表示“只读”时才用const。</p>
+<p>​        constexpr在修饰指针时仅对指针有效，与指针所指的对象无关。</p>
     </div>
-    <div class="read-more">
-      <a href="/post/cpp/" class="read-more-link">阅读全文</a>
-    </div>
-    
-  </div>
-</article>
 
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/docker/">Docker原理及应用</a>
-    </h1>
     
-    <div class="post-meta">
-      <time datetime="2021-10-24" class="post-time">
-        2021-10-24
-      </time>
-      <div class="post-category">
-          <a href="https://lowerce.github.io/categories/technology/"> technology </a>
-          <a href="https://lowerce.github.io/categories/2021/"> 2021 </a>
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Lowerce</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+      2021-11-07
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="https://lowerce.github.io/tags/c&#43;&#43;/">C&#43;&#43;</a>
+          <a href="https://lowerce.github.io/tags/2021/">2021</a>
           
         </div>
-      <span class="more-meta"> 约 266 字 </span>
-      <span class="more-meta"> 预计阅读 1 分钟 </span>
+
       
-      
-      
-    </div>
-  </header>
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/docker/">
+            <span class="next-text nav-default">Docker原理及应用</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
   
-  <div class="post-content">
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
     
-    <div class="post-summary">
-      <p><em>这是Lowerce&rsquo;s Blog的第七篇文章</em></p>
-    </div>
-    <div class="read-more">
-      <a href="/post/docker/" class="read-more-link">阅读全文</a>
-    </div>
-    
-  </div>
-</article>
 
   
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/site_construction/">前后端开发自学指南</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2021-09-18" class="post-time">
-        2021-09-18
-      </time>
-      <div class="post-category">
-          <a href="https://lowerce.github.io/categories/technology/"> technology </a>
-          <a href="https://lowerce.github.io/categories/2021/"> 2021 </a>
-          
-        </div>
-      <span class="more-meta"> 约 1364 字 </span>
-      <span class="more-meta"> 预计阅读 3 分钟 </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      <p><em>这是Lowerce&rsquo;s Blog的第六篇文章</em></p>
-    </div>
-    <div class="read-more">
-      <a href="/post/site_construction/" class="read-more-link">阅读全文</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-</section>
-
-
-
-
-
-
-  
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-  <nav class="pagination">
-    <ul>
-      
-      <li  class="active" >
-        <a href="/">1</a>
-      </li>
-      
-      <li >
-        <a href="/page/2/">2</a>
-      </li>
-      
-      <li >
-        <a href="/page/3/">3</a>
-      </li>
-      
-    </ul>
-  </nav>
-
-  
-  
-
-
-
-
 
         </div>
       </div>

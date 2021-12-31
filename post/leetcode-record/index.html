@@ -69,7 +69,7 @@
 <meta itemprop="name" content="使用leetcode练习算法的一些总结">
 <meta itemprop="description" content="这是Lowerce&rsquo;s Blog的第二篇文章"><meta itemprop="datePublished" content="2021-08-24T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-08-24T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1167">
+<meta itemprop="wordCount" content="1165">
 <meta itemprop="keywords" content="algorithm,c&#43;&#43;,2021," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="使用leetcode练习算法的一些总结"/>
 <meta name="twitter:description" content="这是Lowerce&rsquo;s Blog的第二篇文章"/>
@@ -346,7 +346,7 @@
             <a href="https://lowerce.github.io/categories/2021/"> 2021 </a>
             
           </div>
-        <span class="more-meta"> 约 1167 字 </span>
+        <span class="more-meta"> 约 1165 字 </span>
           <span class="more-meta"> 预计阅读 3 分钟 </span>
 
         
@@ -394,7 +394,7 @@
 <h4 id="查找">查找</h4>
 <p>作为一个哈希表，查找是其得到使用的根本原因。</p>
 <p>看一个key是不是在表里， if(maps.find(&ldquo;hello&rdquo;)!=maps.end()) ，如果返回true，则说明在表里。这里的返回值是一个迭代器，迭代器这么用，maps.find(&ldquo;hello&rdquo;)-&gt;first ，这就是key的值（也就是&quot;hello&quot;），maps.find(&ldquo;hello&rdquo;)-&gt;second ，这就是&quot;hello&quot;对应的value值。</p>
-<p>想遍历map，也得靠迭代器，先造个迭代器，unordered_map&lt;string,int&gt;::iterator itr，然后for循环的用法就跟一般的遍历差不多了。for(itr=maps.begin();itr&lt;maps.end();itr++)这样就能遍历啦。</p>
+<p>想遍历map，也得靠迭代器，先造个迭代器，unordered_map&lt;string,int&gt;::iterator itr，然后for循环的用法就跟一般的遍历差不多了。for(itr=maps.begin();itr!=maps.end();itr++)这样就能遍历啦。</p>
 <h3 id="2-string">2. string</h3>
 <p>string的各种操作用法千奇百怪，很多感觉几乎等效。</p>
 <h4 id="assign">assign</h4>

@@ -6,7 +6,7 @@
     <description>Recent content on Lowerce&#39;s Blog - A technology &amp; emotion Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 24 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 07 Nov 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://lowerce.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -37,6 +37,195 @@
 &lt;li&gt;&lt;em&gt;Host Computer Programming&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
+      
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; Primer充电以及C&#43;&#43;特性了解</title>
+      <link>https://lowerce.github.io/post/cpp/</link>
+      <pubDate>Sun, 07 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://lowerce.github.io/post/cpp/</guid>
+      
+        <description>&lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第九篇文章&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;C++基础知识？&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;c-primer&#34;&gt;C++ Primer&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;单文件编译&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;​        g++ -o 输出文件名 待编译文件名&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;读取、输出到文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;​        程序名 &amp;lt; 输入文件 程序名 &amp;gt; 输出文件&lt;/p&gt;
+&lt;h4 id=&#34;数据类型&#34;&gt;数据类型&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;选用的经验：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;​        数值不为负选择无符号型(unsigned)
+​        整数运算选用&lt;code&gt;int&lt;/code&gt;，超过表示范围的话选用&lt;code&gt;long long&lt;/code&gt;
+​        浮点数运算选用&lt;code&gt;double&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不要混用有符号类型和无符号类型，带符号数会自动转换为无符号数，等于初始值对无符号类型所能表示的数值总数取模后的余数&lt;/li&gt;
+&lt;li&gt;字符型字面值常量的类型可以通过前缀指定，整型、浮点型可以通过后缀指定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;变量&#34;&gt;变量&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;初始化和赋值存在本质上的巨大区别&lt;/li&gt;
+&lt;li&gt;使用列表初始化{}，在可能的数据丢失时会使编译器给出警告&lt;/li&gt;
+&lt;li&gt;声明(declaration)和定义(definition)是不同的，声明使名字为程序所知，定义则为变量申请存储空间或赋初值&lt;/li&gt;
+&lt;li&gt;使用&lt;code&gt;extern&lt;/code&gt;关键字来声明变量&lt;/li&gt;
+&lt;li&gt;变量能且只能被定义一次，但可以被多次声明&lt;/li&gt;
+&lt;li&gt;C++是静态语言——在编译阶段检查类型&lt;/li&gt;
+&lt;li&gt;全局变量在块作用域内用&lt;code&gt;::&lt;/code&gt;前缀可以显式访问（屏蔽块作用域内的局部变量）&lt;/li&gt;
+&lt;li&gt;局部变量最好不要同全局变量同名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;复合类型&#34;&gt;复合类型&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;通过在变量名前加&lt;code&gt;&amp;amp;&lt;/code&gt;来定义引用类型，引用必须初始化&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;引用即别名&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;引用只能绑定在对象上&lt;/li&gt;
+&lt;li&gt;指针存放对象的地址，使用&lt;strong&gt;取地址符&lt;/strong&gt;&lt;code&gt;&amp;amp;&lt;/code&gt;获取地址&lt;/li&gt;
+&lt;li&gt;利用指针访问对象，使用&lt;strong&gt;解引用符&lt;/strong&gt;&lt;code&gt;*&lt;/code&gt;访问对象&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;amp;&lt;/code&gt;和&lt;code&gt;*&lt;/code&gt;出现在声明和表达式中的含义截然不同&lt;/li&gt;
+&lt;li&gt;初始化空指针(=nullptr、=0、=NULL)&lt;/li&gt;
+&lt;li&gt;赋值永远改变的是等号左侧的对象&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;void*&lt;/code&gt;可以存放任意对象的地址&lt;/li&gt;
+&lt;li&gt;类型修饰符(&lt;code&gt;*&lt;/code&gt;和&lt;code&gt;&amp;amp;&lt;/code&gt;)仅修饰其后的&lt;strong&gt;第一个&lt;/strong&gt;变量标识符&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;const限定符&#34;&gt;const限定符&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;弄清声明的含义最有效的方法是从右向左阅读&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;*&lt;/code&gt;放在const之前说明指针是一个常量-不变的是指针本身的值而非指向的那个值&lt;/li&gt;
+&lt;li&gt;指针本身是一个常量并不意味着不能通过指针修改其所指向对象的值&lt;/li&gt;
+&lt;li&gt;非常量可以转换为常量 反之则不行&lt;/li&gt;
+&lt;li&gt;常量表达式是指值不会改变并且在编译过程就能得到计算结果的表达式&lt;/li&gt;
+&lt;li&gt;一个对象是不是常量表达式由它的数据类型和初始值共同决定&lt;/li&gt;
+&lt;li&gt;顶层const 和 底层const&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;处理类型&#34;&gt;处理类型&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;类型别名：typedef 前者 后者 —— 后者是前者的同义词&lt;/li&gt;
+&lt;li&gt;注意typedef中使用&lt;code&gt;*&lt;/code&gt;的情况（并不是简单的替换关系）&lt;/li&gt;
+&lt;li&gt;别名声明：using 前者 = 后者 —— 前者是后者的同义词&lt;/li&gt;
+&lt;li&gt;auto 根据初值自动推断数据类型（仅保留底层const）顶层const需要在auto前加以修饰&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;*&lt;/code&gt;和&lt;code&gt;&amp;amp;&lt;/code&gt;只从属于某个声明符而非基本数据类型的一部分&lt;/li&gt;
+&lt;li&gt;decltype 推断表达式类型而不使用其作为初值（保留变量的全部类型）&lt;/li&gt;
+&lt;li&gt;如果decltype使用的表达式不是一个变量，则decltype返回表达式结果对应的类型&lt;/li&gt;
+&lt;li&gt;如果表达式的内容是解引用操作，则decltype将得到引用类型&lt;/li&gt;
+&lt;li&gt;对于decltype所用的表达式来说，在变量名上加括号与不加括号得到的类型会有不同&lt;/li&gt;
+&lt;li&gt;decltype((变量))的结果永远是引用，decltype(变量)只有在变量本身是引用时才是引用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;自定义数据结构&#34;&gt;自定义数据结构&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;struct 类名 类体 &lt;code&gt;;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;预处理器保证头文件多次包含仍能安全工作——头文件保护符&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;#define&lt;/code&gt;把一个名字设定为预处理变量&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;#ifdef&lt;/code&gt;当且仅当变量已定义时为真&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;#ifndef&lt;/code&gt;当且仅当变量未定义时为真&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;#endif&lt;/code&gt;检查结果为真时执行后续操作直到出现此命令&lt;/li&gt;
+&lt;li&gt;一般将预处理变量名全部大写以保证其唯一性&lt;/li&gt;
+&lt;li&gt;头文件一旦改变，相关的源文件必须重新编译以获取更新过的声明&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;using声明&#34;&gt;using声明&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;using namespace::name;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;头文件中不应包含using声明&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;string&#34;&gt;string&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;std::string&lt;/code&gt; 可变长字符序列&lt;/li&gt;
+&lt;li&gt;在执行读取操作时，string对象会自动忽略开头的空白（空格符、换行符、制表符等）并从第一个真正的字符开始读起，直到遇见下一处空白为止&lt;/li&gt;
+&lt;li&gt;常用操作:&lt;code&gt;getline(a,b)&lt;/code&gt;——从a中读取一行（以换行符为界）赋给b &lt;code&gt;s.empty()&lt;/code&gt;——判断s是否为空 &lt;code&gt;s.size()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;size函数的返回值是一个无符号整型数（类型为string::size_type） 注意避免int和unsigned混用&lt;/li&gt;
+&lt;li&gt;string的比较：1.字符相同时，较短string小于较长string；2.字符相异时，第一对相异字符的比较&lt;/li&gt;
+&lt;li&gt;当string对象和字符/字符串字面值混在一条语句中时，必须确保每个+两侧的运算对象至少有一个是string&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;字符串字面值与string是不同的类型&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;使用C++版本的C标准库头文件 &lt;code&gt;ctype.h&lt;/code&gt;=&amp;gt;&lt;code&gt;cctype&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;cctype中包含一系列字符的判断和处理函数&lt;/li&gt;
+&lt;li&gt;基于范围的for语句 &lt;code&gt;for (declaration : expression)&lt;/code&gt; 类似于python中的for语句&lt;/li&gt;
+&lt;li&gt;string中的字符可以通过下标访问&lt;/li&gt;
+&lt;li&gt;始终注意检查下标的合法性（是否在正确的范围内）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;vector&#34;&gt;vector&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;std::vector&lt;/code&gt; 对象的集合（所有对象的类型相同）；容器&lt;/li&gt;
+&lt;li&gt;vector是模板而非类型&lt;/li&gt;
+&lt;li&gt;vector&amp;lt;类型&amp;gt; 容器名;&lt;/li&gt;
+&lt;li&gt;vector丰富的初始化方式：列表、拷贝、构造&amp;hellip;&lt;/li&gt;
+&lt;li&gt;push_back(值) 将值作为vector的尾元素压到vector的尾端&lt;/li&gt;
+&lt;li&gt;vector能高效地快速添加元素（没有必要为其指定容量）&lt;/li&gt;
+&lt;li&gt;如果循环体内部包含有向vector添加元素的语句，则不能使用范围for循环&lt;/li&gt;
+&lt;li&gt;empty和size函数与string的类似&lt;/li&gt;
+&lt;li&gt;size函数的返回值也是属于vector的特殊类型size_type 但需要指出vector的元素类型&lt;/li&gt;
+&lt;li&gt;vector的比较法则也与string类似&lt;/li&gt;
+&lt;li&gt;vector不能使用下标添加元素，只能使用下标访问已存在的元素&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;迭代器&#34;&gt;迭代器&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;有迭代器的类型同时拥有返回迭代器的成员&lt;/li&gt;
+&lt;li&gt;begin()返回指向第一个元素的迭代器 end()返回指向尾元素下一位置**（尾后）**的迭代器&lt;/li&gt;
+&lt;li&gt;一般来说，我们不清楚迭代器的准确类型（使用auto来定义变量）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;*iter&lt;/code&gt;返回迭代器所指元素的引用 &lt;code&gt;iter-&amp;gt;mem&lt;/code&gt; &lt;code&gt;++iter&lt;/code&gt;/&lt;code&gt;--iter&lt;/code&gt;指示容器的下一个/上一个元素&lt;/li&gt;
+&lt;li&gt;泛型编程：所有标准库容器的迭代器都定义了==和!=，所以在for循环中使用!=而非&amp;lt;，因为这种编程风格在标准库提供的所有容器中都有效&lt;/li&gt;
+&lt;li&gt;const_iterator只能读元素，不能写元素&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-&amp;gt;&lt;/code&gt;即为解引用和成员访问的结合，it-&amp;gt;mem等价于(*it).mem&lt;/li&gt;
+&lt;li&gt;任何一种可能改变vector容量的操作，都会使该vector的迭代器失效&lt;/li&gt;
+&lt;li&gt;凡是使用了迭代器的循环体，都不要向迭代器所属的容易添加元素&lt;/li&gt;
+&lt;li&gt;两个迭代器相减的结果为difference_type（带符号整型数）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;数组&#34;&gt;数组&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;与vector类似的是存放类型相同的对象的容器；不同的是数组的大小确定不变，不能随意向其增加元素&lt;/li&gt;
+&lt;li&gt;数组中元素的个数也是数组类型的一部分，所以需要为常量表达式&lt;/li&gt;
+&lt;li&gt;数组的初始化：列表初始化，不允许拷贝&lt;/li&gt;
+&lt;li&gt;字符数组可以使用字符串字面值初始化，但要注意字符串字面值结尾处自带一个空字符&lt;/li&gt;
+&lt;li&gt;默认情况下，类型修饰符从右向左依次绑定；但对于数组而言，由（括号）内向外阅读更有意义&lt;/li&gt;
+&lt;li&gt;在使用数组下标时，通常将其定义为size_t类型&lt;/li&gt;
+&lt;li&gt;使用数组类型的对象其实是使用一个指向该数组首元素的指针&lt;/li&gt;
+&lt;li&gt;当使用数组作为一个auto变量的初始值时，推断得到的类型是指针而非数组；但是decltype不会发生上述转换&lt;/li&gt;
+&lt;li&gt;数组可以使用下标索引尾元素后那个并不存在的元素&lt;/li&gt;
+&lt;li&gt;begin(数组名)/end(数组名)能安全地返回首元素指针/尾后元素指针&lt;/li&gt;
+&lt;li&gt;两个指针相减的结果为ptrdiff_t&lt;/li&gt;
+&lt;li&gt;如果两个指针分别指向不相关的对象，则不能比较&lt;/li&gt;
+&lt;li&gt;内置的下标运算符所用的索引值不是无符号类型，这与vector和string是不同的&lt;/li&gt;
+&lt;li&gt;使用标准库string比使用C风格字符串更安全高效&lt;/li&gt;
+&lt;li&gt;尽量使用标准库类型而非数组&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;多维数组&#34;&gt;多维数组&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;严格来说，C++中没有多维数组，通常所说的多维数组其实是数组的数组&lt;/li&gt;
+&lt;li&gt;使用&lt;code&gt;{}&lt;/code&gt;括起来的一组值初始化多维数组，花括号嵌套与否完全等价（嵌套只是为了更清晰地阅读）&lt;/li&gt;
+&lt;li&gt;可以仅初始化部分元素，其它元素执行默认初始化&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;c特性&#34;&gt;C++特性&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;unique_ptr&amp;lt;类型&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;​		代表一种不共享的指针，不能复制只能移动(&lt;code&gt;std::move&lt;/code&gt;)，可以通过&lt;code&gt;make_unique&amp;lt;类型&amp;gt;(参数)&lt;/code&gt;来创建。归属于头文件&lt;code&gt;&amp;lt;memory&amp;gt;&lt;/code&gt;，属于C++标准库。&lt;/p&gt;
+&lt;p&gt;​		参考 &lt;a href=&#34;https://docs.microsoft.com/en-us/cpp/cpp/how-to-create-and-use-unique-ptr-instances?view=msvc-160&#34;&gt;How to: Create and use unique_ptr instances&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;inline&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;​		一种关键字，表示内联。在程序编译过程中对内联部分的代码调用直接替换代码段。仅适用于简单函数，仅对编译器进行建议，必须与实际实现的函数体放在一起才有意义（仅作用于声明则无效）。&lt;/p&gt;
+&lt;p&gt;​		参考 &lt;a href=&#34;https://www.runoob.com/w3cnote/cpp-inline-usage.html&#34;&gt;C++ 中的 inline 用法&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;const&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;​		一种关键字，表示常量。被修饰的对象或变量无法被修改。&lt;/p&gt;
+&lt;p&gt;​		const对象必须初始化，仅在文件内有效。&lt;/p&gt;
+&lt;p&gt;​		如果想在多个文件中共享const对象，必须在变量的定义之前添加extern关键字。&lt;/p&gt;
+&lt;p&gt;​		允许一个常量引用绑定非常量对象，但无法通过常量引用改变非常量对象。类似的，允许一个常量指针绑定非常量对象。&lt;/p&gt;
+&lt;p&gt;​        参考 &lt;a href=&#34;https://docs.microsoft.com/en-us/cpp/cpp/const-cpp?view=msvc-160&#34;&gt;const (C++)&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;constexpr&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;​        用来修饰编译器常量。由编译器来验证变量的值是否是一个常量表达式。&lt;/p&gt;
+&lt;p&gt;​        在C++ 11中，表示“常量”可以用constexpr，表示“只读”时才用const。&lt;/p&gt;
+&lt;p&gt;​        constexpr在修饰指针时仅对指针有效，与指针所指的对象无关。&lt;/p&gt;</description>
       
     </item>
     
@@ -299,7 +488,7 @@
 &lt;h4 id=&#34;查找&#34;&gt;查找&lt;/h4&gt;
 &lt;p&gt;作为一个哈希表，查找是其得到使用的根本原因。&lt;/p&gt;
 &lt;p&gt;看一个key是不是在表里， if(maps.find(&amp;ldquo;hello&amp;rdquo;)!=maps.end()) ，如果返回true，则说明在表里。这里的返回值是一个迭代器，迭代器这么用，maps.find(&amp;ldquo;hello&amp;rdquo;)-&amp;gt;first ，这就是key的值（也就是&amp;quot;hello&amp;quot;），maps.find(&amp;ldquo;hello&amp;rdquo;)-&amp;gt;second ，这就是&amp;quot;hello&amp;quot;对应的value值。&lt;/p&gt;
-&lt;p&gt;想遍历map，也得靠迭代器，先造个迭代器，unordered_map&amp;lt;string,int&amp;gt;::iterator itr，然后for循环的用法就跟一般的遍历差不多了。for(itr=maps.begin();itr&amp;lt;maps.end();itr++)这样就能遍历啦。&lt;/p&gt;
+&lt;p&gt;想遍历map，也得靠迭代器，先造个迭代器，unordered_map&amp;lt;string,int&amp;gt;::iterator itr，然后for循环的用法就跟一般的遍历差不多了。for(itr=maps.begin();itr!=maps.end();itr++)这样就能遍历啦。&lt;/p&gt;
 &lt;h3 id=&#34;2-string&#34;&gt;2. string&lt;/h3&gt;
 &lt;p&gt;string的各种操作用法千奇百怪，很多感觉几乎等效。&lt;/p&gt;
 &lt;h4 id=&#34;assign&#34;&gt;assign&lt;/h4&gt;
