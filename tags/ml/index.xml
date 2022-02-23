@@ -1,19 +1,116 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ML on Lowerce&#39;s Blog - A technology &amp; emotion Blog</title>
+    <title>Lowerce&#39;s Wiki Blog – ML</title>
     <link>https://lowerce.github.io/tags/ml/</link>
-    <description>Recent content in ML on Lowerce&#39;s Blog - A technology &amp; emotion Blog</description>
+    <description>Recent content in ML on Lowerce&#39;s Wiki Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Thu, 09 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://lowerce.github.io/tags/ml/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Sep 2021 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="https://lowerce.github.io/tags/ml/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
     <item>
-      <title>李宏毅-Machine_Learning</title>
-      <link>https://lowerce.github.io/post/ml_lhy/</link>
+      <title>Docs: 李宏毅-Machine_Learning</title>
+      <link>https://lowerce.github.io/docs/machine-learning/ml_lhy/</link>
       <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://lowerce.github.io/post/ml_lhy/</guid>
-      <description>&lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第四篇文章&lt;/em&gt;&lt;/p&gt;</description>
+      <guid>https://lowerce.github.io/docs/machine-learning/ml_lhy/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第四篇文章&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;此文是根据李宏毅2021年春季的机器学习课程撰写。李宏毅机器学习课程的特点是对理论理解的剖析非常深入同时又不失在实际训练过程中的trick教学。&lt;/p&gt;
+&lt;h2 id=&#34;1-机器学习general-guidence&#34;&gt;1. 机器学习general guidence&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/6216449b04c46.jpg&#34; alt=&#34;机器学习general guidence&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2-调参trick&#34;&gt;2. 调参trick&lt;/h2&gt;
+&lt;h3 id=&#34;1-local-minima局部最小值and-saddle-point鞍点&#34;&gt;1. local minima（局部最小值）and saddle point（鞍点）&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Hessian Matrix&lt;/strong&gt; - 其实就是二阶导 在一阶导数消失的时候通过二阶导来决定下一步行进的方向&lt;/p&gt;
+&lt;p&gt;H正定时（Hessian Matrix 所有特征值为正）说明遇到 local minima&lt;/p&gt;
+&lt;p&gt;H正负不定（Hessian Matrix 特征值有正有负）说明遇到 saddle point&lt;/p&gt;
+&lt;p&gt;向沿H特征向量的方向更新参数&lt;/p&gt;
+&lt;h3 id=&#34;2-batch-size-and-momentum&#34;&gt;2. batch size and momentum&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;batch size大小的优劣&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/621644e069277.jpg&#34; alt=&#34;batch size&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;由1、2得出的conclusion&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/6216451f17749.jpg&#34; alt=&#34;conclusin of 1 and 2&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3-adaptive-learning-rate&#34;&gt;3. Adaptive Learning Rate&lt;/h3&gt;
+&lt;p&gt;$\sigma$&lt;/p&gt;
+&lt;p&gt;Root Mean Square &amp;ndash;&amp;gt; RMSProp &amp;ndash;&amp;gt; Adam(RMSProp + Momentum)&lt;/p&gt;
+&lt;p&gt;$ \eta $&lt;/p&gt;
+&lt;p&gt;Learning Rate Scheduling: Learing Rate Decay and Warm Up&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Optimizer总结&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/62164545ae1f4.jpg&#34; alt=&#34;Optimization Summary&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;4-loss-function&#34;&gt;4. Loss function&lt;/h3&gt;
+&lt;p&gt;Cross-entropy 如何优于 Mean Square Error (MSE)？&lt;/p&gt;
+&lt;p&gt;从error surface的角度来看 Cross-entropy 的梯度变化更平缓 &amp;ndash;&amp;gt; 更好 train&lt;/p&gt;
+&lt;h3 id=&#34;5-batch-normalization&#34;&gt;5. Batch Normalization&lt;/h3&gt;
+&lt;p&gt;Feature Normalization - 对所有样本的每一个维度（dimension）作 normalization（减均值、除方差）&lt;/p&gt;
+&lt;p&gt;可以对每一层的输出（激活函数前后影响不大）作上述 Featurn Normalization&lt;/p&gt;
+&lt;p&gt;归根结底让整个 error surface 不那么崎岖（还有各种Normalization的方法）&lt;/p&gt;
+&lt;h2 id=&#34;3-cnn&#34;&gt;3. CNN&lt;/h2&gt;
+&lt;p&gt;在图像感知的问题中使用&lt;/p&gt;
+&lt;p&gt;stride 迈步步长 padding 越界填充&lt;/p&gt;
+&lt;p&gt;Receptive field &amp;ndash;&amp;gt; neutrons &amp;ndash;&amp;gt; shared parameters&lt;/p&gt;
+&lt;p&gt;filters &amp;ndash;&amp;gt; Feature Map&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;两种看待CNN所做事情的角度&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/6216456fddf44.jpg&#34; alt=&#34;两个故事&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Pooling - subsampling  比较典型的 Max Pooling&lt;/p&gt;
+&lt;p&gt;Pooling不是必要的&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CNN的标准流程&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/62164593a3514.jpg&#34; alt=&#34;典型CNN流程&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;4-self-attention&#34;&gt;4. Self-attention&lt;/h2&gt;
+&lt;p&gt;Sequence(vector set) input 考虑整个input sequence的资讯&lt;/p&gt;
+&lt;p&gt;《Attention is all you need》&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Self-attention的运行方式&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/621645bb560ed.jpg&#34; alt=&#34;self attention运作机制&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Multi-head Self-attention&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/621645d7cbaab.jpg&#34; alt=&#34;multi-head self attention&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Position Encoding&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/621645fada77f.jpg&#34; alt=&#34;position encoding&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Self-attention可以视作可调感知域的&lt;strong&gt;CNN&lt;/strong&gt;（在数据量足够大时效果要好于CNN） CNN属于简化版的Self-attention&lt;/p&gt;
+&lt;p&gt;Self-attention比起&lt;strong&gt;RNN&lt;/strong&gt;更加不受输入vector之间距离的影响&lt;/p&gt;
+&lt;h2 id=&#34;5-transformer-seq2seq&#34;&gt;5. Transformer (Seq2Seq)&lt;/h2&gt;
+&lt;p&gt;语音辨识&lt;/p&gt;
+&lt;p&gt;Encoder + Decoder&lt;/p&gt;
+&lt;h3 id=&#34;encoder&#34;&gt;Encoder&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Encoder block的构成&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/62164621bfb72.jpg&#34; alt=&#34;one block of Encoder&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Encoder的结构&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/6216464cb6e22.jpg&#34; alt=&#34;Encoder&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;decoder&#34;&gt;Decoder&lt;/h3&gt;
+&lt;p&gt;分为 Autoregressive 和 Non- Autoregressive&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/6216467f273cf.jpg&#34; alt=&#34;对比&#34;&gt;&lt;/p&gt;
+&lt;p&gt;下面以Autoregressive为例概述Decoder的组成结构&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Masked Self-attention&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;显然在Decoder中上一个的输出作为下一个的输入，输入一个一个依次产生，无法像Self-attention那样直接考虑所有的资讯&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/621646b23eeab.jpg&#34; alt=&#34;Masked Self-attention&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cross attention&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/621646d66ca74.jpg&#34; alt=&#34;Cross attention&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Decoder的结构（Encoder and Decoder）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/621646f54324e.jpg&#34; alt=&#34;Decoder&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;其它的seq2seq架构&#34;&gt;其它的Seq2Seq架构&lt;/h3&gt;
+&lt;p&gt;Copy mechanism: Pointer Network&lt;/p&gt;
+&lt;p&gt;Guided Attention:  Monotonic Attention、 Location-aware attention&lt;/p&gt;
+&lt;h3 id=&#34;评价方法&#34;&gt;评价方法&lt;/h3&gt;
+&lt;p&gt;BLUE score&lt;/p&gt;
+&lt;p&gt;但BLUE难以用于optimuze，对于不知道如何optimize的问题可以使用&lt;strong&gt;RL&lt;/strong&gt;解决&lt;/p&gt;
+&lt;h3 id=&#34;exposure-bias&#34;&gt;exposure bias&lt;/h3&gt;
+&lt;p&gt;Scheduled Sampling来防止在teacher forcing下可能出现的“一步错步步错”的问题&lt;/p&gt;
+&lt;h2 id=&#34;6-gan&#34;&gt;6. GAN&lt;/h2&gt;
+&lt;p&gt;输出一种分布 &lt;strong&gt;Generator-生成&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Discriminator&lt;/strong&gt;（判别Generator生成的优劣）&lt;/p&gt;
+&lt;p&gt;D将G的生成集和训练集分别label后进行训练以期分辨G的生成和自然数据的差异(real or fake，real打分更高)；G将生成接到D上让D打分 以此作为loss 来更新G的参数&lt;/p&gt;
+&lt;p&gt;轮流固定G和D，训练D和G&lt;/p&gt;
+&lt;h3 id=&#34;训练trick&#34;&gt;训练trick&lt;/h3&gt;
+&lt;p&gt;D存在的意义是在无法或者不容易计算生成数据分布与自然数据分布的divergence的情况下给出loss使G能够train起来，divergence的选择（参见f-GAN文章）决定了D的objective function。&lt;/p&gt;
+&lt;p&gt;JS divergence 不适合区分两个分布没有重叠(overlap)的情况，而在高维空间中不同分布图像的overlap很少；Wasserstein distance适于计算两个分布之间的距离（WGAN）&lt;/p&gt;
+&lt;p&gt;未完待续&amp;hellip;&lt;/p&gt;
+      </description>
     </item>
     
   </channel>

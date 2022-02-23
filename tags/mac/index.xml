@@ -1,19 +1,36 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mac on Lowerce&#39;s Blog - A technology &amp; emotion Blog</title>
+    <title>Lowerce&#39;s Wiki Blog – Mac</title>
     <link>https://lowerce.github.io/tags/mac/</link>
-    <description>Recent content in Mac on Lowerce&#39;s Blog - A technology &amp; emotion Blog</description>
+    <description>Recent content in Mac on Lowerce&#39;s Wiki Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Sun, 12 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://lowerce.github.io/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Sep 2021 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="https://lowerce.github.io/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
     <item>
-      <title>Mounty的使用技巧</title>
-      <link>https://lowerce.github.io/post/mounty-in-mac/</link>
+      <title>Blog: Mounty的使用技巧</title>
+      <link>https://lowerce.github.io/blog/2021/09/12/mounty%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
       <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://lowerce.github.io/post/mounty-in-mac/</guid>
-      <description>&lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第五篇文章&lt;/em&gt;&lt;/p&gt;</description>
+      <guid>https://lowerce.github.io/blog/2021/09/12/mounty%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第五篇文章&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;对于Mac而言，读取文件格式为NTFS的U盘或者移动硬盘是令人痛苦的，虽然并非Mac不支持，但是因为种种原因苹果并不想让各位Mac用户简单方便地读取NTFS的存储设备，所以第一个建议是：如果您是仅使用Mac的人群，那么请尽量确保您自己的存储设备文件格式为exFAT或其他Mac原生支持的文件格式，以便于您访问和操作这些存储设备内的文件。&lt;/p&gt;
+&lt;p&gt;显然，您的Mac总会有同NTFS设备接入的时候，那么这时该如何正常地访问NTFS设备呢？NTFS for Mac是目前使用最为广泛的应用，but，这是一个付费应用，而且，对于Mac这种并非不支持NTFS访问的设备而言，花钱去访问让人感觉非常不值。那么，Mounty是一个很不错的选择。&lt;/p&gt;
+&lt;p&gt;Mounty的正常使用在此不再详述，仅记录一些使用问题的解决方法。&lt;/p&gt;
+&lt;h5 id=&#34;出现不可重新挂载问题&#34;&gt;出现不可重新挂载问题&lt;/h5&gt;
+&lt;p&gt;这种情况一般是由于未正确插拔设备导致，请在windows下使用时选择移除可移动设备后再拔除&lt;/p&gt;
+&lt;p&gt;在windows下使用&lt;strong&gt;chkdsk X: /f&lt;/strong&gt; （X为移动设备对应的盘符）命令检查磁盘即可&lt;/p&gt;
+      </description>
     </item>
     
   </channel>

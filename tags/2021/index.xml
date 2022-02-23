@@ -1,73 +1,659 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>2021 on Lowerce&#39;s Blog - A technology &amp; emotion Blog</title>
+    <title>Lowerce&#39;s Wiki Blog – 2021</title>
     <link>https://lowerce.github.io/tags/2021/</link>
-    <description>Recent content in 2021 on Lowerce&#39;s Blog - A technology &amp; emotion Blog</description>
+    <description>Recent content in 2021 on Lowerce&#39;s Wiki Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Sun, 07 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://lowerce.github.io/tags/2021/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Nov 2021 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="https://lowerce.github.io/tags/2021/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
     <item>
-      <title>C&#43;&#43; Primer充电以及C&#43;&#43;特性了解</title>
-      <link>https://lowerce.github.io/post/cpp/</link>
+      <title>Docs: C&#43;&#43; Primer充电以及C&#43;&#43;特性了解</title>
+      <link>https://lowerce.github.io/docs/c&#43;&#43;/cpp/</link>
       <pubDate>Sun, 07 Nov 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://lowerce.github.io/post/cpp/</guid>
-      <description>&lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第九篇文章&lt;/em&gt;&lt;/p&gt;</description>
+      <guid>https://lowerce.github.io/docs/c&#43;&#43;/cpp/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第九篇文章&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;C++基础知识？&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;c-primer&#34;&gt;C++ Primer&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;单文件编译&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;g++ -o 输出文件名 待编译文件名&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;读取、输出到文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;程序名 &amp;lt; 输入文件&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;程序名 &amp;gt; 输出文件&lt;/code&gt;&lt;/p&gt;
+&lt;h4 id=&#34;数据类型&#34;&gt;数据类型&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;选用的经验：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;数值不为负选择无符号型(unsigned)&lt;/p&gt;
+&lt;p&gt;整数运算选用&lt;code&gt;int&lt;/code&gt;，超过表示范围的话选用&lt;code&gt;long long&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;浮点数运算选用&lt;code&gt;double&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;不要混用&lt;/strong&gt;有符号类型和无符号类型，带符号数会自动转换为无符号数，等于初始值对无符号类型所能表示的数值总数取模后的余数&lt;/li&gt;
+&lt;li&gt;字符型字面值常量的类型可以通过前缀指定，整型、浮点型可以通过后缀指定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;变量&#34;&gt;变量&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;初始化和赋值存在本质上的巨大区别&lt;/li&gt;
+&lt;li&gt;使用列表初始化&lt;code&gt;{}&lt;/code&gt;，在可能的数据丢失时会使编译器给出警告&lt;/li&gt;
+&lt;li&gt;声明(declaration)和定义(definition)是不同的，声明使名字为程序所知，定义则为变量申请存储空间或赋初值&lt;/li&gt;
+&lt;li&gt;使用&lt;code&gt;extern&lt;/code&gt;关键字来声明变量&lt;/li&gt;
+&lt;li&gt;变量能且只能被定义一次，但可以被多次声明&lt;/li&gt;
+&lt;li&gt;C++是静态语言——在编译阶段检查类型&lt;/li&gt;
+&lt;li&gt;全局变量在块作用域内用&lt;code&gt;::&lt;/code&gt;前缀可以显式访问（屏蔽块作用域内的局部变量）&lt;/li&gt;
+&lt;li&gt;局部变量最好不要同全局变量同名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;复合类型&#34;&gt;复合类型&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;通过在变量名前加&lt;code&gt;&amp;amp;&lt;/code&gt;来定义引用类型，引用必须初始化&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;引用即别名&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;引用只能绑定在对象上&lt;/li&gt;
+&lt;li&gt;指针存放对象的地址，使用&lt;strong&gt;取地址符&lt;/strong&gt;&lt;code&gt;&amp;amp;&lt;/code&gt;获取地址&lt;/li&gt;
+&lt;li&gt;利用指针访问对象，使用&lt;strong&gt;解引用符&lt;/strong&gt;&lt;code&gt;*&lt;/code&gt;访问对象&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;amp;&lt;/code&gt;和&lt;code&gt;*&lt;/code&gt;出现在声明和表达式中的含义&lt;strong&gt;截然不同&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;初始化空指针(=nullptr、=0、=NULL)&lt;/li&gt;
+&lt;li&gt;赋值永远改变的是等号左侧的对象&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;void*&lt;/code&gt;可以存放任意对象的地址&lt;/li&gt;
+&lt;li&gt;类型修饰符(&lt;code&gt;*&lt;/code&gt;和&lt;code&gt;&amp;amp;&lt;/code&gt;)仅修饰其后的&lt;strong&gt;第一个&lt;/strong&gt;变量标识符&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;const限定符&#34;&gt;const限定符&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;常量引用是对const的引用&lt;/li&gt;
+&lt;li&gt;在初始化常量引用时允许使用&lt;strong&gt;任意表达式&lt;/strong&gt;作为初始值，只要该表达式的结果能够转换成引用的类型即可&lt;/li&gt;
+&lt;li&gt;对const的引用可能引用一个并非const的对象&lt;/li&gt;
+&lt;li&gt;所谓指向常量的指针或引用不过是指针或引用**“自以为是”**地认为自己指向常量，所以自觉地不去改变所指对象的值&lt;/li&gt;
+&lt;li&gt;弄清声明的含义最有效的方法是从右向左阅读&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;*&lt;/code&gt;放在const之前说明指针是一个常量-不变的是指针本身的值而非指向的那个值&lt;/li&gt;
+&lt;li&gt;指针本身是一个常量并不意味着不能通过指针修改其所指向对象的值&lt;/li&gt;
+&lt;li&gt;非常量可以转换为常量 反之则不行&lt;/li&gt;
+&lt;li&gt;常量表达式是指值不会改变并且在编译过程就能得到计算结果的表达式&lt;/li&gt;
+&lt;li&gt;一个对象是不是常量表达式由它的数据类型和初始值共同决定&lt;/li&gt;
+&lt;li&gt;顶层const 表示指针本身是个常量；底层const 表示指针所指的对象是个常量（仅示例，顶层和底层const适用于各种类型）&lt;/li&gt;
+&lt;li&gt;当执行对象的拷贝操作时，顶层const和底层const区别明显&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;处理类型&#34;&gt;处理类型&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;类型别名：&lt;code&gt;typedef 前者 后者&lt;/code&gt; —— 后者是前者的同义词&lt;/li&gt;
+&lt;li&gt;注意typedef中使用&lt;code&gt;*&lt;/code&gt;的情况（并不是简单的替换关系）&lt;/li&gt;
+&lt;li&gt;别名声明：&lt;code&gt;using 前者 = 后者&lt;/code&gt; —— 前者是后者的同义词&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;auto&lt;/code&gt; 根据初值自动推断数据类型（仅保留底层const）顶层const需要在auto前加以修饰&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;*&lt;/code&gt;和&lt;code&gt;&amp;amp;&lt;/code&gt;只从属于某个声明符而非基本数据类型的一部分&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;decltype&lt;/code&gt; 推断表达式类型而不使用其作为初值（保留变量的全部类型）&lt;/li&gt;
+&lt;li&gt;如果decltype使用的表达式不是一个变量，则decltype返回表达式结果对应的类型&lt;/li&gt;
+&lt;li&gt;如果表达式的内容是解引用操作，则decltype将得到引用类型&lt;/li&gt;
+&lt;li&gt;对于decltype所用的表达式来说，在变量名上加括号与不加括号得到的类型会有不同&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;decltype((变量))&lt;/code&gt;的结果永远是引用，&lt;code&gt;decltype(变量)&lt;/code&gt;只有在变量本身是引用时才是引用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;自定义数据结构&#34;&gt;自定义数据结构&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;struct 类名 类体 ;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;预处理器保证头文件多次包含仍能安全工作——头文件保护符&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;#define&lt;/code&gt;把一个名字设定为预处理变量&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;#ifdef&lt;/code&gt;当且仅当变量已定义时为真&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;#ifndef&lt;/code&gt;当且仅当变量未定义时为真&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;#endif&lt;/code&gt;检查结果为真时执行后续操作直到出现此命令&lt;/li&gt;
+&lt;li&gt;一般将预处理变量名全部大写以保证其唯一性&lt;/li&gt;
+&lt;li&gt;头文件一旦改变，相关的源文件必须重新编译以获取更新过的声明&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;using声明&#34;&gt;using声明&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;using namespace::name;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;头文件中不应包含using声明&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;string&#34;&gt;string&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;std::string&lt;/code&gt; 可变长字符序列&lt;/li&gt;
+&lt;li&gt;在执行读取操作时，string对象会自动忽略开头的空白（空格符、换行符、制表符等）并从第一个真正的字符开始读起，直到遇见下一处空白为止&lt;/li&gt;
+&lt;li&gt;常用操作:&lt;code&gt;getline(a,b)&lt;/code&gt;——从a中读取一行（以换行符为界）赋给b &lt;code&gt;s.empty()&lt;/code&gt;——判断s是否为空 &lt;code&gt;s.size()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;size函数的返回值是一个无符号整型数（类型为&lt;code&gt;string::size_type&lt;/code&gt;） 注意避免int和unsigned混用&lt;/li&gt;
+&lt;li&gt;string的比较：1.字符相同时，较短string小于较长string；2.字符相异时，第一对相异字符的比较&lt;/li&gt;
+&lt;li&gt;当string对象和字符/字符串字面值混在一条语句中时，必须确保每个+两侧的运算对象至少有一个是string&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;字符串字面值与string是不同的类型&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;使用C++版本的C标准库头文件 &lt;code&gt;ctype.h&lt;/code&gt;=&amp;gt;&lt;code&gt;cctype&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;cctype中包含一系列字符的判断和处理函数&lt;/li&gt;
+&lt;li&gt;基于范围的for语句 &lt;code&gt;for (declaration : expression)&lt;/code&gt; 类似于python中的for语句&lt;/li&gt;
+&lt;li&gt;string中的字符可以通过下标访问&lt;/li&gt;
+&lt;li&gt;始终注意检查下标的合法性（是否在正确的范围内）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;vector&#34;&gt;vector&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;std::vector&lt;/code&gt; 对象的集合（所有对象的类型相同）；容器&lt;/li&gt;
+&lt;li&gt;vector是模板而非类型&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;vector&amp;lt;类型&amp;gt; 容器名;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;vector丰富的初始化方式：列表、拷贝、构造&amp;hellip;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;push_back(值)&lt;/code&gt; 将值作为vector的尾元素压到vector的尾端&lt;/li&gt;
+&lt;li&gt;vector能高效地快速添加元素（没有必要为其指定容量）&lt;/li&gt;
+&lt;li&gt;如果循环体内部包含有向vector添加元素的语句，则不能使用范围for循环&lt;/li&gt;
+&lt;li&gt;empty和size函数与string的类似&lt;/li&gt;
+&lt;li&gt;size函数的返回值也是属于vector的特殊类型&lt;code&gt;size_type&lt;/code&gt; 但需要指出vector的元素类型&lt;/li&gt;
+&lt;li&gt;vector的比较法则也与string类似&lt;/li&gt;
+&lt;li&gt;vector不能使用下标添加元素，只能使用下标访问已存在的元素&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;迭代器&#34;&gt;迭代器&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;有迭代器的类型同时拥有返回迭代器的成员&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;begin()&lt;/code&gt;返回指向第一个元素的迭代器 &lt;code&gt;end()&lt;/code&gt;返回指向尾元素下一位置**（尾后）**的迭代器&lt;/li&gt;
+&lt;li&gt;一般来说，我们不清楚迭代器的准确类型（使用&lt;code&gt;auto&lt;/code&gt;来定义变量）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;*iter&lt;/code&gt;返回迭代器所指元素的引用 &lt;code&gt;iter-&amp;gt;mem&lt;/code&gt; &lt;code&gt;++iter&lt;/code&gt;/&lt;code&gt;--iter&lt;/code&gt;指示容器的下一个/上一个元素&lt;/li&gt;
+&lt;li&gt;泛型编程：所有标准库容器的迭代器都定义了&lt;code&gt;==&lt;/code&gt;和&lt;code&gt;!=&lt;/code&gt;，所以在for循环中使用&lt;code&gt;!=&lt;/code&gt;而非&lt;code&gt;&amp;lt;&lt;/code&gt;，因为这种编程风格在标准库提供的所有容器中都有效&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;const_iterator&lt;/code&gt;只能读元素，不能写元素&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-&amp;gt;&lt;/code&gt;即为解引用和成员访问的结合，it-&amp;gt;mem等价于(*it).mem&lt;/li&gt;
+&lt;li&gt;任何一种可能改变vector容量的操作，都会使该vector的迭代器失效&lt;/li&gt;
+&lt;li&gt;凡是使用了迭代器的循环体，都不要向迭代器所属的容易添加元素&lt;/li&gt;
+&lt;li&gt;两个迭代器相减的结果为&lt;code&gt;difference_type&lt;/code&gt;（带符号整型数）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;数组&#34;&gt;数组&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;与vector类似的是存放类型相同的对象的容器；不同的是数组的大小确定不变，不能随意向其增加元素&lt;/li&gt;
+&lt;li&gt;数组中元素的个数也是数组类型的一部分，所以需要为常量表达式&lt;/li&gt;
+&lt;li&gt;数组的初始化：列表初始化，不允许拷贝&lt;/li&gt;
+&lt;li&gt;字符数组可以使用字符串字面值初始化，但要注意字符串字面值结尾处自带一个空字符&lt;/li&gt;
+&lt;li&gt;默认情况下，类型修饰符从右向左依次绑定；但对于数组而言，&lt;strong&gt;由（括号）内向外阅读&lt;/strong&gt;更有意义&lt;/li&gt;
+&lt;li&gt;在使用数组下标时，通常将其定义为&lt;code&gt;size_t&lt;/code&gt;类型&lt;/li&gt;
+&lt;li&gt;使用数组类型的对象其实是使用一个指向该数组首元素的指针&lt;/li&gt;
+&lt;li&gt;当使用数组作为一个auto变量的初始值时，推断得到的类型是指针而非数组；但是decltype不会发生上述转换&lt;/li&gt;
+&lt;li&gt;数组可以使用下标索引尾元素后那个并不存在的元素&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;begin(数组名)&lt;/code&gt;/&lt;code&gt;end(数组名)&lt;/code&gt;能安全地返回首元素指针/尾后元素指针&lt;/li&gt;
+&lt;li&gt;两个指针相减的结果为&lt;code&gt;ptrdiff_t&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;如果两个指针分别指向不相关的对象，则不能比较&lt;/li&gt;
+&lt;li&gt;内置的下标运算符所用的索引值不是无符号类型，这与vector和string是不同的&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;C风格字符串&lt;/strong&gt;存放在字符数组中并以空字符（&lt;code&gt;\0&lt;/code&gt;）结束&lt;/li&gt;
+&lt;li&gt;头文件&lt;code&gt;cstring&lt;/code&gt;中定义的函数可以操作C风格字符串&lt;/li&gt;
+&lt;li&gt;使用标准库string比使用&lt;strong&gt;C风格字符串&lt;/strong&gt;更安全高效&lt;/li&gt;
+&lt;li&gt;尽量使用标准库类型而非数组&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;多维数组&#34;&gt;多维数组&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;严格来说，C++中没有多维数组，通常所说的多维数组其实是数组的数组&lt;/li&gt;
+&lt;li&gt;使用&lt;code&gt;{}&lt;/code&gt;括起来的一组值初始化多维数组，花括号嵌套与否完全等价（嵌套只是为了更清晰地阅读）&lt;/li&gt;
+&lt;li&gt;可以仅初始化部分元素，其它元素执行默认初始化&lt;/li&gt;
+&lt;li&gt;使用范围for语句处理多维数组，除了最内层的循环外，其他所有循环的控制变量都应该是引用类型&lt;/li&gt;
+&lt;li&gt;当程序使用多维数组的名字时，会自动将其转换成指向数组首元素的指针，即指向第一个内层数组的指针&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;表达式基础&#34;&gt;表达式基础&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;左值和右值：左值可以位于赋值语句的左侧，右值则不能（在C++中并非如此简单）&lt;/li&gt;
+&lt;li&gt;当一个对象被用作右值的时候，用的是对象的值（内容）；当对象被用作左值的时候，用的是对象的身份（在内存中的位置）&lt;/li&gt;
+&lt;li&gt;赋值运算符需要一个非常量左值作为其左侧运算符，得到的结果也为左值&lt;/li&gt;
+&lt;li&gt;取地址符作用于一个左值运算对象，返回一个指向该运算对象的指针，该指针为右值&lt;/li&gt;
+&lt;li&gt;解引用运算符、下标运算符的求值结果为左值&lt;/li&gt;
+&lt;li&gt;复合表达式中，括号无视优先级与结合律&lt;/li&gt;
+&lt;li&gt;求值顺序在大多数运算符中没有明确规定，除了&lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;、&lt;code&gt;||&lt;/code&gt;、&lt;code&gt;?:&lt;/code&gt;、&lt;code&gt;,&lt;/code&gt;外&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;运算符&#34;&gt;运算符&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;整数相除的商值无论正负一律向0取整（舍弃小数部分）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;(-m)/n&lt;/code&gt;和&lt;code&gt;m/(-n)&lt;/code&gt;都等价于&lt;code&gt;-(m/n)&lt;/code&gt;，&lt;code&gt;m%(-n)&lt;/code&gt;等价于&lt;code&gt;m%n&lt;/code&gt;，&lt;code&gt;(-m)%n&lt;/code&gt;等价于&lt;code&gt;-(m%n)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;除非必须，否则不用递增递减运算符的后置版本&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ptr-&amp;gt;mem&lt;/code&gt;等价于&lt;code&gt;(*ptr).mem&lt;/code&gt; P.S.解引用运算符的优先级低于点运算符&lt;/li&gt;
+&lt;li&gt;条件运算符（&lt;code&gt;cond?expr1:expr2&lt;/code&gt;）可嵌套 最好不超过两到三层&lt;/li&gt;
+&lt;li&gt;条件运算符的优先级非常低，通常需要在它两端加括号&lt;/li&gt;
+&lt;li&gt;仅将位运算符用于处理无符号类型&lt;/li&gt;
+&lt;li&gt;移位运算符（IO运算符）的优先级不高不低：低于算术运算符，高于关系运算符、赋值运算符、条件运算符&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sizeof&lt;/code&gt;返回一条表达式或一个类型名字所占的字节数 &lt;code&gt;sizeof (type)&lt;/code&gt;和&lt;code&gt;sizeof expr&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sizeof&lt;/code&gt;并不实际计算其运算对象的值&lt;/li&gt;
+&lt;li&gt;对char或类型为char的表达式执行sizeof运算结果为1&lt;/li&gt;
+&lt;li&gt;sizeof运算不会把数组转换成指针来处理，等价于对数组中所有元素执行一次sizeof运算并将所得结果求和&lt;/li&gt;
+&lt;li&gt;对string或vector对象执行sizeof运算只返回该类型固定部分的大小，不会计算对象中的元素占用了多少空间&lt;/li&gt;
+&lt;li&gt;逗号运算符真正的结果是右侧表达式的值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;类型转换&#34;&gt;类型转换&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;整型提升、算术转换&lt;/li&gt;
+&lt;li&gt;强制类型转换&lt;code&gt;cast-name&amp;lt;type&amp;gt;(expression)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;任何具有明确定义的类型转换，只要不包含底层const，都可以使用&lt;code&gt;static_cast&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;当需要把一个较大的算术类型赋值给较小的类型时，&lt;code&gt;static_cast&lt;/code&gt;非常有用&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;static_cast&lt;/code&gt;对于编译器无法自动执行的类型转换也非常有用&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;const_cast&lt;/code&gt;只能改变运算对象的底层const，只有&lt;code&gt;const_cast&lt;/code&gt;能改变表达式的常量属性&lt;/li&gt;
+&lt;li&gt;使用&lt;code&gt;reinterpret_cast&lt;/code&gt;非常危险&lt;/li&gt;
+&lt;li&gt;要尽量避免强制类型转换&lt;/li&gt;
+&lt;li&gt;旧式的强制类型转换 &lt;code&gt;type (expr)&lt;/code&gt;和&lt;code&gt;(type) expr&lt;/code&gt;，不够清晰明了，追踪困难&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;运算符优先级&#34;&gt;运算符优先级&lt;/h4&gt;
+&lt;h4 id=&#34;条件语句&#34;&gt;条件语句&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;else&lt;/code&gt;与离它最近的未匹配的&lt;code&gt;if&lt;/code&gt;匹配，使用花括号可以强制匹配&lt;/li&gt;
+&lt;li&gt;case标签必须是整形常量表达式&lt;/li&gt;
+&lt;li&gt;如果在某处一个带有初值的变量位于作用域之外，在另一处该变量位于作用域之内，则从前一处跳转到后一处的行为为非法行为&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;迭代语句&#34;&gt;迭代语句&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;传统for循环的执行流程：首先执行init-statement；接下来判断condition；条件为真，执行循环体；最后执行expression&lt;/li&gt;
+&lt;li&gt;for语句中的init-statement可定义多个对象，但只能有一条声明语句，所以所有变量的基础类型&lt;strong&gt;必须相同&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;在范围for语句中，当范围变量为引用类型时，才能对元素执行写操作&lt;/li&gt;
+&lt;li&gt;在范围for语句中，使用&lt;code&gt;auto&lt;/code&gt;可以保证类型相容&lt;/li&gt;
+&lt;li&gt;范围for语句的等价传统for语句（不能用范围for语句增加vector对象或其他容器的元素）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;do while&lt;/code&gt;与&lt;code&gt;while&lt;/code&gt;十分相似，只是先执行循环体后检查条件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;跳转语句&#34;&gt;跳转语句&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;break&lt;/code&gt;负责终止离它最近的&lt;code&gt;while&lt;/code&gt;、&lt;code&gt;do while&lt;/code&gt;、&lt;code&gt;for&lt;/code&gt;、&lt;code&gt;switch&lt;/code&gt;语句，并从这些语句后的第一条语句开始继续执行&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;continue&lt;/code&gt;用于终止离它最近的&lt;code&gt;for&lt;/code&gt;、&lt;code&gt;while&lt;/code&gt;、&lt;code&gt;do while&lt;/code&gt;循环中的当前迭代并立即开始下一次迭代&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;goto label;&lt;/code&gt; label是用于标识一条语句的标示符&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;try语句块和异常处理&#34;&gt;try语句块和异常处理&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;程序的异常检测部分使用&lt;code&gt;throw&lt;/code&gt;表达式引发一个异常&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;try&lt;/code&gt;块后跟随一个或多个&lt;code&gt;catch&lt;/code&gt;子句，由&lt;code&gt;try&lt;/code&gt;中抛出的异常来选中对应的&lt;code&gt;catch&lt;/code&gt;子句&lt;/li&gt;
+&lt;li&gt;C风格字符串（&lt;code&gt;const char*&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;异常中断了程序的正常流程，那些在异常发生期间正确执行了“清理”工作的程序被称作&lt;strong&gt;异常安全&lt;/strong&gt;的代码&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;stdexcept&lt;/code&gt;头文件定义了几种常用的异常类，另外几种异常类型：&lt;code&gt;exception&lt;/code&gt;、&lt;code&gt;bad_alloc&lt;/code&gt;、&lt;code&gt;bad_cast&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;后三种异常只能以默认初始化的方式初始化，不允许为这些对象提供初始值；其它异常类型使用string对象或者C风格字符串初始化这些类型的对象，不允许使用默认初始化的方式&lt;/li&gt;
+&lt;li&gt;异常类型只定义了一个成员函数&lt;code&gt;what&lt;/code&gt;，该函数没有参数，返回一个指向C风格字符串的&lt;code&gt;const char*&lt;/code&gt;，提供关于异常的信息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;函数基础&#34;&gt;函数基础&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;函数形参列表中的形参通常用逗号隔开，其中每个形参都含有一个声明符的声明，即使两个形参的类型一样，也必须把两个类型都写出来&lt;/li&gt;
+&lt;li&gt;形参名是可选的，当函数确实有个别形参不会被用到时，此类形参通常不命名以表示在函数体内不会使用它&lt;/li&gt;
+&lt;li&gt;函数的返回类型不能是数组类型或函数类型，但可以是指向数组或函数的指针&lt;/li&gt;
+&lt;li&gt;名字有作用域，对象有生命周期&lt;/li&gt;
+&lt;li&gt;形参和函数体内部定义的变量为&lt;strong&gt;局部变量&lt;/strong&gt;，仅在函数的作用域内可见，还会隐藏在外层作用域中同名的其他所有声明中&lt;/li&gt;
+&lt;li&gt;只存在于块执行期间的对象成为&lt;strong&gt;自动对象&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;局部静态对象&lt;/strong&gt;在程序的执行路径第一次经过对象定义语句时初始化，并直到程序终止才被销毁——&lt;code&gt;static&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;函数名需要在使用前声明，函数只能定义一次，但可以声明多次，函数声明无需函数体，用&lt;code&gt;;&lt;/code&gt;替代即可&lt;/li&gt;
+&lt;li&gt;函数声明也称作&lt;strong&gt;函数原型&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;含有函数声明的头文件应该被包含到定义函数的源文件中&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;分离式编译&lt;/strong&gt;允许程序分散在几个文件中，每个文件独立编译&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;参数传递&#34;&gt;参数传递&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;引用传递和值传递&lt;/li&gt;
+&lt;li&gt;C++中建议使用引用类型的形参代替指针类型访问函数外部的对象&lt;/li&gt;
+&lt;li&gt;使用引用来避免拷贝&lt;/li&gt;
+&lt;li&gt;当函数无须修改引用形参的值时最好使用常量引用&lt;/li&gt;
+&lt;li&gt;使用引用形参返回额外信息：一个函数只能返回一个值，但有时函数需要同时返回多个值，引用形参为我们一次返回多个结果提供了有效途径&lt;/li&gt;
+&lt;li&gt;用实参初始化形参时会忽略掉顶层const（作用于对象本身）&lt;/li&gt;
+&lt;li&gt;在C++中允许定义若干具有相同名字的函数，前提是不同函数的形参列表有&lt;strong&gt;明显&lt;/strong&gt;的区别&lt;/li&gt;
+&lt;li&gt;可以用非常量初始化一个底层const对象，但反之不行；一个普通的引用必须用同类型的对象初始化&lt;/li&gt;
+&lt;li&gt;C++允许使用字面值初始化常量引用&lt;/li&gt;
+&lt;li&gt;尽量使用常量引用，把函数不会改变的形参定义为普通引用是一种常见错误&lt;/li&gt;
+&lt;li&gt;数组的特殊性：不允许拷贝数组，使用数组时会将其转换成指针&lt;/li&gt;
+&lt;li&gt;尽管不能以值传递的方式传递数组，但可以把形参写成类似数组的形式，本质上传递的还是指向数组首元素的指针&lt;/li&gt;
+&lt;li&gt;管理指针形参（数组实参）的三种技术：1.使用标记指定数组长度；2.使用标准库规范（传递指向数组首元素和尾后元素的指针）；3.显式传递一个表示数组大小的形参&lt;/li&gt;
+&lt;li&gt;形参也可以是数组的引用，如&lt;code&gt;int (&amp;amp;arr)[10]&lt;/code&gt;，数组大小是构成数组类型的一部分&lt;/li&gt;
+&lt;li&gt;传递多维数组，如&lt;code&gt;int matrix[][10]&lt;/code&gt;，编译器会忽略第一个维度，最好不要把它包括在形参列表内。matrix的声明看起来是一个二维数组，实际上形参是指向含有10个整数的数组的指针&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;int main(int argc, char *argv[]) {...}&lt;/code&gt; 第二个形参是一个数组，其元素是指向C风格字符串的指针；第一个形参表示数组中字符串的数量&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;int main(int argc, char **argv) {...}&lt;/code&gt;等价于上述代码&lt;/li&gt;
+&lt;li&gt;当使用argv中的实参时，可选的实参从&lt;code&gt;argv[1]&lt;/code&gt;开始，&lt;code&gt;argv[0]&lt;/code&gt;保存程序名&lt;/li&gt;
+&lt;li&gt;如果函数的实参数量未知但全部实参的类型&lt;strong&gt;都相同&lt;/strong&gt;，可以使用&lt;code&gt;initializer_list&lt;/code&gt;类型的形参，使用方式类似于&lt;code&gt;vector&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;initializer_list&lt;/code&gt;中的元素永远是常量值，无法改变&lt;code&gt;initializer_list&lt;/code&gt;对象中元素的值&lt;/li&gt;
+&lt;li&gt;省略符形参是为了便于C++程序访问某些特殊的C代码（使用了C标准库varargs）而设置的，形如&lt;code&gt;void foo(parm_list, ...);&lt;/code&gt;和&lt;code&gt;void foo(n...)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;返回类型和return语句&#34;&gt;返回类型和return语句&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;返回void的函数不必须要有return，因为在最后总会隐式执行。若想让函数提前退出，可以使用return。&lt;/li&gt;
+&lt;li&gt;在含有return语句的循环后也应该有一条return语句，否则程序是错误的且难以被编译器发现&lt;/li&gt;
+&lt;li&gt;不要返回局部对象的引用或指针&lt;/li&gt;
+&lt;li&gt;引用返回左值：调用一个返回引用的函数得到左值，其他返回类型得到右值&lt;/li&gt;
+&lt;li&gt;C++11规定，函数可以返回&lt;code&gt;{}&lt;/code&gt;包围的值的列表(返回类型为&lt;code&gt;vector&amp;lt;类型&amp;gt;&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;头文件&lt;code&gt;cstdlib&lt;/code&gt;中定义了两个预处理变量&lt;code&gt;EXIT_FAILURE&lt;/code&gt;、&lt;code&gt;EXIT_SUCCESS&lt;/code&gt;，可以作为main函数的返回值&lt;/li&gt;
+&lt;li&gt;递归：函数调用自身（main函数不能调用自己）&lt;/li&gt;
+&lt;li&gt;函数不能返回数组但可以返回数组的指针或引用&lt;/li&gt;
+&lt;li&gt;要想定义一个返回数组的指针或引用可以&lt;strong&gt;使用类型别名&lt;/strong&gt;，如&lt;code&gt;typedef int arrT[10]&lt;/code&gt;、等价写法&lt;code&gt;using arrT = int[10] &lt;/code&gt;，此时，&lt;code&gt;arrT* func(int i)&lt;/code&gt;中的func函数即返回一个指向含有10个整数的数组的指针&lt;/li&gt;
+&lt;li&gt;除了类型别名，返回数组指针的函数形式如&lt;code&gt;Type (*function(parameter_list))[dimension]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;还可以使用&lt;strong&gt;尾置返回类型&lt;/strong&gt;，如&lt;code&gt;auto func(int i) -&amp;gt; int(*)[10]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;或者使用&lt;code&gt;decltype(数组名)*&lt;/code&gt;来声明函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;函数重载&#34;&gt;函数重载&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;重载函数：同一作用域内的几个函数名相同但形参列表不同（main函数不能重载）&lt;/li&gt;
+&lt;li&gt;重载函数的返回类型需要一致，不允许同名函数返回不同的类型&lt;/li&gt;
+&lt;li&gt;顶层const形参并不区分重载函数而底层const（指针、引用）可以区分重载函数&lt;/li&gt;
+&lt;li&gt;最好只重载非常相似的操作&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;const_cast&lt;/code&gt;在重载函数的情景中最有用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;函数匹配&lt;/strong&gt;也叫&lt;strong&gt;重载确定&lt;/strong&gt;，在调用重载函数时可能的三种结果：最佳匹配、无匹配、二义性调用&lt;/li&gt;
+&lt;li&gt;在C++中，&lt;strong&gt;名字查找&lt;/strong&gt;发生在&lt;strong&gt;类型检查&lt;/strong&gt;之前&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;特殊用途语言特性&#34;&gt;特殊用途语言特性&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;c特性&#34;&gt;C++特性&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;unique_ptr&amp;lt;类型&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;代表一种不共享的指针，不能复制只能移动(&lt;code&gt;std::move&lt;/code&gt;)，可以通过&lt;code&gt;make_unique&amp;lt;类型&amp;gt;(参数)&lt;/code&gt;来创建。归属于头文件&lt;code&gt;&amp;lt;memory&amp;gt;&lt;/code&gt;，属于C++标准库。&lt;/p&gt;
+&lt;p&gt;参考 &lt;a href=&#34;https://docs.microsoft.com/en-us/cpp/cpp/how-to-create-and-use-unique-ptr-instances?view=msvc-160&#34;&gt;How to: Create and use unique_ptr instances&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;inline&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一种关键字，表示内联。在程序编译过程中对内联部分的代码调用直接替换代码段。仅适用于简单函数，仅对编译器进行建议，必须与实际实现的函数体放在一起才有意义（仅作用于声明则无效）。&lt;/p&gt;
+&lt;p&gt;参考 &lt;a href=&#34;https://www.runoob.com/w3cnote/cpp-inline-usage.html&#34;&gt;C++ 中的 inline 用法&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;const&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一种关键字，表示常量。被修饰的对象或变量无法被修改。&lt;/p&gt;
+&lt;p&gt;const对象必须初始化，仅在文件内有效。&lt;/p&gt;
+&lt;p&gt;如果想在多个文件中共享const对象，必须在变量的定义之前添加extern关键字。&lt;/p&gt;
+&lt;p&gt;允许一个常量引用绑定非常量对象，但无法通过常量引用改变非常量对象。类似的，允许一个常量指针绑定非常量对象。&lt;/p&gt;
+&lt;p&gt;参考 &lt;a href=&#34;https://docs.microsoft.com/en-us/cpp/cpp/const-cpp?view=msvc-160&#34;&gt;const (C++)&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;constexpr&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;用来修饰编译器常量。由编译器来验证变量的值是否是一个常量表达式。&lt;/p&gt;
+&lt;p&gt;在C++ 11中，表示“常量”可以用constexpr，表示“只读”时才用const。&lt;/p&gt;
+&lt;p&gt;constexpr在修饰指针时仅对指针有效，与指针所指的对象无关。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;memcpy&lt;/code&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;memcpy(a,b,c)  从b处拷贝c个字节至a&lt;/p&gt;
+&lt;p&gt;属于标准库的cstring&lt;/p&gt;
+      </description>
     </item>
     
     <item>
-      <title>Docker原理及应用</title>
-      <link>https://lowerce.github.io/post/docker/</link>
+      <title>Docs: Docker原理及应用</title>
+      <link>https://lowerce.github.io/docs/docker/docker/</link>
       <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://lowerce.github.io/post/docker/</guid>
-      <description>&lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第七篇文章&lt;/em&gt;&lt;/p&gt;</description>
+      <guid>https://lowerce.github.io/docs/docker/docker/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第七篇文章&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;command&#34;&gt;Command&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;docker images&lt;/code&gt;  列出全部映像&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker run -it 映像&lt;/code&gt;  运行并保持某一映像&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker ps -a&lt;/code&gt;  列出全部容器（包括未在运行的）&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker container prune&lt;/code&gt;  删除全部已停止的容器&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker rm 容器&lt;/code&gt;   删除指定容器&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker port 容器&lt;/code&gt;  查看容器所映射的端口&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker start 容器&lt;/code&gt;  启动指定容器&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker stop 容器&lt;/code&gt;  停止指定容器&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker search 映像&lt;/code&gt;  搜索所需映像&lt;/p&gt;
+&lt;h2 id=&#34;dockerfile&#34;&gt;Dockerfile&lt;/h2&gt;
+&lt;h2 id=&#34;trick&#34;&gt;Trick&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;docker run --rm 映像&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;映像不存在时自动pull映像运行并在映像运行结束后自动删除容器&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker run -d -P --name 指定一个名称 映像&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;终端界面可以自由关闭而不影响容器的持续运行，映射容器的端口到本机的随机端口，并为容器指定名称&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker run -p 本机端口:映像端口 映像&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;将映像的端口映射到本机的端口中来启动容器&lt;/p&gt;
+      </description>
     </item>
     
     <item>
-      <title>前后端开发自学指南</title>
-      <link>https://lowerce.github.io/post/site_construction/</link>
+      <title>Docs: 前后端开发自学指南</title>
+      <link>https://lowerce.github.io/docs/site/site_construction/</link>
       <pubDate>Sat, 18 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://lowerce.github.io/post/site_construction/</guid>
-      <description>&lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第六篇文章&lt;/em&gt;&lt;/p&gt;</description>
+      <guid>https://lowerce.github.io/docs/site/site_construction/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第六篇文章&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;学点有的没的，以加深对于网络世界的理解。&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;spring-boot&#34;&gt;Spring Boot&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;创建&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在Intellij IDEA中新建项目，使用Spring Initializer创建即可。&lt;/p&gt;
+&lt;p&gt;名称最好为网址的倒序排列。&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;入门&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;参考&lt;a href=&#34;https://spring.io/&#34;&gt;spring.io&lt;/a&gt;中&lt;a href=&#34;https://spring.io/guides&#34;&gt;Guides&lt;/a&gt;栏下的&lt;a href=&#34;https://spring.io/guides/gs/serving-web-content/&#34;&gt;Serving Web Content with Spring MVC&lt;/a&gt;进行配置。&lt;/p&gt;
+&lt;p&gt;主要注意&lt;code&gt;pom.xml&lt;/code&gt;中&lt;code&gt;dependency&lt;/code&gt;的添加，&lt;code&gt;controller&lt;/code&gt;的创建以及&lt;code&gt;templates&lt;/code&gt;中html的添加。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&#34;bootstrap&#34;&gt;Bootstrap&lt;/h3&gt;
+&lt;p&gt;参考&lt;a href=&#34;https://v3.bootcss.com/components/&#34;&gt;bootstrap v3&lt;/a&gt;中各组件的使用，以及&lt;a href=&#34;https://v3.bootcss.com/css/#grid&#34;&gt;bootstrap 栅格系统&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;在https://v3.bootcss.com/getting-started/#download中直接下载用于生产环境的bootstrap。&lt;/p&gt;
+&lt;p&gt;把这些文件放至&lt;code&gt;static&lt;/code&gt;目录下。&lt;/p&gt;
+&lt;p&gt;按照https://v3.bootcss.com/getting-started/#download-cdn的方式在html中部署css和js文件，路径应为&lt;code&gt;css/&lt;/code&gt;或者&lt;code&gt;js/&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;拷贝所需组件的代码至html文件。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;登录&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;参照https://docs.github.com/en/developers/apps/building-oauth-apps来使用Github登录。&lt;/p&gt;
+&lt;p&gt;在&lt;code&gt;Developer setting&lt;/code&gt;中创建OAuth应用。&lt;/p&gt;
+&lt;p&gt;在&lt;strong&gt;登录&lt;/strong&gt;按钮处按照https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps的&lt;strong&gt;GET&lt;/strong&gt;部分来填写&lt;code&gt;href&lt;/code&gt;，其&lt;code&gt;Parameters&lt;/code&gt;使用&lt;code&gt;?&amp;amp;&lt;/code&gt;的组合传入。&lt;/p&gt;
+&lt;p&gt;创建&lt;code&gt;controller&lt;/code&gt;来接收&lt;code&gt;callback&lt;/code&gt;的数据（包含code和state）。&lt;/p&gt;
+&lt;p&gt;这里使用&lt;a href=&#34;https://square.github.io/okhttp/&#34;&gt;OkHttp&lt;/a&gt;来&lt;strong&gt;POST&lt;/strong&gt;。需要一个&lt;code&gt;DTO&lt;/code&gt;（需要&lt;code&gt;POST&lt;/code&gt;的参数以及相应的get\set方法）和一个&lt;code&gt;Provider&lt;/code&gt;（创建一个方法来调用&lt;code&gt;OkHttp&lt;/code&gt;）。Json依赖可以使用&lt;code&gt;Fastjson&lt;/code&gt;，可在https://mvnrepository.com/里查找所需库并按&lt;code&gt;Maven&lt;/code&gt;来添加&lt;code&gt;dependency&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;在&lt;code&gt;controller&lt;/code&gt;中调用&lt;code&gt;Provider&lt;/code&gt;和&lt;code&gt;DTO&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;再通过&lt;code&gt;access_token&lt;/code&gt;&lt;strong&gt;GET&lt;/strong&gt;接入API。同样可以构造&lt;code&gt;DTO&lt;/code&gt;（&lt;code&gt;DTO&lt;/code&gt;的内容选择需要&lt;code&gt;GET&lt;/code&gt;的参数内容）和&lt;code&gt;Provider&lt;/code&gt;（&lt;code&gt;Provider&lt;/code&gt;可以共用，因为是同一个过程的不同步骤，有些变量会重用）。使用&lt;code&gt;JSON.parseObject&lt;/code&gt;来将String按照DTO的形式来切分。&lt;/p&gt;
+&lt;p&gt;基本流程：&lt;strong&gt;GET获取code -&amp;gt; POST获取的code来换取AccessToken -&amp;gt; 使用AccessToken来GET用户信息&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;P.S. DTO用来传递网络中的数据结构&lt;/strong&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Session&amp;amp;Cookie&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;HttpServletRequest用来处理Http请求，获取session并将得到的用户信息写入session以保持登录态。&lt;/p&gt;
+&lt;p&gt;session信息和前端页面的绑定通过index.html的修改实现，需要根据&lt;code&gt;dependency&lt;/code&gt;依赖的引擎所支持的语法来改写前端页面。&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;redirect:/&amp;ldquo;可以重定向至首页。&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;MySQL&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.runoob.com/mysql/mysql-tutorial.html&#34;&gt;常用语句&lt;/a&gt;：增(CREATE、INSERT INTO)、删(DELETE)、查(SELECT)、改(UPDATE)&lt;/p&gt;
+&lt;p&gt;在此处使用&lt;strong&gt;H2数据库&lt;/strong&gt;。通过MVN引入的方式参考&lt;a href=&#34;https://mvnrepository.com/artifact/com.h2database/h2&#34;&gt;H2 Database Engine&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;在IDEA中的右侧边栏&lt;code&gt;Database&lt;/code&gt;，点击&lt;code&gt;+&lt;/code&gt;选择数据源，配置方式参考&lt;a href=&#34;http://h2database.com/html/quickstart.html&#34;&gt;Quickstart&lt;/a&gt;。在此基础上右键创建的database来创建表和列。&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;MyBatis&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;参考&lt;a href=&#34;http://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/&#34;&gt;mybatis-spring-boot-autoconfigure&lt;/a&gt;来引入MyBatis。&lt;/p&gt;
+&lt;p&gt;参考&lt;a href=&#34;https://docs.spring.io/spring-boot/docs/2.5.4/reference/htmlsingle/#features.sql&#34;&gt;官方文档&lt;/a&gt;来添加支持。&lt;/p&gt;
+&lt;p&gt;在mapper文件夹下创建UserMapper，在model文件夹下创建User，&lt;strong&gt;mapper用来存放映射对应SQL操作的方法&lt;/strong&gt;，&lt;strong&gt;model用来存放程序内部交换的数据结构&lt;/strong&gt;，&lt;/p&gt;
+&lt;h3 id=&#34;applicationproperties&#34;&gt;application.properties&lt;/h3&gt;
+&lt;p&gt;server.port 指定端口&lt;/p&gt;
+&lt;p&gt;可以任意指定关键字，使用时在@Value中替换即可。适用于当前环境与开发环境不一致的路径，便于快速修改。&lt;/p&gt;
+&lt;h3 id=&#34;spring-&#34;&gt;Spring @&lt;/h3&gt;
+&lt;p&gt;@Component&lt;/p&gt;
+&lt;p&gt;@Autowired&lt;/p&gt;
+&lt;p&gt;@Value(&amp;quot;${}&amp;quot;)&lt;/p&gt;
+&lt;p&gt;@Controller&lt;/p&gt;
+&lt;p&gt;@GetMapping()&lt;/p&gt;
+&lt;h3 id=&#34;快捷键&#34;&gt;快捷键&lt;/h3&gt;
+&lt;p&gt;ctrl alt v 快速创建变量&lt;/p&gt;
+&lt;p&gt;alt insert 快速创建get\set等方法&lt;/p&gt;
+&lt;p&gt;alt enter 引入所需的包（标红时使用）&lt;/p&gt;
+&lt;p&gt;ctrl 鼠标左键 快速查看对应的定义&lt;/p&gt;
+&lt;p&gt;ctrl alt o 去除未使用的引入包&lt;/p&gt;
+&lt;p&gt;ctrl n 检索&lt;/p&gt;
+&lt;p&gt;shift enter 快速换行&lt;/p&gt;
+      </description>
     </item>
     
     <item>
-      <title>Mounty的使用技巧</title>
-      <link>https://lowerce.github.io/post/mounty-in-mac/</link>
+      <title>Blog: Mounty的使用技巧</title>
+      <link>https://lowerce.github.io/blog/2021/09/12/mounty%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
       <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://lowerce.github.io/post/mounty-in-mac/</guid>
-      <description>&lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第五篇文章&lt;/em&gt;&lt;/p&gt;</description>
+      <guid>https://lowerce.github.io/blog/2021/09/12/mounty%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第五篇文章&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;对于Mac而言，读取文件格式为NTFS的U盘或者移动硬盘是令人痛苦的，虽然并非Mac不支持，但是因为种种原因苹果并不想让各位Mac用户简单方便地读取NTFS的存储设备，所以第一个建议是：如果您是仅使用Mac的人群，那么请尽量确保您自己的存储设备文件格式为exFAT或其他Mac原生支持的文件格式，以便于您访问和操作这些存储设备内的文件。&lt;/p&gt;
+&lt;p&gt;显然，您的Mac总会有同NTFS设备接入的时候，那么这时该如何正常地访问NTFS设备呢？NTFS for Mac是目前使用最为广泛的应用，but，这是一个付费应用，而且，对于Mac这种并非不支持NTFS访问的设备而言，花钱去访问让人感觉非常不值。那么，Mounty是一个很不错的选择。&lt;/p&gt;
+&lt;p&gt;Mounty的正常使用在此不再详述，仅记录一些使用问题的解决方法。&lt;/p&gt;
+&lt;h5 id=&#34;出现不可重新挂载问题&#34;&gt;出现不可重新挂载问题&lt;/h5&gt;
+&lt;p&gt;这种情况一般是由于未正确插拔设备导致，请在windows下使用时选择移除可移动设备后再拔除&lt;/p&gt;
+&lt;p&gt;在windows下使用&lt;strong&gt;chkdsk X: /f&lt;/strong&gt; （X为移动设备对应的盘符）命令检查磁盘即可&lt;/p&gt;
+      </description>
     </item>
     
     <item>
-      <title>李宏毅-Machine_Learning</title>
-      <link>https://lowerce.github.io/post/ml_lhy/</link>
+      <title>Docs: 李宏毅-Machine_Learning</title>
+      <link>https://lowerce.github.io/docs/machine-learning/ml_lhy/</link>
       <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://lowerce.github.io/post/ml_lhy/</guid>
-      <description>&lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第四篇文章&lt;/em&gt;&lt;/p&gt;</description>
+      <guid>https://lowerce.github.io/docs/machine-learning/ml_lhy/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第四篇文章&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;此文是根据李宏毅2021年春季的机器学习课程撰写。李宏毅机器学习课程的特点是对理论理解的剖析非常深入同时又不失在实际训练过程中的trick教学。&lt;/p&gt;
+&lt;h2 id=&#34;1-机器学习general-guidence&#34;&gt;1. 机器学习general guidence&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/6216449b04c46.jpg&#34; alt=&#34;机器学习general guidence&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2-调参trick&#34;&gt;2. 调参trick&lt;/h2&gt;
+&lt;h3 id=&#34;1-local-minima局部最小值and-saddle-point鞍点&#34;&gt;1. local minima（局部最小值）and saddle point（鞍点）&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Hessian Matrix&lt;/strong&gt; - 其实就是二阶导 在一阶导数消失的时候通过二阶导来决定下一步行进的方向&lt;/p&gt;
+&lt;p&gt;H正定时（Hessian Matrix 所有特征值为正）说明遇到 local minima&lt;/p&gt;
+&lt;p&gt;H正负不定（Hessian Matrix 特征值有正有负）说明遇到 saddle point&lt;/p&gt;
+&lt;p&gt;向沿H特征向量的方向更新参数&lt;/p&gt;
+&lt;h3 id=&#34;2-batch-size-and-momentum&#34;&gt;2. batch size and momentum&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;batch size大小的优劣&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/621644e069277.jpg&#34; alt=&#34;batch size&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;由1、2得出的conclusion&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/6216451f17749.jpg&#34; alt=&#34;conclusin of 1 and 2&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3-adaptive-learning-rate&#34;&gt;3. Adaptive Learning Rate&lt;/h3&gt;
+&lt;p&gt;$\sigma$&lt;/p&gt;
+&lt;p&gt;Root Mean Square &amp;ndash;&amp;gt; RMSProp &amp;ndash;&amp;gt; Adam(RMSProp + Momentum)&lt;/p&gt;
+&lt;p&gt;$ \eta $&lt;/p&gt;
+&lt;p&gt;Learning Rate Scheduling: Learing Rate Decay and Warm Up&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Optimizer总结&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/62164545ae1f4.jpg&#34; alt=&#34;Optimization Summary&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;4-loss-function&#34;&gt;4. Loss function&lt;/h3&gt;
+&lt;p&gt;Cross-entropy 如何优于 Mean Square Error (MSE)？&lt;/p&gt;
+&lt;p&gt;从error surface的角度来看 Cross-entropy 的梯度变化更平缓 &amp;ndash;&amp;gt; 更好 train&lt;/p&gt;
+&lt;h3 id=&#34;5-batch-normalization&#34;&gt;5. Batch Normalization&lt;/h3&gt;
+&lt;p&gt;Feature Normalization - 对所有样本的每一个维度（dimension）作 normalization（减均值、除方差）&lt;/p&gt;
+&lt;p&gt;可以对每一层的输出（激活函数前后影响不大）作上述 Featurn Normalization&lt;/p&gt;
+&lt;p&gt;归根结底让整个 error surface 不那么崎岖（还有各种Normalization的方法）&lt;/p&gt;
+&lt;h2 id=&#34;3-cnn&#34;&gt;3. CNN&lt;/h2&gt;
+&lt;p&gt;在图像感知的问题中使用&lt;/p&gt;
+&lt;p&gt;stride 迈步步长 padding 越界填充&lt;/p&gt;
+&lt;p&gt;Receptive field &amp;ndash;&amp;gt; neutrons &amp;ndash;&amp;gt; shared parameters&lt;/p&gt;
+&lt;p&gt;filters &amp;ndash;&amp;gt; Feature Map&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;两种看待CNN所做事情的角度&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/6216456fddf44.jpg&#34; alt=&#34;两个故事&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Pooling - subsampling  比较典型的 Max Pooling&lt;/p&gt;
+&lt;p&gt;Pooling不是必要的&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CNN的标准流程&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/62164593a3514.jpg&#34; alt=&#34;典型CNN流程&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;4-self-attention&#34;&gt;4. Self-attention&lt;/h2&gt;
+&lt;p&gt;Sequence(vector set) input 考虑整个input sequence的资讯&lt;/p&gt;
+&lt;p&gt;《Attention is all you need》&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Self-attention的运行方式&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/621645bb560ed.jpg&#34; alt=&#34;self attention运作机制&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Multi-head Self-attention&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/621645d7cbaab.jpg&#34; alt=&#34;multi-head self attention&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Position Encoding&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/621645fada77f.jpg&#34; alt=&#34;position encoding&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Self-attention可以视作可调感知域的&lt;strong&gt;CNN&lt;/strong&gt;（在数据量足够大时效果要好于CNN） CNN属于简化版的Self-attention&lt;/p&gt;
+&lt;p&gt;Self-attention比起&lt;strong&gt;RNN&lt;/strong&gt;更加不受输入vector之间距离的影响&lt;/p&gt;
+&lt;h2 id=&#34;5-transformer-seq2seq&#34;&gt;5. Transformer (Seq2Seq)&lt;/h2&gt;
+&lt;p&gt;语音辨识&lt;/p&gt;
+&lt;p&gt;Encoder + Decoder&lt;/p&gt;
+&lt;h3 id=&#34;encoder&#34;&gt;Encoder&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Encoder block的构成&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/62164621bfb72.jpg&#34; alt=&#34;one block of Encoder&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Encoder的结构&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/6216464cb6e22.jpg&#34; alt=&#34;Encoder&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;decoder&#34;&gt;Decoder&lt;/h3&gt;
+&lt;p&gt;分为 Autoregressive 和 Non- Autoregressive&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/6216467f273cf.jpg&#34; alt=&#34;对比&#34;&gt;&lt;/p&gt;
+&lt;p&gt;下面以Autoregressive为例概述Decoder的组成结构&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Masked Self-attention&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;显然在Decoder中上一个的输出作为下一个的输入，输入一个一个依次产生，无法像Self-attention那样直接考虑所有的资讯&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/621646b23eeab.jpg&#34; alt=&#34;Masked Self-attention&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cross attention&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/621646d66ca74.jpg&#34; alt=&#34;Cross attention&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Decoder的结构（Encoder and Decoder）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/621646f54324e.jpg&#34; alt=&#34;Decoder&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;其它的seq2seq架构&#34;&gt;其它的Seq2Seq架构&lt;/h3&gt;
+&lt;p&gt;Copy mechanism: Pointer Network&lt;/p&gt;
+&lt;p&gt;Guided Attention:  Monotonic Attention、 Location-aware attention&lt;/p&gt;
+&lt;h3 id=&#34;评价方法&#34;&gt;评价方法&lt;/h3&gt;
+&lt;p&gt;BLUE score&lt;/p&gt;
+&lt;p&gt;但BLUE难以用于optimuze，对于不知道如何optimize的问题可以使用&lt;strong&gt;RL&lt;/strong&gt;解决&lt;/p&gt;
+&lt;h3 id=&#34;exposure-bias&#34;&gt;exposure bias&lt;/h3&gt;
+&lt;p&gt;Scheduled Sampling来防止在teacher forcing下可能出现的“一步错步步错”的问题&lt;/p&gt;
+&lt;h2 id=&#34;6-gan&#34;&gt;6. GAN&lt;/h2&gt;
+&lt;p&gt;输出一种分布 &lt;strong&gt;Generator-生成&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Discriminator&lt;/strong&gt;（判别Generator生成的优劣）&lt;/p&gt;
+&lt;p&gt;D将G的生成集和训练集分别label后进行训练以期分辨G的生成和自然数据的差异(real or fake，real打分更高)；G将生成接到D上让D打分 以此作为loss 来更新G的参数&lt;/p&gt;
+&lt;p&gt;轮流固定G和D，训练D和G&lt;/p&gt;
+&lt;h3 id=&#34;训练trick&#34;&gt;训练trick&lt;/h3&gt;
+&lt;p&gt;D存在的意义是在无法或者不容易计算生成数据分布与自然数据分布的divergence的情况下给出loss使G能够train起来，divergence的选择（参见f-GAN文章）决定了D的objective function。&lt;/p&gt;
+&lt;p&gt;JS divergence 不适合区分两个分布没有重叠(overlap)的情况，而在高维空间中不同分布图像的overlap很少；Wasserstein distance适于计算两个分布之间的距离（WGAN）&lt;/p&gt;
+&lt;p&gt;未完待续&amp;hellip;&lt;/p&gt;
+      </description>
     </item>
     
     <item>
-      <title>使用leetcode练习算法的一些总结(UPDATE-1)</title>
-      <link>https://lowerce.github.io/post/leetcode-record-2/</link>
+      <title>Docs: 使用leetcode练习算法的一些总结(UPDATE-1)</title>
+      <link>https://lowerce.github.io/docs/algorithm/leetcode-record-2/</link>
       <pubDate>Sun, 29 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://lowerce.github.io/post/leetcode-record-2/</guid>
-      <description>&lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第三篇文章&lt;/em&gt;&lt;/p&gt;</description>
+      <guid>https://lowerce.github.io/docs/algorithm/leetcode-record-2/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第三篇文章&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;即使不靠算法吃饭，leetcode依然能让我在编程语言的使用上更上一层楼。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;本文内容依据我在使用c++完成各类leetcode问题时得到的有效信息和经验写成。&lt;/p&gt;
+&lt;p&gt;P.S.可能更强调在c++的使用上而非各类逆天的算法解决方案上。&lt;/p&gt;
+&lt;h3 id=&#34;1-一些c标准库函数&#34;&gt;1. 一些C++标准库函数&lt;/h3&gt;
+&lt;h4 id=&#34;reverse&#34;&gt;reverse&lt;/h4&gt;
+&lt;p&gt;这个好像可以用来反转很多C++支持的数据结构，一般是两个输入参量，用法大概是这样。reverse(开始位置，开始位置+需要翻转的数量)，从这个角度看，它的输入参量是&lt;strong&gt;左闭右开&lt;/strong&gt;的区间，例如reverse(string.begin(),string.end())&amp;hellip;&lt;/p&gt;
+&lt;p&gt;反正第一次用起来有点晕，极有可能c++很多的标准函数采用类似的输入形式，需要注意。&lt;/p&gt;
+&lt;h4 id=&#34;resize&#34;&gt;resize&lt;/h4&gt;
+&lt;p&gt;反正对于字符串而言挺好使，直接resize(更新后的尺寸)，可以直接把字符串扩充到指定长度，多出来的部分应该是空的吧。&lt;/p&gt;
+&lt;h4 id=&#34;sort&#34;&gt;sort&lt;/h4&gt;
+&lt;p&gt;sort(begin(),end())这样用，反正可以直接按从小到大光速排序，这里的开始和结束参照reverse，输入是完全一样的方法。说明前面的猜想是正确的😄。&lt;/p&gt;
+&lt;p&gt;好像还可以用自定义函数作为第三个输入参量来作为排序依据，这个等以后做题遇到的时候再写吧，没用过的东西一概不写😋。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;以后随时更新&amp;hellip;&lt;/strong&gt;&lt;/p&gt;
+      </description>
     </item>
     
     <item>
-      <title>使用leetcode练习算法的一些总结</title>
-      <link>https://lowerce.github.io/post/leetcode-record/</link>
+      <title>Docs: 使用leetcode练习算法的一些总结</title>
+      <link>https://lowerce.github.io/docs/algorithm/leetcode-record/</link>
       <pubDate>Tue, 24 Aug 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://lowerce.github.io/post/leetcode-record/</guid>
-      <description>&lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第二篇文章&lt;/em&gt;&lt;/p&gt;</description>
+      <guid>https://lowerce.github.io/docs/algorithm/leetcode-record/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第二篇文章&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;即使不靠算法吃饭，leetcode依然能让我在编程语言的使用上更上一层楼。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;本文内容依据我在使用c++完成各类leetcode问题时得到的有效信息和经验写成。&lt;/p&gt;
+&lt;p&gt;P.S.可能更强调在c++的使用上而非各类逆天的算法解决方案上。&lt;/p&gt;
+&lt;h3 id=&#34;1-map&#34;&gt;1. map&lt;/h3&gt;
+&lt;p&gt;总的来说map是一个非常好用的东西，很多可以用set的问题我依然使用map来解决，感觉很舒服。&lt;/p&gt;
+&lt;h4 id=&#34;创建&#34;&gt;创建&lt;/h4&gt;
+&lt;p&gt;创建的时候需要指定好类型 map or unordered_map &amp;lt; type , type &amp;gt; variable_name，创建出来是空的。拿unordered_map&amp;lt;string,int&amp;gt; maps来举例。&lt;/p&gt;
+&lt;h4 id=&#34;插入删除&#34;&gt;插入删除&lt;/h4&gt;
+&lt;p&gt;对于计数型应用(反正做题比较多)，即后一个type是int的情况，用起来很简单，直接maps[&amp;ldquo;hello&amp;rdquo;]++，这样就在创建了对应key值并+1。这里使用上&lt;strong&gt;值得注意&lt;/strong&gt;，当key对应的value值减到0时，并不意味着这个key就消失了，需要maps.erase(&amp;ldquo;hello&amp;rdquo;)才能真正抹掉对应的key值。&lt;/p&gt;
+&lt;p&gt;其它的应用就需要使用maps.insert(pair&amp;lt;string,string&amp;gt;(&amp;ldquo;hello&amp;rdquo;,&amp;ldquo;world&amp;rdquo;))来插入了。&lt;/p&gt;
+&lt;h4 id=&#34;查找&#34;&gt;查找&lt;/h4&gt;
+&lt;p&gt;作为一个哈希表，查找是其得到使用的根本原因。&lt;/p&gt;
+&lt;p&gt;看一个key是不是在表里， if(maps.find(&amp;ldquo;hello&amp;rdquo;)!=maps.end()) ，如果返回true，则说明在表里。这里的返回值是一个迭代器，迭代器这么用，maps.find(&amp;ldquo;hello&amp;rdquo;)-&amp;gt;first ，这就是key的值（也就是&amp;quot;hello&amp;quot;），maps.find(&amp;ldquo;hello&amp;rdquo;)-&amp;gt;second ，这就是&amp;quot;hello&amp;quot;对应的value值。&lt;/p&gt;
+&lt;p&gt;想遍历map，也得靠迭代器，先造个迭代器，unordered_map&amp;lt;string,int&amp;gt;::iterator itr，然后for循环的用法就跟一般的遍历差不多了。for(itr=maps.begin();itr!=maps.end();itr++)这样就能遍历啦。&lt;/p&gt;
+&lt;h3 id=&#34;2-string&#34;&gt;2. string&lt;/h3&gt;
+&lt;p&gt;string的各种操作用法千奇百怪，很多感觉几乎等效。&lt;/p&gt;
+&lt;h4 id=&#34;assign&#34;&gt;assign&lt;/h4&gt;
+&lt;p&gt;大概用法是 s1.assign(s,index,num) ，这样可以把s字符串从index索引值开始往后的num个字符赋给s1字符串。&lt;/p&gt;
+&lt;p&gt;基本跟substr是一样的。&lt;/p&gt;
+&lt;h4 id=&#34;substr&#34;&gt;substr&lt;/h4&gt;
+&lt;p&gt;s1=s.substr(index,num) ，这个操作跟使用assign是等效的。&lt;/p&gt;
+&lt;h3 id=&#34;3-for&#34;&gt;3. for&lt;/h3&gt;
+&lt;p&gt;for循环一些自动遍历的trick之前没用过。&lt;/p&gt;
+&lt;p&gt;比如for(auto i:nums)或者for(auto &amp;amp;i:maps)，后者取值用t.first和t.second即可。也可以for(auto &amp;amp;[key,vaule]:maps)就能直接取到key和value啦。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;以后随时更新&amp;hellip;&lt;/strong&gt;&lt;/p&gt;
+      </description>
     </item>
     
   </channel>

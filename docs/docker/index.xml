@@ -1,0 +1,49 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lowerce&#39;s Wiki Blog – Docker</title>
+    <link>https://lowerce.github.io/docs/docker/</link>
+    <description>Recent content in Docker on Lowerce&#39;s Wiki Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 24 Oct 2021 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="https://lowerce.github.io/docs/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Docker原理及应用</title>
+      <link>https://lowerce.github.io/docs/docker/docker/</link>
+      <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://lowerce.github.io/docs/docker/docker/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第七篇文章&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;command&#34;&gt;Command&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;docker images&lt;/code&gt;  列出全部映像&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker run -it 映像&lt;/code&gt;  运行并保持某一映像&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker ps -a&lt;/code&gt;  列出全部容器（包括未在运行的）&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker container prune&lt;/code&gt;  删除全部已停止的容器&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker rm 容器&lt;/code&gt;   删除指定容器&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker port 容器&lt;/code&gt;  查看容器所映射的端口&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker start 容器&lt;/code&gt;  启动指定容器&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker stop 容器&lt;/code&gt;  停止指定容器&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker search 映像&lt;/code&gt;  搜索所需映像&lt;/p&gt;
+&lt;h2 id=&#34;dockerfile&#34;&gt;Dockerfile&lt;/h2&gt;
+&lt;h2 id=&#34;trick&#34;&gt;Trick&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;docker run --rm 映像&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;映像不存在时自动pull映像运行并在映像运行结束后自动删除容器&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker run -d -P --name 指定一个名称 映像&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;终端界面可以自由关闭而不影响容器的持续运行，映射容器的端口到本机的随机端口，并为容器指定名称&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker run -p 本机端口:映像端口 映像&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;将映像的端口映射到本机的端口中来启动容器&lt;/p&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>

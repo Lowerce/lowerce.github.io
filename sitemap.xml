@@ -1,200 +1,114 @@
-<?xml-stylesheet type="text/xsl" href="https://lowerce.github.io/sitemap.xsl"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://lowerce.github.io/about/</loc>
-    <lastmod>2020-12-31T10:43:19+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
+    <loc>https://lowerce.github.io/docs/c&#43;&#43;/</loc>
+    <lastmod>2021-11-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lowerce.github.io/docs/machine-learning/</loc>
+    <lastmod>2021-09-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lowerce.github.io/docs/algorithm/</loc>
+    <lastmod>2021-08-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lowerce.github.io/docs/docker/</loc>
+    <lastmod>2021-10-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lowerce.github.io/docs/site/</loc>
+    <lastmod>2021-09-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lowerce.github.io/docs/</loc>
+    <lastmod>2021-11-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lowerce.github.io/blog/solutions/</loc>
+    <lastmod>2021-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://lowerce.github.io/blog/diaries/</loc>
+    <lastmod>2020-12-31T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://lowerce.github.io/tags/2021/</loc>
     <lastmod>2021-11-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://lowerce.github.io/categories/2021/</loc>
     <lastmod>2021-11-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://lowerce.github.io/tags/c&#43;&#43;/</loc>
     <lastmod>2021-11-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://lowerce.github.io/post/cpp/</loc>
+  </url><url>
+    <loc>https://lowerce.github.io/docs/c&#43;&#43;/cpp/</loc>
     <lastmod>2021-11-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://lowerce.github.io/categories/</loc>
     <lastmod>2021-11-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://lowerce.github.io/</loc>
     <lastmod>2021-11-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://lowerce.github.io/post/</loc>
-    <lastmod>2021-11-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://lowerce.github.io/tags/</loc>
     <lastmod>2021-11-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://lowerce.github.io/categories/technology/</loc>
     <lastmod>2021-11-07T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://lowerce.github.io/tags/docker/</loc>
     <lastmod>2021-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://lowerce.github.io/post/docker/</loc>
+  </url><url>
+    <loc>https://lowerce.github.io/docs/docker/docker/</loc>
     <lastmod>2021-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://lowerce.github.io/tags/geant4/</loc>
     <lastmod>2021-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://lowerce.github.io/tags/website/</loc>
     <lastmod>2021-09-18T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://lowerce.github.io/post/site_construction/</loc>
+  </url><url>
+    <loc>https://lowerce.github.io/docs/site/site_construction/</loc>
     <lastmod>2021-09-18T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://lowerce.github.io/blog/</loc>
+    <lastmod>2021-09-12T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://lowerce.github.io/tags/mac/</loc>
     <lastmod>2021-09-12T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://lowerce.github.io/post/mounty-in-mac/</loc>
+  </url><url>
+    <loc>https://lowerce.github.io/blog/2021/09/12/mounty%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
     <lastmod>2021-09-12T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://lowerce.github.io/tags/ml/</loc>
     <lastmod>2021-09-09T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://lowerce.github.io/post/ml_lhy/</loc>
+  </url><url>
+    <loc>https://lowerce.github.io/docs/machine-learning/ml_lhy/</loc>
     <lastmod>2021-09-09T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://lowerce.github.io/tags/algorithm/</loc>
     <lastmod>2021-08-29T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://lowerce.github.io/post/leetcode-record-2/</loc>
+  </url><url>
+    <loc>https://lowerce.github.io/docs/algorithm/leetcode-record-2/</loc>
     <lastmod>2021-08-29T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://lowerce.github.io/post/leetcode-record/</loc>
+  </url><url>
+    <loc>https://lowerce.github.io/docs/algorithm/leetcode-record/</loc>
     <lastmod>2021-08-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://lowerce.github.io/tags/2020/</loc>
     <lastmod>2020-12-31T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://lowerce.github.io/categories/2020/</loc>
     <lastmod>2020-12-31T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://lowerce.github.io/categories/emotion/</loc>
     <lastmod>2020-12-31T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://lowerce.github.io/tags/love/</loc>
     <lastmod>2020-12-31T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://lowerce.github.io/tags/summary/</loc>
     <lastmod>2020-12-31T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://lowerce.github.io/post/my-first-record/</loc>
+  </url><url>
+    <loc>https://lowerce.github.io/blog/2020/12/31/%E5%86%99%E5%9C%A82020%E5%B9%B4%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/</loc>
     <lastmod>2020-12-31T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+  </url><url>
+    <loc>https://lowerce.github.io/about/</loc>
+  </url><url>
+    <loc>https://lowerce.github.io/search/</loc>
   </url>
-  
 </urlset>

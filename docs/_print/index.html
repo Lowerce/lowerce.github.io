@@ -1,0 +1,1225 @@
+<!doctype html>
+<html lang="zh-cn" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.92.2" />
+<link rel="canonical" type="text/html" href="https://lowerce.github.io/docs/">
+<link rel="alternate" type="application/rss&#43;xml" href="https://lowerce.github.io/docs/index.xml">
+<meta name="robots" content="noindex, nofollow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Documentation | Lowerce&#39;s Wiki Blog</title>
+<meta name="description" content="
+
+
+请在左侧或本页面下方的目录中查阅您需要了解的内容或在右上角输入关键字搜索.
+
+
+
+本页面是Lowerce&rsquo;s Wiki Blog的文档系统起始页,文档系统记录的内容主要是一些技术学习过程中记录的笔记以及一些工作的完整流程记录。
+由于科研需要,我主要使用C&#43;&#43;编程语言并在不断的精进过 …">
+<meta property="og:title" content="Documentation" />
+<meta property="og:description" content="维基笔记归档站" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://lowerce.github.io/docs/" /><meta property="og:site_name" content="Lowerce&#39;s Wiki Blog" />
+
+<meta itemprop="name" content="Documentation">
+<meta itemprop="description" content="维基笔记归档站"><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Documentation"/>
+<meta name="twitter:description" content="维基笔记归档站"/>
+
+
+
+
+<link rel="preload" href="/scss/main.scss" as="style">
+<link href="/scss/main.scss" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+
+  </head>
+  <body class="td-section">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"><svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500"><g><path style="fill:#fff" d="M116.8525 421.9722c-5.7041.0-10.3442-4.3127-10.3442-9.6129V88.183c0-5.3002 4.6401-9.6117 10.3442-9.6117H320.858c3.0347.0 9.3959.5498 11.7506 2.6302l.3545.3442 58.905 63.2912c2.3101 2.491 2.9202 8.4928 2.9202 11.3184v256.2039c0 5.3002-4.6407 9.6129-10.3436 9.6129H116.8525z"/><g><g><g><path style="fill:#767676" d="M384.4445 423.2066H116.852c-6.3839.0-11.5786-4.8658-11.5786-10.8474V88.1831c0-5.9804 5.1947-10.8461 11.5786-10.8461h204.0062c.377.0 9.2786.0329 12.568 2.9389l.3947.3833 58.9508 63.337c3.2135 3.4652 3.2514 11.7924 3.2514 12.1593v256.2036C396.0231 418.3408 390.8284 423.2066 384.4445 423.2066zM116.5079 411.9189c.0848.0278.1999.0531.3441.0531h267.5925c.1442.0.2581-.0253.3441-.0531V156.1556c-.0076-.9033-.3593-3.7347-.7034-5.0037l-57.6527-61.9416c-1.4651-.3176-4.4533-.6389-5.5742-.6389H116.852c-.143.0-.2594.024-.3441.0531V411.9189zm267.4533-261.149zM327.0321 89.371v.0013V89.371z"/></g></g></g><g><g><path style="fill:#5b7fc0" d="M189.0874 210.1754l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4473C177.5953 212.627 183.0601 210.1742 189.0874 210.1754zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 234.1722 197.0804 232.033z"/><path style="opacity:.3;fill:#fff" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/><g><defs><path id="SVGID_1_" d="M194.7376 237.6875c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 234.2399 196.1861 236.239 194.7376 237.6875z"/></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_2_);fill:#fff" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/><path style="opacity:.13;clip-path:url(#SVGID_2_);fill:#020202" d="M190.0704 225.0237c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 225.7247 191.9774 225.0237 190.0704 225.0237z"/></g><g><defs><path id="SVGID_3_" d="M189.0898 210.176c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 212.6276 183.0612 210.176 189.0898 210.176zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 236.239 197.0839 234.2399 197.0839 232.0372z"/></defs><clipPath id="SVGID_4_"><use xlink:href="#SVGID_3_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_4_);fill:#5b7fc0" d="M172.6595 215.6045c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8475-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 209.1953 176.6171 211.647 172.6595 215.6045z"/></g></g><rect x="198.8952" y="225.1043" style="fill:#5b7fc0" width="122.6266" height="13.8671"/></g><g><path style="fill:#d95140" d="M189.0874 155.7611l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.0249 2.454-11.4897 6.4116-15.4473C177.5953 158.2128 183.0601 155.7599 189.0874 155.7611zm7.993 21.8577c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.2508 181.7667 197.0816 179.758 197.0804 177.6188z"/><path style="opacity:.3;fill:#fff" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zm7.9941 21.8613c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/><g><defs><path id="SVGID_5_" d="M194.7376 183.2733c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 179.8256 196.1861 181.8248 194.7376 183.2733z"/></defs><clipPath id="SVGID_6_"><use xlink:href="#SVGID_5_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_6_);fill:#fff" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/><path style="opacity:.13;clip-path:url(#SVGID_6_);fill:#020202" d="M190.0704 170.6095c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9546.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.663-2.8588-6.116.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C193.7885 171.3104 191.9774 170.6095 190.0704 170.6095z"/></g><g><defs><path id="SVGID_7_" d="M189.0898 155.7617c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8066-21.8612-21.8613.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 158.2134 183.0612 155.7617 189.0898 155.7617zm7.9941 21.8613c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 181.8248 197.0839 179.8256 197.0839 177.623z"/></defs><clipPath id="SVGID_8_"><use xlink:href="#SVGID_7_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_8_);fill:#d95140" d="M172.6595 161.1903c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 154.7811 176.6171 157.2327 172.6595 161.1903z"/></g><rect x="198.8952" y="170.69" style="fill:#d95140" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#56a55c" d="M189.5379 264.6147l.0012-.0012c7.7751.0012 15.0294 4.1862 18.932 10.9235 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3304-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032-5.8394.0-11.3281-2.2733-15.458-6.4032-4.13-4.13-6.4032-9.6186-6.4056-15.4628.0012-6.0249 2.454-11.4897 6.4116-15.4472C178.0458 267.0663 183.5105 264.6135 189.5379 264.6147zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6538 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403C196.7013 290.6202 197.5321 288.6115 197.5309 286.4723z"/><path style="opacity:.3;fill:#fff" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/><g><defs><path id="SVGID_9_" d="M195.1881 292.1268c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.9989 7.9942-7.9941 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.5344 288.6792 196.6366 290.6783 195.1881 292.1268z"/></defs><clipPath id="SVGID_10_"><use xlink:href="#SVGID_9_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_10_);fill:#fff" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/><path style="opacity:.13;clip-path:url(#SVGID_10_);fill:#020202" d="M190.5209 279.463c-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7446-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9941 2.3802-1e-4 4.616 1.0833 6.1218 2.8788C194.239 280.164 192.4279 279.463 190.5209 279.463z"/></g><g><defs><path id="SVGID_11_" d="M189.5403 264.6153c7.7763.0 15.0283 4.1826 18.926 10.9151 1.9201 3.3135 2.9377 7.0987 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8613-12.0547.0024-21.8636-9.8065-21.8612-21.8613.0-6.0285 2.4516-11.492 6.4116-15.452C178.0482 267.0669 183.5117 264.6153 189.5403 264.6153zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9941.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.6366 290.6783 197.5344 288.6792 197.5344 286.4765z"/></defs><clipPath id="SVGID_12_"><use xlink:href="#SVGID_11_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_12_);fill:#56a55c" d="M173.11 270.0439c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8613 12.0547.0024 21.8636-9.797 21.8613-21.8613.0024-3.8474-1.0151-7.6326-2.9353-10.9462-3.8977-6.7325-11.1497-10.9151-18.926-10.9151C182.5311 263.6346 177.0676 266.0863 173.11 270.0439z"/></g></g><rect x="199.3456" y="279.5436" style="fill:#56a55c" width="122.6266" height="13.8671"/></g><g><g><path style="fill:#f1bc42" d="M189.0874 318.7208l.0012-.0012c7.7751.0012 15.0295 4.1862 18.932 10.9234 1.9177 3.3159 2.9305 7.1011 2.9293 10.9378.0 5.8394-2.2733 11.3305-6.4032 15.4604-4.1288 4.1288-9.6186 6.4032-15.458 6.4032s-11.328-2.2733-15.458-6.4032-6.4032-9.6186-6.4056-15.4628c.0012-6.025 2.454-11.4897 6.4116-15.4472C177.5953 321.1724 183.0601 318.7196 189.0874 318.7208zm7.993 21.8576c.0012-1.4042-.3687-2.7868-1.063-3.9887-1.4293-2.4684-4.0833-3.9995-6.9299-4.0019-4.4077.0024-7.993 3.5877-7.993 7.993.0 2.1356.832 4.1431 2.3427 5.6539 1.5083 1.5083 3.5159 2.3403 5.6503 2.3415 2.1356.0 4.1443-.8308 5.6539-2.3403S197.0816 342.7176 197.0804 340.5784z"/><path style="opacity:.3;fill:#fff" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/><g><defs><path id="SVGID_13_" d="M194.7376 346.2329c-1.4461 1.4461-3.4452 2.3439-5.6479 2.3439-4.4077-.0024-7.9918-3.5865-7.9942-7.9942.0024-4.4125 3.5937-7.999 7.9942-7.9942 2.8443.0 5.497 1.5323 6.924 3.9983.6991 1.2067 1.0702 2.5881 1.0702 3.9959C197.0839 342.7853 196.1861 344.7844 194.7376 346.2329z"/></defs><clipPath id="SVGID_14_"><use xlink:href="#SVGID_13_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_14_);fill:#fff" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/><path style="opacity:.13;clip-path:url(#SVGID_14_);fill:#020202" d="M190.0704 333.5691c-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0011 1.9547.7088 3.7452 1.8782 5.1354-1.7447-1.4674-2.8575-3.6631-2.8588-6.1161.0024-4.4125 3.5936-7.999 7.9942-7.9942 2.3802-1e-4 4.616 1.0834 6.1218 2.8788C193.7885 334.2701 191.9774 333.5691 190.0704 333.5691z"/></g><g><defs><path id="SVGID_15_" d="M189.0898 318.7214c7.7763.0 15.0283 4.1826 18.926 10.915 1.9201 3.3136 2.9377 7.0988 2.9353 10.9462.0024 12.0643-9.8065 21.8636-21.8613 21.8612-12.0547.0024-21.8636-9.8065-21.8612-21.8612.0-6.0285 2.4516-11.4921 6.4116-15.452C177.5977 321.173 183.0612 318.7214 189.0898 318.7214zm7.9941 21.8612c0-1.4078-.3711-2.7892-1.0702-3.9959-1.4269-2.466-4.0797-3.9983-6.924-3.9983-4.4005-.0048-7.9918 3.5817-7.9942 7.9942.0024 4.4077 3.5865 7.9918 7.9942 7.9942 2.2027.0 4.2018-.8978 5.6479-2.3439C196.1861 344.7844 197.0839 342.7853 197.0839 340.5826z"/></defs><clipPath id="SVGID_16_"><use xlink:href="#SVGID_15_" style="overflow:visible"/></clipPath><path style="clip-path:url(#SVGID_16_);fill:#f1bc42" d="M172.6595 324.15c-3.96 3.96-6.4116 9.4235-6.4116 15.452-.0024 12.0547 9.8066 21.8636 21.8613 21.8612 12.0547.0024 21.8636-9.797 21.8613-21.8612.0024-3.8474-1.0151-7.6327-2.9353-10.9462-3.8977-6.7324-11.1497-10.9151-18.926-10.9151C182.0806 317.7407 176.6171 320.1924 172.6595 324.15z"/></g></g><rect x="198.8952" y="333.6497" style="fill:#f1bc42" width="122.6266" height="13.8671"/></g></g></svg></span><span class="text-uppercase font-weight-bold">Lowerce&#39;s Wiki Blog</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/about/" ><span>About</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link active" href="/docs/" ><span class="active">Documentation</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/blog/" ><span>Blog</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block"><input type="search" class="form-control td-search-input" placeholder="&#xf002; 站内搜索…" aria-label="站内搜索…" autocomplete="off">
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+
+
+
+
+<div class="td-content">
+<div class="pageinfo pageinfo-primary d-print-none">
+<p>
+这是本节的多页打印视图。
+<a href="#" onclick="print();return false;">点击此处打印</a>.
+</p><p>
+<a href="/docs/">返回本页常规视图</a>.
+</p>
+</div>
+
+
+
+<h1 class="title">Documentation</h1>
+
+
+
+
+
+    <ul>
+    
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1: <a href="#pg-922211f82e581d1e905efb98e8ca453a">C&#43;&#43;</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>1.1: <a href="#pg-451807a610c5be94feb9cac83b376571">C&#43;&#43; Primer充电以及C&#43;&#43;特性了解</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-03bdce40ac72b07f5175158e5b3410f3">Machine Learning</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>2.1: <a href="#pg-ec021ae621f53763870f7ceb22a58b6f">李宏毅-Machine_Learning</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>3: <a href="#pg-f6122ad87182536850946ffe9df0fa90">Algorithm</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>3.1: <a href="#pg-aebee7a2ccf06e8dc7bd34e98d4657c6">使用leetcode练习算法的一些总结(UPDATE-1)</a></li>
+
+
+    
+  
+    
+    
+	
+<li>3.2: <a href="#pg-a9ae5938d84208521ccc8e62518aa358">使用leetcode练习算法的一些总结</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>4: <a href="#pg-0ba5e81d3356361bc5d229b29a407206">Docker</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>4.1: <a href="#pg-98e691cc6d2a02eb40d696d5e9c01a98">Docker原理及应用</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
+    
+    
+	
+<li>5: <a href="#pg-1fdb0bcd62206e847642712a25a623db">建站</a></li>
+
+
+    
+    <ul>
+        
+  
+  
+  
+  
+
+  
+    
+    
+	
+<li>5.1: <a href="#pg-41bc38e6de0946ffb5d318ad12593b36">前后端开发自学指南</a></li>
+
+
+    
+  
+
+    </ul>
+    
+  
+
+    </ul>
+
+
+<div class="content">
+      
+
+<div class="pageinfo pageinfo-primary">
+<p>请在左侧或本页面下方的目录中查阅您需要了解的内容或在右上角输入关键字搜索.</p>
+
+</div>
+
+<p>本页面是Lowerce&rsquo;s Wiki Blog的文档系统起始页,文档系统记录的内容主要是一些技术学习过程中记录的笔记以及一些工作的完整流程记录。</p>
+<p>由于科研需要,我主要使用C++编程语言并在不断的精进过程中,工作主要涉及到一些基于C++的计算工具和框架.</p>
+
+</div>
+</div>
+
+
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-922211f82e581d1e905efb98e8ca453a">1 - C&#43;&#43;</h1>
+    <div class="lead">C++相关的学习笔记.</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>C++相关的学习笔记.</p>
+
+</div>
+
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-451807a610c5be94feb9cac83b376571">1.1 - C&#43;&#43; Primer充电以及C&#43;&#43;特性了解</h1>
+    
+	<p><em>这是Lowerce&rsquo;s Blog的第九篇文章</em></p>
+<blockquote>
+<p><em>C++基础知识？</em></p>
+</blockquote>
+<h2 id="c-primer">C++ Primer</h2>
+<ul>
+<li>单文件编译</li>
+</ul>
+<p><code>g++ -o 输出文件名 待编译文件名</code></p>
+<ul>
+<li>读取、输出到文件</li>
+</ul>
+<p><code>程序名 &lt; 输入文件</code></p>
+<p><code>程序名 &gt; 输出文件</code></p>
+<h4 id="数据类型">数据类型</h4>
+<ul>
+<li>选用的经验：</li>
+</ul>
+<p>数值不为负选择无符号型(unsigned)</p>
+<p>整数运算选用<code>int</code>，超过表示范围的话选用<code>long long</code></p>
+<p>浮点数运算选用<code>double</code></p>
+<ul>
+<li><strong>不要混用</strong>有符号类型和无符号类型，带符号数会自动转换为无符号数，等于初始值对无符号类型所能表示的数值总数取模后的余数</li>
+<li>字符型字面值常量的类型可以通过前缀指定，整型、浮点型可以通过后缀指定</li>
+</ul>
+<h4 id="变量">变量</h4>
+<ul>
+<li>初始化和赋值存在本质上的巨大区别</li>
+<li>使用列表初始化<code>{}</code>，在可能的数据丢失时会使编译器给出警告</li>
+<li>声明(declaration)和定义(definition)是不同的，声明使名字为程序所知，定义则为变量申请存储空间或赋初值</li>
+<li>使用<code>extern</code>关键字来声明变量</li>
+<li>变量能且只能被定义一次，但可以被多次声明</li>
+<li>C++是静态语言——在编译阶段检查类型</li>
+<li>全局变量在块作用域内用<code>::</code>前缀可以显式访问（屏蔽块作用域内的局部变量）</li>
+<li>局部变量最好不要同全局变量同名</li>
+</ul>
+<h4 id="复合类型">复合类型</h4>
+<ul>
+<li>通过在变量名前加<code>&amp;</code>来定义引用类型，引用必须初始化</li>
+<li><strong>引用即别名</strong></li>
+<li>引用只能绑定在对象上</li>
+<li>指针存放对象的地址，使用<strong>取地址符</strong><code>&amp;</code>获取地址</li>
+<li>利用指针访问对象，使用<strong>解引用符</strong><code>*</code>访问对象</li>
+<li><code>&amp;</code>和<code>*</code>出现在声明和表达式中的含义<strong>截然不同</strong></li>
+<li>初始化空指针(=nullptr、=0、=NULL)</li>
+<li>赋值永远改变的是等号左侧的对象</li>
+<li><code>void*</code>可以存放任意对象的地址</li>
+<li>类型修饰符(<code>*</code>和<code>&amp;</code>)仅修饰其后的<strong>第一个</strong>变量标识符</li>
+</ul>
+<h4 id="const限定符">const限定符</h4>
+<ul>
+<li>常量引用是对const的引用</li>
+<li>在初始化常量引用时允许使用<strong>任意表达式</strong>作为初始值，只要该表达式的结果能够转换成引用的类型即可</li>
+<li>对const的引用可能引用一个并非const的对象</li>
+<li>所谓指向常量的指针或引用不过是指针或引用**“自以为是”**地认为自己指向常量，所以自觉地不去改变所指对象的值</li>
+<li>弄清声明的含义最有效的方法是从右向左阅读</li>
+<li><code>*</code>放在const之前说明指针是一个常量-不变的是指针本身的值而非指向的那个值</li>
+<li>指针本身是一个常量并不意味着不能通过指针修改其所指向对象的值</li>
+<li>非常量可以转换为常量 反之则不行</li>
+<li>常量表达式是指值不会改变并且在编译过程就能得到计算结果的表达式</li>
+<li>一个对象是不是常量表达式由它的数据类型和初始值共同决定</li>
+<li>顶层const 表示指针本身是个常量；底层const 表示指针所指的对象是个常量（仅示例，顶层和底层const适用于各种类型）</li>
+<li>当执行对象的拷贝操作时，顶层const和底层const区别明显</li>
+</ul>
+<h4 id="处理类型">处理类型</h4>
+<ul>
+<li>类型别名：<code>typedef 前者 后者</code> —— 后者是前者的同义词</li>
+<li>注意typedef中使用<code>*</code>的情况（并不是简单的替换关系）</li>
+<li>别名声明：<code>using 前者 = 后者</code> —— 前者是后者的同义词</li>
+<li><code>auto</code> 根据初值自动推断数据类型（仅保留底层const）顶层const需要在auto前加以修饰</li>
+<li><code>*</code>和<code>&amp;</code>只从属于某个声明符而非基本数据类型的一部分</li>
+<li><code>decltype</code> 推断表达式类型而不使用其作为初值（保留变量的全部类型）</li>
+<li>如果decltype使用的表达式不是一个变量，则decltype返回表达式结果对应的类型</li>
+<li>如果表达式的内容是解引用操作，则decltype将得到引用类型</li>
+<li>对于decltype所用的表达式来说，在变量名上加括号与不加括号得到的类型会有不同</li>
+<li><code>decltype((变量))</code>的结果永远是引用，<code>decltype(变量)</code>只有在变量本身是引用时才是引用</li>
+</ul>
+<h4 id="自定义数据结构">自定义数据结构</h4>
+<ul>
+<li><code>struct 类名 类体 ;</code></li>
+<li>预处理器保证头文件多次包含仍能安全工作——头文件保护符</li>
+<li><code>#define</code>把一个名字设定为预处理变量</li>
+<li><code>#ifdef</code>当且仅当变量已定义时为真</li>
+<li><code>#ifndef</code>当且仅当变量未定义时为真</li>
+<li><code>#endif</code>检查结果为真时执行后续操作直到出现此命令</li>
+<li>一般将预处理变量名全部大写以保证其唯一性</li>
+<li>头文件一旦改变，相关的源文件必须重新编译以获取更新过的声明</li>
+</ul>
+<h4 id="using声明">using声明</h4>
+<ul>
+<li><code>using namespace::name;</code></li>
+<li>头文件中不应包含using声明</li>
+</ul>
+<h4 id="string">string</h4>
+<ul>
+<li><code>std::string</code> 可变长字符序列</li>
+<li>在执行读取操作时，string对象会自动忽略开头的空白（空格符、换行符、制表符等）并从第一个真正的字符开始读起，直到遇见下一处空白为止</li>
+<li>常用操作:<code>getline(a,b)</code>——从a中读取一行（以换行符为界）赋给b <code>s.empty()</code>——判断s是否为空 <code>s.size()</code></li>
+<li>size函数的返回值是一个无符号整型数（类型为<code>string::size_type</code>） 注意避免int和unsigned混用</li>
+<li>string的比较：1.字符相同时，较短string小于较长string；2.字符相异时，第一对相异字符的比较</li>
+<li>当string对象和字符/字符串字面值混在一条语句中时，必须确保每个+两侧的运算对象至少有一个是string</li>
+<li><strong>字符串字面值与string是不同的类型</strong></li>
+<li>使用C++版本的C标准库头文件 <code>ctype.h</code>=&gt;<code>cctype</code></li>
+<li>cctype中包含一系列字符的判断和处理函数</li>
+<li>基于范围的for语句 <code>for (declaration : expression)</code> 类似于python中的for语句</li>
+<li>string中的字符可以通过下标访问</li>
+<li>始终注意检查下标的合法性（是否在正确的范围内）</li>
+</ul>
+<h4 id="vector">vector</h4>
+<ul>
+<li><code>std::vector</code> 对象的集合（所有对象的类型相同）；容器</li>
+<li>vector是模板而非类型</li>
+<li><code>vector&lt;类型&gt; 容器名;</code></li>
+<li>vector丰富的初始化方式：列表、拷贝、构造&hellip;</li>
+<li><code>push_back(值)</code> 将值作为vector的尾元素压到vector的尾端</li>
+<li>vector能高效地快速添加元素（没有必要为其指定容量）</li>
+<li>如果循环体内部包含有向vector添加元素的语句，则不能使用范围for循环</li>
+<li>empty和size函数与string的类似</li>
+<li>size函数的返回值也是属于vector的特殊类型<code>size_type</code> 但需要指出vector的元素类型</li>
+<li>vector的比较法则也与string类似</li>
+<li>vector不能使用下标添加元素，只能使用下标访问已存在的元素</li>
+</ul>
+<h4 id="迭代器">迭代器</h4>
+<ul>
+<li>有迭代器的类型同时拥有返回迭代器的成员</li>
+<li><code>begin()</code>返回指向第一个元素的迭代器 <code>end()</code>返回指向尾元素下一位置**（尾后）**的迭代器</li>
+<li>一般来说，我们不清楚迭代器的准确类型（使用<code>auto</code>来定义变量）</li>
+<li><code>*iter</code>返回迭代器所指元素的引用 <code>iter-&gt;mem</code> <code>++iter</code>/<code>--iter</code>指示容器的下一个/上一个元素</li>
+<li>泛型编程：所有标准库容器的迭代器都定义了<code>==</code>和<code>!=</code>，所以在for循环中使用<code>!=</code>而非<code>&lt;</code>，因为这种编程风格在标准库提供的所有容器中都有效</li>
+<li><code>const_iterator</code>只能读元素，不能写元素</li>
+<li><code>-&gt;</code>即为解引用和成员访问的结合，it-&gt;mem等价于(*it).mem</li>
+<li>任何一种可能改变vector容量的操作，都会使该vector的迭代器失效</li>
+<li>凡是使用了迭代器的循环体，都不要向迭代器所属的容易添加元素</li>
+<li>两个迭代器相减的结果为<code>difference_type</code>（带符号整型数）</li>
+</ul>
+<h4 id="数组">数组</h4>
+<ul>
+<li>与vector类似的是存放类型相同的对象的容器；不同的是数组的大小确定不变，不能随意向其增加元素</li>
+<li>数组中元素的个数也是数组类型的一部分，所以需要为常量表达式</li>
+<li>数组的初始化：列表初始化，不允许拷贝</li>
+<li>字符数组可以使用字符串字面值初始化，但要注意字符串字面值结尾处自带一个空字符</li>
+<li>默认情况下，类型修饰符从右向左依次绑定；但对于数组而言，<strong>由（括号）内向外阅读</strong>更有意义</li>
+<li>在使用数组下标时，通常将其定义为<code>size_t</code>类型</li>
+<li>使用数组类型的对象其实是使用一个指向该数组首元素的指针</li>
+<li>当使用数组作为一个auto变量的初始值时，推断得到的类型是指针而非数组；但是decltype不会发生上述转换</li>
+<li>数组可以使用下标索引尾元素后那个并不存在的元素</li>
+<li><code>begin(数组名)</code>/<code>end(数组名)</code>能安全地返回首元素指针/尾后元素指针</li>
+<li>两个指针相减的结果为<code>ptrdiff_t</code></li>
+<li>如果两个指针分别指向不相关的对象，则不能比较</li>
+<li>内置的下标运算符所用的索引值不是无符号类型，这与vector和string是不同的</li>
+<li><strong>C风格字符串</strong>存放在字符数组中并以空字符（<code>\0</code>）结束</li>
+<li>头文件<code>cstring</code>中定义的函数可以操作C风格字符串</li>
+<li>使用标准库string比使用<strong>C风格字符串</strong>更安全高效</li>
+<li>尽量使用标准库类型而非数组</li>
+</ul>
+<h4 id="多维数组">多维数组</h4>
+<ul>
+<li>严格来说，C++中没有多维数组，通常所说的多维数组其实是数组的数组</li>
+<li>使用<code>{}</code>括起来的一组值初始化多维数组，花括号嵌套与否完全等价（嵌套只是为了更清晰地阅读）</li>
+<li>可以仅初始化部分元素，其它元素执行默认初始化</li>
+<li>使用范围for语句处理多维数组，除了最内层的循环外，其他所有循环的控制变量都应该是引用类型</li>
+<li>当程序使用多维数组的名字时，会自动将其转换成指向数组首元素的指针，即指向第一个内层数组的指针</li>
+</ul>
+<h4 id="表达式基础">表达式基础</h4>
+<ul>
+<li>左值和右值：左值可以位于赋值语句的左侧，右值则不能（在C++中并非如此简单）</li>
+<li>当一个对象被用作右值的时候，用的是对象的值（内容）；当对象被用作左值的时候，用的是对象的身份（在内存中的位置）</li>
+<li>赋值运算符需要一个非常量左值作为其左侧运算符，得到的结果也为左值</li>
+<li>取地址符作用于一个左值运算对象，返回一个指向该运算对象的指针，该指针为右值</li>
+<li>解引用运算符、下标运算符的求值结果为左值</li>
+<li>复合表达式中，括号无视优先级与结合律</li>
+<li>求值顺序在大多数运算符中没有明确规定，除了<code>&amp;&amp;</code>、<code>||</code>、<code>?:</code>、<code>,</code>外</li>
+</ul>
+<h4 id="运算符">运算符</h4>
+<ul>
+<li>整数相除的商值无论正负一律向0取整（舍弃小数部分）</li>
+<li><code>(-m)/n</code>和<code>m/(-n)</code>都等价于<code>-(m/n)</code>，<code>m%(-n)</code>等价于<code>m%n</code>，<code>(-m)%n</code>等价于<code>-(m%n)</code></li>
+<li>除非必须，否则不用递增递减运算符的后置版本</li>
+<li><code>ptr-&gt;mem</code>等价于<code>(*ptr).mem</code> P.S.解引用运算符的优先级低于点运算符</li>
+<li>条件运算符（<code>cond?expr1:expr2</code>）可嵌套 最好不超过两到三层</li>
+<li>条件运算符的优先级非常低，通常需要在它两端加括号</li>
+<li>仅将位运算符用于处理无符号类型</li>
+<li>移位运算符（IO运算符）的优先级不高不低：低于算术运算符，高于关系运算符、赋值运算符、条件运算符</li>
+<li><code>sizeof</code>返回一条表达式或一个类型名字所占的字节数 <code>sizeof (type)</code>和<code>sizeof expr</code></li>
+<li><code>sizeof</code>并不实际计算其运算对象的值</li>
+<li>对char或类型为char的表达式执行sizeof运算结果为1</li>
+<li>sizeof运算不会把数组转换成指针来处理，等价于对数组中所有元素执行一次sizeof运算并将所得结果求和</li>
+<li>对string或vector对象执行sizeof运算只返回该类型固定部分的大小，不会计算对象中的元素占用了多少空间</li>
+<li>逗号运算符真正的结果是右侧表达式的值</li>
+</ul>
+<h4 id="类型转换">类型转换</h4>
+<ul>
+<li>整型提升、算术转换</li>
+<li>强制类型转换<code>cast-name&lt;type&gt;(expression)</code></li>
+<li>任何具有明确定义的类型转换，只要不包含底层const，都可以使用<code>static_cast</code></li>
+<li>当需要把一个较大的算术类型赋值给较小的类型时，<code>static_cast</code>非常有用</li>
+<li><code>static_cast</code>对于编译器无法自动执行的类型转换也非常有用</li>
+<li><code>const_cast</code>只能改变运算对象的底层const，只有<code>const_cast</code>能改变表达式的常量属性</li>
+<li>使用<code>reinterpret_cast</code>非常危险</li>
+<li>要尽量避免强制类型转换</li>
+<li>旧式的强制类型转换 <code>type (expr)</code>和<code>(type) expr</code>，不够清晰明了，追踪困难</li>
+</ul>
+<h4 id="运算符优先级">运算符优先级</h4>
+<h4 id="条件语句">条件语句</h4>
+<ul>
+<li><code>else</code>与离它最近的未匹配的<code>if</code>匹配，使用花括号可以强制匹配</li>
+<li>case标签必须是整形常量表达式</li>
+<li>如果在某处一个带有初值的变量位于作用域之外，在另一处该变量位于作用域之内，则从前一处跳转到后一处的行为为非法行为</li>
+</ul>
+<h4 id="迭代语句">迭代语句</h4>
+<ul>
+<li>传统for循环的执行流程：首先执行init-statement；接下来判断condition；条件为真，执行循环体；最后执行expression</li>
+<li>for语句中的init-statement可定义多个对象，但只能有一条声明语句，所以所有变量的基础类型<strong>必须相同</strong></li>
+<li>在范围for语句中，当范围变量为引用类型时，才能对元素执行写操作</li>
+<li>在范围for语句中，使用<code>auto</code>可以保证类型相容</li>
+<li>范围for语句的等价传统for语句（不能用范围for语句增加vector对象或其他容器的元素）</li>
+<li><code>do while</code>与<code>while</code>十分相似，只是先执行循环体后检查条件</li>
+</ul>
+<h4 id="跳转语句">跳转语句</h4>
+<ul>
+<li><code>break</code>负责终止离它最近的<code>while</code>、<code>do while</code>、<code>for</code>、<code>switch</code>语句，并从这些语句后的第一条语句开始继续执行</li>
+<li><code>continue</code>用于终止离它最近的<code>for</code>、<code>while</code>、<code>do while</code>循环中的当前迭代并立即开始下一次迭代</li>
+<li><code>goto label;</code> label是用于标识一条语句的标示符</li>
+</ul>
+<h4 id="try语句块和异常处理">try语句块和异常处理</h4>
+<ul>
+<li>程序的异常检测部分使用<code>throw</code>表达式引发一个异常</li>
+<li><code>try</code>块后跟随一个或多个<code>catch</code>子句，由<code>try</code>中抛出的异常来选中对应的<code>catch</code>子句</li>
+<li>C风格字符串（<code>const char*</code>）</li>
+<li>异常中断了程序的正常流程，那些在异常发生期间正确执行了“清理”工作的程序被称作<strong>异常安全</strong>的代码</li>
+<li><code>stdexcept</code>头文件定义了几种常用的异常类，另外几种异常类型：<code>exception</code>、<code>bad_alloc</code>、<code>bad_cast</code></li>
+<li>后三种异常只能以默认初始化的方式初始化，不允许为这些对象提供初始值；其它异常类型使用string对象或者C风格字符串初始化这些类型的对象，不允许使用默认初始化的方式</li>
+<li>异常类型只定义了一个成员函数<code>what</code>，该函数没有参数，返回一个指向C风格字符串的<code>const char*</code>，提供关于异常的信息</li>
+</ul>
+<h4 id="函数基础">函数基础</h4>
+<ul>
+<li>函数形参列表中的形参通常用逗号隔开，其中每个形参都含有一个声明符的声明，即使两个形参的类型一样，也必须把两个类型都写出来</li>
+<li>形参名是可选的，当函数确实有个别形参不会被用到时，此类形参通常不命名以表示在函数体内不会使用它</li>
+<li>函数的返回类型不能是数组类型或函数类型，但可以是指向数组或函数的指针</li>
+<li>名字有作用域，对象有生命周期</li>
+<li>形参和函数体内部定义的变量为<strong>局部变量</strong>，仅在函数的作用域内可见，还会隐藏在外层作用域中同名的其他所有声明中</li>
+<li>只存在于块执行期间的对象成为<strong>自动对象</strong></li>
+<li><strong>局部静态对象</strong>在程序的执行路径第一次经过对象定义语句时初始化，并直到程序终止才被销毁——<code>static</code></li>
+<li>函数名需要在使用前声明，函数只能定义一次，但可以声明多次，函数声明无需函数体，用<code>;</code>替代即可</li>
+<li>函数声明也称作<strong>函数原型</strong></li>
+<li>含有函数声明的头文件应该被包含到定义函数的源文件中</li>
+<li><strong>分离式编译</strong>允许程序分散在几个文件中，每个文件独立编译</li>
+</ul>
+<h4 id="参数传递">参数传递</h4>
+<ul>
+<li>引用传递和值传递</li>
+<li>C++中建议使用引用类型的形参代替指针类型访问函数外部的对象</li>
+<li>使用引用来避免拷贝</li>
+<li>当函数无须修改引用形参的值时最好使用常量引用</li>
+<li>使用引用形参返回额外信息：一个函数只能返回一个值，但有时函数需要同时返回多个值，引用形参为我们一次返回多个结果提供了有效途径</li>
+<li>用实参初始化形参时会忽略掉顶层const（作用于对象本身）</li>
+<li>在C++中允许定义若干具有相同名字的函数，前提是不同函数的形参列表有<strong>明显</strong>的区别</li>
+<li>可以用非常量初始化一个底层const对象，但反之不行；一个普通的引用必须用同类型的对象初始化</li>
+<li>C++允许使用字面值初始化常量引用</li>
+<li>尽量使用常量引用，把函数不会改变的形参定义为普通引用是一种常见错误</li>
+<li>数组的特殊性：不允许拷贝数组，使用数组时会将其转换成指针</li>
+<li>尽管不能以值传递的方式传递数组，但可以把形参写成类似数组的形式，本质上传递的还是指向数组首元素的指针</li>
+<li>管理指针形参（数组实参）的三种技术：1.使用标记指定数组长度；2.使用标准库规范（传递指向数组首元素和尾后元素的指针）；3.显式传递一个表示数组大小的形参</li>
+<li>形参也可以是数组的引用，如<code>int (&amp;arr)[10]</code>，数组大小是构成数组类型的一部分</li>
+<li>传递多维数组，如<code>int matrix[][10]</code>，编译器会忽略第一个维度，最好不要把它包括在形参列表内。matrix的声明看起来是一个二维数组，实际上形参是指向含有10个整数的数组的指针</li>
+<li><code>int main(int argc, char *argv[]) {...}</code> 第二个形参是一个数组，其元素是指向C风格字符串的指针；第一个形参表示数组中字符串的数量</li>
+<li><code>int main(int argc, char **argv) {...}</code>等价于上述代码</li>
+<li>当使用argv中的实参时，可选的实参从<code>argv[1]</code>开始，<code>argv[0]</code>保存程序名</li>
+<li>如果函数的实参数量未知但全部实参的类型<strong>都相同</strong>，可以使用<code>initializer_list</code>类型的形参，使用方式类似于<code>vector</code></li>
+<li><code>initializer_list</code>中的元素永远是常量值，无法改变<code>initializer_list</code>对象中元素的值</li>
+<li>省略符形参是为了便于C++程序访问某些特殊的C代码（使用了C标准库varargs）而设置的，形如<code>void foo(parm_list, ...);</code>和<code>void foo(n...)</code></li>
+</ul>
+<h4 id="返回类型和return语句">返回类型和return语句</h4>
+<ul>
+<li>返回void的函数不必须要有return，因为在最后总会隐式执行。若想让函数提前退出，可以使用return。</li>
+<li>在含有return语句的循环后也应该有一条return语句，否则程序是错误的且难以被编译器发现</li>
+<li>不要返回局部对象的引用或指针</li>
+<li>引用返回左值：调用一个返回引用的函数得到左值，其他返回类型得到右值</li>
+<li>C++11规定，函数可以返回<code>{}</code>包围的值的列表(返回类型为<code>vector&lt;类型&gt;</code>)</li>
+<li>头文件<code>cstdlib</code>中定义了两个预处理变量<code>EXIT_FAILURE</code>、<code>EXIT_SUCCESS</code>，可以作为main函数的返回值</li>
+<li>递归：函数调用自身（main函数不能调用自己）</li>
+<li>函数不能返回数组但可以返回数组的指针或引用</li>
+<li>要想定义一个返回数组的指针或引用可以<strong>使用类型别名</strong>，如<code>typedef int arrT[10]</code>、等价写法<code>using arrT = int[10] </code>，此时，<code>arrT* func(int i)</code>中的func函数即返回一个指向含有10个整数的数组的指针</li>
+<li>除了类型别名，返回数组指针的函数形式如<code>Type (*function(parameter_list))[dimension]</code></li>
+<li>还可以使用<strong>尾置返回类型</strong>，如<code>auto func(int i) -&gt; int(*)[10]</code></li>
+<li>或者使用<code>decltype(数组名)*</code>来声明函数</li>
+</ul>
+<h4 id="函数重载">函数重载</h4>
+<ul>
+<li>重载函数：同一作用域内的几个函数名相同但形参列表不同（main函数不能重载）</li>
+<li>重载函数的返回类型需要一致，不允许同名函数返回不同的类型</li>
+<li>顶层const形参并不区分重载函数而底层const（指针、引用）可以区分重载函数</li>
+<li>最好只重载非常相似的操作</li>
+<li><code>const_cast</code>在重载函数的情景中最有用</li>
+<li><strong>函数匹配</strong>也叫<strong>重载确定</strong>，在调用重载函数时可能的三种结果：最佳匹配、无匹配、二义性调用</li>
+<li>在C++中，<strong>名字查找</strong>发生在<strong>类型检查</strong>之前</li>
+</ul>
+<h4 id="特殊用途语言特性">特殊用途语言特性</h4>
+<ul>
+<li></li>
+</ul>
+<h2 id="c特性">C++特性</h2>
+<ul>
+<li><strong><code>unique_ptr&lt;类型&gt;</code></strong></li>
+</ul>
+<p>代表一种不共享的指针，不能复制只能移动(<code>std::move</code>)，可以通过<code>make_unique&lt;类型&gt;(参数)</code>来创建。归属于头文件<code>&lt;memory&gt;</code>，属于C++标准库。</p>
+<p>参考 <a href="https://docs.microsoft.com/en-us/cpp/cpp/how-to-create-and-use-unique-ptr-instances?view=msvc-160">How to: Create and use unique_ptr instances</a></p>
+<ul>
+<li><strong><code>inline</code></strong></li>
+</ul>
+<p>一种关键字，表示内联。在程序编译过程中对内联部分的代码调用直接替换代码段。仅适用于简单函数，仅对编译器进行建议，必须与实际实现的函数体放在一起才有意义（仅作用于声明则无效）。</p>
+<p>参考 <a href="https://www.runoob.com/w3cnote/cpp-inline-usage.html">C++ 中的 inline 用法</a></p>
+<ul>
+<li><strong><code>const</code></strong></li>
+</ul>
+<p>一种关键字，表示常量。被修饰的对象或变量无法被修改。</p>
+<p>const对象必须初始化，仅在文件内有效。</p>
+<p>如果想在多个文件中共享const对象，必须在变量的定义之前添加extern关键字。</p>
+<p>允许一个常量引用绑定非常量对象，但无法通过常量引用改变非常量对象。类似的，允许一个常量指针绑定非常量对象。</p>
+<p>参考 <a href="https://docs.microsoft.com/en-us/cpp/cpp/const-cpp?view=msvc-160">const (C++)</a></p>
+<ul>
+<li><strong><code>constexpr</code></strong></li>
+</ul>
+<p>用来修饰编译器常量。由编译器来验证变量的值是否是一个常量表达式。</p>
+<p>在C++ 11中，表示“常量”可以用constexpr，表示“只读”时才用const。</p>
+<p>constexpr在修饰指针时仅对指针有效，与指针所指的对象无关。</p>
+<ul>
+<li><strong><code>memcpy</code></strong></li>
+</ul>
+<p>memcpy(a,b,c)  从b处拷贝c个字节至a</p>
+<p>属于标准库的cstring</p>
+</div>
+
+
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-03bdce40ac72b07f5175158e5b3410f3">2 - Machine Learning</h1>
+    <div class="lead">机器学习的相关笔记.</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>机器学习的相关笔记.</p>
+
+</div>
+
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-ec021ae621f53763870f7ceb22a58b6f">2.1 - 李宏毅-Machine_Learning</h1>
+    
+	<p><em>这是Lowerce&rsquo;s Blog的第四篇文章</em></p>
+<p>此文是根据李宏毅2021年春季的机器学习课程撰写。李宏毅机器学习课程的特点是对理论理解的剖析非常深入同时又不失在实际训练过程中的trick教学。</p>
+<h2 id="1-机器学习general-guidence">1. 机器学习general guidence</h2>
+<p><img src="https://img.tujidu.com/image/6216449b04c46.jpg" alt="机器学习general guidence"></p>
+<h2 id="2-调参trick">2. 调参trick</h2>
+<h3 id="1-local-minima局部最小值and-saddle-point鞍点">1. local minima（局部最小值）and saddle point（鞍点）</h3>
+<p><strong>Hessian Matrix</strong> - 其实就是二阶导 在一阶导数消失的时候通过二阶导来决定下一步行进的方向</p>
+<p>H正定时（Hessian Matrix 所有特征值为正）说明遇到 local minima</p>
+<p>H正负不定（Hessian Matrix 特征值有正有负）说明遇到 saddle point</p>
+<p>向沿H特征向量的方向更新参数</p>
+<h3 id="2-batch-size-and-momentum">2. batch size and momentum</h3>
+<p><strong>batch size大小的优劣</strong></p>
+<p><img src="https://img.tujidu.com/image/621644e069277.jpg" alt="batch size"></p>
+<p><strong>由1、2得出的conclusion</strong></p>
+<p><img src="https://img.tujidu.com/image/6216451f17749.jpg" alt="conclusin of 1 and 2"></p>
+<h3 id="3-adaptive-learning-rate">3. Adaptive Learning Rate</h3>
+<p>$\sigma$</p>
+<p>Root Mean Square &ndash;&gt; RMSProp &ndash;&gt; Adam(RMSProp + Momentum)</p>
+<p>$ \eta $</p>
+<p>Learning Rate Scheduling: Learing Rate Decay and Warm Up</p>
+<p><strong>Optimizer总结</strong></p>
+<p><img src="https://img.tujidu.com/image/62164545ae1f4.jpg" alt="Optimization Summary"></p>
+<h3 id="4-loss-function">4. Loss function</h3>
+<p>Cross-entropy 如何优于 Mean Square Error (MSE)？</p>
+<p>从error surface的角度来看 Cross-entropy 的梯度变化更平缓 &ndash;&gt; 更好 train</p>
+<h3 id="5-batch-normalization">5. Batch Normalization</h3>
+<p>Feature Normalization - 对所有样本的每一个维度（dimension）作 normalization（减均值、除方差）</p>
+<p>可以对每一层的输出（激活函数前后影响不大）作上述 Featurn Normalization</p>
+<p>归根结底让整个 error surface 不那么崎岖（还有各种Normalization的方法）</p>
+<h2 id="3-cnn">3. CNN</h2>
+<p>在图像感知的问题中使用</p>
+<p>stride 迈步步长 padding 越界填充</p>
+<p>Receptive field &ndash;&gt; neutrons &ndash;&gt; shared parameters</p>
+<p>filters &ndash;&gt; Feature Map</p>
+<p><strong>两种看待CNN所做事情的角度</strong></p>
+<p><img src="https://img.tujidu.com/image/6216456fddf44.jpg" alt="两个故事"></p>
+<p>Pooling - subsampling  比较典型的 Max Pooling</p>
+<p>Pooling不是必要的</p>
+<p><strong>CNN的标准流程</strong></p>
+<p><img src="https://img.tujidu.com/image/62164593a3514.jpg" alt="典型CNN流程"></p>
+<h2 id="4-self-attention">4. Self-attention</h2>
+<p>Sequence(vector set) input 考虑整个input sequence的资讯</p>
+<p>《Attention is all you need》</p>
+<p><strong>Self-attention的运行方式</strong></p>
+<p><img src="https://img.tujidu.com/image/621645bb560ed.jpg" alt="self attention运作机制"></p>
+<p><strong>Multi-head Self-attention</strong></p>
+<p><img src="https://img.tujidu.com/image/621645d7cbaab.jpg" alt="multi-head self attention"></p>
+<p><strong>Position Encoding</strong></p>
+<p><img src="https://img.tujidu.com/image/621645fada77f.jpg" alt="position encoding"></p>
+<p>Self-attention可以视作可调感知域的<strong>CNN</strong>（在数据量足够大时效果要好于CNN） CNN属于简化版的Self-attention</p>
+<p>Self-attention比起<strong>RNN</strong>更加不受输入vector之间距离的影响</p>
+<h2 id="5-transformer-seq2seq">5. Transformer (Seq2Seq)</h2>
+<p>语音辨识</p>
+<p>Encoder + Decoder</p>
+<h3 id="encoder">Encoder</h3>
+<p><strong>Encoder block的构成</strong></p>
+<p><img src="https://img.tujidu.com/image/62164621bfb72.jpg" alt="one block of Encoder"></p>
+<p><strong>Encoder的结构</strong></p>
+<p><img src="https://img.tujidu.com/image/6216464cb6e22.jpg" alt="Encoder"></p>
+<h3 id="decoder">Decoder</h3>
+<p>分为 Autoregressive 和 Non- Autoregressive</p>
+<p><img src="https://img.tujidu.com/image/6216467f273cf.jpg" alt="对比"></p>
+<p>下面以Autoregressive为例概述Decoder的组成结构</p>
+<p><strong>Masked Self-attention</strong></p>
+<p>显然在Decoder中上一个的输出作为下一个的输入，输入一个一个依次产生，无法像Self-attention那样直接考虑所有的资讯</p>
+<p><img src="https://img.tujidu.com/image/621646b23eeab.jpg" alt="Masked Self-attention"></p>
+<p><strong>Cross attention</strong></p>
+<p><img src="https://img.tujidu.com/image/621646d66ca74.jpg" alt="Cross attention"></p>
+<p><strong>Decoder的结构（Encoder and Decoder）</strong></p>
+<p><img src="https://img.tujidu.com/image/621646f54324e.jpg" alt="Decoder"></p>
+<h3 id="其它的seq2seq架构">其它的Seq2Seq架构</h3>
+<p>Copy mechanism: Pointer Network</p>
+<p>Guided Attention:  Monotonic Attention、 Location-aware attention</p>
+<h3 id="评价方法">评价方法</h3>
+<p>BLUE score</p>
+<p>但BLUE难以用于optimuze，对于不知道如何optimize的问题可以使用<strong>RL</strong>解决</p>
+<h3 id="exposure-bias">exposure bias</h3>
+<p>Scheduled Sampling来防止在teacher forcing下可能出现的“一步错步步错”的问题</p>
+<h2 id="6-gan">6. GAN</h2>
+<p>输出一种分布 <strong>Generator-生成</strong></p>
+<p><strong>Discriminator</strong>（判别Generator生成的优劣）</p>
+<p>D将G的生成集和训练集分别label后进行训练以期分辨G的生成和自然数据的差异(real or fake，real打分更高)；G将生成接到D上让D打分 以此作为loss 来更新G的参数</p>
+<p>轮流固定G和D，训练D和G</p>
+<h3 id="训练trick">训练trick</h3>
+<p>D存在的意义是在无法或者不容易计算生成数据分布与自然数据分布的divergence的情况下给出loss使G能够train起来，divergence的选择（参见f-GAN文章）决定了D的objective function。</p>
+<p>JS divergence 不适合区分两个分布没有重叠(overlap)的情况，而在高维空间中不同分布图像的overlap很少；Wasserstein distance适于计算两个分布之间的距离（WGAN）</p>
+<p>未完待续&hellip;</p>
+</div>
+
+
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-f6122ad87182536850946ffe9df0fa90">3 - Algorithm</h1>
+    <div class="lead">算法的相关笔记.</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>算法的相关笔记.</p>
+
+</div>
+
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-aebee7a2ccf06e8dc7bd34e98d4657c6">3.1 - 使用leetcode练习算法的一些总结(UPDATE-1)</h1>
+    
+	<p><em>这是Lowerce&rsquo;s Blog的第三篇文章</em></p>
+<blockquote>
+<p>即使不靠算法吃饭，leetcode依然能让我在编程语言的使用上更上一层楼。</p>
+</blockquote>
+<p>本文内容依据我在使用c++完成各类leetcode问题时得到的有效信息和经验写成。</p>
+<p>P.S.可能更强调在c++的使用上而非各类逆天的算法解决方案上。</p>
+<h3 id="1-一些c标准库函数">1. 一些C++标准库函数</h3>
+<h4 id="reverse">reverse</h4>
+<p>这个好像可以用来反转很多C++支持的数据结构，一般是两个输入参量，用法大概是这样。reverse(开始位置，开始位置+需要翻转的数量)，从这个角度看，它的输入参量是<strong>左闭右开</strong>的区间，例如reverse(string.begin(),string.end())&hellip;</p>
+<p>反正第一次用起来有点晕，极有可能c++很多的标准函数采用类似的输入形式，需要注意。</p>
+<h4 id="resize">resize</h4>
+<p>反正对于字符串而言挺好使，直接resize(更新后的尺寸)，可以直接把字符串扩充到指定长度，多出来的部分应该是空的吧。</p>
+<h4 id="sort">sort</h4>
+<p>sort(begin(),end())这样用，反正可以直接按从小到大光速排序，这里的开始和结束参照reverse，输入是完全一样的方法。说明前面的猜想是正确的😄。</p>
+<p>好像还可以用自定义函数作为第三个输入参量来作为排序依据，这个等以后做题遇到的时候再写吧，没用过的东西一概不写😋。</p>
+<p><strong>以后随时更新&hellip;</strong></p>
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-a9ae5938d84208521ccc8e62518aa358">3.2 - 使用leetcode练习算法的一些总结</h1>
+    
+	<p><em>这是Lowerce&rsquo;s Blog的第二篇文章</em></p>
+<blockquote>
+<p>即使不靠算法吃饭，leetcode依然能让我在编程语言的使用上更上一层楼。</p>
+</blockquote>
+<p>本文内容依据我在使用c++完成各类leetcode问题时得到的有效信息和经验写成。</p>
+<p>P.S.可能更强调在c++的使用上而非各类逆天的算法解决方案上。</p>
+<h3 id="1-map">1. map</h3>
+<p>总的来说map是一个非常好用的东西，很多可以用set的问题我依然使用map来解决，感觉很舒服。</p>
+<h4 id="创建">创建</h4>
+<p>创建的时候需要指定好类型 map or unordered_map &lt; type , type &gt; variable_name，创建出来是空的。拿unordered_map&lt;string,int&gt; maps来举例。</p>
+<h4 id="插入删除">插入删除</h4>
+<p>对于计数型应用(反正做题比较多)，即后一个type是int的情况，用起来很简单，直接maps[&ldquo;hello&rdquo;]++，这样就在创建了对应key值并+1。这里使用上<strong>值得注意</strong>，当key对应的value值减到0时，并不意味着这个key就消失了，需要maps.erase(&ldquo;hello&rdquo;)才能真正抹掉对应的key值。</p>
+<p>其它的应用就需要使用maps.insert(pair&lt;string,string&gt;(&ldquo;hello&rdquo;,&ldquo;world&rdquo;))来插入了。</p>
+<h4 id="查找">查找</h4>
+<p>作为一个哈希表，查找是其得到使用的根本原因。</p>
+<p>看一个key是不是在表里， if(maps.find(&ldquo;hello&rdquo;)!=maps.end()) ，如果返回true，则说明在表里。这里的返回值是一个迭代器，迭代器这么用，maps.find(&ldquo;hello&rdquo;)-&gt;first ，这就是key的值（也就是&quot;hello&quot;），maps.find(&ldquo;hello&rdquo;)-&gt;second ，这就是&quot;hello&quot;对应的value值。</p>
+<p>想遍历map，也得靠迭代器，先造个迭代器，unordered_map&lt;string,int&gt;::iterator itr，然后for循环的用法就跟一般的遍历差不多了。for(itr=maps.begin();itr!=maps.end();itr++)这样就能遍历啦。</p>
+<h3 id="2-string">2. string</h3>
+<p>string的各种操作用法千奇百怪，很多感觉几乎等效。</p>
+<h4 id="assign">assign</h4>
+<p>大概用法是 s1.assign(s,index,num) ，这样可以把s字符串从index索引值开始往后的num个字符赋给s1字符串。</p>
+<p>基本跟substr是一样的。</p>
+<h4 id="substr">substr</h4>
+<p>s1=s.substr(index,num) ，这个操作跟使用assign是等效的。</p>
+<h3 id="3-for">3. for</h3>
+<p>for循环一些自动遍历的trick之前没用过。</p>
+<p>比如for(auto i:nums)或者for(auto &amp;i:maps)，后者取值用t.first和t.second即可。也可以for(auto &amp;[key,vaule]:maps)就能直接取到key和value啦。</p>
+<p><strong>以后随时更新&hellip;</strong></p>
+</div>
+
+
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-0ba5e81d3356361bc5d229b29a407206">4 - Docker</h1>
+    <div class="lead">Docker的相关笔记.</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>Docker的相关笔记.</p>
+
+</div>
+
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-98e691cc6d2a02eb40d696d5e9c01a98">4.1 - Docker原理及应用</h1>
+    
+	<p><em>这是Lowerce&rsquo;s Blog的第七篇文章</em></p>
+<h2 id="command">Command</h2>
+<p><code>docker images</code>  列出全部映像</p>
+<p><code>docker run -it 映像</code>  运行并保持某一映像</p>
+<p><code>docker ps -a</code>  列出全部容器（包括未在运行的）</p>
+<p><code>docker container prune</code>  删除全部已停止的容器</p>
+<p><code>docker rm 容器</code>   删除指定容器</p>
+<p><code>docker port 容器</code>  查看容器所映射的端口</p>
+<p><code>docker start 容器</code>  启动指定容器</p>
+<p><code>docker stop 容器</code>  停止指定容器</p>
+<p><code>docker search 映像</code>  搜索所需映像</p>
+<h2 id="dockerfile">Dockerfile</h2>
+<h2 id="trick">Trick</h2>
+<p><code>docker run --rm 映像</code></p>
+<p>映像不存在时自动pull映像运行并在映像运行结束后自动删除容器</p>
+<p><code>docker run -d -P --name 指定一个名称 映像</code></p>
+<p>终端界面可以自由关闭而不影响容器的持续运行，映射容器的端口到本机的随机端口，并为容器指定名称</p>
+<p><code>docker run -p 本机端口:映像端口 映像</code></p>
+<p>将映像的端口映射到本机的端口中来启动容器</p>
+</div>
+
+
+
+    
+	
+  
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-1fdb0bcd62206e847642712a25a623db">5 - 建站</h1>
+    <div class="lead">如何建立各种站（论坛、博客 &hellip;）的教程.</div>
+	
+
+<div class="pageinfo pageinfo-primary">
+<p>如何建立各种站（论坛、博客 &hellip;）的教程.</p>
+
+</div>
+
+
+</div>
+
+
+
+    
+      
+  
+  
+  
+  
+
+  
+  
+
+  
+    
+    
+	
+    
+
+<div class="td-content" style="">
+    
+	<h1 id="pg-41bc38e6de0946ffb5d318ad12593b36">5.1 - 前后端开发自学指南</h1>
+    
+	<p><em>这是Lowerce&rsquo;s Blog的第六篇文章</em></p>
+<blockquote>
+<p><em>学点有的没的，以加深对于网络世界的理解。</em></p>
+</blockquote>
+<h2 id="spring-boot">Spring Boot</h2>
+<ol>
+<li>创建</li>
+</ol>
+<p>在Intellij IDEA中新建项目，使用Spring Initializer创建即可。</p>
+<p>名称最好为网址的倒序排列。</p>
+<ol start="2">
+<li>入门</li>
+</ol>
+<p>参考<a href="https://spring.io/">spring.io</a>中<a href="https://spring.io/guides">Guides</a>栏下的<a href="https://spring.io/guides/gs/serving-web-content/">Serving Web Content with Spring MVC</a>进行配置。</p>
+<p>主要注意<code>pom.xml</code>中<code>dependency</code>的添加，<code>controller</code>的创建以及<code>templates</code>中html的添加。</p>
+<blockquote>
+<h3 id="bootstrap">Bootstrap</h3>
+<p>参考<a href="https://v3.bootcss.com/components/">bootstrap v3</a>中各组件的使用，以及<a href="https://v3.bootcss.com/css/#grid">bootstrap 栅格系统</a>。</p>
+<p>在https://v3.bootcss.com/getting-started/#download中直接下载用于生产环境的bootstrap。</p>
+<p>把这些文件放至<code>static</code>目录下。</p>
+<p>按照https://v3.bootcss.com/getting-started/#download-cdn的方式在html中部署css和js文件，路径应为<code>css/</code>或者<code>js/</code>。</p>
+<p>拷贝所需组件的代码至html文件。</p>
+</blockquote>
+<ol start="3">
+<li>登录</li>
+</ol>
+<p>参照https://docs.github.com/en/developers/apps/building-oauth-apps来使用Github登录。</p>
+<p>在<code>Developer setting</code>中创建OAuth应用。</p>
+<p>在<strong>登录</strong>按钮处按照https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps的<strong>GET</strong>部分来填写<code>href</code>，其<code>Parameters</code>使用<code>?&amp;</code>的组合传入。</p>
+<p>创建<code>controller</code>来接收<code>callback</code>的数据（包含code和state）。</p>
+<p>这里使用<a href="https://square.github.io/okhttp/">OkHttp</a>来<strong>POST</strong>。需要一个<code>DTO</code>（需要<code>POST</code>的参数以及相应的get\set方法）和一个<code>Provider</code>（创建一个方法来调用<code>OkHttp</code>）。Json依赖可以使用<code>Fastjson</code>，可在https://mvnrepository.com/里查找所需库并按<code>Maven</code>来添加<code>dependency</code>。</p>
+<p>在<code>controller</code>中调用<code>Provider</code>和<code>DTO</code>。</p>
+<p>再通过<code>access_token</code><strong>GET</strong>接入API。同样可以构造<code>DTO</code>（<code>DTO</code>的内容选择需要<code>GET</code>的参数内容）和<code>Provider</code>（<code>Provider</code>可以共用，因为是同一个过程的不同步骤，有些变量会重用）。使用<code>JSON.parseObject</code>来将String按照DTO的形式来切分。</p>
+<p>基本流程：<strong>GET获取code -&gt; POST获取的code来换取AccessToken -&gt; 使用AccessToken来GET用户信息</strong></p>
+<p><strong>P.S. DTO用来传递网络中的数据结构</strong></p>
+<ol start="4">
+<li>Session&amp;Cookie</li>
+</ol>
+<p>HttpServletRequest用来处理Http请求，获取session并将得到的用户信息写入session以保持登录态。</p>
+<p>session信息和前端页面的绑定通过index.html的修改实现，需要根据<code>dependency</code>依赖的引擎所支持的语法来改写前端页面。</p>
+<p>&ldquo;redirect:/&ldquo;可以重定向至首页。</p>
+<ol start="5">
+<li>MySQL</li>
+</ol>
+<p><a href="https://www.runoob.com/mysql/mysql-tutorial.html">常用语句</a>：增(CREATE、INSERT INTO)、删(DELETE)、查(SELECT)、改(UPDATE)</p>
+<p>在此处使用<strong>H2数据库</strong>。通过MVN引入的方式参考<a href="https://mvnrepository.com/artifact/com.h2database/h2">H2 Database Engine</a>。</p>
+<p>在IDEA中的右侧边栏<code>Database</code>，点击<code>+</code>选择数据源，配置方式参考<a href="http://h2database.com/html/quickstart.html">Quickstart</a>。在此基础上右键创建的database来创建表和列。</p>
+<ol start="6">
+<li>MyBatis</li>
+</ol>
+<p>参考<a href="http://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/">mybatis-spring-boot-autoconfigure</a>来引入MyBatis。</p>
+<p>参考<a href="https://docs.spring.io/spring-boot/docs/2.5.4/reference/htmlsingle/#features.sql">官方文档</a>来添加支持。</p>
+<p>在mapper文件夹下创建UserMapper，在model文件夹下创建User，<strong>mapper用来存放映射对应SQL操作的方法</strong>，<strong>model用来存放程序内部交换的数据结构</strong>，</p>
+<h3 id="applicationproperties">application.properties</h3>
+<p>server.port 指定端口</p>
+<p>可以任意指定关键字，使用时在@Value中替换即可。适用于当前环境与开发环境不一致的路径，便于快速修改。</p>
+<h3 id="spring-">Spring @</h3>
+<p>@Component</p>
+<p>@Autowired</p>
+<p>@Value(&quot;${}&quot;)</p>
+<p>@Controller</p>
+<p>@GetMapping()</p>
+<h3 id="快捷键">快捷键</h3>
+<p>ctrl alt v 快速创建变量</p>
+<p>alt insert 快速创建get\set等方法</p>
+<p>alt enter 引入所需的包（标红时使用）</p>
+<p>ctrl 鼠标左键 快速查看对应的定义</p>
+<p>ctrl alt o 去除未使用的引入包</p>
+<p>ctrl n 检索</p>
+<p>shift enter 快速换行</p>
+</div>
+
+
+
+    
+	
+  
+
+    
+	
+  
+
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitHub" aria-label="GitHub">
+    <a class="text-white" target="_blank" rel="noopener" href="https://github.com/Lowerce" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2022 Lowerce 保留所有权利</small>
+        
+	
+		<p class="mt-2"><a href="/about/">About Lowerce</a></p>
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+    integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA=="
+    crossorigin="anonymous"></script>
+
+
+
+
+
+<script src='/js/tabpane-persist.js'></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.ad402bfdb1ac8104d66668e601ee54c4f539eb3e53a1595e2755d0448cc75f6d.js" integrity="sha256-rUAr/bGsgQTWZmjmAe5UxPU56z5ToVleJ1XQRIzHX20=" crossorigin="anonymous"></script>
+
+
+
+
+  </body>
+</html>

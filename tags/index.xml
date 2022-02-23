@@ -1,110 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Lowerce&#39;s Blog - A technology &amp; emotion Blog</title>
+    <title>Lowerce&#39;s Wiki Blog – Tags</title>
     <link>https://lowerce.github.io/tags/</link>
-    <description>Recent content in Tags on Lowerce&#39;s Blog - A technology &amp; emotion Blog</description>
+    <description>Recent content in Tags on Lowerce&#39;s Wiki Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Sun, 07 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://lowerce.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>2021</title>
-      <link>https://lowerce.github.io/tags/2021/</link>
-      <pubDate>Sun, 07 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://lowerce.github.io/tags/2021/</guid>
-      <description></description>
-    </item>
+    <lastBuildDate>Sun, 07 Nov 2021 00:00:00 +0000</lastBuildDate>
     
-    <item>
-      <title>C&#43;&#43;</title>
-      <link>https://lowerce.github.io/tags/c&#43;&#43;/</link>
-      <pubDate>Sun, 07 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://lowerce.github.io/tags/c&#43;&#43;/</guid>
-      <description></description>
-    </item>
+	  <atom:link href="https://lowerce.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    <item>
-      <title>Docker</title>
-      <link>https://lowerce.github.io/tags/docker/</link>
-      <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://lowerce.github.io/tags/docker/</guid>
-      <description></description>
-    </item>
     
-    <item>
-      <title>Geant4</title>
-      <link>https://lowerce.github.io/tags/geant4/</link>
-      <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://lowerce.github.io/tags/geant4/</guid>
-      <description></description>
-    </item>
+        
+      
     
-    <item>
-      <title>website</title>
-      <link>https://lowerce.github.io/tags/website/</link>
-      <pubDate>Sat, 18 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://lowerce.github.io/tags/website/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mac</title>
-      <link>https://lowerce.github.io/tags/mac/</link>
-      <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://lowerce.github.io/tags/mac/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ML</title>
-      <link>https://lowerce.github.io/tags/ml/</link>
-      <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://lowerce.github.io/tags/ml/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>algorithm</title>
-      <link>https://lowerce.github.io/tags/algorithm/</link>
-      <pubDate>Sun, 29 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://lowerce.github.io/tags/algorithm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>2020</title>
-      <link>https://lowerce.github.io/tags/2020/</link>
-      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://lowerce.github.io/tags/2020/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>love</title>
-      <link>https://lowerce.github.io/tags/love/</link>
-      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://lowerce.github.io/tags/love/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>summary</title>
-      <link>https://lowerce.github.io/tags/summary/</link>
-      <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://lowerce.github.io/tags/summary/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>
