@@ -14,35 +14,34 @@
     
     
     <item>
-      <title>Blog: Mounty的使用技巧</title>
-      <link>https://lowerce.github.io/blog/2021/09/12/mounty%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</link>
+      <title>Blog: Mounty</title>
+      <link>https://lowerce.github.io/blog/2021/09/12/mounty/</link>
       <pubDate>Sun, 12 Sep 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://lowerce.github.io/blog/2021/09/12/mounty%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</guid>
+      <guid>https://lowerce.github.io/blog/2021/09/12/mounty/</guid>
       <description>
         
         
-        &lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第五篇文章&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;对于Mac而言，读取文件格式为NTFS的U盘或者移动硬盘是令人痛苦的，虽然并非Mac不支持，但是因为种种原因苹果并不想让各位Mac用户简单方便地读取NTFS的存储设备，所以第一个建议是：如果您是仅使用Mac的人群，那么请尽量确保您自己的存储设备文件格式为exFAT或其他Mac原生支持的文件格式，以便于您访问和操作这些存储设备内的文件。&lt;/p&gt;
+        &lt;p&gt;对于Mac而言，读取文件格式为NTFS的U盘或者移动硬盘是令人痛苦的，虽然并非Mac不支持，但是因为种种原因苹果并不想让各位Mac用户简单方便地读取NTFS的存储设备，所以第一个建议是：如果您是仅使用Mac的人群，那么请尽量确保您自己的存储设备文件格式为exFAT或其他Mac原生支持的文件格式，以便于您访问和操作这些存储设备内的文件。&lt;/p&gt;
 &lt;p&gt;显然，您的Mac总会有同NTFS设备接入的时候，那么这时该如何正常地访问NTFS设备呢？NTFS for Mac是目前使用最为广泛的应用，but，这是一个付费应用，而且，对于Mac这种并非不支持NTFS访问的设备而言，花钱去访问让人感觉非常不值。那么，Mounty是一个很不错的选择。&lt;/p&gt;
 &lt;p&gt;Mounty的正常使用在此不再详述，仅记录一些使用问题的解决方法。&lt;/p&gt;
 &lt;h5 id=&#34;出现不可重新挂载问题&#34;&gt;出现不可重新挂载问题&lt;/h5&gt;
 &lt;p&gt;这种情况一般是由于未正确插拔设备导致，请在windows下使用时选择移除可移动设备后再拔除&lt;/p&gt;
 &lt;p&gt;在windows下使用&lt;strong&gt;chkdsk X: /f&lt;/strong&gt; （X为移动设备对应的盘符）命令检查磁盘即可&lt;/p&gt;
+
       </description>
     </item>
     
     <item>
-      <title>Blog: 写在2020年的最后一天</title>
-      <link>https://lowerce.github.io/blog/2020/12/31/%E5%86%99%E5%9C%A82020%E5%B9%B4%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/</link>
+      <title>Blog: 写在2020的最后一天</title>
+      <link>https://lowerce.github.io/blog/2020/12/31/%E5%86%99%E5%9C%A82020%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/</link>
       <pubDate>Thu, 31 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://lowerce.github.io/blog/2020/12/31/%E5%86%99%E5%9C%A82020%E5%B9%B4%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/</guid>
+      <guid>https://lowerce.github.io/blog/2020/12/31/%E5%86%99%E5%9C%A82020%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/</guid>
       <description>
         
         
-        &lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第一篇文章&lt;/em&gt;&lt;/p&gt;
-&lt;blockquote&gt;
+        &lt;blockquote&gt;
 &lt;p&gt;就在2020年的最后一天写点什么来度过这个不太一样的2020吧。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;如果在2020年的第一天让我猜测一下我的2020年会是什么样子的，我至少不会猜到今天的我会是以什么样的心情来写下这篇文字。如果说这一年对于大多数人而言是totally shit的话，对于我而言，这是很不错的一年吧，即使有疫情，即使生活也并没有那么如偿所愿，因为我遇到了一个姑娘，my life and my world are totally changed.&lt;/p&gt;
@@ -53,6 +52,7 @@
 &lt;p&gt;小姑娘在几个晚上给我打了几通电话，都在讲在那次“激烈”的交流吧，小姑娘没有做错什么，我的不对更多一些吧，像是一个小朋友在看面前的人是不是在乎自己一样，把脸扭向一边，看看她有没有发现我的不开心，很幼稚，但是小朋友获得了自己想要得到的🍬。开学之前的不开心都在跟小姑娘分享着，我好喜欢小姑娘呀。&lt;/p&gt;
 &lt;p&gt;开学后的时光平平无奇，开课前的研究生教育，开课后的上课，一切都跟本科并无不同，区别就在于热水的供应时间和需要骑车才能到达的教室。我的博士生涯就在这样的波澜不惊中开始了，直到十月初，小姑娘来到北京找我。那些时光就像在昨天一样，我彻底爱上了小姑娘。&lt;/p&gt;
 &lt;p&gt;2020年剩下的时光就是我和姑娘的爱情故事啦，2021、2022、2023……，嘿嘿，未来的每一年都会是的！这是属于我们两个的爱情故事💓。&lt;/p&gt;
+
       </description>
     </item>
     

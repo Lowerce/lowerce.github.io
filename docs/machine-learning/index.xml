@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Lowerce&#39;s Wiki Blog – Machine Learning</title>
+    <title>Lowerce&#39;s Wiki Blog – 机器学习</title>
     <link>https://lowerce.github.io/docs/machine-learning/</link>
-    <description>Recent content in Machine Learning on Lowerce&#39;s Wiki Blog</description>
+    <description>Recent content in 机器学习 on Lowerce&#39;s Wiki Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 09 Sep 2021 00:00:00 +0000</lastBuildDate>
     
@@ -15,7 +15,7 @@
     
     
     <item>
-      <title>Docs: 李宏毅-Machine_Learning</title>
+      <title>Docs: 李宏毅机器学习课程</title>
       <link>https://lowerce.github.io/docs/machine-learning/ml_lhy/</link>
       <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
       
@@ -23,8 +23,7 @@
       <description>
         
         
-        &lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第四篇文章&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;此文是根据李宏毅2021年春季的机器学习课程撰写。李宏毅机器学习课程的特点是对理论理解的剖析非常深入同时又不失在实际训练过程中的trick教学。&lt;/p&gt;
+        &lt;p&gt;此文是根据李宏毅2021年春季的机器学习课程撰写。李宏毅机器学习课程的特点是对理论理解的剖析非常深入同时又不失在实际训练过程中的trick教学。&lt;/p&gt;
 &lt;h2 id=&#34;1-机器学习general-guidence&#34;&gt;1. 机器学习general guidence&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/6216449b04c46.jpg&#34; alt=&#34;机器学习general guidence&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;2-调参trick&#34;&gt;2. 调参trick&lt;/h2&gt;
@@ -110,6 +109,7 @@
 &lt;p&gt;D存在的意义是在无法或者不容易计算生成数据分布与自然数据分布的divergence的情况下给出loss使G能够train起来，divergence的选择（参见f-GAN文章）决定了D的objective function。&lt;/p&gt;
 &lt;p&gt;JS divergence 不适合区分两个分布没有重叠(overlap)的情况，而在高维空间中不同分布图像的overlap很少；Wasserstein distance适于计算两个分布之间的距离（WGAN）&lt;/p&gt;
 &lt;p&gt;未完待续&amp;hellip;&lt;/p&gt;
+
       </description>
     </item>
     

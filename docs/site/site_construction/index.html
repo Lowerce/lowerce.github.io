@@ -18,9 +18,8 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>前后端开发自学指南 | Lowerce&#39;s Wiki Blog</title>
-<meta name="description" content="这是Lowerce&rsquo;s Blog的第六篇文章
-
+<title>论坛建站 | Lowerce&#39;s Wiki Blog</title>
+<meta name="description" content="
 学点有的没的，以加深对于网络世界的理解。
 
 Spring Boot
@@ -32,27 +31,114 @@ Spring Boot
 
 入门
 
-参考spring.io …">
-<meta property="og:title" content="前后端开发自学指南" />
-<meta property="og:description" content="这是Lowerce&rsquo;s Blog的第六篇文章" />
+参考spring.io中Guides栏下的Serving Web Content with …">
+<meta property="og:title" content="论坛建站" />
+<meta property="og:description" content="学点有的没的，以加深对于网络世界的理解。
+ Spring Boot  创建  在Intellij IDEA中新建项目，使用Spring Initializer创建即可。
+名称最好为网址的倒序排列。
+入门  参考spring.io中Guides栏下的Serving Web Content with Spring MVC进行配置。
+主要注意pom.xml中dependency的添加，controller的创建以及templates中html的添加。
+ Bootstrap 参考bootstrap v3中各组件的使用，以及bootstrap 栅格系统。
+在https://v3.bootcss.com/getting-started/#download中直接下载用于生产环境的bootstrap。
+把这些文件放至static目录下。
+按照https://v3.bootcss.com/getting-started/#download-cdn的方式在html中部署css和js文件，路径应为css/或者js/。
+拷贝所需组件的代码至html文件。
+ 登录  参照https://docs.github.com/en/developers/apps/building-oauth-apps来使用Github登录。
+在Developer setting中创建OAuth应用。
+在登录按钮处按照https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps的GET部分来填写href，其Parameters使用?&amp;的组合传入。
+创建controller来接收callback的数据（包含code和state）。
+这里使用OkHttp来POST。需要一个DTO（需要POST的参数以及相应的get\set方法）和一个Provider（创建一个方法来调用OkHttp）。Json依赖可以使用Fastjson，可在https://mvnrepository.com/里查找所需库并按Maven来添加dependency。
+在controller中调用Provider和DTO。
+再通过access_tokenGET接入API。同样可以构造DTO（DTO的内容选择需要GET的参数内容）和Provider（Provider可以共用，因为是同一个过程的不同步骤，有些变量会重用）。使用JSON.parseObject来将String按照DTO的形式来切分。
+基本流程：GET获取code -&gt; POST获取的code来换取AccessToken -&gt; 使用AccessToken来GET用户信息
+P.S. DTO用来传递网络中的数据结构
+Session&amp;Cookie  HttpServletRequest用来处理Http请求，获取session并将得到的用户信息写入session以保持登录态。
+session信息和前端页面的绑定通过index.html的修改实现，需要根据dependency依赖的引擎所支持的语法来改写前端页面。
+&ldquo;redirect:/&ldquo;可以重定向至首页。
+MySQL  常用语句：增(CREATE、INSERT INTO)、删(DELETE)、查(SELECT)、改(UPDATE)
+在此处使用H2数据库。通过MVN引入的方式参考H2 Database Engine。
+在IDEA中的右侧边栏Database，点击&#43;选择数据源，配置方式参考Quickstart。在此基础上右键创建的database来创建表和列。
+MyBatis  参考mybatis-spring-boot-autoconfigure来引入MyBatis。
+参考官方文档来添加支持。
+在mapper文件夹下创建UserMapper，在model文件夹下创建User，mapper用来存放映射对应SQL操作的方法，model用来存放程序内部交换的数据结构，
+application.properties server.port 指定端口
+可以任意指定关键字，使用时在@Value中替换即可。适用于当前环境与开发环境不一致的路径，便于快速修改。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lowerce.github.io/docs/site/site_construction/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2021-09-18T00:00:00+00:00" />
 <meta property="article:modified_time" content="2021-09-18T00:00:00+00:00" /><meta property="og:site_name" content="Lowerce&#39;s Wiki Blog" />
 
-<meta itemprop="name" content="前后端开发自学指南">
-<meta itemprop="description" content="这是Lowerce&rsquo;s Blog的第六篇文章"><meta itemprop="datePublished" content="2021-09-18T00:00:00+00:00" />
+<meta itemprop="name" content="论坛建站">
+<meta itemprop="description" content="学点有的没的，以加深对于网络世界的理解。
+ Spring Boot  创建  在Intellij IDEA中新建项目，使用Spring Initializer创建即可。
+名称最好为网址的倒序排列。
+入门  参考spring.io中Guides栏下的Serving Web Content with Spring MVC进行配置。
+主要注意pom.xml中dependency的添加，controller的创建以及templates中html的添加。
+ Bootstrap 参考bootstrap v3中各组件的使用，以及bootstrap 栅格系统。
+在https://v3.bootcss.com/getting-started/#download中直接下载用于生产环境的bootstrap。
+把这些文件放至static目录下。
+按照https://v3.bootcss.com/getting-started/#download-cdn的方式在html中部署css和js文件，路径应为css/或者js/。
+拷贝所需组件的代码至html文件。
+ 登录  参照https://docs.github.com/en/developers/apps/building-oauth-apps来使用Github登录。
+在Developer setting中创建OAuth应用。
+在登录按钮处按照https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps的GET部分来填写href，其Parameters使用?&amp;的组合传入。
+创建controller来接收callback的数据（包含code和state）。
+这里使用OkHttp来POST。需要一个DTO（需要POST的参数以及相应的get\set方法）和一个Provider（创建一个方法来调用OkHttp）。Json依赖可以使用Fastjson，可在https://mvnrepository.com/里查找所需库并按Maven来添加dependency。
+在controller中调用Provider和DTO。
+再通过access_tokenGET接入API。同样可以构造DTO（DTO的内容选择需要GET的参数内容）和Provider（Provider可以共用，因为是同一个过程的不同步骤，有些变量会重用）。使用JSON.parseObject来将String按照DTO的形式来切分。
+基本流程：GET获取code -&gt; POST获取的code来换取AccessToken -&gt; 使用AccessToken来GET用户信息
+P.S. DTO用来传递网络中的数据结构
+Session&amp;Cookie  HttpServletRequest用来处理Http请求，获取session并将得到的用户信息写入session以保持登录态。
+session信息和前端页面的绑定通过index.html的修改实现，需要根据dependency依赖的引擎所支持的语法来改写前端页面。
+&ldquo;redirect:/&ldquo;可以重定向至首页。
+MySQL  常用语句：增(CREATE、INSERT INTO)、删(DELETE)、查(SELECT)、改(UPDATE)
+在此处使用H2数据库。通过MVN引入的方式参考H2 Database Engine。
+在IDEA中的右侧边栏Database，点击&#43;选择数据源，配置方式参考Quickstart。在此基础上右键创建的database来创建表和列。
+MyBatis  参考mybatis-spring-boot-autoconfigure来引入MyBatis。
+参考官方文档来添加支持。
+在mapper文件夹下创建UserMapper，在model文件夹下创建User，mapper用来存放映射对应SQL操作的方法，model用来存放程序内部交换的数据结构，
+application.properties server.port 指定端口
+可以任意指定关键字，使用时在@Value中替换即可。适用于当前环境与开发环境不一致的路径，便于快速修改。"><meta itemprop="datePublished" content="2021-09-18T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2021-09-18T00:00:00+00:00" />
-<meta itemprop="wordCount" content="92">
+<meta itemprop="wordCount" content="90">
 <meta itemprop="keywords" content="website,2021," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="前后端开发自学指南"/>
-<meta name="twitter:description" content="这是Lowerce&rsquo;s Blog的第六篇文章"/>
+<meta name="twitter:title" content="论坛建站"/>
+<meta name="twitter:description" content="学点有的没的，以加深对于网络世界的理解。
+ Spring Boot  创建  在Intellij IDEA中新建项目，使用Spring Initializer创建即可。
+名称最好为网址的倒序排列。
+入门  参考spring.io中Guides栏下的Serving Web Content with Spring MVC进行配置。
+主要注意pom.xml中dependency的添加，controller的创建以及templates中html的添加。
+ Bootstrap 参考bootstrap v3中各组件的使用，以及bootstrap 栅格系统。
+在https://v3.bootcss.com/getting-started/#download中直接下载用于生产环境的bootstrap。
+把这些文件放至static目录下。
+按照https://v3.bootcss.com/getting-started/#download-cdn的方式在html中部署css和js文件，路径应为css/或者js/。
+拷贝所需组件的代码至html文件。
+ 登录  参照https://docs.github.com/en/developers/apps/building-oauth-apps来使用Github登录。
+在Developer setting中创建OAuth应用。
+在登录按钮处按照https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps的GET部分来填写href，其Parameters使用?&amp;的组合传入。
+创建controller来接收callback的数据（包含code和state）。
+这里使用OkHttp来POST。需要一个DTO（需要POST的参数以及相应的get\set方法）和一个Provider（创建一个方法来调用OkHttp）。Json依赖可以使用Fastjson，可在https://mvnrepository.com/里查找所需库并按Maven来添加dependency。
+在controller中调用Provider和DTO。
+再通过access_tokenGET接入API。同样可以构造DTO（DTO的内容选择需要GET的参数内容）和Provider（Provider可以共用，因为是同一个过程的不同步骤，有些变量会重用）。使用JSON.parseObject来将String按照DTO的形式来切分。
+基本流程：GET获取code -&gt; POST获取的code来换取AccessToken -&gt; 使用AccessToken来GET用户信息
+P.S. DTO用来传递网络中的数据结构
+Session&amp;Cookie  HttpServletRequest用来处理Http请求，获取session并将得到的用户信息写入session以保持登录态。
+session信息和前端页面的绑定通过index.html的修改实现，需要根据dependency依赖的引擎所支持的语法来改写前端页面。
+&ldquo;redirect:/&ldquo;可以重定向至首页。
+MySQL  常用语句：增(CREATE、INSERT INTO)、删(DELETE)、查(SELECT)、改(UPDATE)
+在此处使用H2数据库。通过MVN引入的方式参考H2 Database Engine。
+在IDEA中的右侧边栏Database，点击&#43;选择数据源，配置方式参考Quickstart。在此基础上右键创建的database来创建表和列。
+MyBatis  参考mybatis-spring-boot-autoconfigure来引入MyBatis。
+参考官方文档来添加支持。
+在mapper文件夹下创建UserMapper，在model文件夹下创建User，mapper用来存放映射对应SQL操作的方法，model用来存放程序内部交换的数据结构，
+application.properties server.port 指定端口
+可以任意指定关键字，使用时在@Value中替换即可。适用于当前环境与开发环境不一致的路径，便于快速修改。"/>
 
 
 
 
-<link rel="preload" href="/scss/main.scss" as="style">
-<link href="/scss/main.scss" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.704093cd1a56f37fd00dc35c7125fced09d88d60c92d59965b30c8c0eeef1cd5.css" as="style">
+<link href="/scss/main.min.704093cd1a56f37fd00dc35c7125fced09d88d60c92d59965b30c8c0eeef1cd5.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -137,37 +223,37 @@ Spring Boot
   <a href="/docs/c&#43;&#43;/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsc"><span class="">C&#43;&#43;</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsccpp-li">
-  <a href="/docs/c&#43;&#43;/cpp/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsccpp"><span class="">C&#43;&#43; Primer充电以及C&#43;&#43;特性了解</span></a>
+  <a href="/docs/c&#43;&#43;/cpp/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsccpp"><span class="">C&#43;&#43; Primer</span></a>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsmachine-learning-li">
-  <a href="/docs/machine-learning/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsmachine-learning"><span class="">Machine Learning</span></a>
+  <a href="/docs/machine-learning/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsmachine-learning"><span class="">机器学习</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsmachine-learningml_lhy-li">
-  <a href="/docs/machine-learning/ml_lhy/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsmachine-learningml_lhy"><span class="">李宏毅-Machine_Learning</span></a>
+  <a href="/docs/machine-learning/ml_lhy/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsmachine-learningml_lhy"><span class="">李宏毅机器学习课程</span></a>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsalgorithm-li">
-  <a href="/docs/algorithm/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsalgorithm"><span class="">Algorithm</span></a>
+  <a href="/docs/algorithm/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsalgorithm"><span class="">算法</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsalgorithmleetcode-record-2-li">
-  <a href="/docs/algorithm/leetcode-record-2/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsalgorithmleetcode-record-2"><span class="">使用leetcode练习算法的一些总结(UPDATE-1)</span></a>
+  <a href="/docs/algorithm/leetcode-record-2/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsalgorithmleetcode-record-2"><span class="">leetcode算法总结(UPDATE-1)</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsalgorithmleetcode-record-li">
-  <a href="/docs/algorithm/leetcode-record/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsalgorithmleetcode-record"><span class="">使用leetcode练习算法的一些总结</span></a>
+  <a href="/docs/algorithm/leetcode-record/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsalgorithmleetcode-record"><span class="">leetcode算法总结</span></a>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsdocker-li">
   <a href="/docs/docker/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdocker"><span class="">Docker</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdockerdocker-li">
-  <a href="/docs/docker/docker/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsdockerdocker"><span class="">Docker原理及应用</span></a>
+  <a href="/docs/docker/docker/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsdockerdocker"><span class="">Docker使用教程</span></a>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docssite-li">
   <a href="/docs/site/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docssite"><span class="">建站</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docssitesite_construction-li">
-  <a href="/docs/site/site_construction/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-docssitesite_construction"><span class="td-sidebar-nav-active-item">前后端开发自学指南</span></a>
+  <a href="/docs/site/site_construction/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-docssitesite_construction"><span class="td-sidebar-nav-active-item">论坛建站</span></a>
 </li>
   </ul>
 </li>
@@ -291,13 +377,13 @@ Spring Boot
     <a href="https://lowerce.github.io/docs/site/">建站</a>
   </li>
   <li class="breadcrumb-item active" aria-current="page">
-    <a href="https://lowerce.github.io/docs/site/site_construction/">前后端开发自学指南</a>
+    <a href="https://lowerce.github.io/docs/site/site_construction/">论坛建站</a>
   </li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1>前后端开发自学指南</h1>
+	<h1>论坛建站</h1>
 	
 	<header class="article-meta">
 		
@@ -336,8 +422,7 @@ Spring Boot
 		
 		
 	</header>    
-	<p><em>这是Lowerce&rsquo;s Blog的第六篇文章</em></p>
-<blockquote>
+	<blockquote>
 <p><em>学点有的没的，以加深对于网络世界的理解。</em></p>
 </blockquote>
 <h2 id="spring-boot">Spring Boot</h2>
@@ -406,6 +491,7 @@ Spring Boot
 <p>ctrl alt o 去除未使用的引入包</p>
 <p>ctrl n 检索</p>
 <p>shift enter 快速换行</p>
+
 	
 	
 	

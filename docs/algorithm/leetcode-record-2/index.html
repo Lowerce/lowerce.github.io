@@ -18,34 +18,59 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>使用leetcode练习算法的一些总结(UPDATE-1) | Lowerce&#39;s Wiki Blog</title>
-<meta name="description" content="这是Lowerce&rsquo;s Blog的第三篇文章
-
+<title>leetcode算法总结(UPDATE-1) | Lowerce&#39;s Wiki Blog</title>
+<meta name="description" content="
 即使不靠算法吃饭，leetcode依然能让我在编程语言的使用上更上一层楼。
 
 本文内容依据我在使用c&#43;&#43;完成各类leetcode问题时得到的有效信息和经验写成。
 P.S.可能更强调在c&#43;&#43;的使用上而非各类逆天的算法解决方案上。
-1. 一 …">
-<meta property="og:title" content="使用leetcode练习算法的一些总结(UPDATE-1)" />
-<meta property="og:description" content="这是Lowerce&rsquo;s Blog的第三篇文章" />
+1. 一些C&#43;&#43;标准库函数
+reverse
+这个好像可以用来反转很 …">
+<meta property="og:title" content="leetcode算法总结(UPDATE-1)" />
+<meta property="og:description" content="即使不靠算法吃饭，leetcode依然能让我在编程语言的使用上更上一层楼。
+ 本文内容依据我在使用c&#43;&#43;完成各类leetcode问题时得到的有效信息和经验写成。
+P.S.可能更强调在c&#43;&#43;的使用上而非各类逆天的算法解决方案上。
+1. 一些C&#43;&#43;标准库函数 reverse 这个好像可以用来反转很多C&#43;&#43;支持的数据结构，一般是两个输入参量，用法大概是这样。reverse(开始位置，开始位置&#43;需要翻转的数量)，从这个角度看，它的输入参量是左闭右开的区间，例如reverse(string.begin(),string.end())&hellip;
+反正第一次用起来有点晕，极有可能c&#43;&#43;很多的标准函数采用类似的输入形式，需要注意。
+resize 反正对于字符串而言挺好使，直接resize(更新后的尺寸)，可以直接把字符串扩充到指定长度，多出来的部分应该是空的吧。
+sort sort(begin(),end())这样用，反正可以直接按从小到大光速排序，这里的开始和结束参照reverse，输入是完全一样的方法。说明前面的猜想是正确的😄。
+好像还可以用自定义函数作为第三个输入参量来作为排序依据，这个等以后做题遇到的时候再写吧，没用过的东西一概不写😋。
+以后随时更新&hellip;" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://lowerce.github.io/docs/algorithm/leetcode-record-2/" /><meta property="article:section" content="docs" />
 <meta property="article:published_time" content="2021-08-29T00:00:00+00:00" />
 <meta property="article:modified_time" content="2021-08-29T00:00:00+00:00" /><meta property="og:site_name" content="Lowerce&#39;s Wiki Blog" />
 
-<meta itemprop="name" content="使用leetcode练习算法的一些总结(UPDATE-1)">
-<meta itemprop="description" content="这是Lowerce&rsquo;s Blog的第三篇文章"><meta itemprop="datePublished" content="2021-08-29T00:00:00+00:00" />
+<meta itemprop="name" content="leetcode算法总结(UPDATE-1)">
+<meta itemprop="description" content="即使不靠算法吃饭，leetcode依然能让我在编程语言的使用上更上一层楼。
+ 本文内容依据我在使用c&#43;&#43;完成各类leetcode问题时得到的有效信息和经验写成。
+P.S.可能更强调在c&#43;&#43;的使用上而非各类逆天的算法解决方案上。
+1. 一些C&#43;&#43;标准库函数 reverse 这个好像可以用来反转很多C&#43;&#43;支持的数据结构，一般是两个输入参量，用法大概是这样。reverse(开始位置，开始位置&#43;需要翻转的数量)，从这个角度看，它的输入参量是左闭右开的区间，例如reverse(string.begin(),string.end())&hellip;
+反正第一次用起来有点晕，极有可能c&#43;&#43;很多的标准函数采用类似的输入形式，需要注意。
+resize 反正对于字符串而言挺好使，直接resize(更新后的尺寸)，可以直接把字符串扩充到指定长度，多出来的部分应该是空的吧。
+sort sort(begin(),end())这样用，反正可以直接按从小到大光速排序，这里的开始和结束参照reverse，输入是完全一样的方法。说明前面的猜想是正确的😄。
+好像还可以用自定义函数作为第三个输入参量来作为排序依据，这个等以后做题遇到的时候再写吧，没用过的东西一概不写😋。
+以后随时更新&hellip;"><meta itemprop="datePublished" content="2021-08-29T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2021-08-29T00:00:00+00:00" />
-<meta itemprop="wordCount" content="16">
+<meta itemprop="wordCount" content="14">
 <meta itemprop="keywords" content="algorithm,c&#43;&#43;,2021," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="使用leetcode练习算法的一些总结(UPDATE-1)"/>
-<meta name="twitter:description" content="这是Lowerce&rsquo;s Blog的第三篇文章"/>
+<meta name="twitter:title" content="leetcode算法总结(UPDATE-1)"/>
+<meta name="twitter:description" content="即使不靠算法吃饭，leetcode依然能让我在编程语言的使用上更上一层楼。
+ 本文内容依据我在使用c&#43;&#43;完成各类leetcode问题时得到的有效信息和经验写成。
+P.S.可能更强调在c&#43;&#43;的使用上而非各类逆天的算法解决方案上。
+1. 一些C&#43;&#43;标准库函数 reverse 这个好像可以用来反转很多C&#43;&#43;支持的数据结构，一般是两个输入参量，用法大概是这样。reverse(开始位置，开始位置&#43;需要翻转的数量)，从这个角度看，它的输入参量是左闭右开的区间，例如reverse(string.begin(),string.end())&hellip;
+反正第一次用起来有点晕，极有可能c&#43;&#43;很多的标准函数采用类似的输入形式，需要注意。
+resize 反正对于字符串而言挺好使，直接resize(更新后的尺寸)，可以直接把字符串扩充到指定长度，多出来的部分应该是空的吧。
+sort sort(begin(),end())这样用，反正可以直接按从小到大光速排序，这里的开始和结束参照reverse，输入是完全一样的方法。说明前面的猜想是正确的😄。
+好像还可以用自定义函数作为第三个输入参量来作为排序依据，这个等以后做题遇到的时候再写吧，没用过的东西一概不写😋。
+以后随时更新&hellip;"/>
 
 
 
 
-<link rel="preload" href="/scss/main.scss" as="style">
-<link href="/scss/main.scss" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.704093cd1a56f37fd00dc35c7125fced09d88d60c92d59965b30c8c0eeef1cd5.css" as="style">
+<link href="/scss/main.min.704093cd1a56f37fd00dc35c7125fced09d88d60c92d59965b30c8c0eeef1cd5.css" rel="stylesheet" integrity="">
 
 <script
   src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -130,37 +155,37 @@ P.S.可能更强调在c&#43;&#43;的使用上而非各类逆天的算法解决�
   <a href="/docs/c&#43;&#43;/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsc"><span class="">C&#43;&#43;</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsccpp-li">
-  <a href="/docs/c&#43;&#43;/cpp/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsccpp"><span class="">C&#43;&#43; Primer充电以及C&#43;&#43;特性了解</span></a>
+  <a href="/docs/c&#43;&#43;/cpp/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsccpp"><span class="">C&#43;&#43; Primer</span></a>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsmachine-learning-li">
-  <a href="/docs/machine-learning/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsmachine-learning"><span class="">Machine Learning</span></a>
+  <a href="/docs/machine-learning/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsmachine-learning"><span class="">机器学习</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsmachine-learningml_lhy-li">
-  <a href="/docs/machine-learning/ml_lhy/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsmachine-learningml_lhy"><span class="">李宏毅-Machine_Learning</span></a>
+  <a href="/docs/machine-learning/ml_lhy/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsmachine-learningml_lhy"><span class="">李宏毅机器学习课程</span></a>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsalgorithm-li">
-  <a href="/docs/algorithm/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsalgorithm"><span class="">Algorithm</span></a>
+  <a href="/docs/algorithm/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsalgorithm"><span class="">算法</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsalgorithmleetcode-record-2-li">
-  <a href="/docs/algorithm/leetcode-record-2/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-docsalgorithmleetcode-record-2"><span class="td-sidebar-nav-active-item">使用leetcode练习算法的一些总结(UPDATE-1)</span></a>
+  <a href="/docs/algorithm/leetcode-record-2/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-docsalgorithmleetcode-record-2"><span class="td-sidebar-nav-active-item">leetcode算法总结(UPDATE-1)</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsalgorithmleetcode-record-li">
-  <a href="/docs/algorithm/leetcode-record/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsalgorithmleetcode-record"><span class="">使用leetcode练习算法的一些总结</span></a>
+  <a href="/docs/algorithm/leetcode-record/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsalgorithmleetcode-record"><span class="">leetcode算法总结</span></a>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsdocker-li">
   <a href="/docs/docker/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdocker"><span class="">Docker</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdockerdocker-li">
-  <a href="/docs/docker/docker/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsdockerdocker"><span class="">Docker原理及应用</span></a>
+  <a href="/docs/docker/docker/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsdockerdocker"><span class="">Docker使用教程</span></a>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docssite-li">
   <a href="/docs/site/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docssite"><span class="">建站</span></a>
   <ul class="ul-2 foldable">
     <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docssitesite_construction-li">
-  <a href="/docs/site/site_construction/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docssitesite_construction"><span class="">前后端开发自学指南</span></a>
+  <a href="/docs/site/site_construction/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docssitesite_construction"><span class="">论坛建站</span></a>
 </li>
   </ul>
 </li>
@@ -268,16 +293,16 @@ P.S.可能更强调在c&#43;&#43;的使用上而非各类逆天的算法解决�
     <a href="https://lowerce.github.io/docs/">Documentation</a>
   </li>
   <li class="breadcrumb-item">
-    <a href="https://lowerce.github.io/docs/algorithm/">Algorithm</a>
+    <a href="https://lowerce.github.io/docs/algorithm/">算法</a>
   </li>
   <li class="breadcrumb-item active" aria-current="page">
-    <a href="https://lowerce.github.io/docs/algorithm/leetcode-record-2/">使用leetcode练习算法的一些总结(UPDATE-1)</a>
+    <a href="https://lowerce.github.io/docs/algorithm/leetcode-record-2/">leetcode算法总结(UPDATE-1)</a>
   </li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1>使用leetcode练习算法的一些总结(UPDATE-1)</h1>
+	<h1>leetcode算法总结(UPDATE-1)</h1>
 	
 	<header class="article-meta">
 		
@@ -318,8 +343,7 @@ P.S.可能更强调在c&#43;&#43;的使用上而非各类逆天的算法解决�
 		
 		
 	</header>    
-	<p><em>这是Lowerce&rsquo;s Blog的第三篇文章</em></p>
-<blockquote>
+	<blockquote>
 <p>即使不靠算法吃饭，leetcode依然能让我在编程语言的使用上更上一层楼。</p>
 </blockquote>
 <p>本文内容依据我在使用c++完成各类leetcode问题时得到的有效信息和经验写成。</p>
@@ -334,6 +358,7 @@ P.S.可能更强调在c&#43;&#43;的使用上而非各类逆天的算法解决�
 <p>sort(begin(),end())这样用，反正可以直接按从小到大光速排序，这里的开始和结束参照reverse，输入是完全一样的方法。说明前面的猜想是正确的😄。</p>
 <p>好像还可以用自定义函数作为第三个输入参量来作为排序依据，这个等以后做题遇到的时候再写吧，没用过的东西一概不写😋。</p>
 <p><strong>以后随时更新&hellip;</strong></p>
+
 	
 	
 	

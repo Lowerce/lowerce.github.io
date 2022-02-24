@@ -15,7 +15,7 @@
     
     
     <item>
-      <title>Docs: Docker原理及应用</title>
+      <title>Docs: Docker使用教程</title>
       <link>https://lowerce.github.io/docs/docker/docker/</link>
       <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
       
@@ -23,7 +23,7 @@
       <description>
         
         
-        &lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第七篇文章&lt;/em&gt;&lt;/p&gt;
+        &lt;p&gt;参考:&lt;a href=&#34;https://docker-curriculum.com/&#34;&gt;Docker初学者教程&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;command&#34;&gt;Command&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;docker images&lt;/code&gt;  列出全部映像&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;docker run -it 映像&lt;/code&gt;  运行并保持某一映像&lt;/p&gt;
@@ -42,6 +42,7 @@
 &lt;p&gt;终端界面可以自由关闭而不影响容器的持续运行，映射容器的端口到本机的随机端口，并为容器指定名称&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;docker run -p 本机端口:映像端口 映像&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;将映像的端口映射到本机的端口中来启动容器&lt;/p&gt;
+
       </description>
     </item>
     

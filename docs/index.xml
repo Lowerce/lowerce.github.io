@@ -15,7 +15,7 @@
     
     
     <item>
-      <title>Docs: C&#43;&#43; Primer充电以及C&#43;&#43;特性了解</title>
+      <title>Docs: C&#43;&#43; Primer</title>
       <link>https://lowerce.github.io/docs/c&#43;&#43;/cpp/</link>
       <pubDate>Sun, 07 Nov 2021 00:00:00 +0000</pubDate>
       
@@ -23,8 +23,7 @@
       <description>
         
         
-        &lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第九篇文章&lt;/em&gt;&lt;/p&gt;
-&lt;blockquote&gt;
+        &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;C++基础知识？&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;c-primer&#34;&gt;C++ Primer&lt;/h2&gt;
@@ -354,11 +353,12 @@
 &lt;/ul&gt;
 &lt;p&gt;memcpy(a,b,c)  从b处拷贝c个字节至a&lt;/p&gt;
 &lt;p&gt;属于标准库的cstring&lt;/p&gt;
+
       </description>
     </item>
     
     <item>
-      <title>Docs: Docker原理及应用</title>
+      <title>Docs: Docker使用教程</title>
       <link>https://lowerce.github.io/docs/docker/docker/</link>
       <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
       
@@ -366,7 +366,7 @@
       <description>
         
         
-        &lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第七篇文章&lt;/em&gt;&lt;/p&gt;
+        &lt;p&gt;参考:&lt;a href=&#34;https://docker-curriculum.com/&#34;&gt;Docker初学者教程&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;command&#34;&gt;Command&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;docker images&lt;/code&gt;  列出全部映像&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;docker run -it 映像&lt;/code&gt;  运行并保持某一映像&lt;/p&gt;
@@ -385,11 +385,12 @@
 &lt;p&gt;终端界面可以自由关闭而不影响容器的持续运行，映射容器的端口到本机的随机端口，并为容器指定名称&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;docker run -p 本机端口:映像端口 映像&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;将映像的端口映射到本机的端口中来启动容器&lt;/p&gt;
+
       </description>
     </item>
     
     <item>
-      <title>Docs: 前后端开发自学指南</title>
+      <title>Docs: 论坛建站</title>
       <link>https://lowerce.github.io/docs/site/site_construction/</link>
       <pubDate>Sat, 18 Sep 2021 00:00:00 +0000</pubDate>
       
@@ -397,8 +398,7 @@
       <description>
         
         
-        &lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第六篇文章&lt;/em&gt;&lt;/p&gt;
-&lt;blockquote&gt;
+        &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;学点有的没的，以加深对于网络世界的理解。&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;spring-boot&#34;&gt;Spring Boot&lt;/h2&gt;
@@ -467,11 +467,12 @@
 &lt;p&gt;ctrl alt o 去除未使用的引入包&lt;/p&gt;
 &lt;p&gt;ctrl n 检索&lt;/p&gt;
 &lt;p&gt;shift enter 快速换行&lt;/p&gt;
+
       </description>
     </item>
     
     <item>
-      <title>Docs: 李宏毅-Machine_Learning</title>
+      <title>Docs: 李宏毅机器学习课程</title>
       <link>https://lowerce.github.io/docs/machine-learning/ml_lhy/</link>
       <pubDate>Thu, 09 Sep 2021 00:00:00 +0000</pubDate>
       
@@ -479,8 +480,7 @@
       <description>
         
         
-        &lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第四篇文章&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;此文是根据李宏毅2021年春季的机器学习课程撰写。李宏毅机器学习课程的特点是对理论理解的剖析非常深入同时又不失在实际训练过程中的trick教学。&lt;/p&gt;
+        &lt;p&gt;此文是根据李宏毅2021年春季的机器学习课程撰写。李宏毅机器学习课程的特点是对理论理解的剖析非常深入同时又不失在实际训练过程中的trick教学。&lt;/p&gt;
 &lt;h2 id=&#34;1-机器学习general-guidence&#34;&gt;1. 机器学习general guidence&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/6216449b04c46.jpg&#34; alt=&#34;机器学习general guidence&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;2-调参trick&#34;&gt;2. 调参trick&lt;/h2&gt;
@@ -566,11 +566,12 @@
 &lt;p&gt;D存在的意义是在无法或者不容易计算生成数据分布与自然数据分布的divergence的情况下给出loss使G能够train起来，divergence的选择（参见f-GAN文章）决定了D的objective function。&lt;/p&gt;
 &lt;p&gt;JS divergence 不适合区分两个分布没有重叠(overlap)的情况，而在高维空间中不同分布图像的overlap很少；Wasserstein distance适于计算两个分布之间的距离（WGAN）&lt;/p&gt;
 &lt;p&gt;未完待续&amp;hellip;&lt;/p&gt;
+
       </description>
     </item>
     
     <item>
-      <title>Docs: 使用leetcode练习算法的一些总结(UPDATE-1)</title>
+      <title>Docs: leetcode算法总结(UPDATE-1)</title>
       <link>https://lowerce.github.io/docs/algorithm/leetcode-record-2/</link>
       <pubDate>Sun, 29 Aug 2021 00:00:00 +0000</pubDate>
       
@@ -578,8 +579,7 @@
       <description>
         
         
-        &lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第三篇文章&lt;/em&gt;&lt;/p&gt;
-&lt;blockquote&gt;
+        &lt;blockquote&gt;
 &lt;p&gt;即使不靠算法吃饭，leetcode依然能让我在编程语言的使用上更上一层楼。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;本文内容依据我在使用c++完成各类leetcode问题时得到的有效信息和经验写成。&lt;/p&gt;
@@ -594,11 +594,12 @@
 &lt;p&gt;sort(begin(),end())这样用，反正可以直接按从小到大光速排序，这里的开始和结束参照reverse，输入是完全一样的方法。说明前面的猜想是正确的😄。&lt;/p&gt;
 &lt;p&gt;好像还可以用自定义函数作为第三个输入参量来作为排序依据，这个等以后做题遇到的时候再写吧，没用过的东西一概不写😋。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;以后随时更新&amp;hellip;&lt;/strong&gt;&lt;/p&gt;
+
       </description>
     </item>
     
     <item>
-      <title>Docs: 使用leetcode练习算法的一些总结</title>
+      <title>Docs: leetcode算法总结</title>
       <link>https://lowerce.github.io/docs/algorithm/leetcode-record/</link>
       <pubDate>Tue, 24 Aug 2021 00:00:00 +0000</pubDate>
       
@@ -606,8 +607,7 @@
       <description>
         
         
-        &lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第二篇文章&lt;/em&gt;&lt;/p&gt;
-&lt;blockquote&gt;
+        &lt;blockquote&gt;
 &lt;p&gt;即使不靠算法吃饭，leetcode依然能让我在编程语言的使用上更上一层楼。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;本文内容依据我在使用c++完成各类leetcode问题时得到的有效信息和经验写成。&lt;/p&gt;
@@ -634,6 +634,7 @@
 &lt;p&gt;for循环一些自动遍历的trick之前没用过。&lt;/p&gt;
 &lt;p&gt;比如for(auto i:nums)或者for(auto &amp;amp;i:maps)，后者取值用t.first和t.second即可。也可以for(auto &amp;amp;[key,vaule]:maps)就能直接取到key和value啦。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;以后随时更新&amp;hellip;&lt;/strong&gt;&lt;/p&gt;
+
       </description>
     </item>
     

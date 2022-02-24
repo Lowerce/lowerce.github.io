@@ -15,7 +15,7 @@
     
     
     <item>
-      <title>Docs: C&#43;&#43; Primer充电以及C&#43;&#43;特性了解</title>
+      <title>Docs: C&#43;&#43; Primer</title>
       <link>https://lowerce.github.io/docs/c&#43;&#43;/cpp/</link>
       <pubDate>Sun, 07 Nov 2021 00:00:00 +0000</pubDate>
       
@@ -23,8 +23,7 @@
       <description>
         
         
-        &lt;p&gt;&lt;em&gt;这是Lowerce&amp;rsquo;s Blog的第九篇文章&lt;/em&gt;&lt;/p&gt;
-&lt;blockquote&gt;
+        &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;C++基础知识？&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;c-primer&#34;&gt;C++ Primer&lt;/h2&gt;
@@ -354,6 +353,7 @@
 &lt;/ul&gt;
 &lt;p&gt;memcpy(a,b,c)  从b处拷贝c个字节至a&lt;/p&gt;
 &lt;p&gt;属于标准库的cstring&lt;/p&gt;
+
       </description>
     </item>
     
