@@ -379,7 +379,7 @@ if (!doNotTrack) {
 </ul>
 <p><code>程序名 &lt; 输入文件</code></p>
 <p><code>程序名 &gt; 输出文件</code></p>
-<h4 id="数据类型">数据类型</h4>
+<h3 id="数据类型">数据类型</h3>
 <ul>
 <li>选用的经验：</li>
 </ul>
@@ -390,7 +390,7 @@ if (!doNotTrack) {
 <li><strong>不要混用</strong>有符号类型和无符号类型，带符号数会自动转换为无符号数，等于初始值对无符号类型所能表示的数值总数取模后的余数</li>
 <li>字符型字面值常量的类型可以通过前缀指定，整型、浮点型可以通过后缀指定</li>
 </ul>
-<h4 id="变量">变量</h4>
+<h3 id="变量">变量</h3>
 <ul>
 <li>初始化和赋值存在本质上的巨大区别</li>
 <li>使用列表初始化<code>{}</code>，在可能的数据丢失时会使编译器给出警告</li>
@@ -401,7 +401,7 @@ if (!doNotTrack) {
 <li>全局变量在块作用域内用<code>::</code>前缀可以显式访问（屏蔽块作用域内的局部变量）</li>
 <li>局部变量最好不要同全局变量同名</li>
 </ul>
-<h4 id="复合类型">复合类型</h4>
+<h3 id="复合类型">复合类型</h3>
 <ul>
 <li>通过在变量名前加<code>&amp;</code>来定义引用类型，引用必须初始化</li>
 <li><strong>引用即别名</strong></li>
@@ -414,7 +414,7 @@ if (!doNotTrack) {
 <li><code>void*</code>可以存放任意对象的地址</li>
 <li>类型修饰符(<code>*</code>和<code>&amp;</code>)仅修饰其后的<strong>第一个</strong>变量标识符</li>
 </ul>
-<h4 id="const限定符">const限定符</h4>
+<h3 id="const限定符">const限定符</h3>
 <ul>
 <li>常量引用是对const的引用</li>
 <li>在初始化常量引用时允许使用<strong>任意表达式</strong>作为初始值，只要该表达式的结果能够转换成引用的类型即可</li>
@@ -429,7 +429,7 @@ if (!doNotTrack) {
 <li>顶层const 表示指针本身是个常量；底层const 表示指针所指的对象是个常量（仅示例，顶层和底层const适用于各种类型）</li>
 <li>当执行对象的拷贝操作时，顶层const和底层const区别明显</li>
 </ul>
-<h4 id="处理类型">处理类型</h4>
+<h3 id="处理类型">处理类型</h3>
 <ul>
 <li>类型别名：<code>typedef 前者 后者</code> —— 后者是前者的同义词</li>
 <li>注意typedef中使用<code>*</code>的情况（并不是简单的替换关系）</li>
@@ -442,7 +442,7 @@ if (!doNotTrack) {
 <li>对于decltype所用的表达式来说，在变量名上加括号与不加括号得到的类型会有不同</li>
 <li><code>decltype((变量))</code>的结果永远是引用，<code>decltype(变量)</code>只有在变量本身是引用时才是引用</li>
 </ul>
-<h4 id="自定义数据结构">自定义数据结构</h4>
+<h3 id="自定义数据结构">自定义数据结构</h3>
 <ul>
 <li><code>struct 类名 类体 ;</code></li>
 <li>预处理器保证头文件多次包含仍能安全工作——头文件保护符</li>
@@ -453,12 +453,12 @@ if (!doNotTrack) {
 <li>一般将预处理变量名全部大写以保证其唯一性</li>
 <li>头文件一旦改变，相关的源文件必须重新编译以获取更新过的声明</li>
 </ul>
-<h4 id="using声明">using声明</h4>
+<h3 id="using声明">using声明</h3>
 <ul>
 <li><code>using namespace::name;</code></li>
 <li>头文件中不应包含using声明</li>
 </ul>
-<h4 id="string">string</h4>
+<h3 id="string">string</h3>
 <ul>
 <li><code>std::string</code> 可变长字符序列</li>
 <li>在执行读取操作时，string对象会自动忽略开头的空白（空格符、换行符、制表符等）并从第一个真正的字符开始读起，直到遇见下一处空白为止</li>
@@ -473,7 +473,7 @@ if (!doNotTrack) {
 <li>string中的字符可以通过下标访问</li>
 <li>始终注意检查下标的合法性（是否在正确的范围内）</li>
 </ul>
-<h4 id="vector">vector</h4>
+<h3 id="vector">vector</h3>
 <ul>
 <li><code>std::vector</code> 对象的集合（所有对象的类型相同）；容器</li>
 <li>vector是模板而非类型</li>
@@ -487,7 +487,7 @@ if (!doNotTrack) {
 <li>vector的比较法则也与string类似</li>
 <li>vector不能使用下标添加元素，只能使用下标访问已存在的元素</li>
 </ul>
-<h4 id="迭代器">迭代器</h4>
+<h3 id="迭代器">迭代器</h3>
 <ul>
 <li>有迭代器的类型同时拥有返回迭代器的成员</li>
 <li><code>begin()</code>返回指向第一个元素的迭代器 <code>end()</code>返回指向尾元素下一位置**（尾后）**的迭代器</li>
@@ -500,7 +500,7 @@ if (!doNotTrack) {
 <li>凡是使用了迭代器的循环体，都不要向迭代器所属的容易添加元素</li>
 <li>两个迭代器相减的结果为<code>difference_type</code>（带符号整型数）</li>
 </ul>
-<h4 id="数组">数组</h4>
+<h3 id="数组">数组</h3>
 <ul>
 <li>与vector类似的是存放类型相同的对象的容器；不同的是数组的大小确定不变，不能随意向其增加元素</li>
 <li>数组中元素的个数也是数组类型的一部分，所以需要为常量表达式</li>
@@ -520,7 +520,7 @@ if (!doNotTrack) {
 <li>使用标准库string比使用<strong>C风格字符串</strong>更安全高效</li>
 <li>尽量使用标准库类型而非数组</li>
 </ul>
-<h4 id="多维数组">多维数组</h4>
+<h3 id="多维数组">多维数组</h3>
 <ul>
 <li>严格来说，C++中没有多维数组，通常所说的多维数组其实是数组的数组</li>
 <li>使用<code>{}</code>括起来的一组值初始化多维数组，花括号嵌套与否完全等价（嵌套只是为了更清晰地阅读）</li>
@@ -528,7 +528,7 @@ if (!doNotTrack) {
 <li>使用范围for语句处理多维数组，除了最内层的循环外，其他所有循环的控制变量都应该是引用类型</li>
 <li>当程序使用多维数组的名字时，会自动将其转换成指向数组首元素的指针，即指向第一个内层数组的指针</li>
 </ul>
-<h4 id="表达式基础">表达式基础</h4>
+<h3 id="表达式基础">表达式基础</h3>
 <ul>
 <li>左值和右值：左值可以位于赋值语句的左侧，右值则不能（在C++中并非如此简单）</li>
 <li>当一个对象被用作右值的时候，用的是对象的值（内容）；当对象被用作左值的时候，用的是对象的身份（在内存中的位置）</li>
@@ -538,7 +538,7 @@ if (!doNotTrack) {
 <li>复合表达式中，括号无视优先级与结合律</li>
 <li>求值顺序在大多数运算符中没有明确规定，除了<code>&amp;&amp;</code>、<code>||</code>、<code>?:</code>、<code>,</code>外</li>
 </ul>
-<h4 id="运算符">运算符</h4>
+<h3 id="运算符">运算符</h3>
 <ul>
 <li>整数相除的商值无论正负一律向0取整（舍弃小数部分）</li>
 <li><code>(-m)/n</code>和<code>m/(-n)</code>都等价于<code>-(m/n)</code>，<code>m%(-n)</code>等价于<code>m%n</code>，<code>(-m)%n</code>等价于<code>-(m%n)</code></li>
@@ -555,7 +555,7 @@ if (!doNotTrack) {
 <li>对string或vector对象执行sizeof运算只返回该类型固定部分的大小，不会计算对象中的元素占用了多少空间</li>
 <li>逗号运算符真正的结果是右侧表达式的值</li>
 </ul>
-<h4 id="类型转换">类型转换</h4>
+<h3 id="类型转换">类型转换</h3>
 <ul>
 <li>整型提升、算术转换</li>
 <li>强制类型转换<code>cast-name&lt;type&gt;(expression)</code></li>
@@ -567,14 +567,14 @@ if (!doNotTrack) {
 <li>要尽量避免强制类型转换</li>
 <li>旧式的强制类型转换 <code>type (expr)</code>和<code>(type) expr</code>，不够清晰明了，追踪困难</li>
 </ul>
-<h4 id="运算符优先级">运算符优先级</h4>
-<h4 id="条件语句">条件语句</h4>
+<h3 id="运算符优先级">运算符优先级</h3>
+<h3 id="条件语句">条件语句</h3>
 <ul>
 <li><code>else</code>与离它最近的未匹配的<code>if</code>匹配，使用花括号可以强制匹配</li>
 <li>case标签必须是整形常量表达式</li>
 <li>如果在某处一个带有初值的变量位于作用域之外，在另一处该变量位于作用域之内，则从前一处跳转到后一处的行为为非法行为</li>
 </ul>
-<h4 id="迭代语句">迭代语句</h4>
+<h3 id="迭代语句">迭代语句</h3>
 <ul>
 <li>传统for循环的执行流程：首先执行init-statement；接下来判断condition；条件为真，执行循环体；最后执行expression</li>
 <li>for语句中的init-statement可定义多个对象，但只能有一条声明语句，所以所有变量的基础类型<strong>必须相同</strong></li>
@@ -583,13 +583,13 @@ if (!doNotTrack) {
 <li>范围for语句的等价传统for语句（不能用范围for语句增加vector对象或其他容器的元素）</li>
 <li><code>do while</code>与<code>while</code>十分相似，只是先执行循环体后检查条件</li>
 </ul>
-<h4 id="跳转语句">跳转语句</h4>
+<h3 id="跳转语句">跳转语句</h3>
 <ul>
 <li><code>break</code>负责终止离它最近的<code>while</code>、<code>do while</code>、<code>for</code>、<code>switch</code>语句，并从这些语句后的第一条语句开始继续执行</li>
 <li><code>continue</code>用于终止离它最近的<code>for</code>、<code>while</code>、<code>do while</code>循环中的当前迭代并立即开始下一次迭代</li>
 <li><code>goto label;</code> label是用于标识一条语句的标示符</li>
 </ul>
-<h4 id="try语句块和异常处理">try语句块和异常处理</h4>
+<h3 id="try语句块和异常处理">try语句块和异常处理</h3>
 <ul>
 <li>程序的异常检测部分使用<code>throw</code>表达式引发一个异常</li>
 <li><code>try</code>块后跟随一个或多个<code>catch</code>子句，由<code>try</code>中抛出的异常来选中对应的<code>catch</code>子句</li>
@@ -599,7 +599,7 @@ if (!doNotTrack) {
 <li>后三种异常只能以默认初始化的方式初始化，不允许为这些对象提供初始值；其它异常类型使用string对象或者C风格字符串初始化这些类型的对象，不允许使用默认初始化的方式</li>
 <li>异常类型只定义了一个成员函数<code>what</code>，该函数没有参数，返回一个指向C风格字符串的<code>const char*</code>，提供关于异常的信息</li>
 </ul>
-<h4 id="函数基础">函数基础</h4>
+<h3 id="函数基础">函数基础</h3>
 <ul>
 <li>函数形参列表中的形参通常用逗号隔开，其中每个形参都含有一个声明符的声明，即使两个形参的类型一样，也必须把两个类型都写出来</li>
 <li>形参名是可选的，当函数确实有个别形参不会被用到时，此类形参通常不命名以表示在函数体内不会使用它</li>
@@ -613,7 +613,7 @@ if (!doNotTrack) {
 <li>含有函数声明的头文件应该被包含到定义函数的源文件中</li>
 <li><strong>分离式编译</strong>允许程序分散在几个文件中，每个文件独立编译</li>
 </ul>
-<h4 id="参数传递">参数传递</h4>
+<h3 id="参数传递">参数传递</h3>
 <ul>
 <li>引用传递和值传递</li>
 <li>C++中建议使用引用类型的形参代替指针类型访问函数外部的对象</li>
@@ -637,7 +637,7 @@ if (!doNotTrack) {
 <li><code>initializer_list</code>中的元素永远是常量值，无法改变<code>initializer_list</code>对象中元素的值</li>
 <li>省略符形参是为了便于C++程序访问某些特殊的C代码（使用了C标准库varargs）而设置的，形如<code>void foo(parm_list, ...);</code>和<code>void foo(n...)</code></li>
 </ul>
-<h4 id="返回类型和return语句">返回类型和return语句</h4>
+<h3 id="返回类型和return语句">返回类型和return语句</h3>
 <ul>
 <li>返回void的函数不必须要有return，因为在最后总会隐式执行。若想让函数提前退出，可以使用return。</li>
 <li>在含有return语句的循环后也应该有一条return语句，否则程序是错误的且难以被编译器发现</li>
@@ -652,7 +652,7 @@ if (!doNotTrack) {
 <li>还可以使用<strong>尾置返回类型</strong>，如<code>auto func(int i) -&gt; int(*)[10]</code></li>
 <li>或者使用<code>decltype(数组名)*</code>来声明函数</li>
 </ul>
-<h4 id="函数重载">函数重载</h4>
+<h3 id="函数重载">函数重载</h3>
 <ul>
 <li>重载函数：同一作用域内的几个函数名相同但形参列表不同（main函数不能重载）</li>
 <li>重载函数的返回类型需要一致，不允许同名函数返回不同的类型</li>
@@ -662,7 +662,7 @@ if (!doNotTrack) {
 <li><strong>函数匹配</strong>也叫<strong>重载确定</strong>，在调用重载函数时可能的三种结果：最佳匹配、无匹配、二义性调用</li>
 <li>在C++中，<strong>名字查找</strong>发生在<strong>类型检查</strong>之前</li>
 </ul>
-<h4 id="特殊用途语言特性">特殊用途语言特性</h4>
+<h3 id="特殊用途语言特性">特殊用途语言特性</h3>
 <ul>
 <li></li>
 </ul>
@@ -764,9 +764,9 @@ if (!doNotTrack) {
 <p><strong>由1、2得出的conclusion</strong></p>
 <p><img src="https://img.tujidu.com/image/6216451f17749.jpg" alt="conclusin of 1 and 2"></p>
 <h3 id="3-adaptive-learning-rate">3. Adaptive Learning Rate</h3>
-<p>$\sigma$</p>
+<p><strong>sigma</strong></p>
 <p>Root Mean Square &ndash;&gt; RMSProp &ndash;&gt; Adam(RMSProp + Momentum)</p>
-<p>$ \eta $</p>
+<p><strong>eta</strong></p>
 <p>Learning Rate Scheduling: Learing Rate Decay and Warm Up</p>
 <p><strong>Optimizer总结</strong></p>
 <p><img src="https://img.tujidu.com/image/62164545ae1f4.jpg" alt="Optimization Summary"></p>
@@ -893,13 +893,13 @@ if (!doNotTrack) {
 </blockquote>
 <p>本文内容依据我在使用c++完成各类leetcode问题时得到的有效信息和经验写成。</p>
 <p>P.S.可能更强调在c++的使用上而非各类逆天的算法解决方案上。</p>
-<h3 id="1-一些c标准库函数">1. 一些C++标准库函数</h3>
-<h4 id="reverse">reverse</h4>
+<h2 id="1-一些c标准库函数">1. 一些C++标准库函数</h2>
+<h3 id="reverse">reverse</h3>
 <p>这个好像可以用来反转很多C++支持的数据结构，一般是两个输入参量，用法大概是这样。reverse(开始位置，开始位置+需要翻转的数量)，从这个角度看，它的输入参量是<strong>左闭右开</strong>的区间，例如reverse(string.begin(),string.end())&hellip;</p>
 <p>反正第一次用起来有点晕，极有可能c++很多的标准函数采用类似的输入形式，需要注意。</p>
-<h4 id="resize">resize</h4>
+<h3 id="resize">resize</h3>
 <p>反正对于字符串而言挺好使，直接resize(更新后的尺寸)，可以直接把字符串扩充到指定长度，多出来的部分应该是空的吧。</p>
-<h4 id="sort">sort</h4>
+<h3 id="sort">sort</h3>
 <p>sort(begin(),end())这样用，反正可以直接按从小到大光速排序，这里的开始和结束参照reverse，输入是完全一样的方法。说明前面的猜想是正确的😄。</p>
 <p>好像还可以用自定义函数作为第三个输入参量来作为排序依据，这个等以后做题遇到的时候再写吧，没用过的东西一概不写😋。</p>
 <p><strong>以后随时更新&hellip;</strong></p>
@@ -925,25 +925,25 @@ if (!doNotTrack) {
 </blockquote>
 <p>本文内容依据我在使用c++完成各类leetcode问题时得到的有效信息和经验写成。</p>
 <p>P.S.可能更强调在c++的使用上而非各类逆天的算法解决方案上。</p>
-<h3 id="1-map">1. map</h3>
+<h2 id="1-map">1. map</h2>
 <p>总的来说map是一个非常好用的东西，很多可以用set的问题我依然使用map来解决，感觉很舒服。</p>
-<h4 id="创建">创建</h4>
+<h3 id="创建">创建</h3>
 <p>创建的时候需要指定好类型 map or unordered_map &lt; type , type &gt; variable_name，创建出来是空的。拿unordered_map&lt;string,int&gt; maps来举例。</p>
-<h4 id="插入删除">插入删除</h4>
+<h3 id="插入删除">插入删除</h3>
 <p>对于计数型应用(反正做题比较多)，即后一个type是int的情况，用起来很简单，直接maps[&ldquo;hello&rdquo;]++，这样就在创建了对应key值并+1。这里使用上<strong>值得注意</strong>，当key对应的value值减到0时，并不意味着这个key就消失了，需要maps.erase(&ldquo;hello&rdquo;)才能真正抹掉对应的key值。</p>
 <p>其它的应用就需要使用maps.insert(pair&lt;string,string&gt;(&ldquo;hello&rdquo;,&ldquo;world&rdquo;))来插入了。</p>
-<h4 id="查找">查找</h4>
+<h3 id="查找">查找</h3>
 <p>作为一个哈希表，查找是其得到使用的根本原因。</p>
 <p>看一个key是不是在表里， if(maps.find(&ldquo;hello&rdquo;)!=maps.end()) ，如果返回true，则说明在表里。这里的返回值是一个迭代器，迭代器这么用，maps.find(&ldquo;hello&rdquo;)-&gt;first ，这就是key的值（也就是&quot;hello&quot;），maps.find(&ldquo;hello&rdquo;)-&gt;second ，这就是&quot;hello&quot;对应的value值。</p>
 <p>想遍历map，也得靠迭代器，先造个迭代器，unordered_map&lt;string,int&gt;::iterator itr，然后for循环的用法就跟一般的遍历差不多了。for(itr=maps.begin();itr!=maps.end();itr++)这样就能遍历啦。</p>
-<h3 id="2-string">2. string</h3>
+<h2 id="2-string">2. string</h2>
 <p>string的各种操作用法千奇百怪，很多感觉几乎等效。</p>
-<h4 id="assign">assign</h4>
+<h3 id="assign">assign</h3>
 <p>大概用法是 s1.assign(s,index,num) ，这样可以把s字符串从index索引值开始往后的num个字符赋给s1字符串。</p>
 <p>基本跟substr是一样的。</p>
-<h4 id="substr">substr</h4>
+<h3 id="substr">substr</h3>
 <p>s1=s.substr(index,num) ，这个操作跟使用assign是等效的。</p>
-<h3 id="3-for">3. for</h3>
+<h2 id="3-for">3. for</h2>
 <p>for循环一些自动遍历的trick之前没用过。</p>
 <p>比如for(auto i:nums)或者for(auto &amp;i:maps)，后者取值用t.first和t.second即可。也可以for(auto &amp;[key,vaule]:maps)就能直接取到key和value啦。</p>
 <p><strong>以后随时更新&hellip;</strong></p>
@@ -1000,7 +1000,9 @@ if (!doNotTrack) {
     
 	<h1 id="pg-98e691cc6d2a02eb40d696d5e9c01a98">4.1 - Docker使用教程</h1>
     
-	<p>参考:<a href="https://docker-curriculum.com/">Docker初学者教程</a></p>
+	<blockquote>
+<p>参考:<a href="https://docker-curriculum.com/">Docker初学者教程</a></p>
+</blockquote>
 <h2 id="command">Command</h2>
 <p><code>docker images</code>  列出全部映像</p>
 <p><code>docker run -it 映像</code>  运行并保持某一映像</p>
@@ -1013,12 +1015,12 @@ if (!doNotTrack) {
 <p><code>docker search 映像</code>  搜索所需映像</p>
 <h2 id="dockerfile">Dockerfile</h2>
 <h2 id="trick">Trick</h2>
-<p><code>docker run --rm 映像</code></p>
-<p>映像不存在时自动pull映像运行并在映像运行结束后自动删除容器</p>
-<p><code>docker run -d -P --name 指定一个名称 映像</code></p>
-<p>终端界面可以自由关闭而不影响容器的持续运行，映射容器的端口到本机的随机端口，并为容器指定名称</p>
-<p><code>docker run -p 本机端口:映像端口 映像</code></p>
-<p>将映像的端口映射到本机的端口中来启动容器</p>
+<p><code>docker run --rm 映像</code>
+映像不存在时自动pull映像运行并在映像运行结束后自动删除容器</p>
+<p><code>docker run -d -P --name 指定一个名称 映像</code>
+终端界面可以自由关闭而不影响容器的持续运行，映射容器的端口到本机的随机端口，并为容器指定名称</p>
+<p><code>docker run -p 本机端口:映像端口 映像</code>
+将映像的端口映射到本机的端口中来启动容器</p>
 
 </div>
 
@@ -1076,27 +1078,24 @@ if (!doNotTrack) {
 <p><em>学点有的没的，以加深对于网络世界的理解。</em></p>
 </blockquote>
 <h2 id="spring-boot">Spring Boot</h2>
-<ol>
-<li>创建</li>
-</ol>
+<h3 id="1-创建">1. 创建</h3>
 <p>在Intellij IDEA中新建项目，使用Spring Initializer创建即可。</p>
 <p>名称最好为网址的倒序排列。</p>
-<ol start="2">
-<li>入门</li>
-</ol>
+<h3 id="2-入门">2. 入门</h3>
 <p>参考<a href="https://spring.io/">spring.io</a>中<a href="https://spring.io/guides">Guides</a>栏下的<a href="https://spring.io/guides/gs/serving-web-content/">Serving Web Content with Spring MVC</a>进行配置。</p>
 <p>主要注意<code>pom.xml</code>中<code>dependency</code>的添加，<code>controller</code>的创建以及<code>templates</code>中html的添加。</p>
-<blockquote>
-<h3 id="bootstrap">Bootstrap</h3>
-<p>参考<a href="https://v3.bootcss.com/components/">bootstrap v3</a>中各组件的使用，以及<a href="https://v3.bootcss.com/css/#grid">bootstrap 栅格系统</a>。</p>
-<p>在https://v3.bootcss.com/getting-started/#download中直接下载用于生产环境的bootstrap。</p>
-<p>把这些文件放至<code>static</code>目录下。</p>
-<p>按照https://v3.bootcss.com/getting-started/#download-cdn的方式在html中部署css和js文件，路径应为<code>css/</code>或者<code>js/</code>。</p>
-<p>拷贝所需组件的代码至html文件。</p>
-</blockquote>
-<ol start="3">
-<li>登录</li>
-</ol>
+<pre tabindex="0"><code>### Bootstrap
+
+参考[bootstrap v3](https://v3.bootcss.com/components/)中各组件的使用，以及[bootstrap 栅格系统](https://v3.bootcss.com/css/#grid)。
+
+在 https://v3.bootcss.com/getting-started/#download 中直接下载用于生产环境的bootstrap。
+
+把这些文件放至`static`目录下。
+
+按照 https://v3.bootcss.com/getting-started/#download-cdn 的方式在html中部署css和js文件，路径应为`css/`或者`js/`。
+
+拷贝所需组件的代码至html文件。
+</code></pre><h3 id="3-登录">3. 登录</h3>
 <p>参照https://docs.github.com/en/developers/apps/building-oauth-apps来使用Github登录。</p>
 <p>在<code>Developer setting</code>中创建OAuth应用。</p>
 <p>在<strong>登录</strong>按钮处按照https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps的<strong>GET</strong>部分来填写<code>href</code>，其<code>Parameters</code>使用<code>?&amp;</code>的组合传入。</p>
@@ -1106,34 +1105,28 @@ if (!doNotTrack) {
 <p>再通过<code>access_token</code><strong>GET</strong>接入API。同样可以构造<code>DTO</code>（<code>DTO</code>的内容选择需要<code>GET</code>的参数内容）和<code>Provider</code>（<code>Provider</code>可以共用，因为是同一个过程的不同步骤，有些变量会重用）。使用<code>JSON.parseObject</code>来将String按照DTO的形式来切分。</p>
 <p>基本流程：<strong>GET获取code -&gt; POST获取的code来换取AccessToken -&gt; 使用AccessToken来GET用户信息</strong></p>
 <p><strong>P.S. DTO用来传递网络中的数据结构</strong></p>
-<ol start="4">
-<li>Session&amp;Cookie</li>
-</ol>
+<h3 id="4-sessioncookie">4. Session&amp;Cookie</h3>
 <p>HttpServletRequest用来处理Http请求，获取session并将得到的用户信息写入session以保持登录态。</p>
 <p>session信息和前端页面的绑定通过index.html的修改实现，需要根据<code>dependency</code>依赖的引擎所支持的语法来改写前端页面。</p>
 <p>&ldquo;redirect:/&ldquo;可以重定向至首页。</p>
-<ol start="5">
-<li>MySQL</li>
-</ol>
+<h3 id="5-mysql">5. MySQL</h3>
 <p><a href="https://www.runoob.com/mysql/mysql-tutorial.html">常用语句</a>：增(CREATE、INSERT INTO)、删(DELETE)、查(SELECT)、改(UPDATE)</p>
 <p>在此处使用<strong>H2数据库</strong>。通过MVN引入的方式参考<a href="https://mvnrepository.com/artifact/com.h2database/h2">H2 Database Engine</a>。</p>
 <p>在IDEA中的右侧边栏<code>Database</code>，点击<code>+</code>选择数据源，配置方式参考<a href="http://h2database.com/html/quickstart.html">Quickstart</a>。在此基础上右键创建的database来创建表和列。</p>
-<ol start="6">
-<li>MyBatis</li>
-</ol>
+<h3 id="6-mybatis">6. MyBatis</h3>
 <p>参考<a href="http://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/">mybatis-spring-boot-autoconfigure</a>来引入MyBatis。</p>
 <p>参考<a href="https://docs.spring.io/spring-boot/docs/2.5.4/reference/htmlsingle/#features.sql">官方文档</a>来添加支持。</p>
 <p>在mapper文件夹下创建UserMapper，在model文件夹下创建User，<strong>mapper用来存放映射对应SQL操作的方法</strong>，<strong>model用来存放程序内部交换的数据结构</strong>，</p>
-<h3 id="applicationproperties">application.properties</h3>
+<h2 id="applicationproperties">application.properties</h2>
 <p>server.port 指定端口</p>
 <p>可以任意指定关键字，使用时在@Value中替换即可。适用于当前环境与开发环境不一致的路径，便于快速修改。</p>
-<h3 id="spring-">Spring @</h3>
+<h2 id="spring-">Spring @</h2>
 <p>@Component</p>
 <p>@Autowired</p>
 <p>@Value(&quot;${}&quot;)</p>
 <p>@Controller</p>
 <p>@GetMapping()</p>
-<h3 id="快捷键">快捷键</h3>
+<h2 id="快捷键">快捷键</h2>
 <p>ctrl alt v 快速创建变量</p>
 <p>alt insert 快速创建get\set等方法</p>
 <p>alt enter 引入所需的包（标红时使用）</p>

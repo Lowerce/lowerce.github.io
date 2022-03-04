@@ -206,13 +206,13 @@ if (!doNotTrack) {
 </blockquote>
 <p>本文内容依据我在使用c++完成各类leetcode问题时得到的有效信息和经验写成。</p>
 <p>P.S.可能更强调在c++的使用上而非各类逆天的算法解决方案上。</p>
-<h3 id="1-一些c标准库函数">1. 一些C++标准库函数</h3>
-<h4 id="reverse">reverse</h4>
+<h2 id="1-一些c标准库函数">1. 一些C++标准库函数</h2>
+<h3 id="reverse">reverse</h3>
 <p>这个好像可以用来反转很多C++支持的数据结构，一般是两个输入参量，用法大概是这样。reverse(开始位置，开始位置+需要翻转的数量)，从这个角度看，它的输入参量是<strong>左闭右开</strong>的区间，例如reverse(string.begin(),string.end())&hellip;</p>
 <p>反正第一次用起来有点晕，极有可能c++很多的标准函数采用类似的输入形式，需要注意。</p>
-<h4 id="resize">resize</h4>
+<h3 id="resize">resize</h3>
 <p>反正对于字符串而言挺好使，直接resize(更新后的尺寸)，可以直接把字符串扩充到指定长度，多出来的部分应该是空的吧。</p>
-<h4 id="sort">sort</h4>
+<h3 id="sort">sort</h3>
 <p>sort(begin(),end())这样用，反正可以直接按从小到大光速排序，这里的开始和结束参照reverse，输入是完全一样的方法。说明前面的猜想是正确的😄。</p>
 <p>好像还可以用自定义函数作为第三个输入参量来作为排序依据，这个等以后做题遇到的时候再写吧，没用过的东西一概不写😋。</p>
 <p><strong>以后随时更新&hellip;</strong></p>
@@ -238,25 +238,25 @@ if (!doNotTrack) {
 </blockquote>
 <p>本文内容依据我在使用c++完成各类leetcode问题时得到的有效信息和经验写成。</p>
 <p>P.S.可能更强调在c++的使用上而非各类逆天的算法解决方案上。</p>
-<h3 id="1-map">1. map</h3>
+<h2 id="1-map">1. map</h2>
 <p>总的来说map是一个非常好用的东西，很多可以用set的问题我依然使用map来解决，感觉很舒服。</p>
-<h4 id="创建">创建</h4>
+<h3 id="创建">创建</h3>
 <p>创建的时候需要指定好类型 map or unordered_map &lt; type , type &gt; variable_name，创建出来是空的。拿unordered_map&lt;string,int&gt; maps来举例。</p>
-<h4 id="插入删除">插入删除</h4>
+<h3 id="插入删除">插入删除</h3>
 <p>对于计数型应用(反正做题比较多)，即后一个type是int的情况，用起来很简单，直接maps[&ldquo;hello&rdquo;]++，这样就在创建了对应key值并+1。这里使用上<strong>值得注意</strong>，当key对应的value值减到0时，并不意味着这个key就消失了，需要maps.erase(&ldquo;hello&rdquo;)才能真正抹掉对应的key值。</p>
 <p>其它的应用就需要使用maps.insert(pair&lt;string,string&gt;(&ldquo;hello&rdquo;,&ldquo;world&rdquo;))来插入了。</p>
-<h4 id="查找">查找</h4>
+<h3 id="查找">查找</h3>
 <p>作为一个哈希表，查找是其得到使用的根本原因。</p>
 <p>看一个key是不是在表里， if(maps.find(&ldquo;hello&rdquo;)!=maps.end()) ，如果返回true，则说明在表里。这里的返回值是一个迭代器，迭代器这么用，maps.find(&ldquo;hello&rdquo;)-&gt;first ，这就是key的值（也就是&quot;hello&quot;），maps.find(&ldquo;hello&rdquo;)-&gt;second ，这就是&quot;hello&quot;对应的value值。</p>
 <p>想遍历map，也得靠迭代器，先造个迭代器，unordered_map&lt;string,int&gt;::iterator itr，然后for循环的用法就跟一般的遍历差不多了。for(itr=maps.begin();itr!=maps.end();itr++)这样就能遍历啦。</p>
-<h3 id="2-string">2. string</h3>
+<h2 id="2-string">2. string</h2>
 <p>string的各种操作用法千奇百怪，很多感觉几乎等效。</p>
-<h4 id="assign">assign</h4>
+<h3 id="assign">assign</h3>
 <p>大概用法是 s1.assign(s,index,num) ，这样可以把s字符串从index索引值开始往后的num个字符赋给s1字符串。</p>
 <p>基本跟substr是一样的。</p>
-<h4 id="substr">substr</h4>
+<h3 id="substr">substr</h3>
 <p>s1=s.substr(index,num) ，这个操作跟使用assign是等效的。</p>
-<h3 id="3-for">3. for</h3>
+<h2 id="3-for">3. for</h2>
 <p>for循环一些自动遍历的trick之前没用过。</p>
 <p>比如for(auto i:nums)或者for(auto &amp;i:maps)，后者取值用t.first和t.second即可。也可以for(auto &amp;[key,vaule]:maps)就能直接取到key和value啦。</p>
 <p><strong>以后随时更新&hellip;</strong></p>

@@ -36,7 +36,7 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;code&gt;程序名 &amp;lt; 输入文件&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;程序名 &amp;gt; 输出文件&lt;/code&gt;&lt;/p&gt;
-&lt;h4 id=&#34;数据类型&#34;&gt;数据类型&lt;/h4&gt;
+&lt;h3 id=&#34;数据类型&#34;&gt;数据类型&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;选用的经验：&lt;/li&gt;
 &lt;/ul&gt;
@@ -47,7 +47,7 @@
 &lt;li&gt;&lt;strong&gt;不要混用&lt;/strong&gt;有符号类型和无符号类型，带符号数会自动转换为无符号数，等于初始值对无符号类型所能表示的数值总数取模后的余数&lt;/li&gt;
 &lt;li&gt;字符型字面值常量的类型可以通过前缀指定，整型、浮点型可以通过后缀指定&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;变量&#34;&gt;变量&lt;/h4&gt;
+&lt;h3 id=&#34;变量&#34;&gt;变量&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;初始化和赋值存在本质上的巨大区别&lt;/li&gt;
 &lt;li&gt;使用列表初始化&lt;code&gt;{}&lt;/code&gt;，在可能的数据丢失时会使编译器给出警告&lt;/li&gt;
@@ -58,7 +58,7 @@
 &lt;li&gt;全局变量在块作用域内用&lt;code&gt;::&lt;/code&gt;前缀可以显式访问（屏蔽块作用域内的局部变量）&lt;/li&gt;
 &lt;li&gt;局部变量最好不要同全局变量同名&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;复合类型&#34;&gt;复合类型&lt;/h4&gt;
+&lt;h3 id=&#34;复合类型&#34;&gt;复合类型&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;通过在变量名前加&lt;code&gt;&amp;amp;&lt;/code&gt;来定义引用类型，引用必须初始化&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;引用即别名&lt;/strong&gt;&lt;/li&gt;
@@ -71,7 +71,7 @@
 &lt;li&gt;&lt;code&gt;void*&lt;/code&gt;可以存放任意对象的地址&lt;/li&gt;
 &lt;li&gt;类型修饰符(&lt;code&gt;*&lt;/code&gt;和&lt;code&gt;&amp;amp;&lt;/code&gt;)仅修饰其后的&lt;strong&gt;第一个&lt;/strong&gt;变量标识符&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;const限定符&#34;&gt;const限定符&lt;/h4&gt;
+&lt;h3 id=&#34;const限定符&#34;&gt;const限定符&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;常量引用是对const的引用&lt;/li&gt;
 &lt;li&gt;在初始化常量引用时允许使用&lt;strong&gt;任意表达式&lt;/strong&gt;作为初始值，只要该表达式的结果能够转换成引用的类型即可&lt;/li&gt;
@@ -86,7 +86,7 @@
 &lt;li&gt;顶层const 表示指针本身是个常量；底层const 表示指针所指的对象是个常量（仅示例，顶层和底层const适用于各种类型）&lt;/li&gt;
 &lt;li&gt;当执行对象的拷贝操作时，顶层const和底层const区别明显&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;处理类型&#34;&gt;处理类型&lt;/h4&gt;
+&lt;h3 id=&#34;处理类型&#34;&gt;处理类型&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;类型别名：&lt;code&gt;typedef 前者 后者&lt;/code&gt; —— 后者是前者的同义词&lt;/li&gt;
 &lt;li&gt;注意typedef中使用&lt;code&gt;*&lt;/code&gt;的情况（并不是简单的替换关系）&lt;/li&gt;
@@ -99,7 +99,7 @@
 &lt;li&gt;对于decltype所用的表达式来说，在变量名上加括号与不加括号得到的类型会有不同&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;decltype((变量))&lt;/code&gt;的结果永远是引用，&lt;code&gt;decltype(变量)&lt;/code&gt;只有在变量本身是引用时才是引用&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;自定义数据结构&#34;&gt;自定义数据结构&lt;/h4&gt;
+&lt;h3 id=&#34;自定义数据结构&#34;&gt;自定义数据结构&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;struct 类名 类体 ;&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;预处理器保证头文件多次包含仍能安全工作——头文件保护符&lt;/li&gt;
@@ -110,12 +110,12 @@
 &lt;li&gt;一般将预处理变量名全部大写以保证其唯一性&lt;/li&gt;
 &lt;li&gt;头文件一旦改变，相关的源文件必须重新编译以获取更新过的声明&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;using声明&#34;&gt;using声明&lt;/h4&gt;
+&lt;h3 id=&#34;using声明&#34;&gt;using声明&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;using namespace::name;&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;头文件中不应包含using声明&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;string&#34;&gt;string&lt;/h4&gt;
+&lt;h3 id=&#34;string&#34;&gt;string&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;std::string&lt;/code&gt; 可变长字符序列&lt;/li&gt;
 &lt;li&gt;在执行读取操作时，string对象会自动忽略开头的空白（空格符、换行符、制表符等）并从第一个真正的字符开始读起，直到遇见下一处空白为止&lt;/li&gt;
@@ -130,7 +130,7 @@
 &lt;li&gt;string中的字符可以通过下标访问&lt;/li&gt;
 &lt;li&gt;始终注意检查下标的合法性（是否在正确的范围内）&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;vector&#34;&gt;vector&lt;/h4&gt;
+&lt;h3 id=&#34;vector&#34;&gt;vector&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;std::vector&lt;/code&gt; 对象的集合（所有对象的类型相同）；容器&lt;/li&gt;
 &lt;li&gt;vector是模板而非类型&lt;/li&gt;
@@ -144,7 +144,7 @@
 &lt;li&gt;vector的比较法则也与string类似&lt;/li&gt;
 &lt;li&gt;vector不能使用下标添加元素，只能使用下标访问已存在的元素&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;迭代器&#34;&gt;迭代器&lt;/h4&gt;
+&lt;h3 id=&#34;迭代器&#34;&gt;迭代器&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;有迭代器的类型同时拥有返回迭代器的成员&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;begin()&lt;/code&gt;返回指向第一个元素的迭代器 &lt;code&gt;end()&lt;/code&gt;返回指向尾元素下一位置**（尾后）**的迭代器&lt;/li&gt;
@@ -157,7 +157,7 @@
 &lt;li&gt;凡是使用了迭代器的循环体，都不要向迭代器所属的容易添加元素&lt;/li&gt;
 &lt;li&gt;两个迭代器相减的结果为&lt;code&gt;difference_type&lt;/code&gt;（带符号整型数）&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;数组&#34;&gt;数组&lt;/h4&gt;
+&lt;h3 id=&#34;数组&#34;&gt;数组&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;与vector类似的是存放类型相同的对象的容器；不同的是数组的大小确定不变，不能随意向其增加元素&lt;/li&gt;
 &lt;li&gt;数组中元素的个数也是数组类型的一部分，所以需要为常量表达式&lt;/li&gt;
@@ -177,7 +177,7 @@
 &lt;li&gt;使用标准库string比使用&lt;strong&gt;C风格字符串&lt;/strong&gt;更安全高效&lt;/li&gt;
 &lt;li&gt;尽量使用标准库类型而非数组&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;多维数组&#34;&gt;多维数组&lt;/h4&gt;
+&lt;h3 id=&#34;多维数组&#34;&gt;多维数组&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;严格来说，C++中没有多维数组，通常所说的多维数组其实是数组的数组&lt;/li&gt;
 &lt;li&gt;使用&lt;code&gt;{}&lt;/code&gt;括起来的一组值初始化多维数组，花括号嵌套与否完全等价（嵌套只是为了更清晰地阅读）&lt;/li&gt;
@@ -185,7 +185,7 @@
 &lt;li&gt;使用范围for语句处理多维数组，除了最内层的循环外，其他所有循环的控制变量都应该是引用类型&lt;/li&gt;
 &lt;li&gt;当程序使用多维数组的名字时，会自动将其转换成指向数组首元素的指针，即指向第一个内层数组的指针&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;表达式基础&#34;&gt;表达式基础&lt;/h4&gt;
+&lt;h3 id=&#34;表达式基础&#34;&gt;表达式基础&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;左值和右值：左值可以位于赋值语句的左侧，右值则不能（在C++中并非如此简单）&lt;/li&gt;
 &lt;li&gt;当一个对象被用作右值的时候，用的是对象的值（内容）；当对象被用作左值的时候，用的是对象的身份（在内存中的位置）&lt;/li&gt;
@@ -195,7 +195,7 @@
 &lt;li&gt;复合表达式中，括号无视优先级与结合律&lt;/li&gt;
 &lt;li&gt;求值顺序在大多数运算符中没有明确规定，除了&lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;、&lt;code&gt;||&lt;/code&gt;、&lt;code&gt;?:&lt;/code&gt;、&lt;code&gt;,&lt;/code&gt;外&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;运算符&#34;&gt;运算符&lt;/h4&gt;
+&lt;h3 id=&#34;运算符&#34;&gt;运算符&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;整数相除的商值无论正负一律向0取整（舍弃小数部分）&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;(-m)/n&lt;/code&gt;和&lt;code&gt;m/(-n)&lt;/code&gt;都等价于&lt;code&gt;-(m/n)&lt;/code&gt;，&lt;code&gt;m%(-n)&lt;/code&gt;等价于&lt;code&gt;m%n&lt;/code&gt;，&lt;code&gt;(-m)%n&lt;/code&gt;等价于&lt;code&gt;-(m%n)&lt;/code&gt;&lt;/li&gt;
@@ -212,7 +212,7 @@
 &lt;li&gt;对string或vector对象执行sizeof运算只返回该类型固定部分的大小，不会计算对象中的元素占用了多少空间&lt;/li&gt;
 &lt;li&gt;逗号运算符真正的结果是右侧表达式的值&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;类型转换&#34;&gt;类型转换&lt;/h4&gt;
+&lt;h3 id=&#34;类型转换&#34;&gt;类型转换&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;整型提升、算术转换&lt;/li&gt;
 &lt;li&gt;强制类型转换&lt;code&gt;cast-name&amp;lt;type&amp;gt;(expression)&lt;/code&gt;&lt;/li&gt;
@@ -224,14 +224,14 @@
 &lt;li&gt;要尽量避免强制类型转换&lt;/li&gt;
 &lt;li&gt;旧式的强制类型转换 &lt;code&gt;type (expr)&lt;/code&gt;和&lt;code&gt;(type) expr&lt;/code&gt;，不够清晰明了，追踪困难&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;运算符优先级&#34;&gt;运算符优先级&lt;/h4&gt;
-&lt;h4 id=&#34;条件语句&#34;&gt;条件语句&lt;/h4&gt;
+&lt;h3 id=&#34;运算符优先级&#34;&gt;运算符优先级&lt;/h3&gt;
+&lt;h3 id=&#34;条件语句&#34;&gt;条件语句&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;else&lt;/code&gt;与离它最近的未匹配的&lt;code&gt;if&lt;/code&gt;匹配，使用花括号可以强制匹配&lt;/li&gt;
 &lt;li&gt;case标签必须是整形常量表达式&lt;/li&gt;
 &lt;li&gt;如果在某处一个带有初值的变量位于作用域之外，在另一处该变量位于作用域之内，则从前一处跳转到后一处的行为为非法行为&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;迭代语句&#34;&gt;迭代语句&lt;/h4&gt;
+&lt;h3 id=&#34;迭代语句&#34;&gt;迭代语句&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;传统for循环的执行流程：首先执行init-statement；接下来判断condition；条件为真，执行循环体；最后执行expression&lt;/li&gt;
 &lt;li&gt;for语句中的init-statement可定义多个对象，但只能有一条声明语句，所以所有变量的基础类型&lt;strong&gt;必须相同&lt;/strong&gt;&lt;/li&gt;
@@ -240,13 +240,13 @@
 &lt;li&gt;范围for语句的等价传统for语句（不能用范围for语句增加vector对象或其他容器的元素）&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;do while&lt;/code&gt;与&lt;code&gt;while&lt;/code&gt;十分相似，只是先执行循环体后检查条件&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;跳转语句&#34;&gt;跳转语句&lt;/h4&gt;
+&lt;h3 id=&#34;跳转语句&#34;&gt;跳转语句&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;break&lt;/code&gt;负责终止离它最近的&lt;code&gt;while&lt;/code&gt;、&lt;code&gt;do while&lt;/code&gt;、&lt;code&gt;for&lt;/code&gt;、&lt;code&gt;switch&lt;/code&gt;语句，并从这些语句后的第一条语句开始继续执行&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;continue&lt;/code&gt;用于终止离它最近的&lt;code&gt;for&lt;/code&gt;、&lt;code&gt;while&lt;/code&gt;、&lt;code&gt;do while&lt;/code&gt;循环中的当前迭代并立即开始下一次迭代&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;goto label;&lt;/code&gt; label是用于标识一条语句的标示符&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;try语句块和异常处理&#34;&gt;try语句块和异常处理&lt;/h4&gt;
+&lt;h3 id=&#34;try语句块和异常处理&#34;&gt;try语句块和异常处理&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;程序的异常检测部分使用&lt;code&gt;throw&lt;/code&gt;表达式引发一个异常&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;try&lt;/code&gt;块后跟随一个或多个&lt;code&gt;catch&lt;/code&gt;子句，由&lt;code&gt;try&lt;/code&gt;中抛出的异常来选中对应的&lt;code&gt;catch&lt;/code&gt;子句&lt;/li&gt;
@@ -256,7 +256,7 @@
 &lt;li&gt;后三种异常只能以默认初始化的方式初始化，不允许为这些对象提供初始值；其它异常类型使用string对象或者C风格字符串初始化这些类型的对象，不允许使用默认初始化的方式&lt;/li&gt;
 &lt;li&gt;异常类型只定义了一个成员函数&lt;code&gt;what&lt;/code&gt;，该函数没有参数，返回一个指向C风格字符串的&lt;code&gt;const char*&lt;/code&gt;，提供关于异常的信息&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;函数基础&#34;&gt;函数基础&lt;/h4&gt;
+&lt;h3 id=&#34;函数基础&#34;&gt;函数基础&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;函数形参列表中的形参通常用逗号隔开，其中每个形参都含有一个声明符的声明，即使两个形参的类型一样，也必须把两个类型都写出来&lt;/li&gt;
 &lt;li&gt;形参名是可选的，当函数确实有个别形参不会被用到时，此类形参通常不命名以表示在函数体内不会使用它&lt;/li&gt;
@@ -270,7 +270,7 @@
 &lt;li&gt;含有函数声明的头文件应该被包含到定义函数的源文件中&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;分离式编译&lt;/strong&gt;允许程序分散在几个文件中，每个文件独立编译&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;参数传递&#34;&gt;参数传递&lt;/h4&gt;
+&lt;h3 id=&#34;参数传递&#34;&gt;参数传递&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;引用传递和值传递&lt;/li&gt;
 &lt;li&gt;C++中建议使用引用类型的形参代替指针类型访问函数外部的对象&lt;/li&gt;
@@ -294,7 +294,7 @@
 &lt;li&gt;&lt;code&gt;initializer_list&lt;/code&gt;中的元素永远是常量值，无法改变&lt;code&gt;initializer_list&lt;/code&gt;对象中元素的值&lt;/li&gt;
 &lt;li&gt;省略符形参是为了便于C++程序访问某些特殊的C代码（使用了C标准库varargs）而设置的，形如&lt;code&gt;void foo(parm_list, ...);&lt;/code&gt;和&lt;code&gt;void foo(n...)&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;返回类型和return语句&#34;&gt;返回类型和return语句&lt;/h4&gt;
+&lt;h3 id=&#34;返回类型和return语句&#34;&gt;返回类型和return语句&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;返回void的函数不必须要有return，因为在最后总会隐式执行。若想让函数提前退出，可以使用return。&lt;/li&gt;
 &lt;li&gt;在含有return语句的循环后也应该有一条return语句，否则程序是错误的且难以被编译器发现&lt;/li&gt;
@@ -309,7 +309,7 @@
 &lt;li&gt;还可以使用&lt;strong&gt;尾置返回类型&lt;/strong&gt;，如&lt;code&gt;auto func(int i) -&amp;gt; int(*)[10]&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;或者使用&lt;code&gt;decltype(数组名)*&lt;/code&gt;来声明函数&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;函数重载&#34;&gt;函数重载&lt;/h4&gt;
+&lt;h3 id=&#34;函数重载&#34;&gt;函数重载&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;重载函数：同一作用域内的几个函数名相同但形参列表不同（main函数不能重载）&lt;/li&gt;
 &lt;li&gt;重载函数的返回类型需要一致，不允许同名函数返回不同的类型&lt;/li&gt;
@@ -319,7 +319,7 @@
 &lt;li&gt;&lt;strong&gt;函数匹配&lt;/strong&gt;也叫&lt;strong&gt;重载确定&lt;/strong&gt;，在调用重载函数时可能的三种结果：最佳匹配、无匹配、二义性调用&lt;/li&gt;
 &lt;li&gt;在C++中，&lt;strong&gt;名字查找&lt;/strong&gt;发生在&lt;strong&gt;类型检查&lt;/strong&gt;之前&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;特殊用途语言特性&#34;&gt;特殊用途语言特性&lt;/h4&gt;
+&lt;h3 id=&#34;特殊用途语言特性&#34;&gt;特殊用途语言特性&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -366,7 +366,9 @@
       <description>
         
         
-        &lt;p&gt;参考:&lt;a href=&#34;https://docker-curriculum.com/&#34;&gt;Docker初学者教程&lt;/a&gt;&lt;/p&gt;
+        &lt;blockquote&gt;
+&lt;p&gt;参考:&lt;a href=&#34;https://docker-curriculum.com/&#34;&gt;Docker初学者教程&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;command&#34;&gt;Command&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;docker images&lt;/code&gt;  列出全部映像&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;docker run -it 映像&lt;/code&gt;  运行并保持某一映像&lt;/p&gt;
@@ -379,12 +381,12 @@
 &lt;p&gt;&lt;code&gt;docker search 映像&lt;/code&gt;  搜索所需映像&lt;/p&gt;
 &lt;h2 id=&#34;dockerfile&#34;&gt;Dockerfile&lt;/h2&gt;
 &lt;h2 id=&#34;trick&#34;&gt;Trick&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;docker run --rm 映像&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;映像不存在时自动pull映像运行并在映像运行结束后自动删除容器&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;docker run -d -P --name 指定一个名称 映像&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;终端界面可以自由关闭而不影响容器的持续运行，映射容器的端口到本机的随机端口，并为容器指定名称&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;docker run -p 本机端口:映像端口 映像&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;将映像的端口映射到本机的端口中来启动容器&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker run --rm 映像&lt;/code&gt;
+映像不存在时自动pull映像运行并在映像运行结束后自动删除容器&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker run -d -P --name 指定一个名称 映像&lt;/code&gt;
+终端界面可以自由关闭而不影响容器的持续运行，映射容器的端口到本机的随机端口，并为容器指定名称&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;docker run -p 本机端口:映像端口 映像&lt;/code&gt;
+将映像的端口映射到本机的端口中来启动容器&lt;/p&gt;
 
       </description>
     </item>
@@ -402,27 +404,24 @@
 &lt;p&gt;&lt;em&gt;学点有的没的，以加深对于网络世界的理解。&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;spring-boot&#34;&gt;Spring Boot&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;创建&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h3 id=&#34;1-创建&#34;&gt;1. 创建&lt;/h3&gt;
 &lt;p&gt;在Intellij IDEA中新建项目，使用Spring Initializer创建即可。&lt;/p&gt;
 &lt;p&gt;名称最好为网址的倒序排列。&lt;/p&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;入门&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h3 id=&#34;2-入门&#34;&gt;2. 入门&lt;/h3&gt;
 &lt;p&gt;参考&lt;a href=&#34;https://spring.io/&#34;&gt;spring.io&lt;/a&gt;中&lt;a href=&#34;https://spring.io/guides&#34;&gt;Guides&lt;/a&gt;栏下的&lt;a href=&#34;https://spring.io/guides/gs/serving-web-content/&#34;&gt;Serving Web Content with Spring MVC&lt;/a&gt;进行配置。&lt;/p&gt;
 &lt;p&gt;主要注意&lt;code&gt;pom.xml&lt;/code&gt;中&lt;code&gt;dependency&lt;/code&gt;的添加，&lt;code&gt;controller&lt;/code&gt;的创建以及&lt;code&gt;templates&lt;/code&gt;中html的添加。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;h3 id=&#34;bootstrap&#34;&gt;Bootstrap&lt;/h3&gt;
-&lt;p&gt;参考&lt;a href=&#34;https://v3.bootcss.com/components/&#34;&gt;bootstrap v3&lt;/a&gt;中各组件的使用，以及&lt;a href=&#34;https://v3.bootcss.com/css/#grid&#34;&gt;bootstrap 栅格系统&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;在https://v3.bootcss.com/getting-started/#download中直接下载用于生产环境的bootstrap。&lt;/p&gt;
-&lt;p&gt;把这些文件放至&lt;code&gt;static&lt;/code&gt;目录下。&lt;/p&gt;
-&lt;p&gt;按照https://v3.bootcss.com/getting-started/#download-cdn的方式在html中部署css和js文件，路径应为&lt;code&gt;css/&lt;/code&gt;或者&lt;code&gt;js/&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;拷贝所需组件的代码至html文件。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;登录&lt;/li&gt;
-&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;### Bootstrap
+
+参考[bootstrap v3](https://v3.bootcss.com/components/)中各组件的使用，以及[bootstrap 栅格系统](https://v3.bootcss.com/css/#grid)。
+
+在 https://v3.bootcss.com/getting-started/#download 中直接下载用于生产环境的bootstrap。
+
+把这些文件放至`static`目录下。
+
+按照 https://v3.bootcss.com/getting-started/#download-cdn 的方式在html中部署css和js文件，路径应为`css/`或者`js/`。
+
+拷贝所需组件的代码至html文件。
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;3-登录&#34;&gt;3. 登录&lt;/h3&gt;
 &lt;p&gt;参照https://docs.github.com/en/developers/apps/building-oauth-apps来使用Github登录。&lt;/p&gt;
 &lt;p&gt;在&lt;code&gt;Developer setting&lt;/code&gt;中创建OAuth应用。&lt;/p&gt;
 &lt;p&gt;在&lt;strong&gt;登录&lt;/strong&gt;按钮处按照https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps的&lt;strong&gt;GET&lt;/strong&gt;部分来填写&lt;code&gt;href&lt;/code&gt;，其&lt;code&gt;Parameters&lt;/code&gt;使用&lt;code&gt;?&amp;amp;&lt;/code&gt;的组合传入。&lt;/p&gt;
@@ -432,34 +431,28 @@
 &lt;p&gt;再通过&lt;code&gt;access_token&lt;/code&gt;&lt;strong&gt;GET&lt;/strong&gt;接入API。同样可以构造&lt;code&gt;DTO&lt;/code&gt;（&lt;code&gt;DTO&lt;/code&gt;的内容选择需要&lt;code&gt;GET&lt;/code&gt;的参数内容）和&lt;code&gt;Provider&lt;/code&gt;（&lt;code&gt;Provider&lt;/code&gt;可以共用，因为是同一个过程的不同步骤，有些变量会重用）。使用&lt;code&gt;JSON.parseObject&lt;/code&gt;来将String按照DTO的形式来切分。&lt;/p&gt;
 &lt;p&gt;基本流程：&lt;strong&gt;GET获取code -&amp;gt; POST获取的code来换取AccessToken -&amp;gt; 使用AccessToken来GET用户信息&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;P.S. DTO用来传递网络中的数据结构&lt;/strong&gt;&lt;/p&gt;
-&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;Session&amp;amp;Cookie&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h3 id=&#34;4-sessioncookie&#34;&gt;4. Session&amp;amp;Cookie&lt;/h3&gt;
 &lt;p&gt;HttpServletRequest用来处理Http请求，获取session并将得到的用户信息写入session以保持登录态。&lt;/p&gt;
 &lt;p&gt;session信息和前端页面的绑定通过index.html的修改实现，需要根据&lt;code&gt;dependency&lt;/code&gt;依赖的引擎所支持的语法来改写前端页面。&lt;/p&gt;
 &lt;p&gt;&amp;ldquo;redirect:/&amp;ldquo;可以重定向至首页。&lt;/p&gt;
-&lt;ol start=&#34;5&#34;&gt;
-&lt;li&gt;MySQL&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h3 id=&#34;5-mysql&#34;&gt;5. MySQL&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.runoob.com/mysql/mysql-tutorial.html&#34;&gt;常用语句&lt;/a&gt;：增(CREATE、INSERT INTO)、删(DELETE)、查(SELECT)、改(UPDATE)&lt;/p&gt;
 &lt;p&gt;在此处使用&lt;strong&gt;H2数据库&lt;/strong&gt;。通过MVN引入的方式参考&lt;a href=&#34;https://mvnrepository.com/artifact/com.h2database/h2&#34;&gt;H2 Database Engine&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;在IDEA中的右侧边栏&lt;code&gt;Database&lt;/code&gt;，点击&lt;code&gt;+&lt;/code&gt;选择数据源，配置方式参考&lt;a href=&#34;http://h2database.com/html/quickstart.html&#34;&gt;Quickstart&lt;/a&gt;。在此基础上右键创建的database来创建表和列。&lt;/p&gt;
-&lt;ol start=&#34;6&#34;&gt;
-&lt;li&gt;MyBatis&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h3 id=&#34;6-mybatis&#34;&gt;6. MyBatis&lt;/h3&gt;
 &lt;p&gt;参考&lt;a href=&#34;http://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/&#34;&gt;mybatis-spring-boot-autoconfigure&lt;/a&gt;来引入MyBatis。&lt;/p&gt;
 &lt;p&gt;参考&lt;a href=&#34;https://docs.spring.io/spring-boot/docs/2.5.4/reference/htmlsingle/#features.sql&#34;&gt;官方文档&lt;/a&gt;来添加支持。&lt;/p&gt;
 &lt;p&gt;在mapper文件夹下创建UserMapper，在model文件夹下创建User，&lt;strong&gt;mapper用来存放映射对应SQL操作的方法&lt;/strong&gt;，&lt;strong&gt;model用来存放程序内部交换的数据结构&lt;/strong&gt;，&lt;/p&gt;
-&lt;h3 id=&#34;applicationproperties&#34;&gt;application.properties&lt;/h3&gt;
+&lt;h2 id=&#34;applicationproperties&#34;&gt;application.properties&lt;/h2&gt;
 &lt;p&gt;server.port 指定端口&lt;/p&gt;
 &lt;p&gt;可以任意指定关键字，使用时在@Value中替换即可。适用于当前环境与开发环境不一致的路径，便于快速修改。&lt;/p&gt;
-&lt;h3 id=&#34;spring-&#34;&gt;Spring @&lt;/h3&gt;
+&lt;h2 id=&#34;spring-&#34;&gt;Spring @&lt;/h2&gt;
 &lt;p&gt;@Component&lt;/p&gt;
 &lt;p&gt;@Autowired&lt;/p&gt;
 &lt;p&gt;@Value(&amp;quot;${}&amp;quot;)&lt;/p&gt;
 &lt;p&gt;@Controller&lt;/p&gt;
 &lt;p&gt;@GetMapping()&lt;/p&gt;
-&lt;h3 id=&#34;快捷键&#34;&gt;快捷键&lt;/h3&gt;
+&lt;h2 id=&#34;快捷键&#34;&gt;快捷键&lt;/h2&gt;
 &lt;p&gt;ctrl alt v 快速创建变量&lt;/p&gt;
 &lt;p&gt;alt insert 快速创建get\set等方法&lt;/p&gt;
 &lt;p&gt;alt enter 引入所需的包（标红时使用）&lt;/p&gt;
@@ -495,9 +488,9 @@
 &lt;p&gt;&lt;strong&gt;由1、2得出的conclusion&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/6216451f17749.jpg&#34; alt=&#34;conclusin of 1 and 2&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;3-adaptive-learning-rate&#34;&gt;3. Adaptive Learning Rate&lt;/h3&gt;
-&lt;p&gt;$\sigma$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;sigma&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Root Mean Square &amp;ndash;&amp;gt; RMSProp &amp;ndash;&amp;gt; Adam(RMSProp + Momentum)&lt;/p&gt;
-&lt;p&gt;$ \eta $&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;eta&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Learning Rate Scheduling: Learing Rate Decay and Warm Up&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Optimizer总结&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/62164545ae1f4.jpg&#34; alt=&#34;Optimization Summary&#34;&gt;&lt;/p&gt;
@@ -584,13 +577,13 @@
 &lt;/blockquote&gt;
 &lt;p&gt;本文内容依据我在使用c++完成各类leetcode问题时得到的有效信息和经验写成。&lt;/p&gt;
 &lt;p&gt;P.S.可能更强调在c++的使用上而非各类逆天的算法解决方案上。&lt;/p&gt;
-&lt;h3 id=&#34;1-一些c标准库函数&#34;&gt;1. 一些C++标准库函数&lt;/h3&gt;
-&lt;h4 id=&#34;reverse&#34;&gt;reverse&lt;/h4&gt;
+&lt;h2 id=&#34;1-一些c标准库函数&#34;&gt;1. 一些C++标准库函数&lt;/h2&gt;
+&lt;h3 id=&#34;reverse&#34;&gt;reverse&lt;/h3&gt;
 &lt;p&gt;这个好像可以用来反转很多C++支持的数据结构，一般是两个输入参量，用法大概是这样。reverse(开始位置，开始位置+需要翻转的数量)，从这个角度看，它的输入参量是&lt;strong&gt;左闭右开&lt;/strong&gt;的区间，例如reverse(string.begin(),string.end())&amp;hellip;&lt;/p&gt;
 &lt;p&gt;反正第一次用起来有点晕，极有可能c++很多的标准函数采用类似的输入形式，需要注意。&lt;/p&gt;
-&lt;h4 id=&#34;resize&#34;&gt;resize&lt;/h4&gt;
+&lt;h3 id=&#34;resize&#34;&gt;resize&lt;/h3&gt;
 &lt;p&gt;反正对于字符串而言挺好使，直接resize(更新后的尺寸)，可以直接把字符串扩充到指定长度，多出来的部分应该是空的吧。&lt;/p&gt;
-&lt;h4 id=&#34;sort&#34;&gt;sort&lt;/h4&gt;
+&lt;h3 id=&#34;sort&#34;&gt;sort&lt;/h3&gt;
 &lt;p&gt;sort(begin(),end())这样用，反正可以直接按从小到大光速排序，这里的开始和结束参照reverse，输入是完全一样的方法。说明前面的猜想是正确的😄。&lt;/p&gt;
 &lt;p&gt;好像还可以用自定义函数作为第三个输入参量来作为排序依据，这个等以后做题遇到的时候再写吧，没用过的东西一概不写😋。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;以后随时更新&amp;hellip;&lt;/strong&gt;&lt;/p&gt;
@@ -612,25 +605,25 @@
 &lt;/blockquote&gt;
 &lt;p&gt;本文内容依据我在使用c++完成各类leetcode问题时得到的有效信息和经验写成。&lt;/p&gt;
 &lt;p&gt;P.S.可能更强调在c++的使用上而非各类逆天的算法解决方案上。&lt;/p&gt;
-&lt;h3 id=&#34;1-map&#34;&gt;1. map&lt;/h3&gt;
+&lt;h2 id=&#34;1-map&#34;&gt;1. map&lt;/h2&gt;
 &lt;p&gt;总的来说map是一个非常好用的东西，很多可以用set的问题我依然使用map来解决，感觉很舒服。&lt;/p&gt;
-&lt;h4 id=&#34;创建&#34;&gt;创建&lt;/h4&gt;
+&lt;h3 id=&#34;创建&#34;&gt;创建&lt;/h3&gt;
 &lt;p&gt;创建的时候需要指定好类型 map or unordered_map &amp;lt; type , type &amp;gt; variable_name，创建出来是空的。拿unordered_map&amp;lt;string,int&amp;gt; maps来举例。&lt;/p&gt;
-&lt;h4 id=&#34;插入删除&#34;&gt;插入删除&lt;/h4&gt;
+&lt;h3 id=&#34;插入删除&#34;&gt;插入删除&lt;/h3&gt;
 &lt;p&gt;对于计数型应用(反正做题比较多)，即后一个type是int的情况，用起来很简单，直接maps[&amp;ldquo;hello&amp;rdquo;]++，这样就在创建了对应key值并+1。这里使用上&lt;strong&gt;值得注意&lt;/strong&gt;，当key对应的value值减到0时，并不意味着这个key就消失了，需要maps.erase(&amp;ldquo;hello&amp;rdquo;)才能真正抹掉对应的key值。&lt;/p&gt;
 &lt;p&gt;其它的应用就需要使用maps.insert(pair&amp;lt;string,string&amp;gt;(&amp;ldquo;hello&amp;rdquo;,&amp;ldquo;world&amp;rdquo;))来插入了。&lt;/p&gt;
-&lt;h4 id=&#34;查找&#34;&gt;查找&lt;/h4&gt;
+&lt;h3 id=&#34;查找&#34;&gt;查找&lt;/h3&gt;
 &lt;p&gt;作为一个哈希表，查找是其得到使用的根本原因。&lt;/p&gt;
 &lt;p&gt;看一个key是不是在表里， if(maps.find(&amp;ldquo;hello&amp;rdquo;)!=maps.end()) ，如果返回true，则说明在表里。这里的返回值是一个迭代器，迭代器这么用，maps.find(&amp;ldquo;hello&amp;rdquo;)-&amp;gt;first ，这就是key的值（也就是&amp;quot;hello&amp;quot;），maps.find(&amp;ldquo;hello&amp;rdquo;)-&amp;gt;second ，这就是&amp;quot;hello&amp;quot;对应的value值。&lt;/p&gt;
 &lt;p&gt;想遍历map，也得靠迭代器，先造个迭代器，unordered_map&amp;lt;string,int&amp;gt;::iterator itr，然后for循环的用法就跟一般的遍历差不多了。for(itr=maps.begin();itr!=maps.end();itr++)这样就能遍历啦。&lt;/p&gt;
-&lt;h3 id=&#34;2-string&#34;&gt;2. string&lt;/h3&gt;
+&lt;h2 id=&#34;2-string&#34;&gt;2. string&lt;/h2&gt;
 &lt;p&gt;string的各种操作用法千奇百怪，很多感觉几乎等效。&lt;/p&gt;
-&lt;h4 id=&#34;assign&#34;&gt;assign&lt;/h4&gt;
+&lt;h3 id=&#34;assign&#34;&gt;assign&lt;/h3&gt;
 &lt;p&gt;大概用法是 s1.assign(s,index,num) ，这样可以把s字符串从index索引值开始往后的num个字符赋给s1字符串。&lt;/p&gt;
 &lt;p&gt;基本跟substr是一样的。&lt;/p&gt;
-&lt;h4 id=&#34;substr&#34;&gt;substr&lt;/h4&gt;
+&lt;h3 id=&#34;substr&#34;&gt;substr&lt;/h3&gt;
 &lt;p&gt;s1=s.substr(index,num) ，这个操作跟使用assign是等效的。&lt;/p&gt;
-&lt;h3 id=&#34;3-for&#34;&gt;3. for&lt;/h3&gt;
+&lt;h2 id=&#34;3-for&#34;&gt;3. for&lt;/h2&gt;
 &lt;p&gt;for循环一些自动遍历的trick之前没用过。&lt;/p&gt;
 &lt;p&gt;比如for(auto i:nums)或者for(auto &amp;amp;i:maps)，后者取值用t.first和t.second即可。也可以for(auto &amp;amp;[key,vaule]:maps)就能直接取到key和value啦。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;以后随时更新&amp;hellip;&lt;/strong&gt;&lt;/p&gt;

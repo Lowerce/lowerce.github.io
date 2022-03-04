@@ -27,27 +27,24 @@
 &lt;p&gt;&lt;em&gt;学点有的没的，以加深对于网络世界的理解。&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;spring-boot&#34;&gt;Spring Boot&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;创建&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h3 id=&#34;1-创建&#34;&gt;1. 创建&lt;/h3&gt;
 &lt;p&gt;在Intellij IDEA中新建项目，使用Spring Initializer创建即可。&lt;/p&gt;
 &lt;p&gt;名称最好为网址的倒序排列。&lt;/p&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;入门&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h3 id=&#34;2-入门&#34;&gt;2. 入门&lt;/h3&gt;
 &lt;p&gt;参考&lt;a href=&#34;https://spring.io/&#34;&gt;spring.io&lt;/a&gt;中&lt;a href=&#34;https://spring.io/guides&#34;&gt;Guides&lt;/a&gt;栏下的&lt;a href=&#34;https://spring.io/guides/gs/serving-web-content/&#34;&gt;Serving Web Content with Spring MVC&lt;/a&gt;进行配置。&lt;/p&gt;
 &lt;p&gt;主要注意&lt;code&gt;pom.xml&lt;/code&gt;中&lt;code&gt;dependency&lt;/code&gt;的添加，&lt;code&gt;controller&lt;/code&gt;的创建以及&lt;code&gt;templates&lt;/code&gt;中html的添加。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;h3 id=&#34;bootstrap&#34;&gt;Bootstrap&lt;/h3&gt;
-&lt;p&gt;参考&lt;a href=&#34;https://v3.bootcss.com/components/&#34;&gt;bootstrap v3&lt;/a&gt;中各组件的使用，以及&lt;a href=&#34;https://v3.bootcss.com/css/#grid&#34;&gt;bootstrap 栅格系统&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;在https://v3.bootcss.com/getting-started/#download中直接下载用于生产环境的bootstrap。&lt;/p&gt;
-&lt;p&gt;把这些文件放至&lt;code&gt;static&lt;/code&gt;目录下。&lt;/p&gt;
-&lt;p&gt;按照https://v3.bootcss.com/getting-started/#download-cdn的方式在html中部署css和js文件，路径应为&lt;code&gt;css/&lt;/code&gt;或者&lt;code&gt;js/&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;拷贝所需组件的代码至html文件。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;登录&lt;/li&gt;
-&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;### Bootstrap
+
+参考[bootstrap v3](https://v3.bootcss.com/components/)中各组件的使用，以及[bootstrap 栅格系统](https://v3.bootcss.com/css/#grid)。
+
+在 https://v3.bootcss.com/getting-started/#download 中直接下载用于生产环境的bootstrap。
+
+把这些文件放至`static`目录下。
+
+按照 https://v3.bootcss.com/getting-started/#download-cdn 的方式在html中部署css和js文件，路径应为`css/`或者`js/`。
+
+拷贝所需组件的代码至html文件。
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;3-登录&#34;&gt;3. 登录&lt;/h3&gt;
 &lt;p&gt;参照https://docs.github.com/en/developers/apps/building-oauth-apps来使用Github登录。&lt;/p&gt;
 &lt;p&gt;在&lt;code&gt;Developer setting&lt;/code&gt;中创建OAuth应用。&lt;/p&gt;
 &lt;p&gt;在&lt;strong&gt;登录&lt;/strong&gt;按钮处按照https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps的&lt;strong&gt;GET&lt;/strong&gt;部分来填写&lt;code&gt;href&lt;/code&gt;，其&lt;code&gt;Parameters&lt;/code&gt;使用&lt;code&gt;?&amp;amp;&lt;/code&gt;的组合传入。&lt;/p&gt;
@@ -57,34 +54,28 @@
 &lt;p&gt;再通过&lt;code&gt;access_token&lt;/code&gt;&lt;strong&gt;GET&lt;/strong&gt;接入API。同样可以构造&lt;code&gt;DTO&lt;/code&gt;（&lt;code&gt;DTO&lt;/code&gt;的内容选择需要&lt;code&gt;GET&lt;/code&gt;的参数内容）和&lt;code&gt;Provider&lt;/code&gt;（&lt;code&gt;Provider&lt;/code&gt;可以共用，因为是同一个过程的不同步骤，有些变量会重用）。使用&lt;code&gt;JSON.parseObject&lt;/code&gt;来将String按照DTO的形式来切分。&lt;/p&gt;
 &lt;p&gt;基本流程：&lt;strong&gt;GET获取code -&amp;gt; POST获取的code来换取AccessToken -&amp;gt; 使用AccessToken来GET用户信息&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;P.S. DTO用来传递网络中的数据结构&lt;/strong&gt;&lt;/p&gt;
-&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;Session&amp;amp;Cookie&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h3 id=&#34;4-sessioncookie&#34;&gt;4. Session&amp;amp;Cookie&lt;/h3&gt;
 &lt;p&gt;HttpServletRequest用来处理Http请求，获取session并将得到的用户信息写入session以保持登录态。&lt;/p&gt;
 &lt;p&gt;session信息和前端页面的绑定通过index.html的修改实现，需要根据&lt;code&gt;dependency&lt;/code&gt;依赖的引擎所支持的语法来改写前端页面。&lt;/p&gt;
 &lt;p&gt;&amp;ldquo;redirect:/&amp;ldquo;可以重定向至首页。&lt;/p&gt;
-&lt;ol start=&#34;5&#34;&gt;
-&lt;li&gt;MySQL&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h3 id=&#34;5-mysql&#34;&gt;5. MySQL&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.runoob.com/mysql/mysql-tutorial.html&#34;&gt;常用语句&lt;/a&gt;：增(CREATE、INSERT INTO)、删(DELETE)、查(SELECT)、改(UPDATE)&lt;/p&gt;
 &lt;p&gt;在此处使用&lt;strong&gt;H2数据库&lt;/strong&gt;。通过MVN引入的方式参考&lt;a href=&#34;https://mvnrepository.com/artifact/com.h2database/h2&#34;&gt;H2 Database Engine&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;在IDEA中的右侧边栏&lt;code&gt;Database&lt;/code&gt;，点击&lt;code&gt;+&lt;/code&gt;选择数据源，配置方式参考&lt;a href=&#34;http://h2database.com/html/quickstart.html&#34;&gt;Quickstart&lt;/a&gt;。在此基础上右键创建的database来创建表和列。&lt;/p&gt;
-&lt;ol start=&#34;6&#34;&gt;
-&lt;li&gt;MyBatis&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h3 id=&#34;6-mybatis&#34;&gt;6. MyBatis&lt;/h3&gt;
 &lt;p&gt;参考&lt;a href=&#34;http://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/&#34;&gt;mybatis-spring-boot-autoconfigure&lt;/a&gt;来引入MyBatis。&lt;/p&gt;
 &lt;p&gt;参考&lt;a href=&#34;https://docs.spring.io/spring-boot/docs/2.5.4/reference/htmlsingle/#features.sql&#34;&gt;官方文档&lt;/a&gt;来添加支持。&lt;/p&gt;
 &lt;p&gt;在mapper文件夹下创建UserMapper，在model文件夹下创建User，&lt;strong&gt;mapper用来存放映射对应SQL操作的方法&lt;/strong&gt;，&lt;strong&gt;model用来存放程序内部交换的数据结构&lt;/strong&gt;，&lt;/p&gt;
-&lt;h3 id=&#34;applicationproperties&#34;&gt;application.properties&lt;/h3&gt;
+&lt;h2 id=&#34;applicationproperties&#34;&gt;application.properties&lt;/h2&gt;
 &lt;p&gt;server.port 指定端口&lt;/p&gt;
 &lt;p&gt;可以任意指定关键字，使用时在@Value中替换即可。适用于当前环境与开发环境不一致的路径，便于快速修改。&lt;/p&gt;
-&lt;h3 id=&#34;spring-&#34;&gt;Spring @&lt;/h3&gt;
+&lt;h2 id=&#34;spring-&#34;&gt;Spring @&lt;/h2&gt;
 &lt;p&gt;@Component&lt;/p&gt;
 &lt;p&gt;@Autowired&lt;/p&gt;
 &lt;p&gt;@Value(&amp;quot;${}&amp;quot;)&lt;/p&gt;
 &lt;p&gt;@Controller&lt;/p&gt;
 &lt;p&gt;@GetMapping()&lt;/p&gt;
-&lt;h3 id=&#34;快捷键&#34;&gt;快捷键&lt;/h3&gt;
+&lt;h2 id=&#34;快捷键&#34;&gt;快捷键&lt;/h2&gt;
 &lt;p&gt;ctrl alt v 快速创建变量&lt;/p&gt;
 &lt;p&gt;alt insert 快速创建get\set等方法&lt;/p&gt;
 &lt;p&gt;alt enter 引入所需的包（标红时使用）&lt;/p&gt;

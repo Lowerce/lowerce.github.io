@@ -217,6 +217,18 @@ if (!doNotTrack) {
             
 
 
+<div class="td-toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-一些c标准库函数">1. 一些C++标准库函数</a>
+      <ul>
+        <li><a href="#reverse">reverse</a></li>
+        <li><a href="#resize">resize</a></li>
+        <li><a href="#sort">sort</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+
 
 
             
@@ -359,13 +371,13 @@ if (!doNotTrack) {
 </blockquote>
 <p>本文内容依据我在使用c++完成各类leetcode问题时得到的有效信息和经验写成。</p>
 <p>P.S.可能更强调在c++的使用上而非各类逆天的算法解决方案上。</p>
-<h3 id="1-一些c标准库函数">1. 一些C++标准库函数</h3>
-<h4 id="reverse">reverse</h4>
+<h2 id="1-一些c标准库函数">1. 一些C++标准库函数</h2>
+<h3 id="reverse">reverse</h3>
 <p>这个好像可以用来反转很多C++支持的数据结构，一般是两个输入参量，用法大概是这样。reverse(开始位置，开始位置+需要翻转的数量)，从这个角度看，它的输入参量是<strong>左闭右开</strong>的区间，例如reverse(string.begin(),string.end())&hellip;</p>
 <p>反正第一次用起来有点晕，极有可能c++很多的标准函数采用类似的输入形式，需要注意。</p>
-<h4 id="resize">resize</h4>
+<h3 id="resize">resize</h3>
 <p>反正对于字符串而言挺好使，直接resize(更新后的尺寸)，可以直接把字符串扩充到指定长度，多出来的部分应该是空的吧。</p>
-<h4 id="sort">sort</h4>
+<h3 id="sort">sort</h3>
 <p>sort(begin(),end())这样用，反正可以直接按从小到大光速排序，这里的开始和结束参照reverse，输入是完全一样的方法。说明前面的猜想是正确的😄。</p>
 <p>好像还可以用自定义函数作为第三个输入参量来作为排序依据，这个等以后做题遇到的时候再写吧，没用过的东西一概不写😋。</p>
 <p><strong>以后随时更新&hellip;</strong></p>

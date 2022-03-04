@@ -38,9 +38,9 @@
 &lt;p&gt;&lt;strong&gt;由1、2得出的conclusion&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/6216451f17749.jpg&#34; alt=&#34;conclusin of 1 and 2&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;3-adaptive-learning-rate&#34;&gt;3. Adaptive Learning Rate&lt;/h3&gt;
-&lt;p&gt;$\sigma$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;sigma&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Root Mean Square &amp;ndash;&amp;gt; RMSProp &amp;ndash;&amp;gt; Adam(RMSProp + Momentum)&lt;/p&gt;
-&lt;p&gt;$ \eta $&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;eta&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Learning Rate Scheduling: Learing Rate Decay and Warm Up&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Optimizer总结&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://img.tujidu.com/image/62164545ae1f4.jpg&#34; alt=&#34;Optimization Summary&#34;&gt;&lt;/p&gt;

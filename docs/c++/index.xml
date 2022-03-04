@@ -36,7 +36,7 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;code&gt;程序名 &amp;lt; 输入文件&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;程序名 &amp;gt; 输出文件&lt;/code&gt;&lt;/p&gt;
-&lt;h4 id=&#34;数据类型&#34;&gt;数据类型&lt;/h4&gt;
+&lt;h3 id=&#34;数据类型&#34;&gt;数据类型&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;选用的经验：&lt;/li&gt;
 &lt;/ul&gt;
@@ -47,7 +47,7 @@
 &lt;li&gt;&lt;strong&gt;不要混用&lt;/strong&gt;有符号类型和无符号类型，带符号数会自动转换为无符号数，等于初始值对无符号类型所能表示的数值总数取模后的余数&lt;/li&gt;
 &lt;li&gt;字符型字面值常量的类型可以通过前缀指定，整型、浮点型可以通过后缀指定&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;变量&#34;&gt;变量&lt;/h4&gt;
+&lt;h3 id=&#34;变量&#34;&gt;变量&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;初始化和赋值存在本质上的巨大区别&lt;/li&gt;
 &lt;li&gt;使用列表初始化&lt;code&gt;{}&lt;/code&gt;，在可能的数据丢失时会使编译器给出警告&lt;/li&gt;
@@ -58,7 +58,7 @@
 &lt;li&gt;全局变量在块作用域内用&lt;code&gt;::&lt;/code&gt;前缀可以显式访问（屏蔽块作用域内的局部变量）&lt;/li&gt;
 &lt;li&gt;局部变量最好不要同全局变量同名&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;复合类型&#34;&gt;复合类型&lt;/h4&gt;
+&lt;h3 id=&#34;复合类型&#34;&gt;复合类型&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;通过在变量名前加&lt;code&gt;&amp;amp;&lt;/code&gt;来定义引用类型，引用必须初始化&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;引用即别名&lt;/strong&gt;&lt;/li&gt;
@@ -71,7 +71,7 @@
 &lt;li&gt;&lt;code&gt;void*&lt;/code&gt;可以存放任意对象的地址&lt;/li&gt;
 &lt;li&gt;类型修饰符(&lt;code&gt;*&lt;/code&gt;和&lt;code&gt;&amp;amp;&lt;/code&gt;)仅修饰其后的&lt;strong&gt;第一个&lt;/strong&gt;变量标识符&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;const限定符&#34;&gt;const限定符&lt;/h4&gt;
+&lt;h3 id=&#34;const限定符&#34;&gt;const限定符&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;常量引用是对const的引用&lt;/li&gt;
 &lt;li&gt;在初始化常量引用时允许使用&lt;strong&gt;任意表达式&lt;/strong&gt;作为初始值，只要该表达式的结果能够转换成引用的类型即可&lt;/li&gt;
@@ -86,7 +86,7 @@
 &lt;li&gt;顶层const 表示指针本身是个常量；底层const 表示指针所指的对象是个常量（仅示例，顶层和底层const适用于各种类型）&lt;/li&gt;
 &lt;li&gt;当执行对象的拷贝操作时，顶层const和底层const区别明显&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;处理类型&#34;&gt;处理类型&lt;/h4&gt;
+&lt;h3 id=&#34;处理类型&#34;&gt;处理类型&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;类型别名：&lt;code&gt;typedef 前者 后者&lt;/code&gt; —— 后者是前者的同义词&lt;/li&gt;
 &lt;li&gt;注意typedef中使用&lt;code&gt;*&lt;/code&gt;的情况（并不是简单的替换关系）&lt;/li&gt;
@@ -99,7 +99,7 @@
 &lt;li&gt;对于decltype所用的表达式来说，在变量名上加括号与不加括号得到的类型会有不同&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;decltype((变量))&lt;/code&gt;的结果永远是引用，&lt;code&gt;decltype(变量)&lt;/code&gt;只有在变量本身是引用时才是引用&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;自定义数据结构&#34;&gt;自定义数据结构&lt;/h4&gt;
+&lt;h3 id=&#34;自定义数据结构&#34;&gt;自定义数据结构&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;struct 类名 类体 ;&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;预处理器保证头文件多次包含仍能安全工作——头文件保护符&lt;/li&gt;
@@ -110,12 +110,12 @@
 &lt;li&gt;一般将预处理变量名全部大写以保证其唯一性&lt;/li&gt;
 &lt;li&gt;头文件一旦改变，相关的源文件必须重新编译以获取更新过的声明&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;using声明&#34;&gt;using声明&lt;/h4&gt;
+&lt;h3 id=&#34;using声明&#34;&gt;using声明&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;using namespace::name;&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;头文件中不应包含using声明&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;string&#34;&gt;string&lt;/h4&gt;
+&lt;h3 id=&#34;string&#34;&gt;string&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;std::string&lt;/code&gt; 可变长字符序列&lt;/li&gt;
 &lt;li&gt;在执行读取操作时，string对象会自动忽略开头的空白（空格符、换行符、制表符等）并从第一个真正的字符开始读起，直到遇见下一处空白为止&lt;/li&gt;
@@ -130,7 +130,7 @@
 &lt;li&gt;string中的字符可以通过下标访问&lt;/li&gt;
 &lt;li&gt;始终注意检查下标的合法性（是否在正确的范围内）&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;vector&#34;&gt;vector&lt;/h4&gt;
+&lt;h3 id=&#34;vector&#34;&gt;vector&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;std::vector&lt;/code&gt; 对象的集合（所有对象的类型相同）；容器&lt;/li&gt;
 &lt;li&gt;vector是模板而非类型&lt;/li&gt;
@@ -144,7 +144,7 @@
 &lt;li&gt;vector的比较法则也与string类似&lt;/li&gt;
 &lt;li&gt;vector不能使用下标添加元素，只能使用下标访问已存在的元素&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;迭代器&#34;&gt;迭代器&lt;/h4&gt;
+&lt;h3 id=&#34;迭代器&#34;&gt;迭代器&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;有迭代器的类型同时拥有返回迭代器的成员&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;begin()&lt;/code&gt;返回指向第一个元素的迭代器 &lt;code&gt;end()&lt;/code&gt;返回指向尾元素下一位置**（尾后）**的迭代器&lt;/li&gt;
@@ -157,7 +157,7 @@
 &lt;li&gt;凡是使用了迭代器的循环体，都不要向迭代器所属的容易添加元素&lt;/li&gt;
 &lt;li&gt;两个迭代器相减的结果为&lt;code&gt;difference_type&lt;/code&gt;（带符号整型数）&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;数组&#34;&gt;数组&lt;/h4&gt;
+&lt;h3 id=&#34;数组&#34;&gt;数组&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;与vector类似的是存放类型相同的对象的容器；不同的是数组的大小确定不变，不能随意向其增加元素&lt;/li&gt;
 &lt;li&gt;数组中元素的个数也是数组类型的一部分，所以需要为常量表达式&lt;/li&gt;
@@ -177,7 +177,7 @@
 &lt;li&gt;使用标准库string比使用&lt;strong&gt;C风格字符串&lt;/strong&gt;更安全高效&lt;/li&gt;
 &lt;li&gt;尽量使用标准库类型而非数组&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;多维数组&#34;&gt;多维数组&lt;/h4&gt;
+&lt;h3 id=&#34;多维数组&#34;&gt;多维数组&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;严格来说，C++中没有多维数组，通常所说的多维数组其实是数组的数组&lt;/li&gt;
 &lt;li&gt;使用&lt;code&gt;{}&lt;/code&gt;括起来的一组值初始化多维数组，花括号嵌套与否完全等价（嵌套只是为了更清晰地阅读）&lt;/li&gt;
@@ -185,7 +185,7 @@
 &lt;li&gt;使用范围for语句处理多维数组，除了最内层的循环外，其他所有循环的控制变量都应该是引用类型&lt;/li&gt;
 &lt;li&gt;当程序使用多维数组的名字时，会自动将其转换成指向数组首元素的指针，即指向第一个内层数组的指针&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;表达式基础&#34;&gt;表达式基础&lt;/h4&gt;
+&lt;h3 id=&#34;表达式基础&#34;&gt;表达式基础&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;左值和右值：左值可以位于赋值语句的左侧，右值则不能（在C++中并非如此简单）&lt;/li&gt;
 &lt;li&gt;当一个对象被用作右值的时候，用的是对象的值（内容）；当对象被用作左值的时候，用的是对象的身份（在内存中的位置）&lt;/li&gt;
@@ -195,7 +195,7 @@
 &lt;li&gt;复合表达式中，括号无视优先级与结合律&lt;/li&gt;
 &lt;li&gt;求值顺序在大多数运算符中没有明确规定，除了&lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;、&lt;code&gt;||&lt;/code&gt;、&lt;code&gt;?:&lt;/code&gt;、&lt;code&gt;,&lt;/code&gt;外&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;运算符&#34;&gt;运算符&lt;/h4&gt;
+&lt;h3 id=&#34;运算符&#34;&gt;运算符&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;整数相除的商值无论正负一律向0取整（舍弃小数部分）&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;(-m)/n&lt;/code&gt;和&lt;code&gt;m/(-n)&lt;/code&gt;都等价于&lt;code&gt;-(m/n)&lt;/code&gt;，&lt;code&gt;m%(-n)&lt;/code&gt;等价于&lt;code&gt;m%n&lt;/code&gt;，&lt;code&gt;(-m)%n&lt;/code&gt;等价于&lt;code&gt;-(m%n)&lt;/code&gt;&lt;/li&gt;
@@ -212,7 +212,7 @@
 &lt;li&gt;对string或vector对象执行sizeof运算只返回该类型固定部分的大小，不会计算对象中的元素占用了多少空间&lt;/li&gt;
 &lt;li&gt;逗号运算符真正的结果是右侧表达式的值&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;类型转换&#34;&gt;类型转换&lt;/h4&gt;
+&lt;h3 id=&#34;类型转换&#34;&gt;类型转换&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;整型提升、算术转换&lt;/li&gt;
 &lt;li&gt;强制类型转换&lt;code&gt;cast-name&amp;lt;type&amp;gt;(expression)&lt;/code&gt;&lt;/li&gt;
@@ -224,14 +224,14 @@
 &lt;li&gt;要尽量避免强制类型转换&lt;/li&gt;
 &lt;li&gt;旧式的强制类型转换 &lt;code&gt;type (expr)&lt;/code&gt;和&lt;code&gt;(type) expr&lt;/code&gt;，不够清晰明了，追踪困难&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;运算符优先级&#34;&gt;运算符优先级&lt;/h4&gt;
-&lt;h4 id=&#34;条件语句&#34;&gt;条件语句&lt;/h4&gt;
+&lt;h3 id=&#34;运算符优先级&#34;&gt;运算符优先级&lt;/h3&gt;
+&lt;h3 id=&#34;条件语句&#34;&gt;条件语句&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;else&lt;/code&gt;与离它最近的未匹配的&lt;code&gt;if&lt;/code&gt;匹配，使用花括号可以强制匹配&lt;/li&gt;
 &lt;li&gt;case标签必须是整形常量表达式&lt;/li&gt;
 &lt;li&gt;如果在某处一个带有初值的变量位于作用域之外，在另一处该变量位于作用域之内，则从前一处跳转到后一处的行为为非法行为&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;迭代语句&#34;&gt;迭代语句&lt;/h4&gt;
+&lt;h3 id=&#34;迭代语句&#34;&gt;迭代语句&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;传统for循环的执行流程：首先执行init-statement；接下来判断condition；条件为真，执行循环体；最后执行expression&lt;/li&gt;
 &lt;li&gt;for语句中的init-statement可定义多个对象，但只能有一条声明语句，所以所有变量的基础类型&lt;strong&gt;必须相同&lt;/strong&gt;&lt;/li&gt;
@@ -240,13 +240,13 @@
 &lt;li&gt;范围for语句的等价传统for语句（不能用范围for语句增加vector对象或其他容器的元素）&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;do while&lt;/code&gt;与&lt;code&gt;while&lt;/code&gt;十分相似，只是先执行循环体后检查条件&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;跳转语句&#34;&gt;跳转语句&lt;/h4&gt;
+&lt;h3 id=&#34;跳转语句&#34;&gt;跳转语句&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;break&lt;/code&gt;负责终止离它最近的&lt;code&gt;while&lt;/code&gt;、&lt;code&gt;do while&lt;/code&gt;、&lt;code&gt;for&lt;/code&gt;、&lt;code&gt;switch&lt;/code&gt;语句，并从这些语句后的第一条语句开始继续执行&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;continue&lt;/code&gt;用于终止离它最近的&lt;code&gt;for&lt;/code&gt;、&lt;code&gt;while&lt;/code&gt;、&lt;code&gt;do while&lt;/code&gt;循环中的当前迭代并立即开始下一次迭代&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;goto label;&lt;/code&gt; label是用于标识一条语句的标示符&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;try语句块和异常处理&#34;&gt;try语句块和异常处理&lt;/h4&gt;
+&lt;h3 id=&#34;try语句块和异常处理&#34;&gt;try语句块和异常处理&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;程序的异常检测部分使用&lt;code&gt;throw&lt;/code&gt;表达式引发一个异常&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;try&lt;/code&gt;块后跟随一个或多个&lt;code&gt;catch&lt;/code&gt;子句，由&lt;code&gt;try&lt;/code&gt;中抛出的异常来选中对应的&lt;code&gt;catch&lt;/code&gt;子句&lt;/li&gt;
@@ -256,7 +256,7 @@
 &lt;li&gt;后三种异常只能以默认初始化的方式初始化，不允许为这些对象提供初始值；其它异常类型使用string对象或者C风格字符串初始化这些类型的对象，不允许使用默认初始化的方式&lt;/li&gt;
 &lt;li&gt;异常类型只定义了一个成员函数&lt;code&gt;what&lt;/code&gt;，该函数没有参数，返回一个指向C风格字符串的&lt;code&gt;const char*&lt;/code&gt;，提供关于异常的信息&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;函数基础&#34;&gt;函数基础&lt;/h4&gt;
+&lt;h3 id=&#34;函数基础&#34;&gt;函数基础&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;函数形参列表中的形参通常用逗号隔开，其中每个形参都含有一个声明符的声明，即使两个形参的类型一样，也必须把两个类型都写出来&lt;/li&gt;
 &lt;li&gt;形参名是可选的，当函数确实有个别形参不会被用到时，此类形参通常不命名以表示在函数体内不会使用它&lt;/li&gt;
@@ -270,7 +270,7 @@
 &lt;li&gt;含有函数声明的头文件应该被包含到定义函数的源文件中&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;分离式编译&lt;/strong&gt;允许程序分散在几个文件中，每个文件独立编译&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;参数传递&#34;&gt;参数传递&lt;/h4&gt;
+&lt;h3 id=&#34;参数传递&#34;&gt;参数传递&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;引用传递和值传递&lt;/li&gt;
 &lt;li&gt;C++中建议使用引用类型的形参代替指针类型访问函数外部的对象&lt;/li&gt;
@@ -294,7 +294,7 @@
 &lt;li&gt;&lt;code&gt;initializer_list&lt;/code&gt;中的元素永远是常量值，无法改变&lt;code&gt;initializer_list&lt;/code&gt;对象中元素的值&lt;/li&gt;
 &lt;li&gt;省略符形参是为了便于C++程序访问某些特殊的C代码（使用了C标准库varargs）而设置的，形如&lt;code&gt;void foo(parm_list, ...);&lt;/code&gt;和&lt;code&gt;void foo(n...)&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;返回类型和return语句&#34;&gt;返回类型和return语句&lt;/h4&gt;
+&lt;h3 id=&#34;返回类型和return语句&#34;&gt;返回类型和return语句&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;返回void的函数不必须要有return，因为在最后总会隐式执行。若想让函数提前退出，可以使用return。&lt;/li&gt;
 &lt;li&gt;在含有return语句的循环后也应该有一条return语句，否则程序是错误的且难以被编译器发现&lt;/li&gt;
@@ -309,7 +309,7 @@
 &lt;li&gt;还可以使用&lt;strong&gt;尾置返回类型&lt;/strong&gt;，如&lt;code&gt;auto func(int i) -&amp;gt; int(*)[10]&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;或者使用&lt;code&gt;decltype(数组名)*&lt;/code&gt;来声明函数&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;函数重载&#34;&gt;函数重载&lt;/h4&gt;
+&lt;h3 id=&#34;函数重载&#34;&gt;函数重载&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;重载函数：同一作用域内的几个函数名相同但形参列表不同（main函数不能重载）&lt;/li&gt;
 &lt;li&gt;重载函数的返回类型需要一致，不允许同名函数返回不同的类型&lt;/li&gt;
@@ -319,7 +319,7 @@
 &lt;li&gt;&lt;strong&gt;函数匹配&lt;/strong&gt;也叫&lt;strong&gt;重载确定&lt;/strong&gt;，在调用重载函数时可能的三种结果：最佳匹配、无匹配、二义性调用&lt;/li&gt;
 &lt;li&gt;在C++中，&lt;strong&gt;名字查找&lt;/strong&gt;发生在&lt;strong&gt;类型检查&lt;/strong&gt;之前&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;特殊用途语言特性&#34;&gt;特殊用途语言特性&lt;/h4&gt;
+&lt;h3 id=&#34;特殊用途语言特性&#34;&gt;特殊用途语言特性&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
