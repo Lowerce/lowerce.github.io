@@ -18,66 +18,45 @@
 <link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
 <link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
-<title>Docker使用教程 | Lowerce&#39;s Wiki Blog</title>
-<meta name="description" content="
-参考:Docker初学者教程
-
-Command
-docker images  列出全部映像
-docker run -it 映像  运行并保持某一映像
-docker ps -a  列出全部容器（包括未在运行的）
-docker container prune  删除全部已停止的容器
-docker rm …">
-<meta property="og:title" content="Docker使用教程" />
-<meta property="og:description" content="参考:Docker初学者教程
- Command docker images 列出全部映像
-docker run -it 映像 运行并保持某一映像
-docker ps -a 列出全部容器（包括未在运行的）
-docker container prune 删除全部已停止的容器
-docker rm 容器 删除指定容器
-docker port 容器 查看容器所映射的端口
-docker start 容器 启动指定容器
-docker stop 容器 停止指定容器
-docker search 映像 搜索所需映像
-Dockerfile Trick docker run --rm 映像 映像不存在时自动pull映像运行并在映像运行结束后自动删除容器
-docker run -d -P --name 指定一个名称 映像 终端界面可以自由关闭而不影响容器的持续运行，映射容器的端口到本机的随机端口，并为容器指定名称
-docker run -p 本机端口:映像端口 映像 将映像的端口映射到本机的端口中来启动容器" />
+<title>C&#43;&#43;疑点难点 | Lowerce&#39;s Wiki Blog</title>
+<meta name="description" content="UP:HexUp
+30 分钟讲明白现代 C&#43;&#43;最重要的特性之一：智能指针
+类型声明
+遵循“右左”法则
+从变量名开始向右看 看完后向左看
+不可忽略括号 即一层层括号地看
+跳出一层后的外层表示的是内层元素的类型或者内层指针的指向
+读取过程的顺序表示后者是前者元素的类型
+const一类的声明也遵从“右左” …">
+<meta property="og:title" content="C&#43;&#43;疑点难点" />
+<meta property="og:description" content="UP:HexUp 30 分钟讲明白现代 C&#43;&#43;最重要的特性之一：智能指针
+类型声明 遵循“右左”法则 从变量名开始向右看 看完后向左看 不可忽略括号 即一层层括号地看 跳出一层后的外层表示的是内层元素的类型或者内层指针的指向 读取过程的顺序表示后者是前者元素的类型 const一类的声明也遵从“右左”法则
+指针大小 32位（Bit）架构和64位（Bit）架构 内存的最小单位 1字节（Byte）=8 Bit 32Bit程序的指针大小 4字节 64Bit程序的指针大小 8字节 指针大小在本质上由编译器决定
+Lambda表达式 又名闭包 结构： [ 捕获变量 ]( 参数列表 ) -&gt; 返回类型 { 函数主体 } 变量捕获时不加&amp;按值捕获，加&amp;按引用捕获 [&amp;]按引用捕获所有外部变量 [=]按值捕获所有外部变量 上述二者可以结合，[&amp;,=N]除了变量N按值捕获外其他外部变量全部按引用捕获
+裸指针与动态内存分配 new用来动态申请内存 delete用来手动释放动态申请的内存，否则这部分内存不会被释放，如果new申请的空间为数组，需要使用delete[] 智能指针用来避免手动管理内存可能导致的内存泄漏
+shared_ptr 需要#include &lt;memory&gt;，属于std命名空间 初始化： shared_ptr&lt;int&gt; p {make_shared&lt;int&gt;(100)}; shared_ptr&lt;int&gt; p {new int(100)}; shared_ptr&lt;int&gt; p = make_shared&lt;int&gt;(100); 上述几种方式完全等价 p.use_count()有多少个指针指向同一object p.reset()重置指针，不再指向原object；也可以设置参数使其指向新的object 当指向某一object的shared_ptr降为0，这一object会自动销毁 p.get()获取指向当前object的裸指针 初始化还有一些特殊的参数配置如下： shared_ptr&lt;FILE&gt; sfp {fp, close_file}; 第二个参数为自定义的销毁函数 shared_ptr&lt;Bar&gt; b(f, &amp;(f-&gt;b)); 第二个参数用于访问类的成员变量" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://lowerce.github.io/docs/docker/docker/" /><meta property="article:section" content="docs" />
-<meta property="article:published_time" content="2021-10-24T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-10-24T00:00:00+00:00" /><meta property="og:site_name" content="Lowerce&#39;s Wiki Blog" />
+<meta property="og:url" content="https://lowerce.github.io/docs/c&#43;&#43;/c&#43;&#43;%E7%96%91%E7%82%B9%E9%9A%BE%E7%82%B9/" /><meta property="article:section" content="docs" />
+<meta property="article:published_time" content="2022-11-17T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-11-17T00:00:00+00:00" /><meta property="og:site_name" content="Lowerce&#39;s Wiki Blog" />
 
-<meta itemprop="name" content="Docker使用教程">
-<meta itemprop="description" content="参考:Docker初学者教程
- Command docker images 列出全部映像
-docker run -it 映像 运行并保持某一映像
-docker ps -a 列出全部容器（包括未在运行的）
-docker container prune 删除全部已停止的容器
-docker rm 容器 删除指定容器
-docker port 容器 查看容器所映射的端口
-docker start 容器 启动指定容器
-docker stop 容器 停止指定容器
-docker search 映像 搜索所需映像
-Dockerfile Trick docker run --rm 映像 映像不存在时自动pull映像运行并在映像运行结束后自动删除容器
-docker run -d -P --name 指定一个名称 映像 终端界面可以自由关闭而不影响容器的持续运行，映射容器的端口到本机的随机端口，并为容器指定名称
-docker run -p 本机端口:映像端口 映像 将映像的端口映射到本机的端口中来启动容器"><meta itemprop="datePublished" content="2021-10-24T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-10-24T00:00:00+00:00" />
-<meta itemprop="wordCount" content="59">
-<meta itemprop="keywords" content="Docker,Geant4,2021," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Docker使用教程"/>
-<meta name="twitter:description" content="参考:Docker初学者教程
- Command docker images 列出全部映像
-docker run -it 映像 运行并保持某一映像
-docker ps -a 列出全部容器（包括未在运行的）
-docker container prune 删除全部已停止的容器
-docker rm 容器 删除指定容器
-docker port 容器 查看容器所映射的端口
-docker start 容器 启动指定容器
-docker stop 容器 停止指定容器
-docker search 映像 搜索所需映像
-Dockerfile Trick docker run --rm 映像 映像不存在时自动pull映像运行并在映像运行结束后自动删除容器
-docker run -d -P --name 指定一个名称 映像 终端界面可以自由关闭而不影响容器的持续运行，映射容器的端口到本机的随机端口，并为容器指定名称
-docker run -p 本机端口:映像端口 映像 将映像的端口映射到本机的端口中来启动容器"/>
+<meta itemprop="name" content="C&#43;&#43;疑点难点">
+<meta itemprop="description" content="UP:HexUp 30 分钟讲明白现代 C&#43;&#43;最重要的特性之一：智能指针
+类型声明 遵循“右左”法则 从变量名开始向右看 看完后向左看 不可忽略括号 即一层层括号地看 跳出一层后的外层表示的是内层元素的类型或者内层指针的指向 读取过程的顺序表示后者是前者元素的类型 const一类的声明也遵从“右左”法则
+指针大小 32位（Bit）架构和64位（Bit）架构 内存的最小单位 1字节（Byte）=8 Bit 32Bit程序的指针大小 4字节 64Bit程序的指针大小 8字节 指针大小在本质上由编译器决定
+Lambda表达式 又名闭包 结构： [ 捕获变量 ]( 参数列表 ) -&gt; 返回类型 { 函数主体 } 变量捕获时不加&amp;按值捕获，加&amp;按引用捕获 [&amp;]按引用捕获所有外部变量 [=]按值捕获所有外部变量 上述二者可以结合，[&amp;,=N]除了变量N按值捕获外其他外部变量全部按引用捕获
+裸指针与动态内存分配 new用来动态申请内存 delete用来手动释放动态申请的内存，否则这部分内存不会被释放，如果new申请的空间为数组，需要使用delete[] 智能指针用来避免手动管理内存可能导致的内存泄漏
+shared_ptr 需要#include &lt;memory&gt;，属于std命名空间 初始化： shared_ptr&lt;int&gt; p {make_shared&lt;int&gt;(100)}; shared_ptr&lt;int&gt; p {new int(100)}; shared_ptr&lt;int&gt; p = make_shared&lt;int&gt;(100); 上述几种方式完全等价 p.use_count()有多少个指针指向同一object p.reset()重置指针，不再指向原object；也可以设置参数使其指向新的object 当指向某一object的shared_ptr降为0，这一object会自动销毁 p.get()获取指向当前object的裸指针 初始化还有一些特殊的参数配置如下： shared_ptr&lt;FILE&gt; sfp {fp, close_file}; 第二个参数为自定义的销毁函数 shared_ptr&lt;Bar&gt; b(f, &amp;(f-&gt;b)); 第二个参数用于访问类的成员变量"><meta itemprop="datePublished" content="2022-11-17T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-11-17T00:00:00+00:00" />
+<meta itemprop="wordCount" content="99">
+<meta itemprop="keywords" content="C&#43;&#43;,2022," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="C&#43;&#43;疑点难点"/>
+<meta name="twitter:description" content="UP:HexUp 30 分钟讲明白现代 C&#43;&#43;最重要的特性之一：智能指针
+类型声明 遵循“右左”法则 从变量名开始向右看 看完后向左看 不可忽略括号 即一层层括号地看 跳出一层后的外层表示的是内层元素的类型或者内层指针的指向 读取过程的顺序表示后者是前者元素的类型 const一类的声明也遵从“右左”法则
+指针大小 32位（Bit）架构和64位（Bit）架构 内存的最小单位 1字节（Byte）=8 Bit 32Bit程序的指针大小 4字节 64Bit程序的指针大小 8字节 指针大小在本质上由编译器决定
+Lambda表达式 又名闭包 结构： [ 捕获变量 ]( 参数列表 ) -&gt; 返回类型 { 函数主体 } 变量捕获时不加&amp;按值捕获，加&amp;按引用捕获 [&amp;]按引用捕获所有外部变量 [=]按值捕获所有外部变量 上述二者可以结合，[&amp;,=N]除了变量N按值捕获外其他外部变量全部按引用捕获
+裸指针与动态内存分配 new用来动态申请内存 delete用来手动释放动态申请的内存，否则这部分内存不会被释放，如果new申请的空间为数组，需要使用delete[] 智能指针用来避免手动管理内存可能导致的内存泄漏
+shared_ptr 需要#include &lt;memory&gt;，属于std命名空间 初始化： shared_ptr&lt;int&gt; p {make_shared&lt;int&gt;(100)}; shared_ptr&lt;int&gt; p {new int(100)}; shared_ptr&lt;int&gt; p = make_shared&lt;int&gt;(100); 上述几种方式完全等价 p.use_count()有多少个指针指向同一object p.reset()重置指针，不再指向原object；也可以设置参数使其指向新的object 当指向某一object的shared_ptr降为0，这一object会自动销毁 p.get()获取指向当前object的裸指针 初始化还有一些特殊的参数配置如下： shared_ptr&lt;FILE&gt; sfp {fp, close_file}; 第二个参数为自定义的销毁函数 shared_ptr&lt;Bar&gt; b(f, &amp;(f-&gt;b)); 第二个参数用于访问类的成员变量"/>
 
 
 
@@ -175,11 +154,11 @@ if (!doNotTrack) {
       <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
   <a href="/docs/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Notes</span></a>
   <ul class="ul-1">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsc-li">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsc-li">
   <a href="/docs/c&#43;&#43;/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsc"><span class="">C&#43;&#43;</span></a>
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docscce79691e782b9e99abee782b9-li">
-  <a href="/docs/c&#43;&#43;/c&#43;&#43;%E7%96%91%E7%82%B9%E9%9A%BE%E7%82%B9/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docscce79691e782b9e99abee782b9"><span class="">C&#43;&#43;疑点难点</span></a>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docscce79691e782b9e99abee782b9-li">
+  <a href="/docs/c&#43;&#43;/c&#43;&#43;%E7%96%91%E7%82%B9%E9%9A%BE%E7%82%B9/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-docscce79691e782b9e99abee782b9"><span class="td-sidebar-nav-active-item">C&#43;&#43;疑点难点</span></a>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsccpp-li">
   <a href="/docs/c&#43;&#43;/cpp/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsccpp"><span class="">C&#43;&#43; Primer</span></a>
 </li>
@@ -200,11 +179,11 @@ if (!doNotTrack) {
   <a href="/docs/algorithm/leetcode-record/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsalgorithmleetcode-record"><span class="">leetcode算法总结</span></a>
 </li>
   </ul>
-</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsdocker-li">
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsdocker-li">
   <a href="/docs/docker/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdocker"><span class="">Docker</span></a>
   <ul class="ul-2 foldable">
-    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsdockerdocker-li">
-  <a href="/docs/docker/docker/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-docsdockerdocker"><span class="td-sidebar-nav-active-item">Docker使用教程</span></a>
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdockerdocker-li">
+  <a href="/docs/docker/docker/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsdockerdocker"><span class="">Docker使用教程</span></a>
 </li>
   </ul>
 </li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docssite-li">
@@ -225,12 +204,28 @@ if (!doNotTrack) {
           <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
             
 <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-<a id="print" href="https://lowerce.github.io/docs/docker/_print/"><i class="fa fa-print fa-fw"></i> 整节打印</a>
+<a id="print" href="https://lowerce.github.io/docs/c&#43;&#43;/_print/"><i class="fa fa-print fa-fw"></i> 整节打印</a>
 
 </div>
 
             
 
+
+<div class="td-toc"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#类型声明">类型声明</a></li>
+        <li><a href="#指针大小">指针大小</a></li>
+        <li><a href="#lambda表达式">Lambda表达式</a></li>
+        <li><a href="#裸指针与动态内存分配">裸指针与动态内存分配</a></li>
+        <li><a href="#shared_ptr">shared_ptr</a></li>
+        <li><a href="#unique_ptr">unique_ptr</a></li>
+        <li><a href="#weak_ptr">weak_ptr</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
 
 
 
@@ -323,16 +318,16 @@ if (!doNotTrack) {
     <a href="https://lowerce.github.io/docs/">Notes</a>
   </li>
   <li class="breadcrumb-item">
-    <a href="https://lowerce.github.io/docs/docker/">Docker</a>
+    <a href="https://lowerce.github.io/docs/c&#43;&#43;/">C&#43;&#43;</a>
   </li>
   <li class="breadcrumb-item active" aria-current="page">
-    <a href="https://lowerce.github.io/docs/docker/docker/">Docker使用教程</a>
+    <a href="https://lowerce.github.io/docs/c&#43;&#43;/c&#43;&#43;%E7%96%91%E7%82%B9%E9%9A%BE%E7%82%B9/">C&#43;&#43;疑点难点</a>
   </li>
   </ol>
 </nav>
             
 <div class="td-content">
-	<h1>Docker使用教程</h1>
+	<h1>C&#43;&#43;疑点难点</h1>
 	
 	<header class="article-meta">
 		
@@ -345,11 +340,9 @@ if (!doNotTrack) {
   <h5 class="taxonomy-title">Tags:</h5>
   <ul class="taxonomy-terms">
     
-      <li><a class="taxonomy-term" href="https://lowerce.github.io/tags/docker/" data-taxonomy-term="docker"><span class="taxonomy-label">Docker</span></a></li>
+      <li><a class="taxonomy-term" href="https://lowerce.github.io/tags/c&#43;&#43;/" data-taxonomy-term="c&#43;&#43;"><span class="taxonomy-label">c&#43;&#43;</span></a></li>
     
-      <li><a class="taxonomy-term" href="https://lowerce.github.io/tags/geant4/" data-taxonomy-term="geant4"><span class="taxonomy-label">Geant4</span></a></li>
-    
-      <li><a class="taxonomy-term" href="https://lowerce.github.io/tags/2021/" data-taxonomy-term="2021"><span class="taxonomy-label">2021</span></a></li>
+      <li><a class="taxonomy-term" href="https://lowerce.github.io/tags/2022/" data-taxonomy-term="2022"><span class="taxonomy-label">2022</span></a></li>
     
   </ul>
 </div>
@@ -364,7 +357,7 @@ if (!doNotTrack) {
     
       <li><a class="taxonomy-term" href="https://lowerce.github.io/categories/technology/" data-taxonomy-term="technology"><span class="taxonomy-label">technology</span></a></li>
     
-      <li><a class="taxonomy-term" href="https://lowerce.github.io/categories/2021/" data-taxonomy-term="2021"><span class="taxonomy-label">2021</span></a></li>
+      <li><a class="taxonomy-term" href="https://lowerce.github.io/categories/2022/" data-taxonomy-term="2022"><span class="taxonomy-label">2022</span></a></li>
     
   </ul>
 </div>
@@ -373,27 +366,63 @@ if (!doNotTrack) {
 		
 		
 	</header>    
-	<blockquote>
-<p>参考:<a href="https://docker-curriculum.com/">Docker初学者教程</a></p>
-</blockquote>
-<h2 id="command">Command</h2>
-<p><code>docker images</code>  列出全部映像</p>
-<p><code>docker run -it 映像</code>  运行并保持某一映像</p>
-<p><code>docker ps -a</code>  列出全部容器（包括未在运行的）</p>
-<p><code>docker container prune</code>  删除全部已停止的容器</p>
-<p><code>docker rm 容器</code>   删除指定容器</p>
-<p><code>docker port 容器</code>  查看容器所映射的端口</p>
-<p><code>docker start 容器</code>  启动指定容器</p>
-<p><code>docker stop 容器</code>  停止指定容器</p>
-<p><code>docker search 映像</code>  搜索所需映像</p>
-<h2 id="dockerfile">Dockerfile</h2>
-<h2 id="trick">Trick</h2>
-<p><code>docker run --rm 映像</code>
-映像不存在时自动pull映像运行并在映像运行结束后自动删除容器</p>
-<p><code>docker run -d -P --name 指定一个名称 映像</code>
-终端界面可以自由关闭而不影响容器的持续运行，映射容器的端口到本机的随机端口，并为容器指定名称</p>
-<p><code>docker run -p 本机端口:映像端口 映像</code>
-将映像的端口映射到本机的端口中来启动容器</p>
+	<p>UP:HexUp
+30 分钟讲明白现代 C++最重要的特性之一：智能指针</p>
+<h3 id="类型声明">类型声明</h3>
+<p>遵循“右左”法则
+从<strong>变量名</strong>开始向右看 看完后向左看
+不可忽略括号 即一层层括号地看
+跳出一层后的外层表示的是内层元素的类型或者内层指针的指向
+读取过程的顺序表示后者是前者元素的类型
+<strong>const</strong>一类的声明也遵从“右左”法则</p>
+<h3 id="指针大小">指针大小</h3>
+<p>32位（Bit）架构和64位（Bit）架构
+内存的最小单位 1字节（Byte）=8 Bit
+32Bit程序的指针大小 4字节
+64Bit程序的指针大小 8字节
+指针大小在本质上由<strong>编译器</strong>决定</p>
+<h3 id="lambda表达式">Lambda表达式</h3>
+<p>又名<strong>闭包</strong>
+结构：
+<code>[ 捕获变量 ]( 参数列表 ) -&gt; 返回类型 { 函数主体 }</code>
+变量捕获时不加<code>&amp;</code>按值捕获，加<code>&amp;</code>按引用捕获
+<code>[&amp;]</code>按引用捕获所有外部变量
+<code>[=]</code>按值捕获所有外部变量
+上述二者可以结合，<code>[&amp;,=N]</code>除了变量<code>N</code>按值捕获外其他外部变量全部按引用捕获</p>
+<h3 id="裸指针与动态内存分配">裸指针与动态内存分配</h3>
+<p><code>new</code>用来动态申请内存
+<code>delete</code>用来手动释放动态申请的内存，否则这部分内存不会被释放，如果<code>new</code>申请的空间为数组，需要使用<code>delete[]</code>
+<strong>智能指针</strong>用来避免手动管理内存可能导致的内存泄漏</p>
+<h3 id="shared_ptr">shared_ptr</h3>
+<p>需要<code>#include &lt;memory&gt;</code>，属于<code>std</code>命名空间
+<strong>初始化</strong>：
+<code>shared_ptr&lt;int&gt; p {make_shared&lt;int&gt;(100)};</code>
+<code>shared_ptr&lt;int&gt; p {new int(100)};</code>
+<code>shared_ptr&lt;int&gt; p = make_shared&lt;int&gt;(100);</code>
+上述几种方式完全等价
+<code>p.use_count()</code>有多少个指针指向同一object
+<code>p.reset()</code>重置指针，不再指向原object；也可以设置参数使其指向新的object
+<strong>当指向某一object的<code>shared_ptr</code>降为0，这一object会自动销毁</strong>
+<code>p.get()</code>获取指向当前object的裸指针
+初始化还有一些特殊的参数配置如下：
+<code>shared_ptr&lt;FILE&gt; sfp {fp, close_file};</code> 第二个参数为自定义的销毁函数
+<code>shared_ptr&lt;Bar&gt; b(f, &amp;(f-&gt;b));</code> 第二个参数用于访问类的成员变量</p>
+<h3 id="unique_ptr">unique_ptr</h3>
+<p>库基础、初始化方式与<code>shared_ptr</code>相同
+独占object的管理权，销毁时自动释放所绑定的object
+<code>p.release()</code>会返回object的裸指针同时设置p为<code>nullptr</code>
+控制权不可拷贝但可转移
+<code>unique_ptr&lt;int&gt; p2 {p1.release()}</code>
+<code>unique_ptr&lt;int&gt; p2 {move(p1)}</code>
+将p1的控制权转移给p2，上述两式等价
+<code>unique_ptr&lt;int, decltype(&amp;my_dealloc)&gt; cup {my_alloc(100), my_dealloc}</code> 自定义销毁函数更加复杂，需要在<code>&lt;&gt;</code>内声明
+函数间传递时可以使用<code>*p</code>直接传递值，也可以使用<code>p.get()</code>传递裸指针，或者将函数的参数设置为<code>unique_ptr&lt;int&gt;&amp;</code>即<code>unique_ptr</code>的引用，还可以使用<code>move(p)</code>来改变object的控制权（此时函数的参数为<code>unique_ptr&lt;int&gt;</code>）
+函数的返回值没有额外的限制，可以直接使用<code>unique_ptr&lt;int&gt;</code>类型的函数返回值初始化<code>unique_ptr&lt;int&gt;</code>，其本质也是调用<code>move</code></p>
+<h3 id="weak_ptr">weak_ptr</h3>
+<p>可以解决环形依赖问题
+<code>weak_ptr</code>依赖<code>shared_ptr</code>存在，需要用<code>shared_ptr</code>初始化
+<code>weak_ptr</code>只有object的观察权，没有object的管理权
+<code>wp.lock()</code>会返回一个<code>shared_ptr</code>，若<code>weak_ptr</code>所指向的资源已释放，则返回<code>nullptr</code></p>
 
 	
 	

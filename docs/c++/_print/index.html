@@ -153,7 +153,15 @@ if (!doNotTrack) {
     
     
 	
-<li>1: <a href="#pg-451807a610c5be94feb9cac83b376571">C&#43;&#43; Primer</a></li>
+<li>1: <a href="#pg-49671f503b21c7485647046edee33eae">C&#43;&#43;疑点难点</a></li>
+
+
+    
+  
+    
+    
+	
+<li>2: <a href="#pg-451807a610c5be94feb9cac83b376571">C&#43;&#43; Primer</a></li>
 
 
     
@@ -184,7 +192,81 @@ if (!doNotTrack) {
 
 <div class="td-content" style="">
     
-	<h1 id="pg-451807a610c5be94feb9cac83b376571">1 - C&#43;&#43; Primer</h1>
+	<h1 id="pg-49671f503b21c7485647046edee33eae">1 - C&#43;&#43;疑点难点</h1>
+    
+	<p>UP:HexUp
+30 分钟讲明白现代 C++最重要的特性之一：智能指针</p>
+<h3 id="类型声明">类型声明</h3>
+<p>遵循“右左”法则
+从<strong>变量名</strong>开始向右看 看完后向左看
+不可忽略括号 即一层层括号地看
+跳出一层后的外层表示的是内层元素的类型或者内层指针的指向
+读取过程的顺序表示后者是前者元素的类型
+<strong>const</strong>一类的声明也遵从“右左”法则</p>
+<h3 id="指针大小">指针大小</h3>
+<p>32位（Bit）架构和64位（Bit）架构
+内存的最小单位 1字节（Byte）=8 Bit
+32Bit程序的指针大小 4字节
+64Bit程序的指针大小 8字节
+指针大小在本质上由<strong>编译器</strong>决定</p>
+<h3 id="lambda表达式">Lambda表达式</h3>
+<p>又名<strong>闭包</strong>
+结构：
+<code>[ 捕获变量 ]( 参数列表 ) -&gt; 返回类型 { 函数主体 }</code>
+变量捕获时不加<code>&amp;</code>按值捕获，加<code>&amp;</code>按引用捕获
+<code>[&amp;]</code>按引用捕获所有外部变量
+<code>[=]</code>按值捕获所有外部变量
+上述二者可以结合，<code>[&amp;,=N]</code>除了变量<code>N</code>按值捕获外其他外部变量全部按引用捕获</p>
+<h3 id="裸指针与动态内存分配">裸指针与动态内存分配</h3>
+<p><code>new</code>用来动态申请内存
+<code>delete</code>用来手动释放动态申请的内存，否则这部分内存不会被释放，如果<code>new</code>申请的空间为数组，需要使用<code>delete[]</code>
+<strong>智能指针</strong>用来避免手动管理内存可能导致的内存泄漏</p>
+<h3 id="shared_ptr">shared_ptr</h3>
+<p>需要<code>#include &lt;memory&gt;</code>，属于<code>std</code>命名空间
+<strong>初始化</strong>：
+<code>shared_ptr&lt;int&gt; p {make_shared&lt;int&gt;(100)};</code>
+<code>shared_ptr&lt;int&gt; p {new int(100)};</code>
+<code>shared_ptr&lt;int&gt; p = make_shared&lt;int&gt;(100);</code>
+上述几种方式完全等价
+<code>p.use_count()</code>有多少个指针指向同一object
+<code>p.reset()</code>重置指针，不再指向原object；也可以设置参数使其指向新的object
+<strong>当指向某一object的<code>shared_ptr</code>降为0，这一object会自动销毁</strong>
+<code>p.get()</code>获取指向当前object的裸指针
+初始化还有一些特殊的参数配置如下：
+<code>shared_ptr&lt;FILE&gt; sfp {fp, close_file};</code> 第二个参数为自定义的销毁函数
+<code>shared_ptr&lt;Bar&gt; b(f, &amp;(f-&gt;b));</code> 第二个参数用于访问类的成员变量</p>
+<h3 id="unique_ptr">unique_ptr</h3>
+<p>库基础、初始化方式与<code>shared_ptr</code>相同
+独占object的管理权，销毁时自动释放所绑定的object
+<code>p.release()</code>会返回object的裸指针同时设置p为<code>nullptr</code>
+控制权不可拷贝但可转移
+<code>unique_ptr&lt;int&gt; p2 {p1.release()}</code>
+<code>unique_ptr&lt;int&gt; p2 {move(p1)}</code>
+将p1的控制权转移给p2，上述两式等价
+<code>unique_ptr&lt;int, decltype(&amp;my_dealloc)&gt; cup {my_alloc(100), my_dealloc}</code> 自定义销毁函数更加复杂，需要在<code>&lt;&gt;</code>内声明
+函数间传递时可以使用<code>*p</code>直接传递值，也可以使用<code>p.get()</code>传递裸指针，或者将函数的参数设置为<code>unique_ptr&lt;int&gt;&amp;</code>即<code>unique_ptr</code>的引用，还可以使用<code>move(p)</code>来改变object的控制权（此时函数的参数为<code>unique_ptr&lt;int&gt;</code>）
+函数的返回值没有额外的限制，可以直接使用<code>unique_ptr&lt;int&gt;</code>类型的函数返回值初始化<code>unique_ptr&lt;int&gt;</code>，其本质也是调用<code>move</code></p>
+<h3 id="weak_ptr">weak_ptr</h3>
+<p>可以解决环形依赖问题
+<code>weak_ptr</code>依赖<code>shared_ptr</code>存在，需要用<code>shared_ptr</code>初始化
+<code>weak_ptr</code>只有object的观察权，没有object的管理权
+<code>wp.lock()</code>会返回一个<code>shared_ptr</code>，若<code>weak_ptr</code>所指向的资源已释放，则返回<code>nullptr</code></p>
+
+</div>
+
+
+
+    
+	
+  
+    
+    
+	
+    
+
+<div class="td-content" style="page-break-before: always">
+    
+	<h1 id="pg-451807a610c5be94feb9cac83b376571">2 - C&#43;&#43; Primer</h1>
     
 	<blockquote>
 <p><em>C++基础知识？</em></p>
@@ -884,7 +966,7 @@ if (!doNotTrack) {
         
       </div>
       <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
-        <small class="text-white">&copy; 2022 Lowerce 保留所有权利</small>
+        <small class="text-white">&copy; 2023 Lowerce 保留所有权利</small>
         
 	
 		<p class="mt-2"><a href="/about/">About Lowerce</a></p>

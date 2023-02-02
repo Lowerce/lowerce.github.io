@@ -4,7 +4,7 @@
     <link>https://lowerce.github.io/docs/c&#43;&#43;/</link>
     <description>Recent content in C&#43;&#43; on Lowerce&#39;s Wiki Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 07 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 17 Nov 2022 00:00:00 +0000</lastBuildDate>
     
 	  <atom:link href="https://lowerce.github.io/docs/c++/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,6 +13,76 @@
         
       
     
+    
+    <item>
+      <title>Docs: C&#43;&#43;疑点难点</title>
+      <link>https://lowerce.github.io/docs/c&#43;&#43;/c&#43;&#43;%E7%96%91%E7%82%B9%E9%9A%BE%E7%82%B9/</link>
+      <pubDate>Thu, 17 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://lowerce.github.io/docs/c&#43;&#43;/c&#43;&#43;%E7%96%91%E7%82%B9%E9%9A%BE%E7%82%B9/</guid>
+      <description>
+        
+        
+        &lt;p&gt;UP:HexUp
+30 分钟讲明白现代 C++最重要的特性之一：智能指针&lt;/p&gt;
+&lt;h3 id=&#34;类型声明&#34;&gt;类型声明&lt;/h3&gt;
+&lt;p&gt;遵循“右左”法则
+从&lt;strong&gt;变量名&lt;/strong&gt;开始向右看 看完后向左看
+不可忽略括号 即一层层括号地看
+跳出一层后的外层表示的是内层元素的类型或者内层指针的指向
+读取过程的顺序表示后者是前者元素的类型
+&lt;strong&gt;const&lt;/strong&gt;一类的声明也遵从“右左”法则&lt;/p&gt;
+&lt;h3 id=&#34;指针大小&#34;&gt;指针大小&lt;/h3&gt;
+&lt;p&gt;32位（Bit）架构和64位（Bit）架构
+内存的最小单位 1字节（Byte）=8 Bit
+32Bit程序的指针大小 4字节
+64Bit程序的指针大小 8字节
+指针大小在本质上由&lt;strong&gt;编译器&lt;/strong&gt;决定&lt;/p&gt;
+&lt;h3 id=&#34;lambda表达式&#34;&gt;Lambda表达式&lt;/h3&gt;
+&lt;p&gt;又名&lt;strong&gt;闭包&lt;/strong&gt;
+结构：
+&lt;code&gt;[ 捕获变量 ]( 参数列表 ) -&amp;gt; 返回类型 { 函数主体 }&lt;/code&gt;
+变量捕获时不加&lt;code&gt;&amp;amp;&lt;/code&gt;按值捕获，加&lt;code&gt;&amp;amp;&lt;/code&gt;按引用捕获
+&lt;code&gt;[&amp;amp;]&lt;/code&gt;按引用捕获所有外部变量
+&lt;code&gt;[=]&lt;/code&gt;按值捕获所有外部变量
+上述二者可以结合，&lt;code&gt;[&amp;amp;,=N]&lt;/code&gt;除了变量&lt;code&gt;N&lt;/code&gt;按值捕获外其他外部变量全部按引用捕获&lt;/p&gt;
+&lt;h3 id=&#34;裸指针与动态内存分配&#34;&gt;裸指针与动态内存分配&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;new&lt;/code&gt;用来动态申请内存
+&lt;code&gt;delete&lt;/code&gt;用来手动释放动态申请的内存，否则这部分内存不会被释放，如果&lt;code&gt;new&lt;/code&gt;申请的空间为数组，需要使用&lt;code&gt;delete[]&lt;/code&gt;
+&lt;strong&gt;智能指针&lt;/strong&gt;用来避免手动管理内存可能导致的内存泄漏&lt;/p&gt;
+&lt;h3 id=&#34;shared_ptr&#34;&gt;shared_ptr&lt;/h3&gt;
+&lt;p&gt;需要&lt;code&gt;#include &amp;lt;memory&amp;gt;&lt;/code&gt;，属于&lt;code&gt;std&lt;/code&gt;命名空间
+&lt;strong&gt;初始化&lt;/strong&gt;：
+&lt;code&gt;shared_ptr&amp;lt;int&amp;gt; p {make_shared&amp;lt;int&amp;gt;(100)};&lt;/code&gt;
+&lt;code&gt;shared_ptr&amp;lt;int&amp;gt; p {new int(100)};&lt;/code&gt;
+&lt;code&gt;shared_ptr&amp;lt;int&amp;gt; p = make_shared&amp;lt;int&amp;gt;(100);&lt;/code&gt;
+上述几种方式完全等价
+&lt;code&gt;p.use_count()&lt;/code&gt;有多少个指针指向同一object
+&lt;code&gt;p.reset()&lt;/code&gt;重置指针，不再指向原object；也可以设置参数使其指向新的object
+&lt;strong&gt;当指向某一object的&lt;code&gt;shared_ptr&lt;/code&gt;降为0，这一object会自动销毁&lt;/strong&gt;
+&lt;code&gt;p.get()&lt;/code&gt;获取指向当前object的裸指针
+初始化还有一些特殊的参数配置如下：
+&lt;code&gt;shared_ptr&amp;lt;FILE&amp;gt; sfp {fp, close_file};&lt;/code&gt; 第二个参数为自定义的销毁函数
+&lt;code&gt;shared_ptr&amp;lt;Bar&amp;gt; b(f, &amp;amp;(f-&amp;gt;b));&lt;/code&gt; 第二个参数用于访问类的成员变量&lt;/p&gt;
+&lt;h3 id=&#34;unique_ptr&#34;&gt;unique_ptr&lt;/h3&gt;
+&lt;p&gt;库基础、初始化方式与&lt;code&gt;shared_ptr&lt;/code&gt;相同
+独占object的管理权，销毁时自动释放所绑定的object
+&lt;code&gt;p.release()&lt;/code&gt;会返回object的裸指针同时设置p为&lt;code&gt;nullptr&lt;/code&gt;
+控制权不可拷贝但可转移
+&lt;code&gt;unique_ptr&amp;lt;int&amp;gt; p2 {p1.release()}&lt;/code&gt;
+&lt;code&gt;unique_ptr&amp;lt;int&amp;gt; p2 {move(p1)}&lt;/code&gt;
+将p1的控制权转移给p2，上述两式等价
+&lt;code&gt;unique_ptr&amp;lt;int, decltype(&amp;amp;my_dealloc)&amp;gt; cup {my_alloc(100), my_dealloc}&lt;/code&gt; 自定义销毁函数更加复杂，需要在&lt;code&gt;&amp;lt;&amp;gt;&lt;/code&gt;内声明
+函数间传递时可以使用&lt;code&gt;*p&lt;/code&gt;直接传递值，也可以使用&lt;code&gt;p.get()&lt;/code&gt;传递裸指针，或者将函数的参数设置为&lt;code&gt;unique_ptr&amp;lt;int&amp;gt;&amp;amp;&lt;/code&gt;即&lt;code&gt;unique_ptr&lt;/code&gt;的引用，还可以使用&lt;code&gt;move(p)&lt;/code&gt;来改变object的控制权（此时函数的参数为&lt;code&gt;unique_ptr&amp;lt;int&amp;gt;&lt;/code&gt;）
+函数的返回值没有额外的限制，可以直接使用&lt;code&gt;unique_ptr&amp;lt;int&amp;gt;&lt;/code&gt;类型的函数返回值初始化&lt;code&gt;unique_ptr&amp;lt;int&amp;gt;&lt;/code&gt;，其本质也是调用&lt;code&gt;move&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;weak_ptr&#34;&gt;weak_ptr&lt;/h3&gt;
+&lt;p&gt;可以解决环形依赖问题
+&lt;code&gt;weak_ptr&lt;/code&gt;依赖&lt;code&gt;shared_ptr&lt;/code&gt;存在，需要用&lt;code&gt;shared_ptr&lt;/code&gt;初始化
+&lt;code&gt;weak_ptr&lt;/code&gt;只有object的观察权，没有object的管理权
+&lt;code&gt;wp.lock()&lt;/code&gt;会返回一个&lt;code&gt;shared_ptr&lt;/code&gt;，若&lt;code&gt;weak_ptr&lt;/code&gt;所指向的资源已释放，则返回&lt;code&gt;nullptr&lt;/code&gt;&lt;/p&gt;
+
+      </description>
+    </item>
     
     <item>
       <title>Docs: C&#43;&#43; Primer</title>
