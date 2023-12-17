@@ -1,0 +1,3 @@
+THIS BLOG SITE WILL NOT BE UPDATED. 
+
+LOWERCE'S BLOG HAS BEEN MOVED TO https://lowerce.xlog.app/.
