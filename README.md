@@ -1,3 +1,3 @@
-THIS BLOG SITE WILL NOT BE MAINTAINED. 
+THIS BLOG SITE IS NOT UNDER MAINTENANCE. 
 
-LOWERCE'S BLOG HAS BEEN MOVED TO [https://blog.lowerce.us](https://blog.lowerce.us).
+LOWERCE'S BLOG HAS BEEN MOVED TO [https://lowerce.us](https://lowerce.us).
